@@ -1,6 +1,6 @@
-# Generating PDFs from HTML — SpeakEasy Portuguese
+# Generating the PDF — SpeakEasy Portuguese
 
-> This guide explains how to convert the e-book HTML files into PDFs using Puppeteer, maintaining full design fidelity.
+> This guide explains how to convert the single e-book HTML file into a final PDF using Puppeteer, maintaining full design fidelity.
 
 ---
 
@@ -13,24 +13,15 @@
 
 ## Folder Structure
 
-Before running, organize your files like this:
-
 ```
 speakeasy-ebook/
-├── html/                        ← place all HTML files here
-│   ├── 01_cover.html
-│   ├── 02_cover_v3.html
-│   ├── 03_table_of_contents_p1.html
-│   ├── 04_table_of_contents_p2.html
-│   ├── 05_how_to_use.html
-│   ├── 06_chapter_01.html
-│   ├── 07_chapters_02_to_10.html
-│   ├── 08_quick_practice_plan.html
-│   └── 09_next_steps.html
-├── pdf/                         ← generated PDFs will appear here
+├── speakeasy_ebook_FINAL.html   ← single source file with all pages embedded
+├── pdf/                         ← generated PDF will appear here
 ├── generate_pdfs.js
 └── README.md
 ```
+
+> All pages, images, and assets are embedded directly in the HTML file. No external dependencies needed at conversion time.
 
 ---
 
@@ -54,49 +45,46 @@ npm install puppeteer
 
 ---
 
-## Generate the PDFs
+## Generate the PDF
 
 Run the script:
 ```bash
 node generate_pdfs.js
 ```
 
-One PDF per page will be saved to the `/pdf` folder. The script waits for fonts and images to load before exporting, so colors, backgrounds, and typography will be fully preserved.
+The script will generate a single `speakeasy_final.pdf` inside the `/pdf` folder.
+Each `.page` block in the HTML becomes its own PDF page automatically via `page-break-after: always`.
 
 ---
 
-## Merge into a Single PDF
+## How it works
 
-Install Ghostscript (if not already installed):
-```bash
-brew install ghostscript
-```
-
-Then merge all pages into one final file:
-```bash
-gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite \
-   -sOutputFile=speakeasy_final.pdf \
-   pdf/01_cover.pdf \
-   pdf/02_cover_v3.pdf \
-   pdf/03_toc_p1.pdf \
-   pdf/04_toc_p2.pdf \
-   pdf/05_how_to_use.pdf \
-   pdf/06_chapter_01.pdf \
-   pdf/07_chapters_02_to_10.pdf \
-   pdf/08_quick_practice_plan.pdf \
-   pdf/09_next_steps.pdf
-```
-
-Your final file `speakeasy_final.pdf` will be ready in the project root.
+- `printBackground: true` — preserves all background colors and images
+- `width: 420px` + `height: auto` — each page is exactly the size of its content, no borders
+- `@page { size: 420px auto; margin: 0mm }` — defined in the HTML itself, Puppeteer respects it
+- `networkidle0` + `document.fonts.ready` — waits for Google Fonts to fully load before export
+- No merge step needed — all pages are already in sequence in the single HTML file
 
 ---
 
-## Notes
+## Editing before export
 
-- `printBackground: true` ensures all background colors and images are preserved
-- `width: 420px` + `height: auto` means each page is exactly the size of its content — no white or beige borders
-- `networkidle0` + `document.fonts.ready` ensures Google Fonts load before export
-- If a page has multiple chapters (like `07_chapters_02_to_10.html`), Puppeteer will automatically split it into multiple PDF pages
+The HTML file is structured with clear comments for easy navigation:
+
+```
+<!-- PAGE 01 — Cover (base) -->
+<!-- PAGE 02 — Cover V3 (use this one) -->
+<!-- PAGE 03 — Table of Contents -->
+<!-- PAGE 04 — How to Use -->
+<!-- PAGE 05 — Chapter I -->
+...
+<!-- PAGE 16 — Next Steps -->
+```
+
+Common edits before generating the final PDF:
+- **CTA link** on page 16: replace `speakeasyptbr.com` in the button with the real product URL
+- **Cover**: swap between Cover 01 (base) and Cover V3 (with embedded assets) by removing the one you don't want
+- **Page labels** (grey text above each page on screen): these are hidden automatically during print via `display: none`
 
 ---
 
@@ -106,5 +94,6 @@ Your final file `speakeasy_final.pdf` will be ready in the project root.
 |-------|-----|
 | Fonts not loading | Check internet connection — Google Fonts requires it |
 | Background colors missing | Make sure `printBackground: true` is set in the script |
-| PDF page cut off | Check that `margin` is set to `0` on all sides |
+| Pages have white borders | Confirm `@page { margin: 0mm }` is in the HTML CSS |
+| Page content cut off | Check that `page-break-inside: avoid` is set on the affected block |
 | `puppeteer` not found | Run `npm install puppeteer` again inside the project folder |
