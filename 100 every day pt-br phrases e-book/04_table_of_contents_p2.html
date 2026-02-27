@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table of Contents – Page 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #F5F0E8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .page {
+    width: 420px;
+    background: #F5F0E8;
+    border-radius: 24px;
+    overflow: hidden;
+    animation: fadeUp 0.5s ease both;
+    position: relative;
+  }
+
+  /* ── Continuação label no topo ── */
+  .continuation-bar {
+    background: rgba(30, 77, 59, 0.07);
+    padding: 10px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(212,203,187,0.6);
+  }
+
+  .continuation-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7EC8A4;
+  }
+
+  .continuation-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #8FA897;
+    font-style: italic;
+  }
+
+  /* ── Body ── */
+  .body {
+    padding: 20px 32px 36px;
+  }
+
+  /* ── TOC list ── */
+  .toc-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(212,203,187,0.55);
+    animation: fadeUp 0.5s ease both;
+    transition: background 0.18s;
+    border-radius: 6px;
+    cursor: default;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: rgba(168,230,195,0.13); padding-left: 5px; padding-right: 5px; }
+
+  .toc-item:nth-child(1) { animation-delay: 0.08s; }
+  .toc-item:nth-child(2) { animation-delay: 0.13s; }
+  .toc-item:nth-child(3) { animation-delay: 0.18s; }
+  .toc-item:nth-child(4) { animation-delay: 0.23s; }
+  .toc-item:nth-child(5) { animation-delay: 0.28s; }
+
+  .toc-chapter {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7EC8A4;
+    min-width: 72px;
+    flex-shrink: 0;
+  }
+
+  .toc-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .toc-en {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1E4D3B;
+    line-height: 1.25;
+  }
+
+  .toc-pt {
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5px;
+    font-style: italic;
+    color: #8FA897;
+    line-height: 1.2;
+  }
+
+  .toc-dots {
+    flex: 1;
+    border-bottom: 1.5px dotted #C8BFB0;
+    margin: 0 8px 4px;
+    min-width: 12px;
+  }
+
+  .toc-page {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1E4D3B;
+    min-width: 22px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .toc-item.special .toc-chapter {
+    color: #C8BFB0;
+    font-weight: 500;
+  }
+  .toc-item.special .toc-en {
+    color: #5A7265;
+  }
+
+  .toc-divider {
+    height: 1px;
+    background: #D4CBBB;
+    margin: 6px 0;
+  }
+
+  /* ── Page number bottom ── */
+  .page-footer {
+    padding: 0 32px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .page-num {
+    font-size: 11px;
+    color: #B0A898;
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Barra de continuação no lugar do header verde -->
+  <div class="continuation-bar">
+    <span class="continuation-label">Table of Contents</span>
+    <span class="continuation-title">continued</span>
+    <span class="page-num" style="font-family:'Inter',sans-serif;font-size:11px;color:#8FA897;letter-spacing:0.1em;margin-left:auto;padding-left:12px;">04</span>
+  </div>
+
+  <div class="body">
+    <div class="toc-list">
+
+      <!-- itens que "transbordaram" da página 1 viriam aqui -->
+      <!-- exemplo com os itens finais + bonus -->
+
+      <div class="toc-item">
+        <div class="toc-chapter">Ch. IX</div>
+        <div class="toc-text">
+          <span class="toc-en">Food &amp; Drink</span>
+          <span class="toc-pt">Comidas e bebidas</span>
+        </div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">13</div>
+      </div>
+
+      <div class="toc-item">
+        <div class="toc-chapter">Ch. X</div>
+        <div class="toc-text">
+          <span class="toc-en">Transport &amp; Closing</span>
+          <span class="toc-pt">Transporte e encerramento</span>
+        </div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">14</div>
+      </div>
+
+      <div class="toc-divider"></div>
+
+      <div class="toc-item special">
+        <div class="toc-chapter">Bonus</div>
+        <div class="toc-text">
+          <span class="toc-en">Quick Practice Plan (7 days)</span>
+        </div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">15</div>
+      </div>
+
+      <div class="toc-item special">
+        <div class="toc-chapter">+</div>
+        <div class="toc-text">
+          <span class="toc-en">Next Step <span style="font-size:11px;color:#A8E6C3;font-weight:500;">(coming soon)</span></span>
+        </div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">16</div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+</body>
+</html>

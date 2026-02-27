@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter I – Greetings & First Impressions</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F5F0E8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .page {
+    width: 420px;
+    background: #F5F0E8;
+    border-radius: 24px;
+    overflow: hidden;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .header {
+    background: #1E4D3B;
+    padding: 36px 32px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .chapter-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7EC8A4;
+    margin-bottom: 10px;
+  }
+
+  .chapter-title {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+  }
+
+  .chapter-title em {
+    font-style: italic;
+    color: #A8E6C3;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+  }
+
+  .page-num {
+    position: absolute;
+    bottom: 20px; right: 28px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.1em;
+  }
+
+  .body {
+    padding: 28px 32px 36px;
+  }
+
+  .intro {
+    font-size: 13px;
+    color: #6B7B6E;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    border-left: 3px solid #A8E6C3;
+    padding-left: 12px;
+    font-style: italic;
+  }
+
+  .col-headers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #D4CBBB;
+  }
+
+  .col-headers span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1E4D3B;
+  }
+
+  .phrase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .phrase-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(212, 203, 187, 0.5);
+    animation: fadeUp 0.5s ease both;
+    transition: background 0.2s;
+    border-radius: 6px;
+    cursor: default;
+  }
+
+  .phrase-row:hover {
+    background: rgba(168, 230, 195, 0.15);
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .phrase-row:nth-child(1) { animation-delay: 0.1s; }
+  .phrase-row:nth-child(2) { animation-delay: 0.15s; }
+  .phrase-row:nth-child(3) { animation-delay: 0.2s; }
+  .phrase-row:nth-child(4) { animation-delay: 0.25s; }
+  .phrase-row:nth-child(5) { animation-delay: 0.3s; }
+  .phrase-row:nth-child(6) { animation-delay: 0.35s; }
+  .phrase-row:nth-child(7) { animation-delay: 0.4s; }
+  .phrase-row:nth-child(8) { animation-delay: 0.45s; }
+  .phrase-row:nth-child(9) { animation-delay: 0.5s; }
+  .phrase-row:nth-child(10) { animation-delay: 0.55s; }
+
+  .pt {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1E4D3B;
+    line-height: 1.3;
+  }
+
+  .en-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .en {
+    font-size: 13.5px;
+    color: #3D5247;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  .note {
+    font-size: 10.5px;
+    color: #8FA897;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .tip-box {
+    margin-top: 24px;
+    background: #1E4D3B;
+    border-radius: 14px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .tip-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .tip-text {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+  }
+
+  .tip-text strong {
+    color: #A8E6C3;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="header">
+    <div class="chapter-label">Chapter I</div>
+    <h1 class="chapter-title">Greetings &amp;<br><em>First Impressions</em></h1>
+    <p class="subtitle">Your first words in Brazilian Portuguese</p>
+    <div class="page-num">05</div>
+  </div>
+
+  <div class="body">
+    <p class="intro">Brazilians are warm and expressive — a good greeting goes a long way. Learn these and you'll feel at home from day one.</p>
+
+    <div class="col-headers">
+      <span>🇧🇷 Portuguese (PT-BR)</span>
+      <span>🇺🇸 English</span>
+    </div>
+
+    <div class="phrase-list">
+
+      <div class="phrase-row">
+        <div class="pt">Oi!</div>
+        <div class="en-wrap">
+          <span class="en">Hi!</span>
+          <span class="note">Very casual, used among friends</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Olá!</div>
+        <div class="en-wrap">
+          <span class="en">Hello!</span>
+          <span class="note">Neutral, works in any context</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Bom dia!</div>
+        <div class="en-wrap">
+          <span class="en">Good morning!</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Boa tarde!</div>
+        <div class="en-wrap">
+          <span class="en">Good afternoon!</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Boa noite!</div>
+        <div class="en-wrap">
+          <span class="en">Good evening / night</span>
+          <span class="note">Used as both greeting and goodbye at night</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Tudo bem?</div>
+        <div class="en-wrap">
+          <span class="en">How are you?</span>
+          <span class="note">Lit. "All good?" — very common</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Tudo certo?</div>
+        <div class="en-wrap">
+          <span class="en">Everything ok?</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">E você?</div>
+        <div class="en-wrap">
+          <span class="en">And you?</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Prazer em te conhecer!</div>
+        <div class="en-wrap">
+          <span class="en">Nice to meet you!</span>
+        </div>
+      </div>
+
+      <div class="phrase-row">
+        <div class="pt">Com licença.</div>
+        <div class="en-wrap">
+          <span class="en">Excuse me</span>
+          <span class="note">To get attention or pass by someone</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">💡</div>
+      <div class="tip-text">
+        <strong>Quick tip</strong>
+        Brazilians often reply to "Tudo bem?" with "Tudo bem!" — it's both the question and the answer. Think of it like saying "How's it going?" / "Good, good!"
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
