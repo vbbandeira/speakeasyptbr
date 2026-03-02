@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakEasy Portuguese — 100 Everyday PT-BR Phrases</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ════════════════════════════════════════════════════
+   RESET
+════════════════════════════════════════════════════ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ════════════════════════════════════════════════════
+   SCREEN LAYOUT
+════════════════════════════════════════════════════ */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #D8D4CC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 48px 20px;
+}
+
+.page {
+  width: 420px;
+  background: #F5F0E8;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #D4CBBB;
+}
+
+/* ── Header ── */
+.header {
+  background: #1E4D3B;
+  padding: 28px 32px 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.chapter-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #7EC8A4;
+  margin-bottom: 6px;
+}
+.chapter-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+.chapter-subtitle {
+  margin-top: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+.page-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Body ── */
+.body {
+  padding: 24px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Intro ── */
+.intro {
+  font-size: 13px;
+  color: #6B7B6E;
+  line-height: 1.65;
+  border-left: 3px solid #A8E6C3;
+  padding-left: 12px;
+  font-style: italic;
+}
+
+/* ── Tip Box ── */
+.tip-box {
+  background: #1E4D3B;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.tip-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+.tip-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7EC8A4;
+  margin-bottom: 3px;
+}
+.tip-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+.tip-text em { color: #A8E6C3; font-style: normal; font-weight: 500; }
+
+/* ── Phrase table ── */
+.col-headers {
+  display: grid;
+  grid-template-columns: 26px 1fr 1fr;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #D4CBBB;
+}
+.col-headers span {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1E4D3B;
+}
+.col-headers span:first-child { color: #B0A898; }
+.phrase-list { display: flex; flex-direction: column; }
+.phrase-row {
+  display: grid;
+  grid-template-columns: 26px 1fr 1fr;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(212,203,187,0.5);
+}
+.phrase-row:last-child { border-bottom: none; }
+.phrase-num { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; color: #B0A898; padding-top: 2px; }
+.pt { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: #1E4D3B; line-height: 1.3; padding-right: 8px; }
+.en-wrap { display: flex; flex-direction: column; gap: 2px; }
+.en { font-family: 'Inter', sans-serif; font-size: 12.5px; color: #3D5247; line-height: 1.3; }
+.note { font-family: 'Inter', sans-serif; font-size: 10px; color: #8FA897; font-style: italic; line-height: 1.4; }
+
+/* ── TOC ── */
+.continuation-bar {
+  background: rgba(30,77,59,0.07);
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(212,203,187,0.6);
+}
+.continuation-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7EC8A4;
+}
+.toc-list { display: flex; flex-direction: column; }
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(212,203,187,0.55);
+}
+.toc-item:last-child { border-bottom: none; }
+.toc-chapter {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7EC8A4;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+.toc-text { flex: 1; display: flex; flex-direction: column; gap: 1px; }
+.toc-en { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: #1E4D3B; line-height: 1.25; }
+.toc-pt { font-family: 'Inter', sans-serif; font-size: 11px; font-style: italic; color: #8FA897; }
+.toc-dots { flex: 1; border-bottom: 1.5px dotted #C8BFB0; margin: 0 8px 4px; min-width: 12px; }
+.toc-page { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: #1E4D3B; min-width: 22px; text-align: right; }
+.toc-item.special .toc-chapter { color: #C8BFB0; }
+.toc-item.special .toc-en { color: #5A7265; }
+.toc-divider { height: 1px; background: #D4CBBB; margin: 4px 0; }
+
+/* ── How to Use ── */
+.section-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1E4D3B;
+}
+.routine-list { display: flex; flex-direction: column; gap: 7px; }
+.routine-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid #EDE9E0;
+}
+.step-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  background: #1E4D3B;
+  border-radius: 7px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.step-content { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+.step-text { font-family: 'Inter', sans-serif; font-size: 12.5px; color: #3D5247; line-height: 1.5; }
+.step-text strong { font-weight: 500; color: #1E4D3B; }
+.audio-tip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #F0FAF4;
+  border: 1px solid #A8E6C3;
+  border-radius: 7px;
+  padding: 5px 10px;
+}
+.audio-tip-text { font-family: 'Inter', sans-serif; font-size: 11px; color: #2D6B52; line-height: 1.4; }
+.audio-tip-text strong { font-weight: 500; }
+
+/* ── Practice Plan ── */
+.plan-list { display: flex; flex-direction: column; gap: 5px; }
+.plan-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #EDE9E0;
+}
+.plan-card-top { display: flex; align-items: center; gap: 10px; width: 100%; }
+.plan-card.highlight { background: #F0FAF4; border: 1.5px solid #A8E6C3; }
+.day-badge {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: #1E4D3B;
+  border-radius: 7px;
+  padding: 3px 8px;
+  flex-shrink: 0;
+  min-width: 44px;
+  text-align: center;
+}
+.plan-card.highlight .day-badge { background: #2D6B52; }
+.plan-content { flex: 1; }
+.plan-chapter { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: #8FA897; margin-bottom: 1px; }
+.plan-text { font-family: 'Inter', sans-serif; font-size: 12px; color: #3D5247; }
+.plan-text strong { font-weight: 500; color: #1E4D3B; }
+.phrase-count { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; color: #7EC8A4; background: #1E4D3B; border-radius: 20px; padding: 3px 9px; white-space: nowrap; }
+.plan-audio-tip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #F0FAF4;
+  border: 1px solid #A8E6C3;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+.plan-audio-tip span { font-family: 'Inter', sans-serif; font-size: 10.5px; color: #2D6B52; }
+.plan-audio-tip strong { font-weight: 500; }
+
+/* ── Next Steps ── */
+.cta-headline { font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: #1E4D3B; line-height: 1.3; }
+.kit-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #E0DDD5; }
+.kit-card-header { background: #1E4D3B; padding: 15px 18px; display: flex; align-items: center; gap: 12px; }
+.kit-icon { font-size: 22px; flex-shrink: 0; }
+.kit-name { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: #fff; line-height: 1.25; }
+.kit-tagline { font-family: 'Inter', sans-serif; font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.kit-includes { padding: 14px 18px; display: flex; flex-direction: column; gap: 7px; }
+.includes-label { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8FA897; margin-bottom: 3px; }
+.include-item { display: flex; align-items: center; gap: 10px; padding: 9px 11px; background: #F5F0E8; border-radius: 9px; }
+.include-icon { font-size: 15px; flex-shrink: 0; width: 28px; height: 28px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; border: 1px solid #E8E5DC; }
+.include-text { font-family: 'Inter', sans-serif; font-size: 12.5px; color: #3D5247; line-height: 1.4; }
+.include-text strong { font-weight: 500; color: #1E4D3B; }
+.cta-wrap { padding: 0 18px 18px; }
+.cta-btn { display: block; width: 100%; background: #1E4D3B; color: #fff; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; text-align: center; padding: 13px; border-radius: 10px; text-decoration: none; border: none; cursor: pointer; letter-spacing: 0.02em; }
+.cta-sub { text-align: center; font-family: 'Inter', sans-serif; font-size: 11px; color: #8FA897; margin-top: 7px; font-style: italic; }
+
+/* ════════════════════════════════════════
+   PRINT STYLES
+════════════════════════════════════════ */
+@media print {
+
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  @page {
+    size: 420px auto;
+    margin: 0mm;
+  }
+
+  html, body {
+    width: 420px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #F5F0E8 !important;
+    display: block !important;
+    min-height: unset !important;
+  }
+
+  /* Each page breaks onto its own PDF page */
+  .page {
+    width: 420px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    margin: 0 !important;
+  }
+
+  .page:last-of-type { page-break-after: auto; }
+
+  /* Remove box shadows, keep borders */
+  .routine-card, .plan-card { box-shadow: none !important; }
+  .kit-card { box-shadow: none !important; border: 1px solid #D4CBBB !important; }
+  .include-icon { box-shadow: none !important; }
+
+  /* Avoid breaking inside these blocks */
+  .phrase-row, .toc-item, .routine-card, .plan-card,
+  .include-item, .tip-box, .kit-card, .header {
+    page-break-inside: avoid;
+  }
+}
+
+</style>
+</head>
+<body>
+
+
+
+<!-- ============================================================
+     PAGE 01 — COVER 
+============================================================ -->
+<div class="page" style="height:747px; background:#E8E5DC; display:flex; flex-direction:column;">
+  <div style="background:#1E4D3B; padding:20px 28px; display:flex; align-items:center; position:relative; overflow:hidden; flex-shrink:0;">
+    <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    <img src="./assets/Logo-transparent.png" alt="Logo">
+  </div>
+  <div style="flex:1; display:flex; flex-direction:column; align-items:center; padding:28px 28px 0; position:relative; overflow:hidden;">
+    <img src="./assets/Cristo.png" style="width:152px; mix-blend-mode:multiply; margin-bottom:22px;" alt="Cristo Redentor"/>
+    <div style="text-align:center; width:100%; padding:0 16px;">
+      <div style="font-family:'Inter',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.28em; text-transform:uppercase; color:#5A8A72; margin-bottom:7px;">100 every day</div>
+      <div style="font-family:'Poppins',sans-serif; font-size:50px; font-weight:800; color:#1E4D3B; line-height:0.92; letter-spacing:-1px; text-transform:uppercase; margin-bottom:10px;">Brazilian<br>Portuguese<br>Phrases</div>
+      <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#2D6B52; margin-bottom:14px;">You'll actually use</div>
+      <div style="width:44px; height:3px; background:#A8E6C3; border-radius:2px; margin:0 auto 13px;"></div>
+      <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">PT-BR + English translations + Quick practice tips</div>
+      <div style="font-family:'Inter',sans-serif; font-size:11px; color:#4A6B58;">Made for English speakers who want to start speaking today</div>
+    </div>
+    <img src="./assets/Arara.png" style="position:absolute; right:8px; bottom:55px; width:125px; mix-blend-mode:multiply;" alt="Arara"/>
+    <img src="./assets/Palacio.png" style="position:absolute; left:0; bottom:38px; width:115px; mix-blend-mode:multiply; opacity:0.6;" alt="Palácio"/>
+  </div>
+  <div style="background:#1E4D3B; padding:12px 28px; display:flex; align-items:center; justify-content:center; gap:10px; flex-shrink:0;">
+    <span style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45);">@speakeasyptbr</span>
+    <div style="width:3px;height:3px;border-radius:50%;background:#7EC8A4;"></div>
+    <span style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">speakeasyptbr.com</span>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 02 — TABLE OF CONTENTS
+============================================================ -->
+<div class="page">
+  <div class="header">
+    <div><div class="chapter-label">SpeakEasy Portuguese</div><h1 class="chapter-title">Table of<br>Contents</h1></div>
+    <div class="page-num">03</div>
+  </div>
+  <div class="body">
+    <div class="toc-list">
+      <div class="toc-item special"><div class="toc-chapter">Intro</div><div class="toc-text"><span class="toc-en">How to use this phrasebook</span><span class="toc-pt">Como usar este guia</span></div><div class="toc-dots"></div><div class="toc-page">04</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. I</div><div class="toc-text"><span class="toc-en">Greetings &amp; First Impressions</span><span class="toc-pt">Saudações e primeiras impressões</span></div><div class="toc-dots"></div><div class="toc-page">05</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. II</div><div class="toc-text"><span class="toc-en">Polite Essentials</span><span class="toc-pt">Noções básicas de educação</span></div><div class="toc-dots"></div><div class="toc-page">06</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. III</div><div class="toc-text"><span class="toc-en">Introductions &amp; Small Talk</span><span class="toc-pt">Apresentações e conversa informal</span></div><div class="toc-dots"></div><div class="toc-page">07</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. IV</div><div class="toc-text"><span class="toc-en">Understanding &amp; Clarification</span><span class="toc-pt">Compreensão e esclarecimento</span></div><div class="toc-dots"></div><div class="toc-page">08</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. V</div><div class="toc-text"><span class="toc-en">Everyday Needs &amp; Feelings</span><span class="toc-pt">Necessidades e sentimentos</span></div><div class="toc-dots"></div><div class="toc-page">09</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. VI</div><div class="toc-text"><span class="toc-en">Time &amp; Plans</span><span class="toc-pt">Horários e planos</span></div><div class="toc-dots"></div><div class="toc-page">10</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. VII</div><div class="toc-text"><span class="toc-en">Directions &amp; Places</span><span class="toc-pt">Direções e lugares</span></div><div class="toc-dots"></div><div class="toc-page">11</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. VIII</div><div class="toc-text"><span class="toc-en">Shopping &amp; Money</span><span class="toc-pt">Compras e dinheiro</span></div><div class="toc-dots"></div><div class="toc-page">12</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. IX</div><div class="toc-text"><span class="toc-en">Food &amp; Drink</span><span class="toc-pt">Comidas e bebidas</span></div><div class="toc-dots"></div><div class="toc-page">13</div></div>
+      <div class="toc-item"><div class="toc-chapter">Ch. X</div><div class="toc-text"><span class="toc-en">Transport &amp; Closing</span><span class="toc-pt">Transporte e encerramento</span></div><div class="toc-dots"></div><div class="toc-page">14</div></div>
+      <div class="toc-divider"></div>
+      <div class="toc-item special"><div class="toc-chapter">Bonus</div><div class="toc-text"><span class="toc-en">Quick Practice Plan (11 days)</span></div><div class="toc-dots"></div><div class="toc-page">15</div></div>
+      <div class="toc-item special"><div class="toc-chapter">+</div><div class="toc-text"><span class="toc-en">Next Step: Speak Clearly</span></div><div class="toc-dots"></div><div class="toc-page">16</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 03 — HOW TO USE
+============================================================ -->
+<div class="page">
+  <div class="header">
+    <div><div class="chapter-label">SpeakEasy Portuguese</div><h1 class="chapter-title">How to use<br>this phrasebook</h1></div>
+    <div class="page-num">04</div>
+  </div>
+  <div class="body">
+    <p class="intro">This is not meant to be read like a textbook. Use it like a tool — pick a small set of phrases, practice them out loud, and reuse them in real life.</p>
+    <div class="section-label">⏱ The 10-minute routine</div>
+    <div class="routine-list">
+      <div class="routine-card"><div class="step-num">1</div><div class="step-content"><div class="step-text">Choose <strong>10 phrases</strong> from one chapter.</div></div></div>
+      <div class="routine-card"><div class="step-num">2</div><div class="step-content"><div class="step-text">Read them out loud <strong>twice</strong> — slow, then natural speed.</div><div class="audio-tip"><span>🎧</span><div class="audio-tip-text"><strong>Audio Kit:</strong> press play → listen → repeat out loud</div></div></div></div>
+      <div class="routine-card"><div class="step-num">3</div><div class="step-content"><div class="step-text"><strong>Record yourself</strong> on your phone and compare.</div><div class="audio-tip"><span>🎧</span><div class="audio-tip-text"><strong>Audio Kit:</strong> compare your recording with the natural-speed track</div></div></div></div>
+      <div class="routine-card"><div class="step-num">4</div><div class="step-content"><div class="step-text">Swap one word and repeat — e.g., <strong>'Eu quero água'</strong> → <strong>'Eu quero café'</strong>.</div></div></div>
+      <div class="routine-card"><div class="step-num">5</div><div class="step-content"><div class="step-text">Use <strong>at least 1 phrase</strong> today in a message or conversation.</div></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text">If you feel understood but still don't sound natural, it's usually <em>pronunciation + rhythm</em>, not vocabulary. The Audio Kit was made exactly for that.</div></div></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 04 — CHAPTER I
+============================================================ -->
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter I</div><h1 class="chapter-title">Greetings &amp;<br>First Impressions</h1><p class="chapter-subtitle">Saudações e primeiras impressões</p></div><div class="page-num">05</div></div>
+  <div class="body">
+    <p class="intro">Brazilians are warm and expressive — a good greeting goes a long way. Learn these and you'll feel at home from day one.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">1</div><div class="pt">Oi!</div><div class="en-wrap"><span class="en">Hi!</span><span class="note">Very casual — used among friends</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">2</div><div class="pt">Olá!</div><div class="en-wrap"><span class="en">Hello!</span><span class="note">Neutral, works in any context</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">3</div><div class="pt">Bom dia!</div><div class="en-wrap"><span class="en">Good morning!</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">4</div><div class="pt">Boa tarde!</div><div class="en-wrap"><span class="en">Good afternoon!</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">5</div><div class="pt">Boa noite!</div><div class="en-wrap"><span class="en">Good evening / night</span><span class="note">Used as both greeting and goodbye at night</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">6</div><div class="pt">Tudo bem?</div><div class="en-wrap"><span class="en">How are you?</span><span class="note">Lit. "All good?" — very common</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">7</div><div class="pt">Tudo certo?</div><div class="en-wrap"><span class="en">Everything ok?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">8</div><div class="pt">E você?</div><div class="en-wrap"><span class="en">And you?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">9</div><div class="pt">Prazer em te conhecer!</div><div class="en-wrap"><span class="en">Nice to meet you!</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">10</div><div class="pt">Com licença.</div><div class="en-wrap"><span class="en">Excuse me.</span><span class="note">To get attention or pass by someone</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text">Brazilians often reply to "Tudo bem?" with "Tudo bem!" — it's both the question and the answer. Think of it as "How's it going?" / "Good, good!"</div></div></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGES 05–14 — CHAPTERS II–X
+============================================================ -->
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter II</div><h1 class="chapter-title">Polite<br>Essentials</h1><p class="chapter-subtitle">Noções básicas de educação</p></div><div class="page-num">06</div></div>
+  <div class="body">
+    <p class="intro">Politeness goes a long way. Master these and you'll sound more respectful and confident in any situation.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">11</div><div class="pt">Por favor.</div><div class="en-wrap"><span class="en">Please.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">12</div><div class="pt">Obrigado(a)!</div><div class="en-wrap"><span class="en">Thank you!</span><span class="note">Obrigado (m) / Obrigada (f)</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">13</div><div class="pt">Valeu!</div><div class="en-wrap"><span class="en">Thanks!</span><span class="note">Casual — like "cheers!"</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">14</div><div class="pt">De nada.</div><div class="en-wrap"><span class="en">You're welcome.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">15</div><div class="pt">Desculpa.</div><div class="en-wrap"><span class="en">Sorry.</span><span class="note">Casual, everyday use</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">16</div><div class="pt">Desculpe.</div><div class="en-wrap"><span class="en">Excuse me / Sorry.</span><span class="note">More formal version</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">17</div><div class="pt">Sem problemas.</div><div class="en-wrap"><span class="en">No problem.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">18</div><div class="pt">Pode deixar.</div><div class="en-wrap"><span class="en">Sure / Leave it to me.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">19</div><div class="pt">Fica tranquilo(a).</div><div class="en-wrap"><span class="en">Don't worry / Relax.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">20</div><div class="pt">Perdão.</div><div class="en-wrap"><span class="en">Pardon / Sorry.</span><span class="note">More formal, for serious apologies</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text">Match <em>Obrigado/Obrigada</em> to your own gender — it's one of the first things Brazilians notice and always appreciate.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter III</div><h1 class="chapter-title">Introductions &amp;<br>Small Talk</h1><p class="chapter-subtitle">Apresentações e conversa informal</p></div><div class="page-num">07</div></div>
+  <div class="body">
+    <p class="intro">Use these to introduce yourself, keep conversations going, and sound friendly from the very first sentence.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">21</div><div class="pt">Como você se chama?</div><div class="en-wrap"><span class="en">What's your name?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">22</div><div class="pt">Eu me chamo __.</div><div class="en-wrap"><span class="en">My name is __.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">23</div><div class="pt">Você é de onde?</div><div class="en-wrap"><span class="en">Where are you from?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">24</div><div class="pt">Eu sou do/da __.</div><div class="en-wrap"><span class="en">I'm from __.</span><span class="note">Do (m) / Da (f) — ex: da Inglaterra</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">25</div><div class="pt">Eu moro em __.</div><div class="en-wrap"><span class="en">I live in __.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">26</div><div class="pt">Eu estou aprendendo português.</div><div class="en-wrap"><span class="en">I'm learning Portuguese.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">27</div><div class="pt">Você fala inglês?</div><div class="en-wrap"><span class="en">Do you speak English?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">28</div><div class="pt">Um pouco.</div><div class="en-wrap"><span class="en">A little.</span><span class="note">A humble answer that always gets a smile</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">29</div><div class="pt">O que você faz?</div><div class="en-wrap"><span class="en">What do you do?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">30</div><div class="pt">Que legal!</div><div class="en-wrap"><span class="en">How cool! / Nice!</span><span class="note">Very Brazilian — use it often!</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text"><em>"Que legal!"</em> is one of those phrases that instantly makes you sound more natural. Brazilians love enthusiasm — don't hold back.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter IV</div><h1 class="chapter-title">Understanding &amp;<br>Clarification</h1><p class="chapter-subtitle">Compreensão e esclarecimento</p></div><div class="page-num">08</div></div>
+  <div class="body">
+    <p class="intro">The fastest way to improve is to ask for help the right way. These phrases keep you in the conversation — even when you're lost.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">31</div><div class="pt">Eu não entendi.</div><div class="en-wrap"><span class="en">I didn't understand.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">32</div><div class="pt">Pode repetir?</div><div class="en-wrap"><span class="en">Can you repeat?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">33</div><div class="pt">Mais devagar, por favor.</div><div class="en-wrap"><span class="en">Slower, please.</span><span class="note">One of the most useful phrases you'll ever use</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">34</div><div class="pt">Como se fala isso em português?</div><div class="en-wrap"><span class="en">How do you say this in Portuguese?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">35</div><div class="pt">O que significa __?</div><div class="en-wrap"><span class="en">What does __ mean?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">36</div><div class="pt">Como se escreve?</div><div class="en-wrap"><span class="en">How do you spell it?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">37</div><div class="pt">Você pode escrever?</div><div class="en-wrap"><span class="en">Can you write it down?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">38</div><div class="pt">Você pode me ajudar?</div><div class="en-wrap"><span class="en">Can you help me?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">39</div><div class="pt">Qual é a diferença entre __ e __?</div><div class="en-wrap"><span class="en">What's the difference between __ and __?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">40</div><div class="pt">Deixa eu ver…</div><div class="en-wrap"><span class="en">Let me see…</span><span class="note">Buys you thinking time naturally</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text">Saying <em>"Mais devagar, por favor"</em> is not a sign of weakness — it shows you're serious about learning. Native speakers will respect it every time.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter V</div><h1 class="chapter-title">Everyday Needs<br>&amp; Feelings</h1><p class="chapter-subtitle">Necessidades e sentimentos do dia a dia</p></div><div class="page-num">09</div></div>
+  <div class="body">
+    <p class="intro">Food, thirst, feelings, preferences — you'll use these constantly. They're the building blocks of real conversation.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">41</div><div class="pt">Eu preciso de ajuda.</div><div class="en-wrap"><span class="en">I need help.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">42</div><div class="pt">Eu estou com fome.</div><div class="en-wrap"><span class="en">I'm hungry.</span><span class="note">Lit. "I am with hunger"</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">43</div><div class="pt">Eu estou com sede.</div><div class="en-wrap"><span class="en">I'm thirsty.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">44</div><div class="pt">Eu estou cansado(a).</div><div class="en-wrap"><span class="en">I'm tired.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">45</div><div class="pt">Eu estou com sono.</div><div class="en-wrap"><span class="en">I'm sleepy.</span><span class="note">Specifically sleepy — different from cansado</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">46</div><div class="pt">Eu estou bem.</div><div class="en-wrap"><span class="en">I'm fine.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">47</div><div class="pt">Eu não estou bem.</div><div class="en-wrap"><span class="en">I'm not feeling well.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">48</div><div class="pt">Eu gosto disso.</div><div class="en-wrap"><span class="en">I like this.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">49</div><div class="pt">Eu não gosto disso.</div><div class="en-wrap"><span class="en">I don't like this.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">50</div><div class="pt">Eu quero isso.</div><div class="en-wrap"><span class="en">I want this.</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text">In Portuguese, feelings like hunger and thirst use <em>"estar com"</em> — not just "estar". It sounds odd at first, but you'll get used to it fast.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter VI</div><h1 class="chapter-title">Time &amp; Plans</h1><p class="chapter-subtitle">Horários e planos</p></div><div class="page-num">10</div></div>
+  <div class="body">
+    <p class="intro">Scheduling and plans happen every day. These phrases keep things simple and natural when talking about time.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">51</div><div class="pt">Que horas são?</div><div class="en-wrap"><span class="en">What time is it?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">52</div><div class="pt">Agora.</div><div class="en-wrap"><span class="en">Now.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">53</div><div class="pt">Hoje.</div><div class="en-wrap"><span class="en">Today.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">54</div><div class="pt">Amanhã.</div><div class="en-wrap"><span class="en">Tomorrow.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">55</div><div class="pt">Ontem.</div><div class="en-wrap"><span class="en">Yesterday.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">56</div><div class="pt">Mais tarde.</div><div class="en-wrap"><span class="en">Later.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">57</div><div class="pt">Quando?</div><div class="en-wrap"><span class="en">When?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">58</div><div class="pt">Que dia?</div><div class="en-wrap"><span class="en">What day?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">59</div><div class="pt">Eu estou livre.</div><div class="en-wrap"><span class="en">I'm free / available.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">60</div><div class="pt">Vamos combinar!</div><div class="en-wrap"><span class="en">Let's make plans!</span><span class="note">Very common — shows enthusiasm to meet up</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text"><em>"Vamos combinar!"</em> is one of those phrases that sounds very native. Brazilians use it all the time to wrap up plans.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter VII</div><h1 class="chapter-title">Directions<br>&amp; Places</h1><p class="chapter-subtitle">Direções e lugares</p></div><div class="page-num">11</div></div>
+  <div class="body">
+    <p class="intro">Ask and answer basic location questions without stress. These 10 phrases will get you very far.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">61</div><div class="pt">Onde fica…?</div><div class="en-wrap"><span class="en">Where is…?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">62</div><div class="pt">Aqui.</div><div class="en-wrap"><span class="en">Here.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">63</div><div class="pt">Ali.</div><div class="en-wrap"><span class="en">There (nearby).</span><span class="note">Visible or close distance</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">64</div><div class="pt">Lá.</div><div class="en-wrap"><span class="en">There (far).</span><span class="note">Further away, out of sight</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">65</div><div class="pt">Perto.</div><div class="en-wrap"><span class="en">Near.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">66</div><div class="pt">Longe.</div><div class="en-wrap"><span class="en">Far.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">67</div><div class="pt">À direita.</div><div class="en-wrap"><span class="en">To the right.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">68</div><div class="pt">À esquerda.</div><div class="en-wrap"><span class="en">To the left.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">69</div><div class="pt">Em frente.</div><div class="en-wrap"><span class="en">In front (of).</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">70</div><div class="pt">Atrás.</div><div class="en-wrap"><span class="en">Behind.</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text">Brazilians often give directions using landmarks, not street names. Combine <em>"Onde fica…?"</em> with <em>"perto"</em> or <em>"longe"</em> to always get a helpful answer.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter VIII</div><h1 class="chapter-title">Shopping<br>&amp; Money</h1><p class="chapter-subtitle">Compras e dinheiro</p></div><div class="page-num">12</div></div>
+  <div class="body">
+    <p class="intro">From prices to payment, these phrases make everyday purchases easier — and help you sound like a local.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">71</div><div class="pt">Quanto custa?</div><div class="en-wrap"><span class="en">How much does it cost?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">72</div><div class="pt">É caro.</div><div class="en-wrap"><span class="en">It's expensive.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">73</div><div class="pt">É barato.</div><div class="en-wrap"><span class="en">It's cheap.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">74</div><div class="pt">Você tem…?</div><div class="en-wrap"><span class="en">Do you have…?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">75</div><div class="pt">Eu só estou olhando.</div><div class="en-wrap"><span class="en">I'm just looking.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">76</div><div class="pt">Eu vou levar.</div><div class="en-wrap"><span class="en">I'll take it.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">77</div><div class="pt">Pode fazer desconto?</div><div class="en-wrap"><span class="en">Can you do a discount?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">78</div><div class="pt">Pode ser no cartão?</div><div class="en-wrap"><span class="en">Can I pay by card?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">79</div><div class="pt">Você aceita Pix?</div><div class="en-wrap"><span class="en">Do you accept Pix?</span><span class="note">Brazil's instant payment system — used everywhere</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">80</div><div class="pt">Nota fiscal, por favor.</div><div class="en-wrap"><span class="en">Receipt, please.</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text"><em>Pix</em> is Brazil's instant payment system — faster than card, used by almost everyone. Knowing this phrase will genuinely surprise and impress locals.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter IX</div><h1 class="chapter-title">Food &amp; Drink</h1><p class="chapter-subtitle">Comidas e bebidas</p></div><div class="page-num">13</div></div>
+  <div class="body">
+    <p class="intro">Ordering and reacting naturally is a huge confidence boost. These phrases will make you feel at home at any Brazilian table.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">81</div><div class="pt">Eu gostaria de…</div><div class="en-wrap"><span class="en">I'd like…</span><span class="note">Polite — great for restaurants</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">82</div><div class="pt">Eu quero um(a)…</div><div class="en-wrap"><span class="en">I want a…</span><span class="note">More direct but totally normal</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">83</div><div class="pt">Sem __, por favor.</div><div class="en-wrap"><span class="en">Without __, please.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">84</div><div class="pt">Com __, por favor.</div><div class="en-wrap"><span class="en">With __, please.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">85</div><div class="pt">Água, por favor.</div><div class="en-wrap"><span class="en">Water, please.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">86</div><div class="pt">A conta, por favor.</div><div class="en-wrap"><span class="en">The bill, please.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">87</div><div class="pt">Está muito bom!</div><div class="en-wrap"><span class="en">It's really good!</span><span class="note">Say this and the whole table will smile</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">88</div><div class="pt">Você recomenda algo?</div><div class="en-wrap"><span class="en">Do you recommend anything?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">89</div><div class="pt">Eu sou vegetariano(a).</div><div class="en-wrap"><span class="en">I'm vegetarian.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">90</div><div class="pt">Você tem opções sem glúten?</div><div class="en-wrap"><span class="en">Do you have gluten-free options?</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">💡</div><div class="tip-content"><div class="tip-label">Quick tip</div><div class="tip-text">Brazilian food culture is warm and generous. Saying <em>"Está muito bom!"</em> to a host or waiter is one of the easiest ways to connect instantly.</div></div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Chapter X</div><h1 class="chapter-title">Transport<br>&amp; Closing</h1><p class="chapter-subtitle">Transporte e encerramento</p></div><div class="page-num">14</div></div>
+  <div class="body">
+    <p class="intro">Finish conversations politely and handle basic transport situations — the last phrases you'll need to complete the full picture.</p>
+    <div class="col-headers"><span>#</span><span>🇧🇷 PT-BR</span><span>🇺🇸 English</span></div>
+    <div class="phrase-list">
+      <div class="phrase-row"><div class="phrase-num">91</div><div class="pt">Pode me chamar um táxi/Uber?</div><div class="en-wrap"><span class="en">Can you call me a taxi/Uber?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">92</div><div class="pt">Onde é o metrô/ônibus?</div><div class="en-wrap"><span class="en">Where is the subway/bus?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">93</div><div class="pt">Eu estou perdido(a).</div><div class="en-wrap"><span class="en">I'm lost.</span><span class="note">Don't be afraid to say this — Brazilians will help!</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">94</div><div class="pt">Pode me mostrar no mapa?</div><div class="en-wrap"><span class="en">Can you show me on the map?</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">95</div><div class="pt">Eu preciso ir agora.</div><div class="en-wrap"><span class="en">I need to go now.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">96</div><div class="pt">Até logo!</div><div class="en-wrap"><span class="en">See you soon!</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">97</div><div class="pt">Tchau!</div><div class="en-wrap"><span class="en">Bye!</span><span class="note">Very casual — borrowed from Italian "ciao"</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">98</div><div class="pt">Boa sorte!</div><div class="en-wrap"><span class="en">Good luck!</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">99</div><div class="pt">Me manda uma mensagem.</div><div class="en-wrap"><span class="en">Send me a message.</span></div></div>
+      <div class="phrase-row"><div class="phrase-num">100</div><div class="pt">Obrigado(a) pela ajuda!</div><div class="en-wrap"><span class="en">Thanks for the help!</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">🎉</div><div class="tip-content"><div class="tip-label">You made it!</div><div class="tip-text">You now have <em>100 real phrases</em> to use in Brazil. The next step? Make them sound natural — check the practice plan on the next page.</div></div></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 14 — QUICK PRACTICE PLAN
+============================================================ -->
+<div class="page">
+  <div class="header"><div><div class="chapter-label">Bonus</div><h1 class="chapter-title">Quick Practice<br>Plan</h1><p class="chapter-subtitle">11 days · 1 chapter/day · 10 min</p></div><div class="page-num">15</div></div>
+  <div class="body">
+    <p class="intro">One chapter per day. 10 phrases. Out loud. Consistency beats intensity every time.</p>
+    <div class="plan-list">
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 1</div><div class="plan-content"><div class="plan-chapter">Chapter I</div><div class="plan-text"><strong>Greetings</strong> &amp; First Impressions</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 2</div><div class="plan-content"><div class="plan-chapter">Chapter II</div><div class="plan-text"><strong>Polite</strong> Essentials</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 3</div><div class="plan-content"><div class="plan-chapter">Chapter III</div><div class="plan-text"><strong>Introductions</strong> &amp; Small Talk</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 4</div><div class="plan-content"><div class="plan-chapter">Chapter IV</div><div class="plan-text"><strong>Understanding</strong> &amp; Clarification</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 5</div><div class="plan-content"><div class="plan-chapter">Chapter V</div><div class="plan-text"><strong>Everyday Needs</strong> &amp; Feelings</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 6</div><div class="plan-content"><div class="plan-chapter">Chapter VI</div><div class="plan-text"><strong>Time</strong> &amp; Plans</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 7</div><div class="plan-content"><div class="plan-chapter">Chapter VII</div><div class="plan-text"><strong>Directions</strong> &amp; Places</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 8</div><div class="plan-content"><div class="plan-chapter">Chapter VIII</div><div class="plan-text"><strong>Shopping</strong> &amp; Money</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 9</div><div class="plan-content"><div class="plan-chapter">Chapter IX</div><div class="plan-text"><strong>Food</strong> &amp; Drink</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card"><div class="plan-card-top"><div class="day-badge">Day 10</div><div class="plan-content"><div class="plan-chapter">Chapter X</div><div class="plan-text"><strong>Transport</strong> &amp; Closing</div></div><div class="phrase-count">10 phrases</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> listen first, then repeat out loud</span></div></div>
+      <div class="plan-card highlight"><div class="plan-card-top"><div class="day-badge">Day 11</div><div class="plan-content"><div class="plan-chapter">Full review</div><div class="plan-text"><strong>Record yourself</strong> — 60 sec, any phrases</div></div><div class="phrase-count">your pick</div></div><div class="plan-audio-tip"><span>🎧 <strong>Audio Kit:</strong> compare your recording with the natural-speed tracks</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-icon">🎙️</div><div class="tip-content"><div class="tip-label">The next step</div><div class="tip-text">Having the right words is just the start. <em>Pronunciation + rhythm</em> is what makes people actually understand you — and feel confident. See the next page.</div></div></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 15 — NEXT STEPS
+============================================================ -->
+<div class="page">
+  <div class="header"><div><div class="chapter-label">What's next</div><h1 class="chapter-title">Next Step:<br>Speak Clearly</h1><p class="chapter-subtitle">Sound natural in PT-BR</p></div><div class="page-num">16</div></div>
+  <div class="body">
+    <p class="intro">If you liked these phrases, you'll love training the sounds and rhythm that make PT‑BR feel truly natural.</p>
+    <p class="cta-headline">Want to sound more natural<br>in Brazilian Portuguese?</p>
+    <div class="kit-card">
+      <div class="kit-card-header">
+        <div class="kit-icon">🎙️</div>
+        <div><div class="kit-name">SpeakEasy Speaking &amp;<br>Pronunciation Kit</div><div class="kit-tagline">The next step after this phrasebook</div></div>
+      </div>
+      <div class="kit-includes">
+        <div class="includes-label">What's included</div>
+        <div class="include-item"><div class="include-icon">🔊</div><div class="include-text"><strong>Audio drills</strong> — slow + natural speed</div></div>
+        <div class="include-item"><div class="include-icon">📅</div><div class="include-text"><strong>14-day plan</strong> — just 10–15 min/day</div></div>
+        <div class="include-item"><div class="include-icon">🎧</div><div class="include-text"><strong>Mini listening pack</strong> — train your ear</div></div>
+        <div class="include-item"><div class="include-icon">📝</div><div class="include-text"><strong>Bonus real-life scripts</strong> — practice real conversations</div></div>
+      </div>
+      <div class="cta-wrap">
+        <button class="cta-btn">Get the Pronunciation Kit →</button>
+        <p class="cta-sub">speakeasyptbr.com</p>
+      </div>
+    </div>
+    <div class="tip-box">
+      <div class="tip-icon">💡</div>
+      <div class="tip-content">
+        <div class="tip-label">Remember</div>
+        <div class="tip-text">Having the right words is just the start. <em>Pronunciation + rhythm</em> is what makes people actually understand you — and what makes you feel confident speaking.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
