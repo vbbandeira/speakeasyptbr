@@ -8,6 +8,7 @@
 
 - [Node.js](https://nodejs.org) (v18+)
 - [Homebrew](https://brew.sh) (for Mac)
+- **pdftk** (recommended) or **Ghostscript** — for merging pages
 
 ---
 
@@ -28,32 +29,47 @@ speakeasy-ebook/
 ## Setup
 
 **1. Install Node.js** (if not already installed):
+
 ```bash
 brew install node
 ```
 
 **2. Navigate to the project folder:**
+
 ```bash
 cd speakeasy-ebook
 ```
 
 **3. Install Puppeteer:**
+
 ```bash
 npm init -y
 npm install puppeteer
 ```
+
+**4. Install pdftk** (for merging pages — recommended):
+
+```bash
+brew install pdftk-java
+```
+
+> If you prefer Ghostscript: `brew install ghostscript` — the script tries pdftk first, then falls back to gs automatically.
 
 ---
 
 ## Generate the PDF
 
 Run the script:
+
 ```bash
 node generate_pdfs.js
 ```
 
-The script will generate a single `speakeasy_final.pdf` inside the `/pdf` folder.
-Each `.page` block in the HTML becomes its own PDF page automatically via `page-break-after: always`.
+The script will:
+
+1. Load the HTML and measure the **exact pixel height** of each `.page` block via JavaScript
+2. Generate one PDF per page with that exact height — no extra whitespace
+3. Merge all pages into a single `speakeasy_final.pdf` inside `/pdf`
 
 ---
 
@@ -73,15 +89,15 @@ The HTML file is structured with clear comments for easy navigation:
 
 ```
 <!-- PAGE 01 — Cover (base) -->
-<!-- PAGE 02 — Cover V3 (use this one) -->
-<!-- PAGE 03 — Table of Contents -->
-<!-- PAGE 04 — How to Use -->
-<!-- PAGE 05 — Chapter I -->
+<!-- PAGE 02 — Table of Contents -->
+<!-- PAGE 03 — How to Use -->
+<!-- PAGE 04 — Chapter I -->
 ...
 <!-- PAGE 16 — Next Steps -->
 ```
 
 Common edits before generating the final PDF:
+
 - **CTA link** on page 16: replace `speakeasyptbr.com` in the button with the real product URL
 - **Cover**: swap between Cover 01 (base) and Cover V3 (with embedded assets) by removing the one you don't want
 - **Page labels** (grey text above each page on screen): these are hidden automatically during print via `display: none`
@@ -90,10 +106,10 @@ Common edits before generating the final PDF:
 
 ## Troubleshooting
 
-| Issue | Fix |
-|-------|-----|
-| Fonts not loading | Check internet connection — Google Fonts requires it |
-| Background colors missing | Make sure `printBackground: true` is set in the script |
-| Pages have white borders | Confirm `@page { margin: 0mm }` is in the HTML CSS |
-| Page content cut off | Check that `page-break-inside: avoid` is set on the affected block |
-| `puppeteer` not found | Run `npm install puppeteer` again inside the project folder |
+| Issue                     | Fix                                                                |
+| ------------------------- | ------------------------------------------------------------------ |
+| Fonts not loading         | Check internet connection — Google Fonts requires it               |
+| Background colors missing | Make sure `printBackground: true` is set in the script             |
+| Pages have white borders  | Confirm `@page { margin: 0mm }` is in the HTML CSS                 |
+| Page content cut off      | Check that `page-break-inside: avoid` is set on the affected block |
+| `puppeteer` not found     | Run `npm install puppeteer` again inside the project folder        |
