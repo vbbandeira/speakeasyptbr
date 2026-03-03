@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakEasy — Start Here</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #D8D4CC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 48px 20px;
+}
+
+.page-label {
+  width: 420px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: -36px;
+  padding-left: 4px;
+}
+
+.page {
+  width: 420px;
+  background: #F5F0E8;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #D4CBBB;
+}
+
+/* ── Header ── */
+.header {
+  background: #1E4D3B;
+  padding: 28px 32px 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.header::before {
+  content:''; position:absolute;
+  top:-50px; right:-50px;
+  width:160px; height:160px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.05);
+}
+.section-tag {
+  font-family:'Inter',sans-serif;
+  font-size:10px; font-weight:500;
+  letter-spacing:0.15em; text-transform:uppercase;
+  color:#7EC8A4; margin-bottom:6px;
+}
+.header-title {
+  font-family:'Poppins',sans-serif;
+  font-size:22px; font-weight:700;
+  color:#fff; line-height:1.15;
+}
+.header-sub {
+  margin-top:6px;
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  color:rgba(255,255,255,0.5);
+}
+.page-num {
+  font-family:'Inter',sans-serif;
+  font-size:11px; color:rgba(255,255,255,0.3);
+  letter-spacing:0.1em; flex-shrink:0; margin-top:2px;
+}
+
+/* ── Body ── */
+.body {
+  padding: 24px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Intro quote ── */
+.intro {
+  font-size:13px; color:#6B7B6E;
+  line-height:1.65;
+  border-left:3px solid #A8E6C3;
+  padding-left:12px;
+  font-style:italic;
+}
+
+/* ── Tip / highlight box ── */
+.tip-box {
+  background:#1E4D3B;
+  border-radius:12px;
+  padding:14px 16px;
+  display:flex; gap:10px; align-items:flex-start;
+}
+.tip-icon { font-size:15px; flex-shrink:0; margin-top:1px; }
+.tip-label {
+  font-family:'Inter',sans-serif; font-size:10px;
+  font-weight:500; letter-spacing:0.12em;
+  text-transform:uppercase; color:#7EC8A4; margin-bottom:3px;
+}
+.tip-text {
+  font-family:'Inter',sans-serif; font-size:12px;
+  color:rgba(255,255,255,0.85); line-height:1.6;
+}
+.tip-text em { color:#A8E6C3; font-style:normal; font-weight:500; }
+
+/* ── Manifesto list ── */
+.section-title {
+  font-family:'Poppins',sans-serif; font-size:13px;
+  font-weight:600; color:#1E4D3B;
+}
+.manifesto-list {
+  display:flex; flex-direction:column; gap:8px;
+}
+.manifesto-item {
+  background:#fff;
+  border-radius:10px;
+  padding:11px 14px;
+  display:flex; align-items:flex-start; gap:12px;
+  border:1px solid #EDE9E0;
+}
+.manifesto-icon {
+  font-size:18px; flex-shrink:0;
+  width:32px; height:32px;
+  background:#F5F0E8; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid #E0DDD5;
+}
+.manifesto-text {
+  font-family:'Inter',sans-serif; font-size:12.5px;
+  color:#3D5247; line-height:1.5;
+}
+.manifesto-text strong {
+  font-weight:500; color:#1E4D3B;
+  display:block; margin-bottom:1px;
+}
+
+/* ── Outcome list ── */
+.outcome-list {
+  display:flex; flex-direction:column; gap:6px;
+}
+.outcome-item {
+  display:flex; align-items:center; gap:10px;
+  padding:9px 12px;
+  background:#fff; border-radius:9px;
+  border:1px solid #EDE9E0;
+}
+.outcome-check {
+  width:20px; height:20px;
+  background:#1E4D3B; border-radius:6px;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; font-size:11px;
+}
+.outcome-text {
+  font-family:'Inter',sans-serif; font-size:12.5px;
+  color:#3D5247; line-height:1.4;
+}
+
+/* ── Routine steps ── */
+.routine-list { display:flex; flex-direction:column; gap:7px; }
+.routine-card {
+  background:#fff; border-radius:10px;
+  padding:10px 13px;
+  display:flex; align-items:flex-start; gap:12px;
+  border:1px solid #EDE9E0;
+}
+.step-num {
+  font-family:'Poppins',sans-serif; font-size:11px;
+  font-weight:600; color:#fff;
+  background:#1E4D3B; border-radius:7px;
+  width:24px; height:24px;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; margin-top:1px;
+}
+.step-content { flex:1; display:flex; flex-direction:column; gap:4px; }
+.step-text {
+  font-family:'Inter',sans-serif; font-size:12.5px;
+  color:#3D5247; line-height:1.5;
+}
+.step-text strong { font-weight:500; color:#1E4D3B; }
+.step-tag {
+  display:inline-flex; align-items:center; gap:5px;
+  background:#F0FAF4; border:1px solid #A8E6C3;
+  border-radius:6px; padding:3px 9px;
+  font-family:'Inter',sans-serif; font-size:10.5px;
+  color:#2D6B52;
+}
+.step-tag strong { font-weight:500; }
+
+/* ── Audio kit ref ── */
+.audio-cue {
+  display:flex; align-items:center; gap:8px;
+  background:#F0FAF4; border:1px solid #A8E6C3;
+  border-radius:8px; padding:8px 12px;
+}
+.audio-cue-icon {
+  font-size:15px; flex-shrink:0;
+}
+.audio-cue-text {
+  font-family:'Inter',sans-serif; font-size:11.5px;
+  color:#2D6B52; line-height:1.4;
+}
+.audio-cue-text strong { font-weight:600; color:#1E4D3B; }
+.audio-cue-text code {
+  font-family:'Inter',sans-serif; font-size:10.5px;
+  background:#E0F5EA; color:#1E4D3B;
+  border-radius:4px; padding:1px 5px;
+}
+
+/* ── Cover specific ── */
+.cover-page {
+  background:#E8E4DC;
+  display:flex; flex-direction:column;
+  height: 680px;
+}
+.cover-top {
+  background:#1E4D3B; padding:20px 28px;
+  display:flex; align-items:center;
+  position:relative; overflow:hidden; flex-shrink:0;
+}
+.cover-top::before {
+  content:''; position:absolute;
+  top:-40px; right:-40px;
+  width:120px; height:120px;
+  border-radius:50%; background:rgba(255,255,255,0.05);
+}
+.cover-body {
+  flex:1; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:32px 28px;
+  text-align:center;
+}
+.cover-kit-label {
+  font-family:'Inter',sans-serif; font-size:10px;
+  font-weight:600; letter-spacing:0.28em;
+  text-transform:uppercase; color:#5A8A72; margin-bottom:10px;
+}
+.cover-title {
+  font-family:'Poppins',sans-serif; font-size:32px;
+  font-weight:800; color:#1E4D3B; line-height:1.05;
+  letter-spacing:-0.5px; margin-bottom:8px;
+}
+.cover-subtitle {
+  font-family:'Inter',sans-serif; font-size:13px;
+  font-weight:500; color:#2D6B52;
+  letter-spacing:0.08em; margin-bottom:16px;
+}
+.cover-divider {
+  width:44px; height:3px; background:#A8E6C3;
+  border-radius:2px; margin:0 auto 16px;
+}
+.cover-desc {
+  font-family:'Inter',sans-serif; font-size:12px;
+  color:#6B7B6E; line-height:1.6; max-width:300px;
+}
+.cover-badge {
+  margin-top:20px;
+  display:inline-flex; align-items:center; gap:8px;
+  background:#1E4D3B; color:#fff;
+  font-family:'Poppins',sans-serif; font-size:11px;
+  font-weight:600; border-radius:20px;
+  padding:8px 18px; letter-spacing:0.04em;
+}
+.cover-bottom {
+  background:#1E4D3B; padding:12px 28px;
+  display:flex; align-items:center;
+  justify-content:center; gap:10px; flex-shrink:0;
+}
+
+
+@media print {
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  @page { size: 420px auto; margin: 0mm; }
+  html, body {
+    width: 420px !important;
+    margin: 0 !important; padding: 0 !important;
+    background: #F5F0E8 !important;
+    display: block !important;
+    min-height: unset !important;
+  }
+  .page-label { display: none !important; }
+  .page {
+    width: 420px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    margin: 0 !important;
+  }
+  .page:last-of-type { page-break-after: auto; }
+  .card, .audio-cue, .mistake-box, .comparison-table,
+  .tip-box, .drill-box, .phrase-row, .plan-card, .survival-row {
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+
+
+<!-- ============================================================
+     PAGE 01 — WHY PRONUNCIATION MATTERS (Manifesto)
+============================================================ -->
+<div class="page-label">📄 PAGE 02 — Manifesto: Why Pronunciation Matters</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Start Here · 01</div>
+      <h1 class="header-title">Why pronunciation<br>actually matters</h1>
+    </div>
+    <div class="page-num">01</div>
+  </div>
+  <div class="body">
+    <p class="intro">You can have the right words and still not be understood. In Brazilian Portuguese, <em style="color:#1E4D3B; font-style:normal; font-weight:500;">how</em> you say it matters as much as what you say.</p>
+
+    <div class="section-title">The 3 reasons most English speakers plateau</div>
+    <div class="manifesto-list">
+      <div class="manifesto-item">
+        <div class="manifesto-icon">🧠</div>
+        <div class="manifesto-text">
+          <strong>They learn words, not sounds</strong>
+          Vocabulary gets you started. Pronunciation gets you understood — and keeps the conversation going.
+        </div>
+      </div>
+      <div class="manifesto-item">
+        <div class="manifesto-icon">👂</div>
+        <div class="manifesto-text">
+          <strong>They don't train their ear</strong>
+          If you can't hear the difference between "pé" and "pê", you'll never say it right. This kit fixes that.
+        </div>
+      </div>
+      <div class="manifesto-item">
+        <div class="manifesto-icon">🎯</div>
+        <div class="manifesto-text">
+          <strong>They practise silently</strong>
+          Reading doesn't build muscle memory. Speaking out loud — even alone — does. Every drill in this kit is designed to be said, not just read.
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">💡</div>
+      <div>
+        <div class="tip-label">The shift</div>
+        <div class="tip-text">You don't need a perfect accent. You need an <em>intelligible</em> one — where Brazilians understand you the first time, without asking you to repeat.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 02 — WHAT TO EXPECT IN 14 DAYS
+============================================================ -->
+<div class="page-label">📄 PAGE 03 — What to Expect in 14 Days</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Start Here · 02</div>
+      <h1 class="header-title">What to expect<br>in 14 days</h1>
+    </div>
+    <div class="page-num">02</div>
+  </div>
+  <div class="body">
+    <p class="intro">This is not a magic pill. It's a focused sprint. 10 minutes a day, done consistently, will change how you sound in real conversations.</p>
+
+    <div class="section-title">By the end of day 14, you'll be able to:</div>
+    <div class="outcome-list">
+      <div class="outcome-item"><div class="outcome-check">✓</div><div class="outcome-text">Pronounce the <strong>nasal sounds</strong> (ão, em, ãe) without stopping to think</div></div>
+      <div class="outcome-item"><div class="outcome-check">✓</div><div class="outcome-text">Use the <strong>Brazilian R</strong> — including at the start of words and in "rr"</div></div>
+      <div class="outcome-item"><div class="outcome-check">✓</div><div class="outcome-text">Sound natural with <strong>T/D before "i"</strong> (tia, dia, dinheiro)</div></div>
+      <div class="outcome-item"><div class="outcome-check">✓</div><div class="outcome-text">Link words together the way <strong>natives actually speak</strong></div></div>
+      <div class="outcome-item"><div class="outcome-check">✓</div><div class="outcome-text">Say <strong>50 survival phrases</strong> with natural rhythm and stress</div></div>
+      <div class="outcome-item"><div class="outcome-check">✓</div><div class="outcome-text">Hear the difference between sounds you couldn't distinguish before</div></div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">📅</div>
+      <div>
+        <div class="tip-label">Realistic expectation</div>
+        <div class="tip-text">Days 1–7 feel like work. Days 8–14 feel like it's clicking. The goal isn't perfection — it's <em>consistency that compounds</em>.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 03 — HOW TO USE THE KIT
+============================================================ -->
+<div class="page-label">📄 PAGE 04 — How to Use the Kit (with Audio)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Start Here · 03</div>
+      <h1 class="header-title">How to use<br>the kit</h1>
+      <p class="header-sub">10 minutes · every day · out loud</p>
+    </div>
+    <div class="page-num">03</div>
+  </div>
+  <div class="body">
+    <p class="intro">The kit has three parts that work together. Use all three to get the full effect — skipping the audio is like going to the gym and not lifting anything.</p>
+
+    <div class="section-title">Your daily 10-minute routine</div>
+    <div class="routine-list">
+      <div class="routine-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-text"><strong>Open the e-book</strong> to today's chapter. Read the explanation — it takes 2 min.</div>
+        </div>
+      </div>
+      <div class="routine-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-text"><strong>Find the audio file</strong> for today's module. Press play.</div>
+          <div class="step-tag">🎧 <strong>Slow version first</strong> — listen without repeating</div>
+        </div>
+      </div>
+      <div class="routine-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-text"><strong>Repeat out loud</strong> with the audio — slow, then natural speed.</div>
+          <div class="step-tag">🎙️ <strong>Record yourself</strong> on your phone and compare</div>
+        </div>
+      </div>
+      <div class="routine-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-text"><strong>Do the word drill</strong> in the e-book. 5–8 words, out loud, twice.</div>
+        </div>
+      </div>
+      <div class="routine-card">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-text"><strong>Pick 1 phrase</strong> from the chapter. Use it today — in a message or out loud to yourself.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">📁</div>
+      <div class="audio-cue-text">
+        <strong>Audio files are numbered.</strong> Each chapter in the e-book references its files directly — e.g. <code>03_stress-demo_1.mp3</code>. Keep your audio folder open alongside the e-book.
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🔑</div>
+      <div>
+        <div class="tip-label">The one rule</div>
+        <div class="tip-text">Never read a drill silently. If your mouth isn't moving, you're not practising pronunciation — you're just reading. <em>Say every single word out loud.</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE 04 — YOUR KIT AT A GLANCE
+============================================================ -->
+<div class="page-label">📄 PAGE 05 — Your Kit at a Glance</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Start Here · 04</div>
+      <h1 class="header-title">Your kit<br>at a glance</h1>
+    </div>
+    <div class="page-num">04</div>
+  </div>
+  <div class="body">
+    <p class="intro">Everything in this kit has a purpose. Here's what you have and how the pieces fit together.</p>
+
+    <div class="manifesto-list">
+      <div class="manifesto-item">
+        <div class="manifesto-icon">📄</div>
+        <div class="manifesto-text">
+          <strong>This document — Start Here</strong>
+          Read once before you begin. The manifesto, the plan, and the rules.
+        </div>
+      </div>
+      <div class="manifesto-item">
+        <div class="manifesto-icon">📖</div>
+        <div class="manifesto-text">
+          <strong>The main e-book</strong>
+          12 chapters covering every key sound in PT-BR, plus 50 survival phrases, a 14-day plan, and the full audio index.
+        </div>
+      </div>
+      <div class="manifesto-item">
+        <div class="manifesto-icon">🎧</div>
+        <div class="manifesto-text">
+          <strong>80 audio files</strong>
+          Modules 1–8, each with slow + natural speed recordings. Named and numbered to match the e-book exactly.
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#fff; border-radius:12px; border:1px solid #EDE9E0; padding:14px 16px;">
+      <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:10px; letter-spacing:0.04em;">MODULES → AUDIO FILES</div>
+      <div style="display:flex; flex-direction:column; gap:5px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 1</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">03–09 (7 files)</div>
+        </div><div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 2</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">10–19 (10 files)</div>
+        </div><div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 3</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">20–31 (12 files)</div>
+        </div><div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 4</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">32–41 (10 files)</div>
+        </div><div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 5</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">42–49 (8 files)</div>
+        </div><div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 6</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">50–57 (8 files)</div>
+        </div><div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 7</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">58–67 (10 files)</div>
+        </div><div style="display:flex; align-items:center; gap:8px;">
+          <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; color:#7EC8A4; min-width:64px; text-transform:uppercase; letter-spacing:0.06em;">Module 8</div>
+          <div style="flex:1; border-bottom:1px dotted #D4CBBB;"></div>
+          <div style="font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247;">68–80 (13 files)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">✅</div>
+      <div>
+        <div class="tip-label">You're ready</div>
+        <div class="tip-text">Close this document. Open the main e-book at <em>Chapter 1 — The Brazilian Sound Map</em>. Press play on audio file <code style="color:#A8E6C3; background:rgba(168,230,195,0.15); border-radius:3px; padding:1px 5px; font-family:Inter,sans-serif;">03_stress-demo_1.mp3</code>. And say the first word out loud.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
