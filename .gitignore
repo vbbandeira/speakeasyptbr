@@ -1,0 +1,4 @@
+node_modules/
+pdf-generator-from-html/pdf/
+pdf-generator-from-html/package-lock.json
+.claude/

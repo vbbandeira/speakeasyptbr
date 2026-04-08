@@ -370,7 +370,7 @@ body {
   <div style="position:absolute; left:0; top:0; width:100%; height:72px; overflow:hidden; z-index:5;">
     <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
 
-    <!-- LOGO -->
+    <!-- LOGO (com bleed anti-linha) -->
     <div style="
       position:absolute;
       left:50%;
@@ -385,7 +385,15 @@ body {
       <img
         src="./assets/Logo.svg"
         alt="SpeakEasy Portuguese"
-        style="width:100%; height:100%; display:block; object-fit:cover; object-position:center;"
+        style="
+          position:absolute;
+          left:-1px; top:-1px;
+          width:calc(100% + 2px);
+          height:calc(100% + 2px);
+          display:block;
+          object-fit:cover;
+          object-position:center;
+        "
       />
     </div>
   </div>
@@ -401,17 +409,25 @@ body {
     gap:10px;
     z-index:6;
   ">
-    <span style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45);">@speakeasyptbr</span>
+    <a href="https://www.instagram.com/speakeasy.ptbr" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); text-decoration:none;">@speakeasy.ptbr</a>
     <div style="width:3px;height:3px;border-radius:50%;background:#7EC8A4;"></div>
-    <span style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">speakeasyptbr.com</span>
+    <a href="https://speakeasyptbr.com" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; text-decoration:none;">speakeasyptbr.com</a>
   </div>
 
-  <!-- CRISTO -->
+  <!-- CRISTO (com bleed anti-linha) -->
   <div style="position:absolute; left:90px; top:35px; width:239px; height:228px; overflow:hidden; z-index:2; pointer-events:none;">
     <img
       src="./assets/Cristo.svg"
       alt="Cristo Redentor"
-      style="width:100%; height:100%; display:block; object-fit:cover; object-position:center;"
+      style="
+        position:absolute;
+        left:-1px; top:-1px;
+        width:calc(100% + 2px);
+        height:calc(100% + 2px);
+        display:block;
+        object-fit:cover;
+        object-position:center;
+      "
     />
   </div>
 
@@ -447,12 +463,20 @@ body {
     />
   </div>
 
-  <!-- PALÁCIO -->
+  <!-- PALÁCIO (com bleed anti-linha) -->
   <div style="position:absolute; left:-20px; top:560px; width:238.5px; height:157.2px; overflow:hidden; opacity:0.6; z-index:1; pointer-events:none;">
     <img
       src="./assets/Palacio.svg"
       alt="Palácio"
-      style="width:100%; height:100%; display:block; object-fit:cover; object-position:center;"
+      style="
+        position:absolute;
+        left:-1px; top:-1px;
+        width:calc(100% + 2px);
+        height:calc(100% + 2px);
+        display:block;
+        object-fit:cover;
+        object-position:center;
+      "
     />
   </div>
 
@@ -746,8 +770,8 @@ body {
         <div class="include-item"><div class="include-icon">📝</div><div class="include-text"><strong>Bonus real-life scripts</strong> — practice real conversations</div></div>
       </div>
       <div class="cta-wrap">
-        <button class="cta-btn">Get the Pronunciation Kit →</button>
-        <p class="cta-sub">speakeasyptbr.com</p>
+        <a href="https://speakeasyptbr.com" class="cta-btn">Get the Pronunciation Kit →</a>
+        <p class="cta-sub"><a href="https://speakeasyptbr.com" target="_blank" style="color:#8FA897; text-decoration:none;">speakeasyptbr.com</a></p>
       </div>
     </div>
     <div class="tip-box">
