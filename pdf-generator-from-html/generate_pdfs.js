@@ -9,7 +9,7 @@ const EBOOKS = [
   {
     label: '100 Everyday PT-BR Phrases',
     html: path.join(__dirname, '..', '100 every day pt-br phrases e-book', 'speakeasy_ebook_FINAL.html'),
-    output: 'speakeasy_100phrases.pdf',
+    output: 'everyday_brazilian_portuguese.pdf',
   },
   {
     label: 'Speaking & Pronunciation Kit',
