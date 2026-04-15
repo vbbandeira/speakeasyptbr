@@ -1,0 +1,174 @@
+schema_version: v1
+product: speaking-pronunciation-kit
+product_name: Speaking & Pronunciation Kit
+version: v1
+
+voices:
+  narrator_pt:
+    primary: $ELEVENLABS_VOICE_ARI_PT
+    fallback: $ELEVENLABS_VOICE_VALENTINA_PT
+  secondary_pt:
+    primary: $ELEVENLABS_VOICE_BANDEIRA_PT
+    fallback: $ELEVENLABS_VOICE_ANTONIO_PT
+
+audio_format:
+  sample_rate: 44100
+  bitrate_kbps: 256               # Speaking Kit teaches pronunciation — higher quality
+  channels: 1
+  format: mp3
+  normalize_lufs: -16
+
+stations:
+  # ── 8 main modules + Bonus ──
+
+  - id: M01
+    name: Rhythm & Stress
+    mode: human_recording         # ⭐ Arí records — TTS does rhythm poorly
+    prompt_template: 13-human-recording-m01.md
+    drills_count: 8
+    focus_sounds: [stress patterns, syllable timing, rhythm]
+    notes: This module benefits from human intonation. Arí records manually following the agent-generated recording guide.
+    status: pending_scripts
+
+  - id: M02
+    name: Vowels
+    mode: tts
+    prompt_template: 02-speaking-kit-module.md
+    voice: narrator_pt
+    drills_count: 12
+    focus_sounds:
+      - open vs closed vowels (é vs ê, ó vs ô)
+      - minimal pairs (avó/avô, essa/êssa)
+      - reduction of unstressed vowels
+    status: pending_scripts
+
+  - id: M03
+    name: Nasal Sounds
+    mode: tts
+    prompt_template: 02-speaking-kit-module.md
+    voice: narrator_pt
+    drills_count: 12
+    focus_sounds:
+      - ã, em, im, om, um
+      - minimal pairs (mão/mau, pão/pau)
+      - ditongos nasais (ãe, õe, ão)
+    status: pending_scripts
+
+  - id: M04
+    name: R / RR / H
+    mode: tts
+    prompt_template: 02-speaking-kit-module.md
+    voice: narrator_pt
+    drills_count: 10
+    focus_sounds:
+      - initial R ("rato" — glottal/H-like)
+      - intervocalic R ("caro" — tap)
+      - RR ("carro" — glottal/guttural)
+      - carioca vs paulista variations
+    notes: Most confusing sound for English speakers. Critical to nail.
+    status: pending_scripts
+
+  - id: M05
+    name: T and D before i
+    mode: tts
+    prompt_template: 02-speaking-kit-module.md
+    voice: narrator_pt
+    drills_count: 8
+    focus_sounds:
+      - "tia → tchia (palatalization)"
+      - "dia → djia"
+      - minimal pairs (tia/tia-formal, não-palatalizada vs palatalizada)
+    status: pending_scripts
+
+  - id: M06
+    name: LH and NH
+    mode: tts
+    prompt_template: 02-speaking-kit-module.md
+    voice: narrator_pt
+    drills_count: 8
+    focus_sounds:
+      - "lh (filho, mulher)"
+      - "nh (banho, manhã)"
+      - contrast with L + I / N + I (Italian-style misreadings)
+    status: pending_scripts
+
+  - id: M07
+    name: L final & S final
+    mode: tts
+    prompt_template: 02-speaking-kit-module.md
+    voice: narrator_pt
+    drills_count: 8
+    focus_sounds:
+      - final L (Brasil/"Brasiu")
+      - final S (mesmas/"mesmash" in Rio, "mesmas" in SP)
+      - regional variation notes
+    status: pending_scripts
+
+  - id: M08
+    name: Connected Speech
+    mode: human_recording         # ⭐ Arí records — TTS struggles with natural liaisons
+    prompt_template: 14-human-recording-m08.md
+    drills_count: 10
+    focus_sounds:
+      - word linking ("de" + vowel, "para" + vowel)
+      - reductions (você→cê, está→tá, para→pra)
+      - filler integration (né, tipo, sei lá)
+    notes: Requires Arí's natural flow. Agent generates the recording guide only.
+    status: pending_scripts
+
+  - id: BONUS
+    name: 50 Survival Phrases (bonus drills)
+    mode: tts
+    prompt_template: 02-speaking-kit-module.md
+    voice: narrator_pt
+    drills_count: 4
+    focus_sounds: [high-frequency survival phrases, cadence, politeness markers]
+    notes: 4 drill groups covering ~12-13 phrases each, totaling the 50.
+    status: pending_scripts
+
+  # ── Plus tier extras ──
+
+  - id: PLUS-MINIPACK
+    name: Listening Mini-Pack — 10 dialogues
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt  # plus secondary_pt for Speaker B
+    drills_count: 10
+    focus_sounds: [natural conversation, 2 speakers, reductions]
+    notes: 10 dialogues × 2 speeds × 2 voices. Reuses Listening Lab's dialogue sub-prompt.
+    status: pending_scripts
+
+  # ── Pro tier extras ──
+
+  - id: PRO-BOOSTER
+    name: Full Listening Booster — 40 mini-dialogues
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt  # plus secondary_pt
+    drills_count: 40
+    focus_sounds: [A1→B1 progression, varied scenarios, regional touches]
+    status: pending_scripts
+
+bundles:
+  - id: basic
+    price_eur: 29.90
+    includes_stations: [M01, M02, M03, M04, M05, M06, M07, M08, BONUS]
+    includes_extras:
+      - ../../../speaking-pronunciation-kit/pdf/speakeasy_pronunciation_kit.pdf
+      - ../../../speaking-pronunciation-kit/pdf/speakeasy_start_here.pdf
+
+  - id: plus
+    price_eur: 69.90
+    inherits: basic
+    includes_stations: [PLUS-MINIPACK]
+    includes_extras:
+      - ../../../speaking-pronunciation-kit/extras/plus/top-50-mistakes.pdf
+      - ../../../speaking-pronunciation-kit/extras/plus/flashcards-speaking-kit.csv
+
+  - id: pro
+    price_eur: 129.90
+    inherits: plus
+    includes_stations: [PRO-BOOSTER]
+    includes_extras:
+      - ../../../speaking-pronunciation-kit/extras/pro/21-day-fluency-plan.pdf
+      - ../../../speaking-pronunciation-kit/extras/pro/200-speaking-scripts.pdf

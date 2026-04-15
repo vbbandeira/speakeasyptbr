@@ -5,25 +5,30 @@ const { pathToFileURL } = require('url');
 const { PDFDocument } = require('pdf-lib');
 
 // ── All e-books to generate ──
+// Paths are relative to the products repo root (../../ from this script).
+const REPO_ROOT = path.join(__dirname, '..', '..');
+
 const EBOOKS = [
   {
-    label: '100 Everyday PT-BR Phrases',
-    html: path.join(__dirname, '..', '100 every day pt-br phrases e-book', 'speakeasy_ebook_FINAL.html'),
-    output: 'everyday_brazilian_portuguese.pdf',
+    label: 'Everyday Brazilian Portuguese',
+    html: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'speakeasy_ebook_FINAL.html'),
+    output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'everyday_brazilian_portuguese.pdf'),
   },
   {
     label: 'Speaking & Pronunciation Kit',
-    html: path.join(__dirname, '..', 'Speaking & Pronunciation Kit', 'speakeasy_pronunciation_kit.html'),
-    output: 'speakeasy_pronunciation_kit.pdf',
+    html: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'speakeasy_pronunciation_kit.html'),
+    output: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'pdf', 'speakeasy_pronunciation_kit.pdf'),
   },
   {
     label: 'Speaking & Pronunciation Kit — Start Here',
-    html: path.join(__dirname, '..', 'Speaking & Pronunciation Kit', 'speakeasy_start_here.html'),
-    output: 'speakeasy_start_here.pdf',
+    html: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'speakeasy_start_here.html'),
+    output: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'pdf', 'speakeasy_start_here.pdf'),
   },
 ];
 
-const OUTPUT_DIR = path.join(__dirname, 'pdf');
+// Per-ebook output dirs are now next to the source HTML, not in this tool folder.
+// Temp files still live here.
+const TEMP_DIR = path.join(__dirname, 'temp');
 
 async function generateSinglePDF(browser, { label, html, output }) {
   console.log(`\n${'═'.repeat(60)}`);
@@ -35,9 +40,11 @@ async function generateSinglePDF(browser, { label, html, output }) {
     return;
   }
 
-  const outputPath = path.join(OUTPUT_DIR, output);
-  const tempDir = path.join(OUTPUT_DIR, 'temp');
-  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
+  const outputPath = output;
+  const outputDir = path.dirname(outputPath);
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+  if (!fs.existsSync(TEMP_DIR)) fs.mkdirSync(TEMP_DIR, { recursive: true });
+  const tempDir = TEMP_DIR;
 
   console.log('📄 HTML input:', html);
 
@@ -233,8 +240,6 @@ async function generateSinglePDF(browser, { label, html, output }) {
 }
 
 async function generateAll() {
-  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-
   console.log('🚀 Launching browser...');
   const browser = await puppeteer.launch({
     headless: 'new',
@@ -248,15 +253,16 @@ async function generateAll() {
   await browser.close();
 
   // Clean up temp dir
-  const tempDir = path.join(OUTPUT_DIR, 'temp');
-  if (fs.existsSync(tempDir)) {
-    fs.rmSync(tempDir, { recursive: true, force: true });
+  if (fs.existsSync(TEMP_DIR)) {
+    fs.rmSync(TEMP_DIR, { recursive: true, force: true });
   }
 
   console.log(`\n${'═'.repeat(60)}`);
   console.log('✅ All e-books generated!');
-  console.log(`📁 Output folder: ${OUTPUT_DIR}`);
   console.log(`${'═'.repeat(60)}`);
+  for (const ebook of EBOOKS) {
+    console.log(`📄 ${ebook.label}: ${ebook.output}`);
+  }
 }
 
 generateAll().catch((err) => {

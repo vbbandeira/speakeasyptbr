@@ -1,3 +1,24 @@
 node_modules/
 package-lock.json
 .claude/
+
+# Generated audio (large, regeneratable, do not commit)
+**/audio/
+!**/audio-scripts/
+
+# Delivery ZIPs (built from source, do not commit)
+**/delivery/
+
+# Temp dirs from PDF generation
+**/temp/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Env files
+.env
+.env.local

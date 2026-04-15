@@ -1,0 +1,131 @@
+schema_version: v1
+product: everyday-brazilian-portuguese
+product_name: Everyday Brazilian Portuguese
+version: v1
+
+# ─────────────────────────────────────────────────────────────────
+# This product's primary audio path is HUMAN RECORDING by Arí.
+# The Opus agent does NOT generate TTS for the lessons themselves.
+# However, the agent IS responsible for generating RECORDING GUIDES
+# (scripts that Arí will read aloud) for chapters II through X,
+# since she already has Chapter I script, intro, and closing.
+# ─────────────────────────────────────────────────────────────────
+
+voices:
+  narrator_pt:
+    primary: $ELEVENLABS_VOICE_ARI_PT       # used only if Arí cannot record a chapter
+    fallback: $ELEVENLABS_VOICE_VALENTINA_PT
+
+audio_format:
+  sample_rate: 44100
+  bitrate_kbps: 192
+  channels: 1
+  format: mp3
+  normalize_lufs: -16
+
+stations:
+  # ── Already produced (for reference, not re-run) ──
+  - id: INTRO
+    name: Introduction Track (00_introduction.mp3)
+    mode: human_recording
+    notes: Script exists in vault. Arí records.
+    status: done
+
+  - id: CH01
+    name: Chapter I — Greetings & First Impressions (10 lessons)
+    mode: human_recording
+    drills_count: 10
+    notes: Script already generated (see vault audio_script_chapter_01.md).
+    status: done
+
+  # ── To be produced ──
+  - id: CH02
+    name: Chapter II — Polite Essentials (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [polite markers, por favor, com licença, obrigada]
+    status: pending_scripts
+
+  - id: CH03
+    name: Chapter III — Introductions & Small Talk (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [presentations, questions, você vs tu]
+    status: pending_scripts
+
+  - id: CH04
+    name: Chapter IV — Understanding & Clarification (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [não entendi, como assim, pode repetir]
+    status: pending_scripts
+
+  - id: CH05
+    name: Chapter V — Everyday Needs & Feelings (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [estou com fome, preciso, quero, sentimentos]
+    status: pending_scripts
+
+  - id: CH06
+    name: Chapter VI — Time & Plans (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [horas, dias da semana, marcação de compromisso]
+    status: pending_scripts
+
+  - id: CH07
+    name: Chapter VII — Directions & Places (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [onde fica, como chego, à direita à esquerda]
+    status: pending_scripts
+
+  - id: CH08
+    name: Chapter VIII — Shopping & Money (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [quanto custa, aceita cartão, troco]
+    status: pending_scripts
+
+  - id: CH09
+    name: Chapter IX — Food & Drink (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [restaurante, cardápio, pedido]
+    status: pending_scripts
+
+  - id: CH10
+    name: Chapter X — Transport & Closing (10 lessons)
+    mode: human_recording
+    prompt_template: 01-everyday-chapter.md
+    drills_count: 10
+    focus_sounds: [ônibus, metrô, Uber, despedidas]
+    status: pending_scripts
+
+  - id: CLOSING
+    name: Closing Track (99_closing.mp3)
+    mode: human_recording
+    notes: Script exists in vault. Arí records.
+    status: done
+
+bundles:
+  - id: ebook_only
+    price_eur: 9.90
+    includes_stations: []
+    includes_extras:
+      - ../../../everyday-brazilian-portuguese/pdf/everyday_brazilian_portuguese.pdf
+
+  - id: bundle
+    price_eur: 19.90
+    includes_stations: [INTRO, CH01, CH02, CH03, CH04, CH05, CH06, CH07, CH08, CH09, CH10, CLOSING]
+    includes_extras:
+      - ../../../everyday-brazilian-portuguese/pdf/everyday_brazilian_portuguese.pdf

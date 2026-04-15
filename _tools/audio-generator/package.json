@@ -1,0 +1,28 @@
+{
+  "name": "audio-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Audio production pipeline for SpeakEasy Portuguese products. Driven by Claude Code Opus (see AGENT.md).",
+  "type": "module",
+  "scripts": {
+    "test-voice": "tsx src/cli/test-voice.ts",
+    "generate-audio": "tsx src/cli/generate-audio.ts",
+    "post-process": "tsx src/cli/post-process.ts",
+    "package": "tsx src/cli/package.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,154 @@
+schema_version: v1
+product: brazilian-listening-lab
+product_name: Brazilian Listening Lab
+version: v1
+
+voices:
+  narrator_pt:                 # Speaker A (female)
+    primary: $ELEVENLABS_VOICE_ARI_PT
+    fallback: $ELEVENLABS_VOICE_VALENTINA_PT
+  secondary_pt:                # Speaker B (male)
+    primary: $ELEVENLABS_VOICE_BANDEIRA_PT
+    fallback: $ELEVENLABS_VOICE_ANTONIO_PT
+
+audio_format:
+  sample_rate: 44100
+  bitrate_kbps: 192
+  channels: 1
+  format: mp3
+  normalize_lufs: -16
+
+stations:
+  # ── Dialogues D01–D50 (sourced from ../../../brazilian-listening-lab/audio-scripts/dialogues.md) ──
+  # Stations are grouped in 5-packs for batch efficiency and easier QA.
+
+  - id: D01-D05
+    name: Dialogues 1–5 (A1 basics)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    focus_sounds: [simple daily exchanges, Uber, padaria, bar, greetings]
+    notes: Generate scripts for D01–D05 from the existing dialogues.md. 2 speeds per dialogue.
+    status: pending_scripts
+
+  - id: D06-D10
+    name: Dialogues 6–10 (A1)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D11-D15
+    name: Dialogues 11–15 (A1→A2)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D16-D20
+    name: Dialogues 16–20 (A2)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D21-D25
+    name: Dialogues 21–25 (A2)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D26-D30
+    name: Dialogues 26–30 (A2→B1)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D31-D35
+    name: Dialogues 31–35 (B1)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D36-D40
+    name: Dialogues 36–40 (B1)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D41-D45
+    name: Dialogues 41–45 (B1→B2)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  - id: D46-D50
+    name: Dialogues 46–50 (B2)
+    mode: tts
+    prompt_template: 03-listening-lab-dialogue.md
+    voice: narrator_pt
+    drills_count: 5
+    status: pending_scripts
+
+  # ── Pro tier extras ──
+
+  - id: PRO-PODCASTS
+    name: 5 Mini-Podcasts (Pro tier)
+    mode: tts
+    prompt_template: 04-listening-lab-podcast.md
+    voice: narrator_pt
+    drills_count: 5
+    focus_sounds: [cultural monologues, 3-5 min each]
+    notes: Monolog-style, single voice. Themes from vault spec.
+    status: pending_scripts
+
+  - id: PRO-DICTATION
+    name: 5 Dictation Tracks (Pro tier)
+    mode: tts
+    prompt_template: 05-listening-lab-dictation.md
+    voice: narrator_pt
+    drills_count: 5
+    notes: Slower pace, extra pauses between sentences for writing-along.
+    status: pending_scripts
+
+bundles:
+  - id: basic
+    price_eur: 19.90
+    includes_stations: [D01-D05, D06-D10, D11-D15]
+    includes_extras:
+      - ../../../brazilian-listening-lab/pdf/listening-lab-basic-transcripts.pdf
+      - ../../../brazilian-listening-lab/pdf/listening-lab-start-here.pdf
+
+  - id: plus
+    price_eur: 39.90
+    inherits: basic
+    includes_stations: [D16-D20, D21-D25, D26-D30]
+    includes_extras:
+      - ../../../brazilian-listening-lab/pdf/listening-lab-plus-transcripts.pdf
+      - ../../../brazilian-listening-lab/pdf/listening-lab-fill-the-gap.pdf
+      - ../../../brazilian-listening-lab/pdf/top-30-listening-traps.pdf
+      - ../../../brazilian-listening-lab/extras/flashcards-listening-lab.csv
+
+  - id: pro
+    price_eur: 59.90
+    inherits: plus
+    includes_stations: [D31-D35, D36-D40, D41-D45, D46-D50, PRO-PODCASTS, PRO-DICTATION]
+    includes_extras:
+      - ../../../brazilian-listening-lab/pdf/listening-lab-pro-transcripts.pdf
+      - ../../../brazilian-listening-lab/pdf/listening-lab-dictation.pdf
+      - ../../../brazilian-listening-lab/pdf/slang-reductions-guide.pdf
+      - ../../../brazilian-listening-lab/pdf/regional-accents-overview.pdf
