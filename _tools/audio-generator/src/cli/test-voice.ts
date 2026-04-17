@@ -16,11 +16,8 @@ import { GENERATED_DIR } from "@/pipeline/_utils/paths.js";
 const log = createLogger("test-voice");
 
 const VOICE_MAP: Record<string, string | undefined> = {
-  ari_pt: process.env.ELEVENLABS_VOICE_ARI_PT,
-  bandeira_pt: process.env.ELEVENLABS_VOICE_BANDEIRA_PT,
-  valentina_pt: process.env.ELEVENLABS_VOICE_VALENTINA_PT,
-  fernanda_pt: process.env.ELEVENLABS_VOICE_FERNANDA_PT,
-  antonio_pt: process.env.ELEVENLABS_VOICE_ANTONIO_PT,
+  layla_pt: process.env.ELEVENLABS_VOICE_LAYLA_PT,
+  male_pt: process.env.ELEVENLABS_VOICE_MALE_PT,
 };
 
 const args = parseArgs(process.argv.slice(2));

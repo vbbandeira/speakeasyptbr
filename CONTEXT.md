@@ -2,7 +2,7 @@
 
 > **Read this first** when starting a session here. It's the "what's happening right now" snapshot.
 >
-> **Last updated:** 2026-04-15 (by Bandeira via a strategic Claude session)
+> **Last updated:** 2026-04-17 (by Bandeira + Claude session — voice setup done)
 >
 > **Stale after ~1 week of work without update.** If the date above is >1 week old, ask the human for a status update before acting.
 
@@ -10,7 +10,7 @@
 
 ## 🎯 Current focus (in 1 sentence)
 
-Finalizar setup do **audio-generator** tool (ElevenLabs API key + voice cloning Arí + smoke test) pra destravar a produção dos áudios do **Speaking & Pronunciation Kit** — o produto mais crítico no critical path do lançamento.
+Setup do audio-generator **concluído** (API key + 2 vozes + smoke test OK). Próximo passo: **rodar Phase 1 (gerar scripts dos 80 drills)** do Speaking & Pronunciation Kit via production session Opus.
 
 ---
 
@@ -47,19 +47,23 @@ Novo tool em `_tools/audio-generator/`. Arquitetura:
 
 **Pra aprofundar:** leia `_tools/audio-generator/README.md` + `_tools/audio-generator/AGENT.md`.
 
-### Setup humano pendente (bloqueia primeira production session)
+### Setup concluído ✅ (2026-04-17)
 
-- [ ] **API key ElevenLabs** — pegar em https://elevenlabs.io → Profile → API Keys → colocar em `_tools/audio-generator/.env`
-- [ ] **Sample cloning Arí** — Opus agent gera o script (prompt `07-cloning-sample-ari.md`), Arí grava ~1 min, upload no ElevenLabs Voice Lab, salvar voice_id
-- [ ] **Sample cloning Bandeira** — mesmo processo, prompt `08-cloning-sample-bandeira.md`
-- [ ] **Smoke test** — `cd _tools/audio-generator && npm install && npm run test-voice -- --voice ari_pt --text "banho. ba-nho. banho."`
+- [x] **API key ElevenLabs** — configurada em `_tools/audio-generator/.env`
+- [x] **Voz Layla** (feminina, clonada) — `ELEVENLABS_VOICE_LAYLA_PT` — voz principal de todo o conteúdo
+- [x] **Voz Paulo** (masculina) — `ELEVENLABS_VOICE_MALE_PT` — apenas para diálogos com 2 speakers
+- [x] **npm install** — deps instaladas
+- [x] **Smoke test Layla** — OK, 464KB MP3, R/RR/NH/LH testados
+- [x] **Smoke test Paulo** — OK, 56KB MP3
+- [x] **Manifests atualizados** — Arí→Layla, Bandeira→Male, fallbacks removidos
 
-Se o smoke test retornar MP3 audível com pronúncia correta de NH/LH/RR → pipeline validado, pronto pra primeira production session.
+**Próximo passo:** rodar Phase 1 (scripts) via production session Opus. Bootstrap prompt no README do audio-generator.
 
 ---
 
 ## 🔒 Decisões recentes (últimas 2 semanas)
 
+- **2026-04-17:** Setup audio-generator concluído. API key + 2 vozes (Layla clone + Paulo male) + smoke tests OK. Manifests renomeados Arí→Layla, fallbacks removidos. Pronto pra Phase 1.
 - **2026-04-15:** Construído `audio-generator` tool. Linha de produção dirigida por Opus agent + manifests YAML + 18 sub-prompts + 4 CLIs.
 - **2026-04-14:** TTS provider = **ElevenLabs Creator ($22/mo)**. Fish Audio descartado (TTS suporta apenas EN/ZH/JA).
 - **2026-04-13:** Persona mascote do content generator = **Mango** (papagaio), não Tico. Layla fala PT e EN como mesma persona.
@@ -69,8 +73,7 @@ Se o smoke test retornar MP3 audível com pronúncia correta de NH/LH/RR → pip
 
 ## 🚧 Bloqueios externos (não depende de você)
 
-- **Arí gravar sample de cloning** (~1 min de áudio limpo). Depende de ela ter 15 min num momento de calma.
-- **Arí terminar gravação Everyday chapters I + 90 lessons**. Produção em curso, sem ETA travada.
+- **Layla terminar gravação Everyday chapters I + 90 lessons**. Produção em curso, sem ETA travada.
 - **Lemon Squeezy account** — ainda não criado. Criar quando primeiro produto estiver empacotado.
 
 ---

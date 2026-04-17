@@ -5,11 +5,9 @@ version: v1
 
 voices:
   narrator_pt:
-    primary: $ELEVENLABS_VOICE_ARI_PT
-    fallback: $ELEVENLABS_VOICE_VALENTINA_PT
+    primary: $ELEVENLABS_VOICE_LAYLA_PT
   secondary_pt:
-    primary: $ELEVENLABS_VOICE_BANDEIRA_PT
-    fallback: $ELEVENLABS_VOICE_ANTONIO_PT
+    primary: $ELEVENLABS_VOICE_MALE_PT
 
 audio_format:
   sample_rate: 44100

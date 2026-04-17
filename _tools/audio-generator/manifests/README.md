@@ -4,7 +4,7 @@ Source of truth per product. The **Opus agent** (see `../AGENT.md`) reads these 
 
 ## Files
 
-- `everyday.yaml` — Everyday Brazilian Portuguese (102 lessons, narration by Arí)
+- `everyday.yaml` — Everyday Brazilian Portuguese (102 lessons, narration by Layla)
 - `speaking-kit.yaml` — Speaking & Pronunciation Kit (80 drills + extras, TTS + 2 modules human)
 - `listening-lab.yaml` — Brazilian Listening Lab (50 dialogues × 2 speeds, TTS 2-voice)
 
@@ -39,7 +39,7 @@ Top-level keys:
 
 ## Voice refs
 
-`voices.<key>.primary` is an env var reference like `$ELEVENLABS_VOICE_ARI_PT`. The CLI resolves this at runtime.
+`voices.<key>.primary` is an env var reference like `$ELEVENLABS_VOICE_LAYLA_PT`. The CLI resolves this at runtime.
 
 ## Human workflow
 

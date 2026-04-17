@@ -13,8 +13,7 @@ version: v1
 
 voices:
   narrator_pt:
-    primary: $ELEVENLABS_VOICE_ARI_PT       # used only if Arí cannot record a chapter
-    fallback: $ELEVENLABS_VOICE_VALENTINA_PT
+    primary: $ELEVENLABS_VOICE_LAYLA_PT     # used only if Layla cannot record a chapter
 
 audio_format:
   sample_rate: 44100
