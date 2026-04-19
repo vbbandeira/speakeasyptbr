@@ -21,11 +21,11 @@ stations:
 
   - id: M01
     name: Rhythm & Stress
-    mode: human_recording         # ⭐ Arí records — TTS does rhythm poorly
+    mode: human_recording         # ⭐ Layla records — TTS does rhythm poorly
     prompt_template: 13-human-recording-m01.md
     drills_count: 8
     focus_sounds: [stress patterns, syllable timing, rhythm]
-    notes: This module benefits from human intonation. Arí records manually following the agent-generated recording guide.
+    notes: This module benefits from human intonation. Layla records manually following the agent-generated recording guide.
     status: pending_scripts
 
   - id: M02
@@ -104,14 +104,14 @@ stations:
 
   - id: M08
     name: Connected Speech
-    mode: human_recording         # ⭐ Arí records — TTS struggles with natural liaisons
+    mode: human_recording         # ⭐ Layla records — TTS struggles with natural liaisons
     prompt_template: 14-human-recording-m08.md
     drills_count: 10
     focus_sounds:
       - word linking ("de" + vowel, "para" + vowel)
       - reductions (você→cê, está→tá, para→pra)
       - filler integration (né, tipo, sei lá)
-    notes: Requires Arí's natural flow. Agent generates the recording guide only.
+    notes: Requires Layla's natural flow. Agent generates the recording guide only.
     status: pending_scripts
 
   - id: BONUS

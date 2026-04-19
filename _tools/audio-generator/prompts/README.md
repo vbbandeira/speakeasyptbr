@@ -15,20 +15,20 @@ So the agent's effective prompt = base persona + station context + sub-prompt. D
 
 | # | File | Used for |
 |---|---|---|
-| 01 | `01-everyday-chapter.md` | Everyday product — chapters II–X recording guides for Arí |
+| 01 | `01-everyday-chapter.md` | Everyday product — chapters II–X recording guides for Layla |
 | 02 | `02-speaking-kit-module.md` | Speaking Kit — TTS drills M02–M07 + Bonus |
 | 03 | `03-listening-lab-dialogue.md` | Listening Lab dialogues + Speaking Kit Mini-Pack + Booster |
 | 04 | `04-listening-lab-podcast.md` | Listening Lab Pro — 5 mini-podcasts (cultural monologues) |
 | 05 | `05-listening-lab-dictation.md` | Listening Lab Pro — 5 dictation tracks |
 | 06 | `06-tts-formatting-reference.md` | **Not a station prompt** — a reference loaded alongside any TTS generation |
-| 07 | `07-cloning-sample-ari.md` | Script for Arí's ElevenLabs voice cloning sample |
-| 08 | `08-cloning-sample-bandeira.md` | Script for Bandeira's ElevenLabs voice cloning sample |
+| 07 | `07-cloning-sample-layla.md` | Script for Layla's ElevenLabs voice cloning sample |
+| 08 | `08-cloning-sample-male-optional.md` | Script for Bandeira's ElevenLabs voice cloning sample |
 | 09 | `09-speaking-kit-top-50-mistakes.md` | Plus extra — "Top 50 Mistakes for English Speakers" PDF content |
 | 10 | `10-speaking-kit-21-day-plan.md` | Pro extra — 21-day fluency plan |
 | 11 | `11-speaking-scripts-pack.md` | Pro extra — 200 mini speaking scripts |
 | 12 | `12-flashcards-csv.md` | Plus extra (shared) — Anki/Quizlet CSV generator |
-| 13 | `13-human-recording-m01.md` | Speaking Kit M01 — recording guide for Arí (Rhythm & Stress) |
-| 14 | `14-human-recording-m08.md` | Speaking Kit M08 — recording guide for Arí (Connected Speech) |
+| 13 | `13-human-recording-m01.md` | Speaking Kit M01 — recording guide for Layla (Rhythm & Stress) |
+| 14 | `14-human-recording-m08.md` | Speaking Kit M08 — recording guide for Layla (Connected Speech) |
 | 15 | `15-listening-lab-cultural-notes.md` | Plus/Pro extra — cultural context notes per dialogue |
 | 16 | `16-listening-lab-slang-reductions.md` | Pro extra — Brazilian Slang & Reductions Guide |
 | 17 | `17-listening-lab-regional-accents.md` | Pro extra — Regional Accents Overview |

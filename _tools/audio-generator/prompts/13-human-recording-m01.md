@@ -1,14 +1,14 @@
 # 13 — Speaking Kit M01 Recording Guide (Rhythm & Stress)
 
 ## When to use
-Station M01 in `speaking-kit.yaml`. Arí records these drills live, not TTS.
+Station M01 in `speaking-kit.yaml`. Layla records these drills live, not TTS.
 
 ## Variables
 - `drills_count` — 8
 
 ## Persona shift
 
-You are now the **voice director for a pronunciation-teaching kit**. You're writing stage directions for a native speaker (Arí) who will record 8 rhythm-focused drills. Your job: maximum clarity of what she should say, how fast, with what stress, and what to retake if it doesn't land.
+You are now the **voice director for a pronunciation-teaching kit**. You're writing stage directions for a native speaker (Layla) who will record 8 rhythm-focused drills. Your job: maximum clarity of what she should say, how fast, with what stress, and what to retake if it doesn't land.
 
 ## Context you must load
 
@@ -17,7 +17,7 @@ You are now the **voice director for a pronunciation-teaching kit**. You're writ
 
 ## Task
 
-Produce a **recording guide** for Arí. Not a TTS script — a document she reads BEFORE recording, with take-by-take instructions.
+Produce a **recording guide** for Layla. Not a TTS script — a document she reads BEFORE recording, with take-by-take instructions.
 
 Content per drill:
 - The words/phrases she should say
@@ -38,14 +38,14 @@ Module 01 teaches:
 ## Output schema
 
 ```markdown
-# M01 — Rhythm & Stress — Recording Guide (Arí)
+# M01 — Rhythm & Stress — Recording Guide (Layla)
 
 ## Setup
 - Quiet room, phone mic fine (or USB if available)
 - Aim for ~20 min session total
 - 2 takes per drill: SLOW + NATURAL
 
-## Rhythm principle (for Arí)
+## Rhythm principle (for Layla)
 {2–3 sentences reminding her of the distinction: not every syllable equally clipped,
 but clearly marking stress through slight length + pitch, not volume}
 
@@ -85,7 +85,7 @@ SA-bia. Sa-BI-a. Sa-bi-Á.
 
 ## Armadilhas comuns
 
-- **Don't write technical phonetic notation.** Arí is a native speaker, not a linguist. Show stress with caps or bold, not IPA.
+- **Don't write technical phonetic notation.** Layla is a native speaker, not a linguist. Show stress with caps or bold, not IPA.
 - **Don't over-explain rhythm.** A native speaker who hears the slow take once knows what to do.
 - **Don't forget sabia / sábia / sabiá.** That triad is the canonical example for BR-PT stress.
 
@@ -93,4 +93,4 @@ SA-bia. Sa-BI-a. Sa-bi-Á.
 
 Since M01 is `human_recording`, there's no TTS audio phase. Once this guide is generated:
 - `station.status` → `done` (from agent's perspective — audio generation happens outside the tool)
-- Append a note to `run-log.md`: "Recording guide generated. Arí to record manually. Final MP3s go directly into `../../speaking-pronunciation-kit/audio/M01/` once done."
+- Append a note to `run-log.md`: "Recording guide generated. Layla to record manually. Final MP3s go directly into `../../speaking-pronunciation-kit/audio/M01/` once done."

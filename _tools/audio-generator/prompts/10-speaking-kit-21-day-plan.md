@@ -44,7 +44,7 @@ Progression:
 
 ### Self-record block (5 min)
 - Record yourself saying {specific phrases}
-- Compare to Arí's version in drill X
+- Compare to Layla's version in drill X
 - Note any drift
 
 ### Today's reflection (optional, 1 min)

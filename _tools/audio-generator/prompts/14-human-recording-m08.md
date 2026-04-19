@@ -1,14 +1,14 @@
 # 14 — Speaking Kit M08 Recording Guide (Connected Speech)
 
 ## When to use
-Station M08 in `speaking-kit.yaml`. Arí records manually; TTS handles this poorly.
+Station M08 in `speaking-kit.yaml`. Layla records manually; TTS handles this poorly.
 
 ## Variables
 - `drills_count` — 10
 
 ## Persona shift
 
-Same as prompt 13 (voice director). But focus here is **connected speech** — the hardest thing for English speakers AND for TTS. This is why Arí records, not the engine.
+Same as prompt 13 (voice director). But focus here is **connected speech** — the hardest thing for English speakers AND for TTS. This is why Layla records, not the engine.
 
 ## Context you must load
 

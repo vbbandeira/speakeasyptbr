@@ -72,7 +72,7 @@ Both variants use the SAME `voice_id`. Only text and stability change.
 
 ## Technique 5 — Explicit instruction in the voice
 
-The narrator (Arí voice) often gives instructions inline. This helps the listener AND helps the model context-switch.
+The narrator (Layla voice) often gives instructions inline. This helps the listener AND helps the model context-switch.
 
 ```
 Ouça o som "nh". Em português, ele soa como um N suave e úmido, como em:

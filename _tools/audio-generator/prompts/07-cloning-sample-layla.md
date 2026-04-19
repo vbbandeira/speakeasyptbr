@@ -1,7 +1,7 @@
-# 07 — Cloning Sample Script for Arí
+# 07 — Cloning Sample Script for Layla
 
 ## When to use
-One-time task. Generate the script that Arí will READ ALOUD to produce the cloning sample uploaded to ElevenLabs Voice Lab.
+One-time task. Generate the script that Layla will READ ALOUD to produce the cloning sample uploaded to ElevenLabs Voice Lab.
 
 ## Variables
 None. This is a fixed deliverable.
@@ -36,22 +36,22 @@ Required sound coverage (checklist):
 
 ## Output file
 
-`generated/_voice-cloning/cloning-sample-ari.md`
+`generated/_voice-cloning/cloning-sample-layla.md`
 
 (Note: this is in a shared `_voice-cloning/` folder, not tied to any single product.)
 
 ## Output schema
 
 ```markdown
-# Arí — ElevenLabs Voice Cloning Sample Script
+# Layla — ElevenLabs Voice Cloning Sample Script
 
-## Instructions for Arí
+## Instructions for Layla
 
 Read this aloud at a natural, conversational pace. Don't try to be a "voice actress" — just be yourself explaining something to a friend. Record in a quiet room with a decent mic (phone is fine). Aim for 60–90 seconds of clean audio.
 
 If you stumble, just pause and continue — we'll trim awkward moments before uploading. Don't redo unless a whole sentence is unintelligible.
 
-## Sound coverage (pre-recording check for the agent; Arí doesn't need to read this)
+## Sound coverage (pre-recording check for the agent; Layla doesn't need to read this)
 
 {checklist above, confirm all boxes tick off against the script below}
 
@@ -63,10 +63,10 @@ If you stumble, just pause and continue — we'll trim awkward moments before up
 
 1. Save the file as `ari-clone-sample.mp3` or `.wav` in a known location
 2. Go to https://elevenlabs.io → Voice Lab → Add Voice → Instant Voice Clone
-3. Upload the file, name the voice `Arí BR-PT`, let it process
+3. Upload the file, name the voice `Layla BR-PT`, let it process
 4. Copy the generated `voice_id`
-5. Paste into `.env` as `ELEVENLABS_VOICE_ARI_PT=<id>`
-6. Test with: `cd _tools/audio-generator && npm run test-voice -- --voice ari_pt --text "Oi, eu sou a Arí."`
+5. Paste into `.env` as `ELEVENLABS_VOICE_LAYLA_PT=<id>`
+6. Test with: `cd _tools/audio-generator && npm run test-voice -- --voice layla_pt --text "Oi, eu sou a Layla."`
 ```
 
 ## Acceptance criteria
@@ -74,7 +74,7 @@ If you stumble, just pause and continue — we'll trim awkward moments before up
 - [ ] Exactly ONE script, 150–200 words
 - [ ] ALL checklist sounds appear at least twice
 - [ ] Text flows naturally (not a list of target words)
-- [ ] No technical terms or jargon (Arí reads as herself, not as a linguist)
+- [ ] No technical terms or jargon (Layla reads as herself, not as a linguist)
 - [ ] Include sentence variety: at least 2 declarative, 1 interrogative, 1 exclamatory
 
 ## Armadilhas comuns
@@ -82,4 +82,4 @@ If you stumble, just pause and continue — we'll trim awkward moments before up
 - **Don't write a word list.** "Rato, carro, banho, filho, pão" is useless — those sounds need to appear in CONTEXT.
 - **Don't make it about the product.** Stay natural. Story, routine, recipe — anything genuine.
 - **Don't exceed 200 words.** The model doesn't need more.
-- **Don't be cute.** No "Oi, meu amor, aqui é a Arí!" kind of performance. Neutral-warm.
+- **Don't be cute.** No "Oi, meu amor, aqui é a Layla!" kind of performance. Neutral-warm.

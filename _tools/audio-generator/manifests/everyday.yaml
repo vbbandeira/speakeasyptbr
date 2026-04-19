@@ -4,10 +4,10 @@ product_name: Everyday Brazilian Portuguese
 version: v1
 
 # ─────────────────────────────────────────────────────────────────
-# This product's primary audio path is HUMAN RECORDING by Arí.
+# This product's primary audio path is HUMAN RECORDING by Layla.
 # The Opus agent does NOT generate TTS for the lessons themselves.
 # However, the agent IS responsible for generating RECORDING GUIDES
-# (scripts that Arí will read aloud) for chapters II through X,
+# (scripts that Layla will read aloud) for chapters II through X,
 # since she already has Chapter I script, intro, and closing.
 # ─────────────────────────────────────────────────────────────────
 
@@ -27,7 +27,7 @@ stations:
   - id: INTRO
     name: Introduction Track (00_introduction.mp3)
     mode: human_recording
-    notes: Script exists in vault. Arí records.
+    notes: Script exists in vault. Layla records.
     status: done
 
   - id: CH01
@@ -113,7 +113,7 @@ stations:
   - id: CLOSING
     name: Closing Track (99_closing.mp3)
     mode: human_recording
-    notes: Script exists in vault. Arí records.
+    notes: Script exists in vault. Layla records.
     status: done
 
 bundles:

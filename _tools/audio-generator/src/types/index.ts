@@ -25,7 +25,7 @@ export const StationModeSchema = z.enum([
 export type StationMode = z.infer<typeof StationModeSchema>;
 
 export const VoiceKeySchema = z.enum([
-  "narrator_pt", // primary female PT-BR (Arí clone / fallback)
+  "narrator_pt", // primary female PT-BR (Layla clone / fallback)
   "secondary_pt", // male PT-BR (Bandeira clone / Antonio)
   "narrator_en", // for reels use only — not product
 ]);
@@ -63,7 +63,7 @@ export const AudioFormatSchema = z.object({
 export type AudioFormat = z.infer<typeof AudioFormatSchema>;
 
 export const VoiceMappingSchema = z.object({
-  primary: z.string(), // env var reference like $ELEVENLABS_VOICE_ARI_PT
+  primary: z.string(), // env var reference like $ELEVENLABS_VOICE_LAYLA_PT
   fallback: z.string().optional(),
 });
 export type VoiceMapping = z.infer<typeof VoiceMappingSchema>;

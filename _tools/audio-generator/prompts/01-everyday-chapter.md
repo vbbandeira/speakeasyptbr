@@ -32,12 +32,12 @@ If Chapter I script doesn't exist at that path yet, look in the vault for `audio
 
 ## Task
 
-Produce a **recording guide** for Arí (human narrator, native BR-PT). This is NOT a TTS script — it's a readable, performable document for a person. Format:
+Produce a **recording guide** for Layla (human narrator, native BR-PT). This is NOT a TTS script — it's a readable, performable document for a person. Format:
 
 For each lesson (10 total):
 - **The PT-BR target phrase** (the phrase that appears in the PDF phrasebook)
 - **Its English translation** (exact match with the PDF)
-- **Recording template** — what Arí should say (slow version → natural version → "Which means '<English>'!")
+- **Recording template** — what Layla should say (slow version → natural version → "Which means '<English>'!")
 - **Pacing notes** — any pauses, emphasis, tone shifts she should hit
 - **Optional: micro-variations** — if the phrase has a common informal alternative (e.g., "obrigada/valeu"), note it as a Part B
 
@@ -50,7 +50,7 @@ For each lesson (10 total):
 ```markdown
 # {chapter name}
 
-<!-- Recording guide for Arí. Read at natural pace unless marked. -->
+<!-- Recording guide for Layla. Read at natural pace unless marked. -->
 
 ## Chapter focus
 {short paragraph summarizing the phrases covered and the social register}
@@ -107,7 +107,7 @@ Your output is valid if:
 
 - **Don't invent new phrases.** Use only what's in the PDF.
 - **Don't over-slow the slow variant.** Slow ≠ exaggerated. Think "first lesson of the day, clear articulation."
-- **Don't write "dear Arí" or other stage-address-in-the-script.** The recording guide is for her eyes only; the recording itself has no host-mode.
+- **Don't write "dear Layla" or other stage-address-in-the-script.** The recording guide is for her eyes only; the recording itself has no host-mode.
 - **Don't use contractions in the English translation** unless the source PDF does.
 - **Don't preach context in every lesson.** Only where pronunciation/register is genuinely tricky.
 

@@ -2,7 +2,7 @@
 /**
  * test-voice — smoke test. Generate 1 MP3 from 1 voice + 1 phrase.
  *
- *   npm run test-voice -- --voice ari_pt --text "banho. ba-nho. banho."
+ *   npm run test-voice -- --voice layla_pt --text "banho. ba-nho. banho."
  */
 
 import "dotenv/config";
@@ -21,7 +21,7 @@ const VOICE_MAP: Record<string, string | undefined> = {
 };
 
 const args = parseArgs(process.argv.slice(2));
-const voiceKey = requireStr(args, "voice", "(e.g., ari_pt)");
+const voiceKey = requireStr(args, "voice", "(e.g., layla_pt)");
 const text = requireStr(args, "text", '(e.g., "banho. ba-nho. banho.")');
 const stability = Number(optionalStr(args, "stability") ?? "0.5");
 const outDir = path.join(GENERATED_DIR, "_smoke");

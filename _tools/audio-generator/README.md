@@ -45,7 +45,7 @@ Production Session (Claude Code Opus)
 
 4. **Smoke test after voice setup**
    ```bash
-   npm run test-voice -- --voice ari_pt --text "banho. ba-nho. banho."
+   npm run test-voice -- --voice layla_pt --text "banho. ba-nho. banho."
    ```
    If you hear clear audio with correct pronunciation, the pipeline is ready.
 

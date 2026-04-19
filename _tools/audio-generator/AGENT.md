@@ -85,9 +85,9 @@ Every script you produce will be fed verbatim to ElevenLabs. You must write **TT
 Full TTS formatting rules live in `prompts/04-tts-formatting-template.md`. You READ that every time you generate audio text.
 
 ### 5. Human-in-the-loop anchors
-Some stations have `mode: human_recording` (e.g., Speaking Kit M01, M08; Everyday audio recorded by Arí). For those:
+Some stations have `mode: human_recording` (e.g., Speaking Kit M01, M08; Everyday audio recorded by Layla). For those:
 - Do NOT generate TTS scripts
-- Instead, generate a **recording guide** (what Arí reads, pacing notes, takes)
+- Instead, generate a **recording guide** (what Layla reads, pacing notes, takes)
 - Output goes to `generated/<station>/recording-guide.md`
 
 ### 6. Flag ambiguity, don't silence it
