@@ -259,16 +259,31 @@ body {
 }
 
 /* ── Audio index ── */
+.audio-chapter-group {
+  margin-bottom:10px;
+}
+.audio-chapter-header {
+  font-family:'Poppins',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:0.08em; text-transform:uppercase; color:#1E4D3B;
+  background:linear-gradient(90deg, rgba(168,230,195,0.35) 0%, rgba(168,230,195,0.05) 100%);
+  border-left:3px solid #2D6B52; padding:5px 10px; margin:8px 0 4px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+}
+.audio-chapter-header .folder-path {
+  font-family:'Inter',sans-serif; font-size:9px; font-weight:500;
+  color:#4A6B58; letter-spacing:0; text-transform:none;
+  background:rgba(245,240,232,0.7); padding:1px 6px; border-radius:4px;
+}
 .audio-index-row {
-  display:grid; grid-template-columns:120px 1fr;
-  padding:7px 0; border-bottom:1px solid rgba(212,203,187,0.5);
-  gap:8px; align-items:start;
+  display:grid; grid-template-columns:85px 1fr;
+  padding:5px 0 5px 12px; border-bottom:1px solid rgba(212,203,187,0.4);
+  gap:10px; align-items:center;
 }
 .audio-index-row:last-child { border-bottom:none; }
 .audio-filename {
   font-family:'Inter',sans-serif; font-size:10px;
-  color:#1E4D3B; background:#F5F0E8; border-radius:5px;
-  padding:2px 7px; border:1px solid #D4CBBB; word-break:break-all;
+  color:#1E4D3B; background:#F5F0E8; border-radius:4px;
+  padding:2px 7px; border:1px solid #D4CBBB; text-align:center;
 }
 .audio-script {
   font-family:'Inter',sans-serif; font-size:11px; color:#3D5247; line-height:1.4;
@@ -316,7 +331,7 @@ body {
   .page:last-of-type { page-break-after: auto; }
   .card, .audio-cue, .mistake-box, .comparison-row,
   .tip-box, .drill-box, .phrase-row, .plan-card, .survival-row,
-  .word-drill, .toc-item { page-break-inside: avoid; box-shadow: none !important; }
+  .word-drill, .toc-item, .audio-chapter-group { page-break-inside: avoid; box-shadow: none !important; }
 }
 
 </style>
@@ -328,13 +343,13 @@ body {
      PAGE 01 — COVER
 ============================================================ -->
 <div class="page-label">📄 PAGE 01 — Cover</div>
-<div class="page" style="height:747px; background:#E8E5DC; position:relative; overflow:hidden; border:none;">
+<div class="page" style="height:747px; background:linear-gradient(to bottom, #E8E5DC 0, #E8E5DC 703px, #1E4D3B 703px, #1E4D3B 100%); background-color:#1E4D3B; position:relative; overflow:hidden; border:none;">
 
   <!-- HEADER -->
   <div style="position:absolute; left:0; top:0; width:100%; height:72px; overflow:hidden; z-index:5;">
     <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
     <div style="position:absolute; left:50%; top:45%; transform:translate(-50%, -50%); width:210px; height:85px; overflow:hidden; z-index:10; pointer-events:none;">
-      <img src="../100 every day pt-br phrases e-book/assets/Logo.svg" alt="SpeakEasy Portuguese" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+      <img src="../_shared/assets/Logo.svg" alt="SpeakEasy Portuguese" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
     </div>
   </div>
 
@@ -347,7 +362,7 @@ body {
 
   <!-- CRISTO -->
   <div style="position:absolute; left:90px; top:35px; width:239px; height:228px; overflow:hidden; z-index:2; pointer-events:none;">
-    <img src="../100 every day pt-br phrases e-book/assets/Cristo.svg" alt="Cristo Redentor" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+    <img src="../_shared/assets/Cristo.svg" alt="Cristo Redentor" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
   </div>
 
   <!-- TÍTULOS -->
@@ -355,18 +370,18 @@ body {
     <div style="font-family:'Poppins',sans-serif; font-size:44px; font-weight:800; color:#1E4D3B; line-height:0.92; letter-spacing:-1px; text-transform:uppercase; margin-bottom:10px;">Speaking &amp;<br>Pronunciation<br>Kit</div>
     <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#2D6B52; margin-bottom:14px;">Sound like a native in<br>Brazilian Portuguese</div>
     <div style="width:44px; height:3px; background:#A8E6C3; border-radius:2px; margin:0 auto 13px;"></div>
-    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">80 audio files · 12 chapters · 14-day plan</div>
+    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">83 audio files · 8 chapters + bonus · 14-day plan</div>
     <div style="font-family:'Inter',sans-serif; font-size:11px; color:#4A6B58;">The complete guide to PT-BR pronunciation, rhythm &amp; connected speech</div>
   </div>
 
   <!-- ARARA -->
   <div style="position:absolute; left:270px; top:425px; width:232px; height:299px; overflow:hidden; z-index:1; pointer-events:none;">
-    <img src="../100 every day pt-br phrases e-book/assets/Arara.svg" alt="Arara" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+    <img src="../_shared/assets/Arara.svg" alt="Arara" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
   </div>
 
   <!-- PALÁCIO -->
   <div style="position:absolute; left:-20px; top:560px; width:238.5px; height:157.2px; overflow:hidden; opacity:0.6; z-index:1; pointer-events:none;">
-    <img src="../100 every day pt-br phrases e-book/assets/Palacio.svg" alt="Palácio" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+    <img src="../_shared/assets/Palacio.svg" alt="Palácio" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
   </div>
 
 </div>
@@ -443,7 +458,7 @@ body {
         <div class="toc-page">13</div>
       </div><div class="toc-item">
         <div class="toc-ch">Index</div>
-        <div style="flex:1;"><span class="toc-title">Audio Index + Checklist</span><span class="toc-sub">All 80 files mapped</span></div>
+        <div style="flex:1;"><span class="toc-title">Audio Index + Checklist</span><span class="toc-sub">All 83 files mapped</span></div>
         <div class="toc-dots"></div>
         <div class="toc-page">14</div>
       </div>
@@ -568,7 +583,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>03_stress-demo_1.mp3, 04_stress-demo_2.mp3, 05_stress-demo_3.mp3</code> — slow then natural</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_01_Rhythm_Stress/</code> → <code>Lesson_01</code>, <code>Lesson_02</code>, <code>Lesson_03</code> — slow then natural</div>
     </div>
 
     <div class="section-label">The default rule</div>
@@ -584,7 +599,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>06_rhythm_short-phrases.mp3, 07_rhythm_linking_1.mp3</code> — short phrases</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_01_Rhythm_Stress/</code> → <code>Lesson_04</code>, <code>Lesson_05</code> — short phrases</div>
     </div>
     
     <div class="mistake-box">
@@ -653,12 +668,12 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>10_vowels_a.mp3 – 14_vowels_u.mp3</code> — one file per vowel</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/</code> → <code>Lesson_01</code> – <code>Lesson_05</code> — one file per vowel</div>
     </div>
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>15_minimal_pairs_e.mp3, 16_minimal_pairs_o.mp3</code> — avó vs avô — train your ear</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/</code> → <code>Lesson_06</code>, <code>Lesson_07</code> — avó vs avô — train your ear</div>
     </div>
 
     <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">casa</div><div class="drill-word">vida</div><div class="drill-word">tudo</div><div class="drill-word">você</div><div class="drill-word">pé</div><div class="drill-word">avó</div><div class="drill-word">avô</div><div class="drill-word">muito</div></div></div>
@@ -671,7 +686,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>17_vowel_reduction_demo.mp3</code> — para → pra (natural reduction)</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/Lesson_08</code> — para → pra (natural reduction)</div>
     </div>
   </div>
 </div>
@@ -729,7 +744,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>20_nasal_ao.mp3 – 24_nasal_õe.mp3</code> — each nasal sound isolated</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_03_Nasal_Sounds/</code> → <code>Lesson_01</code> – <code>Lesson_05</code> — each nasal sound isolated</div>
     </div>
 
     <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
@@ -743,7 +758,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>25_nasal_phrase_1.mp3 – 27_nasal_phrase_3.mp3</code> — Não tem pão · Eu também não</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_03_Nasal_Sounds/</code> → <code>Lesson_06</code> – <code>Lesson_08</code> — Não tem pão · Eu também não</div>
     </div>
     
     <div class="mistake-box">
@@ -806,12 +821,12 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>32_r_single_vs_rr.mp3</code> — caro vs carro — hear the difference</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/Lesson_01</code> — caro vs carro — hear the difference</div>
     </div>
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>33_r_word_start.mp3, 34_rr_inside.mp3, 35_h_sound.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/</code> → <code>Lesson_02</code>, <code>Lesson_03</code>, <code>Lesson_04</code></div>
     </div>
 
     <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
@@ -825,7 +840,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>36_r_phrase_1.mp3 – 40_r_drill_words.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/</code> → <code>Lesson_05</code> – <code>Lesson_09</code></div>
     </div>
     
     <div class="mistake-box">
@@ -882,12 +897,12 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>42_tia_dia.mp3</code> — tia vs dia — the key pair</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/Lesson_01</code> — tia vs dia — the key pair</div>
     </div>
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>43_ti_di_words.mp3, 44_tch_dj_phrases_1.mp3 – 47_tch_dj_phrases_4.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/</code> → <code>Lesson_02</code> – <code>Lesson_06</code></div>
     </div>
 
     <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
@@ -901,7 +916,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>48_tch_dj_drill.mp3, 49_tch_dj_sentence.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/</code> → <code>Lesson_07</code>, <code>Lesson_08</code></div>
     </div>
     
     <div class="mistake-box">
@@ -952,12 +967,12 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>50_lh_words.mp3, 51_nh_words.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/</code> → <code>Lesson_01</code>, <code>Lesson_02</code></div>
     </div>
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>52_lh_minimal.mp3, 53_nh_minimal.mp3</code> — mala vs malha · cano vs canho</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/</code> → <code>Lesson_03</code>, <code>Lesson_04</code> — mala vs malha · cano vs canho</div>
     </div>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
@@ -979,7 +994,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>54_lh_phrase.mp3 – 57_lh_nh_sentence.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/</code> → <code>Lesson_05</code> – <code>Lesson_08</code></div>
     </div>
     
     <div class="mistake-box">
@@ -1036,12 +1051,12 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>58_l_final_words.mp3, 59_s_final_words.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/</code> → <code>Lesson_01</code>, <code>Lesson_02</code></div>
     </div>
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>60_deixa-eu.mp3, 61_voce_ce.mp3</code> — key reductions in natural speech</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/</code> → <code>Lesson_03</code>, <code>Lesson_04</code> — key reductions in natural speech</div>
     </div>
 
     <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
@@ -1055,7 +1070,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>62_x_sound_words.mp3, 63_phrase_l_s_1.mp3 – 67_sentence_l_s_x.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/</code> → <code>Lesson_05</code> – <code>Lesson_10</code></div>
     </div>
     
     <div class="mistake-box">
@@ -1118,7 +1133,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>07_rhythm_linking_1.mp3, 08_rhythm_linking_2.mp3, 09_rhythm_linking_3.mp3</code></div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_08_Connected_Speech/</code> → <code>Lesson_01</code> – <code>Lesson_05</code></div>
     </div>
 
     <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
@@ -1132,7 +1147,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>68_survival_1.mp3 – 80_survival_13.mp3</code> — full survival phrases at natural speed</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Bonus_50_Survival_Phrases/</code> → <code>Phrase_01</code> – <code>Phrase_13</code> — full survival phrases at natural speed</div>
     </div>
     
     <div class="tip-box">
@@ -1163,7 +1178,7 @@ body {
     
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>68_survival_1.mp3 – 80_survival_13.mp3</code> — key phrases at slow + natural speed</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Bonus_50_Survival_Phrases/</code> → <code>Phrase_01</code> – <code>Phrase_13</code> — key phrases at slow + natural speed</div>
     </div>
   </div>
 </div>
@@ -1172,10 +1187,10 @@ body {
 <!-- ============================================================ BONUS: 50 SURVIVAL PHRASES P2 ============================================================ -->
 <div class="page-label">📄 PAGE 13 — Bonus: 50 Survival Phrases (p.2)</div>
 <div class="page">
-  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(212,203,187,0.6);">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
     <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">50 Survival Phrases</span>
     <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; font-style:italic;">continued · Part 2</span>
-    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; letter-spacing:0.1em; margin-left:auto; padding-left:12px;">13</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; letter-spacing:0.1em; margin-left:auto;">13</span>
   </div>
   <div class="body">
     <div class="survival-list">
@@ -1209,62 +1224,62 @@ body {
         <div class="plan-card-top">
           <div class="day-badge">Day 1</div>
           <div class="plan-content">
-            <div class="plan-module">Module 1</div>
+            <div class="plan-module">Chapter 1</div>
             <div class="plan-text"><strong>Rhythm</strong> — stress + short phrases</div>
           </div>
           <div class="audio-badge">7 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>03–09</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch1 · Lessons 01–07</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 2</div>
           <div class="plan-content">
-            <div class="plan-module">Module 1 review</div>
+            <div class="plan-module">Chapter 1 review</div>
             <div class="plan-text">Record yourself saying 5 phrases</div>
           </div>
           <div class="audio-badge">review</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>03–09</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch1 · Lessons 01–07</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 3</div>
           <div class="plan-content">
-            <div class="plan-module">Module 2</div>
+            <div class="plan-module">Chapter 2</div>
             <div class="plan-text"><strong>Vowels</strong> — all 5 + open/closed</div>
           </div>
           <div class="audio-badge">10 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>10–19</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch2 · Lessons 01–10</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 4</div>
           <div class="plan-content">
-            <div class="plan-module">Module 2 review</div>
+            <div class="plan-module">Chapter 2 review</div>
             <div class="plan-text">Minimal pairs: avó / avô</div>
           </div>
           <div class="audio-badge">review</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>15–16</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch2 · Lessons 06–07</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 5</div>
           <div class="plan-content">
-            <div class="plan-module">Module 3</div>
+            <div class="plan-module">Chapter 3</div>
             <div class="plan-text"><strong>Nasal sounds</strong> — ão, em, ãe, õe</div>
           </div>
           <div class="audio-badge">12 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>20–31</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch3 · Lessons 01–12</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 6</div>
           <div class="plan-content">
-            <div class="plan-module">Module 3 review</div>
+            <div class="plan-module">Chapter 3 review</div>
             <div class="plan-text">3 nasal phrases at natural speed</div>
           </div>
           <div class="audio-badge">review</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>25–27</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch3 · Lessons 06–08</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 7</div>
@@ -1279,52 +1294,52 @@ body {
         <div class="plan-card-top">
           <div class="day-badge">Day 8</div>
           <div class="plan-content">
-            <div class="plan-module">Module 4</div>
+            <div class="plan-module">Chapter 4</div>
             <div class="plan-text"><strong>R / RR / H</strong> — the guttural sound</div>
           </div>
           <div class="audio-badge">10 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>32–41</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch4 · Lessons 01–10</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 9</div>
           <div class="plan-content">
-            <div class="plan-module">Module 5</div>
+            <div class="plan-module">Chapter 5</div>
             <div class="plan-text"><strong>T/D before i</strong> — tia/dia drill</div>
           </div>
           <div class="audio-badge">8 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>42–49</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch5 · Lessons 01–08</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 10</div>
           <div class="plan-content">
-            <div class="plan-module">Module 6</div>
+            <div class="plan-module">Chapter 6</div>
             <div class="plan-text"><strong>LH / NH</strong> — filho, manhã</div>
           </div>
           <div class="audio-badge">8 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>50–57</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch6 · Lessons 01–08</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 11</div>
           <div class="plan-content">
-            <div class="plan-module">Module 7</div>
-            <div class="plan-text"><strong>L final + S final</strong> + você→cê</div>
+            <div class="plan-module">Chapters 7 + 8</div>
+            <div class="plan-text"><strong>L/S final</strong> + <strong>Connected speech</strong></div>
           </div>
-          <div class="audio-badge">10 files</div>
+          <div class="audio-badge">15 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>58–67</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch7 · L01–10 + Ch8 · L01–05</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 12</div>
           <div class="plan-content">
-            <div class="plan-module">Module 8</div>
+            <div class="plan-module">Bonus</div>
             <div class="plan-text"><strong>Survival phrases</strong> — all 13 audios</div>
           </div>
           <div class="audio-badge">13 files</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>68–80</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Bonus · Phrase 01–13</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 13</div>
@@ -1358,15 +1373,68 @@ body {
   <div class="header">
     <div>
       <div class="section-tag">Audio Index</div>
-      <h1 class="header-title">All 80 Files</h1>
-      <p class='header-sub'>Modules 1–4 · files 03–41</p>
+      <h1 class="header-title">All 83 Files</h1>
+      <p class='header-sub'>Chapters 1–4 · organized by folder</p>
     </div>
     <div class="page-num">15</div>
   </div>
   <div class="body">
-    <div style="display:flex; flex-direction:column; gap:0;">
-      <div class="audio-index-row"><div class="audio-filename">03_stress-demo_1</div><div class="audio-script">ca-FÉ… café… café…</div></div><div class="audio-index-row"><div class="audio-filename">04_stress-demo_2</div><div class="audio-script">ho-TEL… hotel… hotel…</div></div><div class="audio-index-row"><div class="audio-filename">05_stress-demo_3</div><div class="audio-script">Bra-SIL… Brasil… Brasil…</div></div><div class="audio-index-row"><div class="audio-filename">06_rhythm_short-phrases</div><div class="audio-script">Tudo bem?… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">07_rhythm_linking_1</div><div class="audio-script">Como é que… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">08_rhythm_linking_2</div><div class="audio-script">Deixa eu ver… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">09_rhythm_linking_3</div><div class="audio-script">Você tá bem? → Cê tá bem?</div></div><div class="audio-index-row"><div class="audio-filename">10_vowels_a</div><div class="audio-script">a… a… / casa… fala…</div></div><div class="audio-index-row"><div class="audio-filename">11_vowels_e_open-close</div><div class="audio-script">é… ê… / pé… você…</div></div><div class="audio-index-row"><div class="audio-filename">12_vowels_i</div><div class="audio-script">i… / vida… lindo…</div></div><div class="audio-index-row"><div class="audio-filename">13_vowels_o_open-close</div><div class="audio-script">ó… ô… / avó… avô…</div></div><div class="audio-index-row"><div class="audio-filename">14_vowels_u</div><div class="audio-script">u… / tudo… muito…</div></div><div class="audio-index-row"><div class="audio-filename">15_minimal_pairs_e</div><div class="audio-script">avó… avô… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">16_minimal_pairs_o</div><div class="audio-script">pode… pôde…</div></div><div class="audio-index-row"><div class="audio-filename">17_vowel_reduction_demo</div><div class="audio-script">para… pra… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">18_common_words_vowels</div><div class="audio-script">não… sim… também… agora…</div></div><div class="audio-index-row"><div class="audio-filename">19_sentence_vowels</div><div class="audio-script">Eu tô com fome. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">20_nasal_ao</div><div class="audio-script">ão… / não… pão… mão…</div></div><div class="audio-index-row"><div class="audio-filename">21_nasal_em_en</div><div class="audio-script">em… / bem… tem… vem…</div></div><div class="audio-index-row"><div class="audio-filename">22_nasal_om_on</div><div class="audio-script">om… / bom… som…</div></div><div class="audio-index-row"><div class="audio-filename">23_nasal_ã</div><div class="audio-script">ã… / irmã… amanhã…</div></div><div class="audio-index-row"><div class="audio-filename">24_nasal_õe</div><div class="audio-script">ões… / limões… aviões…</div></div><div class="audio-index-row"><div class="audio-filename">25_nasal_phrase_1</div><div class="audio-script">Não tem pão. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">26_nasal_phrase_2</div><div class="audio-script">Eu também não. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">27_nasal_phrase_3</div><div class="audio-script">Tá tudo bem então. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">28_nasal_minimal_1</div><div class="audio-script">mau… mão…</div></div><div class="audio-index-row"><div class="audio-filename">29_nasal_minimal_2</div><div class="audio-script">sim… sem…</div></div><div class="audio-index-row"><div class="audio-filename">30_nasal_minimal_3</div><div class="audio-script">bom… bom… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">31_nasal_sentence</div><div class="audio-script">Eu não entendi. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">32_r_single_vs_rr</div><div class="audio-script">caro… carro… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">33_r_word_start</div><div class="audio-script">Rio… rua… rápido…</div></div><div class="audio-index-row"><div class="audio-filename">34_rr_inside</div><div class="audio-script">correr… carro… cachorro…</div></div><div class="audio-index-row"><div class="audio-filename">35_h_sound</div><div class="audio-script">hoje… hotel… humano…</div></div><div class="audio-index-row"><div class="audio-filename">36_r_phrase_1</div><div class="audio-script">Eu quero um carro. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">37_r_phrase_2</div><div class="audio-script">Que horror! (natural)</div></div><div class="audio-index-row"><div class="audio-filename">38_r_phrase_3</div><div class="audio-script">Vamos pro Rio. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">39_r_phrase_4</div><div class="audio-script">Corre, corre! (natural)</div></div><div class="audio-index-row"><div class="audio-filename">40_r_drill_words</div><div class="audio-script">barato… carro… arroz… correr…</div></div><div class="audio-index-row"><div class="audio-filename">41_r_sentence</div><div class="audio-script">Eu moro aqui. (natural)</div></div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 1 · Rhythm &amp; Stress</span><span class="folder-path">Chapter_01_Rhythm_Stress/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">ca-FÉ… café… café… (stress demo)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">ho-TEL… hotel… hotel…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Bra-SIL… Brasil… Brasil…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Tudo bem?… (natural, short phrases)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Como é que… (natural linking)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Deixa eu ver… (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Você tá bem? → Cê tá bem?</div></div>
     </div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 2 · Vowels</span><span class="folder-path">Chapter_02_Vowels/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">a… / casa… fala…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">é… ê… / pé… você… (open vs closed)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">i… / vida… lindo…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">ó… ô… / avó… avô… (open vs closed)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">u… / tudo… muito…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">avó… avô… (minimal pair E)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">pode… pôde… (minimal pair O)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">para… pra… (vowel reduction)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">não… sim… também… agora…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">Eu tô com fome. (natural)</div></div>
+    </div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 3 · Nasal Sounds</span><span class="folder-path">Chapter_03_Nasal_Sounds/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">ão… / não… pão… mão…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">em… / bem… tem… vem…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">om… / bom… som…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">ã… / irmã… amanhã…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">ões… / limões… aviões…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Não tem pão. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Eu também não. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Tá tudo bem então. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">mau… mão… (minimal pair)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">sim… sem… (minimal pair)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_11</div><div class="audio-script">bom… bom… (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_12</div><div class="audio-script">Eu não entendi. (natural)</div></div>
+    </div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 4 · R / RR / H</span><span class="folder-path">Chapter_04_R_RR_H/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">caro… carro… (single vs RR)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Rio… rua… rápido… (R at word start)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">correr… carro… cachorro… (RR inside)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">hoje… hotel… humano… (H sound)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Eu quero um carro. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Que horror! (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Vamos pro Rio. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Corre, corre! (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">barato… carro… arroz… correr… (drill)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">Eu moro aqui. (natural)</div></div>
+    </div>
+
   </div>
 </div>
 
@@ -1374,19 +1442,80 @@ body {
 <!-- ============================================================ AUDIO INDEX P2 ============================================================ -->
 <div class="page-label">📄 PAGE 16 — Audio Index (p.2)</div>
 <div class="page">
-  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(212,203,187,0.6);">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
     <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Audio Index</span>
-    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; font-style:italic;">continued · Modules 5–8 · files 42–80</span>
-    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto; padding-left:12px;">16</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; font-style:italic;">continued · Chapters 5–8 + Bonus</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">16</span>
   </div>
   <div class="body">
-    <div style="display:flex; flex-direction:column; gap:0;">
-      <div class="audio-index-row"><div class="audio-filename">42_tia_dia</div><div class="audio-script">tia… dia… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">43_ti_di_words</div><div class="audio-script">tinha… dia… dinheiro… tipo…</div></div><div class="audio-index-row"><div class="audio-filename">44_tch_dj_phrases_1</div><div class="audio-script">Bom dia! (natural)</div></div><div class="audio-index-row"><div class="audio-filename">45_tch_dj_phrases_2</div><div class="audio-script">Que difícil… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">46_tch_dj_phrases_3</div><div class="audio-script">Eu tinha dinheiro. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">47_tch_dj_phrases_4</div><div class="audio-script">Que tipo? (natural)</div></div><div class="audio-index-row"><div class="audio-filename">48_tch_dj_drill</div><div class="audio-script">dia… dinheiro… difícil… tipo…</div></div><div class="audio-index-row"><div class="audio-filename">49_tch_dj_sentence</div><div class="audio-script">Hoje é dia vinte. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">50_lh_words</div><div class="audio-script">filho… velho… trabalho… mulher…</div></div><div class="audio-index-row"><div class="audio-filename">51_nh_words</div><div class="audio-script">banho… manhã… vinho… dinheiro…</div></div><div class="audio-index-row"><div class="audio-filename">52_lh_minimal</div><div class="audio-script">mala… malha…</div></div><div class="audio-index-row"><div class="audio-filename">53_nh_minimal</div><div class="audio-script">cano… canho… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">54_lh_phrase</div><div class="audio-script">Minha mulher trabalha. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">55_nh_phrase</div><div class="audio-script">Eu quero banho. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">56_lh_nh_drill</div><div class="audio-script">melhor… senhor… mulher… filho…</div></div><div class="audio-index-row"><div class="audio-filename">57_lh_nh_sentence</div><div class="audio-script">Meu filho tá melhor. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">58_l_final_words</div><div class="audio-script">Brasil… mal… sol… legal…</div></div><div class="audio-index-row"><div class="audio-filename">59_s_final_words</div><div class="audio-script">mais… dois… três… vocês…</div></div><div class="audio-index-row"><div class="audio-filename">60_deixa-eu</div><div class="audio-script">Deixa eu ver… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">61_voce_ce</div><div class="audio-script">você… cê… (natural)</div></div><div class="audio-index-row"><div class="audio-filename">62_x_sound_words</div><div class="audio-script">xícara… mexer… peixe…</div></div><div class="audio-index-row"><div class="audio-filename">63_phrase_l_s_1</div><div class="audio-script">Mais tarde. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">64_phrase_l_s_2</div><div class="audio-script">Depois eu te falo. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">65_phrase_x_1</div><div class="audio-script">Fecha a porta. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">66_phrase_x_2</div><div class="audio-script">Mexeu? (natural)</div></div><div class="audio-index-row"><div class="audio-filename">67_sentence_l_s_x</div><div class="audio-script">O Brasil é legal. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">68_survival_1</div><div class="audio-script">Com licença. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">69_survival_2</div><div class="audio-script">Desculpa. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">70_survival_3</div><div class="audio-script">Quanto custa? (natural)</div></div><div class="audio-index-row"><div class="audio-filename">71_survival_4</div><div class="audio-script">Eu não entendi. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">72_survival_5</div><div class="audio-script">Pode repetir? (natural)</div></div><div class="audio-index-row"><div class="audio-filename">73_survival_6</div><div class="audio-script">Mais devagar, por favor.</div></div><div class="audio-index-row"><div class="audio-filename">74_survival_7</div><div class="audio-script">Eu quero isso. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">75_survival_8</div><div class="audio-script">Eu preciso de ajuda.</div></div><div class="audio-index-row"><div class="audio-filename">76_survival_9</div><div class="audio-script">Eu tô com fome. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">77_survival_10</div><div class="audio-script">Eu tô com sede. (natural)</div></div><div class="audio-index-row"><div class="audio-filename">78_survival_11</div><div class="audio-script">Onde fica o banheiro?</div></div><div class="audio-index-row"><div class="audio-filename">79_survival_12</div><div class="audio-script">Pode ser no cartão? (natural)</div></div><div class="audio-index-row"><div class="audio-filename">80_survival_13</div><div class="audio-script">Valeu! (natural)</div></div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 5 · T/D before 'i'</span><span class="folder-path">Chapter_05_T_D_Before_I/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">tia… dia… (key pair)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">tinha… dia… dinheiro… tipo…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Bom dia! (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Que difícil… (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Eu tinha dinheiro. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Que tipo? (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">dia… dinheiro… difícil… tipo… (drill)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Hoje é dia vinte. (natural)</div></div>
     </div>
-    
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 6 · LH / NH</span><span class="folder-path">Chapter_06_LH_NH/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">filho… velho… trabalho… mulher…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">banho… manhã… vinho… dinheiro…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">mala… malha… (LH minimal pair)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">cano… canho… (NH minimal pair)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Minha mulher trabalha. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Eu quero banho. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">melhor… senhor… mulher… filho…</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Meu filho tá melhor. (natural)</div></div>
+    </div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 7 · L final &amp; S final</span><span class="folder-path">Chapter_07_L_Final_S_Final/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Brasil… mal… sol… legal… (L final)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">mais… dois… três… vocês… (S final)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Deixa eu ver… (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">você… cê… (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">xícara… mexer… peixe… (X sound)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Mais tarde. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Depois eu te falo. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Fecha a porta. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">Mexeu? (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">O Brasil é legal. (natural)</div></div>
+    </div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Chapter 8 · Connected Speech</span><span class="folder-path">Chapter_08_Connected_Speech/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Como é que → Cóêki (vowel+vowel)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Deixa eu → Déchavé (consonant+vowel)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">você→cê · está→tá · para→pra</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">né… tipo… sei lá… (fillers)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Eu também não. (full natural flow)</div></div>
+    </div>
+
+    <div class="audio-chapter-group">
+      <div class="audio-chapter-header"><span>Bonus · 50 Survival Phrases</span><span class="folder-path">Bonus_50_Survival_Phrases/</span></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_01</div><div class="audio-script">Com licença. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_02</div><div class="audio-script">Desculpa. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_03</div><div class="audio-script">Quanto custa? (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_04</div><div class="audio-script">Eu não entendi. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_05</div><div class="audio-script">Pode repetir? (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_06</div><div class="audio-script">Mais devagar, por favor.</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_07</div><div class="audio-script">Eu quero isso. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_08</div><div class="audio-script">Eu preciso de ajuda.</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_09</div><div class="audio-script">Eu tô com fome. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_10</div><div class="audio-script">Eu tô com sede. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_11</div><div class="audio-script">Onde fica o banheiro?</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_12</div><div class="audio-script">Pode ser no cartão? (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Phrase_13</div><div class="audio-script">Valeu! (natural)</div></div>
+    </div>
+
     <div class="tip-box">
       <div class="tip-icon">✅</div>
-      <div><div class="tip-label">You have everything</div><div class="tip-text">80 audio files, 12 chapters, 14 days mapped. The only thing left is to press play and say it out loud.</div></div>
+      <div><div class="tip-label">You have everything</div><div class="tip-text">83 audio files across 8 chapters + Bonus, mapped to a 14-day plan. The only thing left is to press play and say it out loud.</div></div>
     </div>
   </div>
 </div>
