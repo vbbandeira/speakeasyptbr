@@ -258,6 +258,125 @@ body {
   font-family:'Inter',sans-serif; font-size:11.5px; color:#3D5247; line-height:1.3;
 }
 
+/* ── Theory spotlight ── */
+.theory-spotlight {
+  background:#F0FAF4; border-radius:10px; padding:12px 14px;
+  border-left:3px solid #2D6B52; display:flex; gap:10px;
+}
+.theory-icon { font-size:16px; flex-shrink:0; margin-top:1px; }
+.theory-content { flex:1; }
+.theory-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.12em; text-transform:uppercase; color:#2D6B52; margin-bottom:4px;
+}
+.theory-text {
+  font-family:'Inter',sans-serif; font-size:11.5px; color:#3D5247; line-height:1.55;
+}
+.theory-text strong { color:#1E4D3B; font-weight:600; }
+.theory-text em { color:#2D6B52; font-style:normal; font-weight:500; }
+
+/* ── Drill progression ── */
+.drill-progression {
+  display:flex; flex-direction:column; gap:8px;
+}
+.drill-level {
+  background:#fff; border-radius:10px; padding:10px 14px;
+  border:1px solid #EDE9E0; display:flex; gap:12px; align-items:flex-start;
+}
+.drill-level-num {
+  font-family:'Poppins',sans-serif; font-size:17px; font-weight:800;
+  color:#A8E6C3; min-width:22px; line-height:1; margin-top:2px;
+}
+.drill-level-content { flex:1; }
+.drill-level-title {
+  font-family:'Poppins',sans-serif; font-size:11.5px; font-weight:600;
+  color:#1E4D3B; margin-bottom:6px; letter-spacing:0.01em;
+}
+.drill-level-title .hint {
+  font-family:'Inter',sans-serif; font-weight:400; color:#8FA897; font-style:italic;
+  font-size:10.5px; margin-left:4px;
+}
+.drill-level-examples {
+  display:flex; flex-wrap:wrap; gap:6px;
+}
+.drill-level-examples .ex {
+  font-family:'Poppins',sans-serif; font-size:12px; font-weight:600;
+  color:#1E4D3B; background:#F5F0E8; border-radius:6px;
+  padding:3px 9px; border:1px solid #D4CBBB;
+}
+.drill-level-sentence {
+  font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:500;
+  color:#1E4D3B; font-style:italic;
+}
+.drill-level-sentence .translation {
+  display:block; font-family:'Inter',sans-serif; font-size:10.5px;
+  color:#8FA897; font-style:italic; font-weight:400; margin-top:2px;
+}
+
+/* ── Minimal pairs lab ── */
+.minimal-pairs {
+  background:#fff; border-radius:11px; padding:12px 14px; border:1px solid #EDE9E0;
+}
+.minimal-pairs-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.1em; text-transform:uppercase; color:#8FA897; margin-bottom:8px;
+}
+.pair-row {
+  display:grid; grid-template-columns:1fr 18px 1fr 1.4fr;
+  padding:6px 0; border-bottom:1px solid rgba(212,203,187,0.4);
+  align-items:center; gap:6px;
+}
+.pair-row:last-child { border-bottom:none; }
+.pair-word {
+  font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:600; color:#1E4D3B;
+}
+.pair-arrow { color:#A8E6C3; text-align:center; font-size:13px; font-weight:600; }
+.pair-meaning {
+  font-family:'Inter',sans-serif; font-size:10.5px; color:#8FA897; font-style:italic;
+  line-height:1.3;
+}
+
+/* ── Traps box ── */
+.traps-box {
+  background:#FFF8F0; border:1px solid #F0D4A8; border-radius:10px;
+  padding:11px 14px;
+}
+.traps-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase; color:#B07030; margin-bottom:7px;
+}
+.trap-item {
+  display:flex; gap:8px; padding:5px 0;
+  border-bottom:1px solid rgba(240,212,168,0.5);
+}
+.trap-item:last-child { border-bottom:none; padding-bottom:1px; }
+.trap-num {
+  font-family:'Poppins',sans-serif; font-size:11px; font-weight:700;
+  color:#B07030; flex-shrink:0; min-width:14px;
+}
+.trap-text {
+  font-family:'Inter',sans-serif; font-size:11px; color:#7A5020; line-height:1.5;
+}
+.trap-text strong { color:#5A3818; font-weight:600; }
+.trap-text em { color:#B07030; font-style:normal; font-weight:500; }
+
+/* ── Cultural context ── */
+.cultural-box {
+  background:#EEF3F4; border-radius:10px; padding:11px 14px;
+  border-left:3px solid #5A9BA4; display:flex; gap:10px;
+}
+.cultural-icon { font-size:15px; flex-shrink:0; margin-top:1px; }
+.cultural-content { flex:1; }
+.cultural-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase; color:#4A838A; margin-bottom:4px;
+}
+.cultural-text {
+  font-family:'Inter',sans-serif; font-size:11px; color:#3D5E63; line-height:1.55;
+}
+.cultural-text strong { color:#2A4A50; font-weight:600; }
+.cultural-text em { color:#4A838A; font-style:normal; font-weight:500; }
+
 /* ── Audio index ── */
 .audio-chapter-group {
   margin-bottom:10px;
@@ -331,7 +450,9 @@ body {
   .page:last-of-type { page-break-after: auto; }
   .card, .audio-cue, .mistake-box, .comparison-row,
   .tip-box, .drill-box, .phrase-row, .plan-card, .survival-row,
-  .word-drill, .toc-item, .audio-chapter-group { page-break-inside: avoid; box-shadow: none !important; }
+  .word-drill, .toc-item, .audio-chapter-group,
+  .theory-spotlight, .drill-level, .minimal-pairs, .traps-box, .cultural-box
+  { page-break-inside: avoid; box-shadow: none !important; }
 }
 
 </style>
@@ -370,7 +491,7 @@ body {
     <div style="font-family:'Poppins',sans-serif; font-size:44px; font-weight:800; color:#1E4D3B; line-height:0.92; letter-spacing:-1px; text-transform:uppercase; margin-bottom:10px;">Speaking &amp;<br>Pronunciation<br>Kit</div>
     <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#2D6B52; margin-bottom:14px;">Sound like a native in<br>Brazilian Portuguese</div>
     <div style="width:44px; height:3px; background:#A8E6C3; border-radius:2px; margin:0 auto 13px;"></div>
-    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">83 audio files · 8 chapters + bonus · 14-day plan</div>
+    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">46 in-depth lessons · 8 chapters + bonus · 14-day plan</div>
     <div style="font-family:'Inter',sans-serif; font-size:11px; color:#4A6B58;">The complete guide to PT-BR pronunciation, rhythm &amp; connected speech</div>
   </div>
 
@@ -408,59 +529,59 @@ body {
         <div class="toc-page">03</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 1</div>
-        <div style="flex:1;"><span class="toc-title">Rhythm & Stress</span><span class="toc-sub">Where the force falls</span></div>
+        <div style="flex:1;"><span class="toc-title">Rhythm &amp; Stress</span><span class="toc-sub">Where the force falls</span></div>
         <div class="toc-dots"></div>
         <div class="toc-page">04</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 2</div>
         <div style="flex:1;"><span class="toc-title">Vowels</span><span class="toc-sub">a / e / i / o / u + common traps</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">05</div>
+        <div class="toc-page">06</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 3</div>
         <div style="flex:1;"><span class="toc-title">Nasal Sounds</span><span class="toc-sub">ão · ãe · õe · em/en</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">06</div>
+        <div class="toc-page">09</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 4</div>
         <div style="flex:1;"><span class="toc-title">R / RR / 'H'</span><span class="toc-sub">The sound English has no equivalent for</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">07</div>
+        <div class="toc-page">12</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 5</div>
         <div style="flex:1;"><span class="toc-title">T/D before 'i'</span><span class="toc-sub">tia, dia, dinheiro</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">08</div>
+        <div class="toc-page">15</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 6</div>
         <div style="flex:1;"><span class="toc-title">LH / NH</span><span class="toc-sub">filho, manhã, melhor</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">09</div>
+        <div class="toc-page">17</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 7</div>
-        <div style="flex:1;"><span class="toc-title">L final & S final</span><span class="toc-sub">What English speakers get wrong most</span></div>
+        <div style="flex:1;"><span class="toc-title">L final &amp; S final</span><span class="toc-sub">What English speakers get wrong most</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">10</div>
+        <div class="toc-page">19</div>
       </div><div class="toc-item">
         <div class="toc-ch">Ch. 8</div>
         <div style="flex:1;"><span class="toc-title">Connected Speech</span><span class="toc-sub">Linking words like a native</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">11</div>
+        <div class="toc-page">22</div>
       </div><div class="toc-item">
         <div class="toc-ch">Bonus</div>
         <div style="flex:1;"><span class="toc-title">50 Survival Phrases</span><span class="toc-sub">With natural pronunciation guide</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">12</div>
+        <div class="toc-page">24</div>
       </div><div class="toc-item">
         <div class="toc-ch">Plan</div>
         <div style="flex:1;"><span class="toc-title">14-Day Plan</span><span class="toc-sub">Day-by-day + audio reference</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">13</div>
+        <div class="toc-page">26</div>
       </div><div class="toc-item">
         <div class="toc-ch">Index</div>
-        <div style="flex:1;"><span class="toc-title">Audio Index + Checklist</span><span class="toc-sub">All 83 files mapped</span></div>
+        <div style="flex:1;"><span class="toc-title">Audio Index + Checklist</span><span class="toc-sub">All 46 lessons mapped</span></div>
         <div class="toc-dots"></div>
-        <div class="toc-page">14</div>
+        <div class="toc-page">27</div>
       </div>
     </div>
   </div>
@@ -537,10 +658,9 @@ body {
 </div>
 
 
-<!-- ============================================================ CH 1: RHYTHM & STRESS ============================================================ -->
-<div class="page-label">📄 PAGE 04 — Ch. 1: Rhythm & Stress</div>
+<!-- ============================================================ CH 1 · PAGE A — Theory + Drill Progression ============================================================ -->
+<div class="page-label">📄 PAGE 04 — Ch. 1: Rhythm & Stress (theory + drills)</div>
 <div class="page">
-  
   <div class="header">
     <div>
       <div class="section-tag">Chapter 1</div>
@@ -552,623 +672,1716 @@ body {
   <div class="body">
     <p class="intro">In English, stress is relatively free. In PT-BR, every word has a predictable stressed syllable — and getting it wrong makes you sound foreign even if every sound is correct.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">How PT-BR stress works</div>
+        <div class="theory-text">
+          Portuguese is a <strong>syllable-timed language</strong> — each syllable gets roughly equal weight, except one: the <em>stressed</em> one, which goes slightly longer and louder. English, by contrast, is <strong>stress-timed</strong>: stressed syllables are loud, unstressed ones get squeezed.
+          <br><br>
+          The good news: PT-BR stress is <em>predictable</em>. Just three rules govern it.
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 English pattern</span>
         <span></span>
-        <span>🇧🇷 PT-BR sound</span>
+        <span>🇧🇷 PT-BR pattern</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">CAR-go (cargo)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ca-FÉ (café)</div>
-          <div class='comp-note'>Stress falls later in PT-BR</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">HO-tel (hotel)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ho-TEL (hotel)</div>
-          
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">BRA-zil (Brazil)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">Bra-SIL (Brasil)</div>
-          
-        </div>
-    </div>
-
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_01_Rhythm_Stress/</code> → <code>Lesson_01</code>, <code>Lesson_02</code>, <code>Lesson_03</code> — slow then natural</div>
-    </div>
-
-    <div class="section-label">The default rule</div>
-    <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
-      <div style="font-family:'Inter',sans-serif; font-size:12.5px; color:#3D5247; line-height:1.6;">
-        Words ending in <strong style="color:#1E4D3B;">-a, -e, -o</strong> → stress the <strong style="color:#1E4D3B;">second-to-last</strong> syllable<br>
-        Words ending in other letters → stress the <strong style="color:#1E4D3B;">last</strong> syllable<br>
-        <span style="font-size:11px; color:#8FA897;">Accents (á, é, ó, etc.) always override the rule.</span>
+      <div class="comparison-row">
+        <div class="comp-en">CAR-go (cargo)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ca-FÉ (café)</div>
+        <div class='comp-note'>Accent mark forces stress on last syllable</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">HO-tel (hotel)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ho-TEL (hotel)</div>
+        <div class='comp-note'>Ends in consonant → stress falls on last syllable</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">BRA-zil (Brazil)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Bra-SIL (Brasil)</div>
+        <div class='comp-note'>Same rule — stress on last syllable</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">BA-na-na (banana)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ba-NA-na (banana)</div>
+        <div class='comp-note'>Ends in -a → stress on second-to-last syllable</div>
       </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">ca-FÉ</div><div class="drill-word">ho-TEL</div><div class="drill-word">Bra-SIL</div><div class="drill-word">Tu-DO bem?</div><div class="drill-word">VA-mos</div><div class="drill-word">co-MER</div></div></div>
-    
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Default rule — ends in <em>-a, -e, -o</em> <span class="hint">— stress the 2nd-to-last</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">ba-NA-na</span><span class="ex">CA-sa</span><span class="ex">ca-DEI-ra</span><span class="ex">ES-co-la</span><span class="ex">JO-go</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Ends in any other letter <span class="hint">— stress the last syllable</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">ho-TEL</span><span class="ex">Bra-SIL</span><span class="ex">fa-LAR</span><span class="ex">jor-NAL</span><span class="ex">co-MER</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Accent mark overrides everything <span class="hint">— stress lands where the accent is</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">ca-FÉ</span><span class="ex">sa-BIÁ</span><span class="ex">ÁGUA</span><span class="ex">PÁS-sa-ro</span><span class="ex">LÁM-pa-da</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_01_Rhythm_Stress/</code> → <code>Lesson_04</code>, <code>Lesson_05</code> — short phrases</div>
-    </div>
-    
-    <div class="mistake-box">
-      <div class="mistake-label">⚠️ Common mistake</div>
-      <div class="mistake-text">Don't stress the first syllable by default. 'CAfé' (English) → 'caFÉ' (PT-BR). The shift feels uncomfortable at first — lean into it.</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_01_Rhythm_Stress/</code> → <code>Lesson_01</code>, <code>Lesson_02</code> — stress rules demo</div>
     </div>
   </div>
 </div>
 
 
-<!-- ============================================================ CH 2: VOWELS ============================================================ -->
-<div class="page-label">📄 PAGE 05 — Ch. 2: Vowels</div>
+<!-- ============================================================ CH 1 · PAGE B — Linking + Minimal Pairs + Traps ============================================================ -->
+<div class="page-label">📄 PAGE 05 — Ch. 1: Rhythm & Stress (linking + traps)</div>
 <div class="page">
-  
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 1 · Rhythm &amp; Stress</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">05</span>
+  </div>
+  <div class="body">
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">4</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Natural linking — words flow together <span class="hint">— feel the rhythm</span></div>
+          <div class="drill-level-sentence">
+            Tudo bem? <span class="translation">How are you? (casual greeting)</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Vamos comer. <span class="translation">Let's eat.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Como é que você está? <span class="translation">How are you? (formal)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="minimal-pairs">
+      <div class="minimal-pairs-label">🔍 Stress changes meaning — classic pairs</div>
+      <div class="pair-row">
+        <div class="pair-word">SÁ-bi-a</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">sa-BI-a</div>
+        <div class="pair-meaning">wise (woman) ↔ (she) knew</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">sa-BI-a</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">sa-bi-Á</div>
+        <div class="pair-meaning">(she) knew ↔ the bird "sabiá"</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">SE-cre-tá-ri-a</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">se-cre-ta-RI-a</div>
+        <div class="pair-meaning">secretary (person) ↔ secretariat (office)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">DÚ-vi-da</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">du-VI-da</div>
+        <div class="pair-meaning">doubt (noun) ↔ (he/she) doubts (verb)</div>
+      </div>
+    </div>
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>Defaulting to English stress patterns.</strong> "CA-fé", "HO-tel", "BRA-zil" — all wrong. The shift feels unnatural at first, <em>lean into it until it doesn't</em>.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Ignoring accent marks.</strong> Those tiny lines aren't decoration. <strong>Pá</strong> and <strong>pa</strong> sound and mean completely different things.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Pausing between every word.</strong> English speakers chop speech into discrete words. PT-BR flows — "<em>tu-DO-bem?</em>" is one unit, not three.</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Why Portuguese sounds "musical"</div>
+        <div class="cultural-text">
+          That melodic quality English speakers often attribute to Portuguese comes directly from its <strong>syllable-timed rhythm</strong>. Because each syllable carries equal weight, the language pulses in an even, song-like pattern. Italian and Spanish share this trait; English and German don't.
+          <br><br>
+          <em>Tip:</em> if your PT-BR sounds "staccato" or "choppy", you're still speaking with English rhythm. Flow more, emphasize less.
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_01_Rhythm_Stress/</code> → <code>Lesson_03</code>, <code>Lesson_04</code> — linking + full flow</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 2 · PAGE A — Theory + 5 vowel drills ============================================================ -->
+<div class="page-label">📄 PAGE 06 — Ch. 2: Vowels (theory + 5 clean vowels)</div>
+<div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Chapter 2</div>
       <h1 class="header-title">Vowels</h1>
       <p class='header-sub'>a / e / i / o / u + the traps</p>
     </div>
-    <div class="page-num">05</div>
+    <div class="page-num">06</div>
   </div>
   <div class="body">
     <p class="intro">PT-BR vowels are purer and more consistent than English vowels. Each vowel has one sound — no diphthongs sneaking in. The tricky part is the open/closed distinction for E and O.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">Why PT-BR vowels feel cleaner</div>
+        <div class="theory-text">
+          English vowels are <strong>diphthongs</strong> — you start one shape and glide to another. "Say" = <em>s-eh-ee</em>. "Go" = <em>g-oh-oo</em>. Your tongue moves mid-vowel.
+          <br><br>
+          In PT-BR, each vowel is <strong>a single, static shape</strong>. You pick a position and hold it. Short, crisp, done. The "uh-glide" that Americans instinctively add at the end of vowels is the #1 thing that gives your accent away.
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 English reference</span>
         <span></span>
-        <span>🇧🇷 PT-BR sound</span>
+        <span>🇧🇷 PT-BR vowel</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">'a' as in 'father'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">a → casa, fala</div>
-          
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">no equivalent (closed e)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ê → você, leite</div>
-          
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'e' as in 'bed'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">é → pé, café</div>
-          
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'o' as in 'so' (closed)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ô → avô, você</div>
-          
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'o' as in 'off' (open)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ó → avó, pó</div>
-          <div class='comp-note'>Grandma vs Grandpa!</div>
-        </div>
+      <div class="comparison-row">
+        <div class="comp-en">'a' as in 'father'</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">A → casa, fala, amor</div>
+        <div class='comp-note'>Open, relaxed jaw — one shape</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">'ee' as in 'see' (shortened)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">I → vida, linda, dia</div>
+        <div class='comp-note'>Short and sharp, not drawn out</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">'oo' as in 'food' (shortened)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">U → tudo, muito, luz</div>
+        <div class='comp-note'>Pure, lips rounded, no glide</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">varies — has two versions</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">E → é (open) / ê (closed)</div>
+        <div class='comp-note'>Two distinct sounds — crucial distinction</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">varies — has two versions</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">O → ó (open) / ô (closed)</div>
+        <div class='comp-note'>Same — two versions, meaning-changing</div>
+      </div>
     </div>
 
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/</code> → <code>Lesson_01</code> – <code>Lesson_05</code> — one file per vowel</div>
-    </div>
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/</code> → <code>Lesson_06</code>, <code>Lesson_07</code> — avó vs avô — train your ear</div>
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">The 3 "simple" vowels <span class="hint">— one shape, no movement</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">casa</span><span class="ex">vida</span><span class="ex">tudo</span><span class="ex">fala</span><span class="ex">muito</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Words with two or more vowels in a row <span class="hint">— each one stays pure</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">saudade</span><span class="ex">papai</span><span class="ex">mamãe</span><span class="ex">caipirinha</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">casa</div><div class="drill-word">vida</div><div class="drill-word">tudo</div><div class="drill-word">você</div><div class="drill-word">pé</div><div class="drill-word">avó</div><div class="drill-word">avô</div><div class="drill-word">muito</div></div></div>
-
-    
-    <div class="mistake-box">
-      <div class="mistake-label">⚠️ Common mistake</div>
-      <div class="mistake-text">English speakers add an 'uh' glide at the end of vowels. 'casa' → say 'CAsuh' → wrong. Keep vowels clean and short.</div>
-    </div>
-    
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/Lesson_08</code> — para → pra (natural reduction)</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/</code> → <code>Lesson_01</code> — the 5 clean vowels</div>
     </div>
   </div>
 </div>
 
 
-<!-- ============================================================ CH 3: NASAL SOUNDS ============================================================ -->
-<div class="page-label">📄 PAGE 06 — Ch. 3: Nasal Sounds</div>
+<!-- ============================================================ CH 2 · PAGE B — Open vs Closed + Minimal Pairs ============================================================ -->
+<div class="page-label">📄 PAGE 07 — Ch. 2: Vowels (open vs closed E/O)</div>
 <div class="page">
-  
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 2 · Vowels</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">07</span>
+  </div>
+  <div class="body">
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">📐</div>
+      <div class="theory-content">
+        <div class="theory-label">Open vs closed — what's the difference?</div>
+        <div class="theory-text">
+          <strong>Closed</strong> (ê, ô) — jaw is relatively closed, mouth compact. The sound is <em>tight, tense, small</em>.<br>
+          <strong>Open</strong> (é, ó) — jaw drops more, mouth opens. The sound is <em>broad, relaxed, louder</em>.
+          <br><br>
+          In writing, accents help you: <strong>^</strong> = closed, <strong>´</strong> = open. In speech, you have to <em>hear</em> them. And mixing them up can flip grandma into grandpa.
+        </div>
+      </div>
+    </div>
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Closed E (ê) <span class="hint">— tight, tense</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">você</span><span class="ex">leite</span><span class="ex">três</span><span class="ex">mesa</span><span class="ex">medo</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">4</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Open E (é) <span class="hint">— wide, relaxed</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">pé</span><span class="ex">café</span><span class="ex">fé</span><span class="ex">festa</span><span class="ex">pedra</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">5</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Closed O (ô) vs Open O (ó) <span class="hint">— tight vs wide</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">avô</span><span class="ex">você</span><span class="ex">pôde</span><span class="ex">avó</span><span class="ex">pó</span><span class="ex">pode</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="minimal-pairs">
+      <div class="minimal-pairs-label">🔍 Minimal pairs lab — open vs closed changes meaning</div>
+      <div class="pair-row">
+        <div class="pair-word">avô (ô)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">avó (ó)</div>
+        <div class="pair-meaning">grandfather ↔ grandmother</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">pôde (ô)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">pode (ó)</div>
+        <div class="pair-meaning">was able (past) ↔ can (present)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">essa (ê)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">éssa (é)</div>
+        <div class="pair-meaning">that one (pronoun) ↔ stressed form (emphasis)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">sede (ê)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">séde (é)</div>
+        <div class="pair-meaning">thirst ↔ headquarters</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">gosto (ô)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">gosto (ó)</div>
+        <div class="pair-meaning">I like (verb, 1st) ↔ taste (noun)</div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/</code> → <code>Lesson_02</code>, <code>Lesson_03</code> — open/closed E and O</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 2 · PAGE C — Reductions + Traps ============================================================ -->
+<div class="page-label">📄 PAGE 08 — Ch. 2: Vowels (reductions + traps)</div>
+<div class="page">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 2 · Vowels</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">08</span>
+  </div>
+  <div class="body">
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">⚡</div>
+      <div class="theory-content">
+        <div class="theory-label">Unstressed vowel reductions</div>
+        <div class="theory-text">
+          In natural speech, unstressed vowels at word endings <strong>shift</strong>:
+          <br>• Final <strong>-e</strong> sounds like <em>-i</em> → "leite" becomes <em>LEY-tchi</em><br>
+          • Final <strong>-o</strong> sounds like <em>-u</em> → "muito" becomes <em>MUYN-tu</em><br>
+          • "para" collapses to <em>pra</em> — everyone does it, even in formal speech
+          <br><br>
+          These aren't slang. They're the rhythm.
+        </div>
+      </div>
+    </div>
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">6</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Final -e reduction (→ i) <span class="hint">— subtle, natural</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">leite → leiti</span><span class="ex">noite → noiti</span><span class="ex">sete → seti</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">7</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Final -o reduction (→ u) <span class="hint">— subtle, natural</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">muito → muitu</span><span class="ex">outro → outru</span><span class="ex">tempo → tempu</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">8</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">"para" → "pra" <span class="hint">— everyone, all the time</span></div>
+          <div class="drill-level-sentence">
+            Eu vou pra escola. <span class="translation">I'm going to school.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Me dá uma pra levar. <span class="translation">Give me one to go.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>The "uh" glide.</strong> "Casa" is <em>KA-sa</em>, not <em>KA-suh</em>. Cut the tail off — PT-BR vowels end abruptly.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Diphthongizing single vowels.</strong> English "Joe" starts with J-OH-OO. Portuguese "Jô" is <em>J-Ô</em>, one crisp sound.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Treating open/closed as the same.</strong> Calling grandma <em>avô</em> (grandpa) is a real mistake people make. Drill the pairs until you hear the difference.</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">The "para" test</div>
+        <div class="cultural-text">
+          If you're reading a news headline aloud, you might say <em>"para a escola"</em> (formal). But in the actual news broadcast, the anchor will almost always say <em>"pra escola"</em>. This reduction isn't colloquial — it's standard Brazilian speech at every register except very formal writing.
+          <br><br>
+          <em>Using "para" in conversation sounds stiff.</em> Say "pra" from day one.
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_02_Vowels/</code> → <code>Lesson_04</code>, <code>Lesson_05</code> — reductions + sentences</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 3 · PAGE A — Theory + ão family ============================================================ -->
+<div class="page-label">📄 PAGE 09 — Ch. 3: Nasal Sounds (theory + ão family)</div>
+<div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Chapter 3</div>
       <h1 class="header-title">Nasal Sounds</h1>
       <p class='header-sub'>ão · ãe · õe · em/en</p>
     </div>
-    <div class="page-num">06</div>
+    <div class="page-num">09</div>
   </div>
   <div class="body">
-    <p class="intro">Nasals are the most distinctively Brazilian sound. You literally feel them vibrate in your nose. English has nasal sounds too (m, n) — but not nasal vowels. This is new territory.</p>
+    <p class="intro">Nasals are the most distinctively Brazilian sound. You literally feel them vibrate in your nose. English has nasal consonants (m, n) — but not nasal vowels. This is new territory.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">How nasal vowels work</div>
+        <div class="theory-text">
+          When you say a nasal vowel, air exits through <strong>both</strong> your mouth and your nose simultaneously. Your soft palate drops, opening the nasal cavity as a second resonator.
+          <br><br>
+          <em>Physical test:</em> pinch your nose and say "não". Can't. Now pinch your nose and say "no" (English). Works fine. That's the difference — the sound needs the nose.
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 English reference</span>
         <span></span>
-        <span>🇧🇷 PT-BR sound</span>
+        <span>🇧🇷 PT-BR nasal</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">no equivalent</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ão → não, pão, mão</div>
-          <div class='comp-note'>Nose + mouth + tail</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">no equivalent</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">em/en → bem, tem, também</div>
-          
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">no equivalent</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ã → irmã, amanhã</div>
-          <div class='comp-note'>Pure nasal</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">no equivalent</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ões → limões, aviões</div>
-          
-        </div>
-    </div>
-
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_03_Nasal_Sounds/</code> → <code>Lesson_01</code> – <code>Lesson_05</code> — each nasal sound isolated</div>
-    </div>
-
-    <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
-      <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:6px;">How to practise</div>
-      <div style="font-family:'Inter',sans-serif; font-size:12px; color:#3D5247; line-height:1.6;">
-        Say "ão" — start with your mouth open, then close it slightly and let the sound move into your nose. Hold the vibration for a beat. <em style="color:#6B7B6E;">You should feel your nose tingle.</em>
+      <div class="comparison-row">
+        <div class="comp-en">no equivalent</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ão → não, pão, mão</div>
+        <div class='comp-note'>Open mouth → close → let nose ring</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"en" in "bench" (but vowel nasalized)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">em/en → bem, tem, cento</div>
+        <div class='comp-note'>The vowel itself nasalizes, M/N soft</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">no equivalent</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ã → irmã, amanhã, maçã</div>
+        <div class='comp-note'>Pure nasal "a" — no trailing sound</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">no equivalent</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ãe → mãe, pães</div>
+        <div class='comp-note'>Nasal "a" gliding into nasal "i"</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">no equivalent</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">õe → limões, aviões</div>
+        <div class='comp-note'>Nasal "o" gliding into nasal "i"</div>
       </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">não</div><div class="drill-word">pão</div><div class="drill-word">mão</div><div class="drill-word">bem</div><div class="drill-word">também</div><div class="drill-word">amanhã</div><div class="drill-word">limões</div><div class="drill-word">então</div></div></div>
-    
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">The ão family <span class="hint">— most common nasal</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">não</span><span class="ex">pão</span><span class="ex">mão</span><span class="ex">João</span><span class="ex">então</span><span class="ex">canção</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Pure ã — nasal "a" without diphthong <span class="hint">— held steady</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">irmã</span><span class="ex">amanhã</span><span class="ex">maçã</span><span class="ex">lã</span><span class="ex">romã</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_03_Nasal_Sounds/</code> → <code>Lesson_06</code> – <code>Lesson_08</code> — Não tem pão · Eu também não</div>
-    </div>
-    
-    <div class="mistake-box">
-      <div class="mistake-label">⚠️ Common mistake</div>
-      <div class="mistake-text">Don't replace ão with 'ow' (like English 'now'). 'Não' ≠ 'now'. The nasal must resonate — it's a completely different exit point for the air.</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_03_Nasal_Sounds/</code> → <code>Lesson_01</code>, <code>Lesson_02</code> — orientation + ão family</div>
     </div>
   </div>
 </div>
 
 
-<!-- ============================================================ CH 4: R / RR ============================================================ -->
-<div class="page-label">📄 PAGE 07 — Ch. 4: R / RR / 'H'</div>
+<!-- ============================================================ CH 3 · PAGE B — em/en + diphthong nasals + minimal pairs ============================================================ -->
+<div class="page-label">📄 PAGE 10 — Ch. 3: Nasal Sounds (em/en + diphthongs)</div>
 <div class="page">
-  
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 3 · Nasal Sounds</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">10</span>
+  </div>
+  <div class="body">
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">em / en / om / on — vowel carries the nasal <span class="hint">— M/N are silent as consonants</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">bem</span><span class="ex">tem</span><span class="ex">sem</span><span class="ex">bom</span><span class="ex">som</span><span class="ex">também</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">4</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Nasal diphthongs — ãe and õe <span class="hint">— two nasal sounds glued</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">mãe</span><span class="ex">pães</span><span class="ex">cães</span><span class="ex">limões</span><span class="ex">aviões</span><span class="ex">canções</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">5</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">In sentences <span class="hint">— chained nasals</span></div>
+          <div class="drill-level-sentence">
+            Não tem pão. <span class="translation">There's no bread.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Eu também não. <span class="translation">Me neither.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Minha mãe comprou limões. <span class="translation">My mom bought lemons.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="minimal-pairs">
+      <div class="minimal-pairs-label">🔍 Minimal pairs lab — nasal vs oral</div>
+      <div class="pair-row">
+        <div class="pair-word">mão</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">mau</div>
+        <div class="pair-meaning">hand ↔ bad (masculine)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">pão</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">pau</div>
+        <div class="pair-meaning">bread ↔ stick/wood</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">lã</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">lá</div>
+        <div class="pair-meaning">wool ↔ there</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">sim</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">si</div>
+        <div class="pair-meaning">yes ↔ musical note B / himself</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">cem</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">sem</div>
+        <div class="pair-meaning">one hundred ↔ without (both nasal, context)</div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_03_Nasal_Sounds/</code> → <code>Lesson_03</code>, <code>Lesson_04</code> — em/en + diphthong nasals</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 3 · PAGE C — Practice guide + traps + cultural ============================================================ -->
+<div class="page-label">📄 PAGE 11 — Ch. 3: Nasal Sounds (practice + traps)</div>
+<div class="page">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 3 · Nasal Sounds</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">11</span>
+  </div>
+  <div class="body">
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">✋</div>
+      <div class="theory-content">
+        <div class="theory-label">Physical practice — the hand test</div>
+        <div class="theory-text">
+          <strong>Step 1:</strong> Place your fingers lightly on the bridge of your nose.<br>
+          <strong>Step 2:</strong> Say English "no". You feel nothing on your fingers.<br>
+          <strong>Step 3:</strong> Now say "não" the Portuguese way — start open like "now", close your mouth slightly mid-syllable, and push air into your nose. <em>You should feel a vibration on your fingers.</em>
+          <br><br>
+          If there's no vibration, the nasal isn't engaging. Try again — exaggerate the close at the end.
+        </div>
+      </div>
+    </div>
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>Saying "ão" like English "now".</strong> It's the most common error. "Não" rhymes with itself, not with "now". The ending vibrates in the nose, doesn't just fall off.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Pronouncing the M/N in em/en, om/on.</strong> In "bem", there's no English M sound at the end. The M just tells you to nasalize the E. Same for "bom" — no English M.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Skipping the nasal on unstressed syllables.</strong> "Falam" (they speak) ends with a subtle nasal. Americans often say <em>FA-lam</em> like English — it should be <em>FA-lão</em> with a nasal tail.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">4</div>
+        <div class="trap-text"><strong>Over-emphasizing.</strong> Conversely, some learners nasalize <em>everything</em> after they get the hang of it. Only the marked vowels nasalize — not every vowel followed by M or N.</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Why it's so uniquely Brazilian</div>
+        <div class="cultural-text">
+          Nasal vowels exist in French, Polish, and Hindi — but Portuguese is the <strong>only major Romance language</strong> where they're this prominent. Spanish, Italian, and Romanian don't have them. Even European Portuguese has them less intensely than Brazilian Portuguese.
+          <br><br>
+          <em>If you can pronounce "não" with a clear nasal tail, you'll instantly sound more Brazilian than Portuguese — and way more native than a Spanish speaker learning PT-BR.</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_03_Nasal_Sounds/</code> → <code>Lesson_05</code> — minimal pairs + sentences</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 4 · PAGE A — Theory + Drill Progression ============================================================ -->
+<div class="page-label">📄 PAGE 12 — Ch. 4: R / RR / 'H' (theory + drills)</div>
+<div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Chapter 4</div>
       <h1 class="header-title">R / RR / 'H'</h1>
       <p class='header-sub'>The sound English has no equivalent for</p>
     </div>
-    <div class="page-num">07</div>
+    <div class="page-num">12</div>
   </div>
   <div class="body">
     <p class="intro">The Brazilian R is the sound most learners dread — and the one that makes the biggest difference. Once you get it, everything sounds more native instantly.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">Sound mechanics</div>
+        <div class="theory-text">
+          The Brazilian R is produced at the <strong>back of the throat</strong>, not with the tongue tip. Think of it as a <em>controlled gargle</em> — the same place where you say English "h" in <em>"hot"</em>, but with more airflow and slight friction.
+          <br><br>
+          The <strong>rule of thumb</strong>: the letter "R" changes sound based on its position in the word.
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 English reference</span>
         <span></span>
         <span>🇧🇷 PT-BR sound</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">'r' as in 'red'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">r (single, middle) → caro, para</div>
-          <div class='comp-note'>Soft tap, like 'd' in 'butter'</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">no equivalent</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">rr (double) → carro, correr</div>
-          <div class='comp-note'>Guttural — from the throat</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">no equivalent</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">r at start → Rio, rua, rápido</div>
-          <div class='comp-note'>Always guttural like 'rr'</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">h as in 'hot'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">h words → hoje, hotel</div>
-          <div class='comp-note'>Breathier, from the throat</div>
-        </div>
-    </div>
-
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/Lesson_01</code> — caro vs carro — hear the difference</div>
-    </div>
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/</code> → <code>Lesson_02</code>, <code>Lesson_03</code>, <code>Lesson_04</code></div>
-    </div>
-
-    <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
-      <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">The guttural trick</div>
-      <div style="font-family:'Inter',sans-serif; font-size:12px; color:#3D5247; line-height:1.6;">
-        Start with the English "h" in "hot." Now breathe a little harder and gargle slightly. That's the Brazilian RR. Words that start with R use this same sound.
+      <div class="comparison-row">
+        <div class="comp-en">'h' as in 'hot'</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Initial R → Rio, rua, rápido</div>
+        <div class='comp-note'>Guttural from the throat — English "h" with more friction</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">no equivalent</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Double RR → carro, correr, ferro</div>
+        <div class='comp-note'>Same guttural sound as initial R, sustained</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">'tt' in 'butter' (American)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Single R between vowels → caro, para, era</div>
+        <div class='comp-note'>Light tongue tap — completely different from RR</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">'h' as in 'hot'</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Letter H → hoje, hotel, humano</div>
+        <div class='comp-note'>Silent or breathy — same family as initial R</div>
       </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">caro</div><div class="drill-word">carro</div><div class="drill-word">Rio</div><div class="drill-word">rua</div><div class="drill-word">correr</div><div class="drill-word">barato</div><div class="drill-word">hoje</div><div class="drill-word">hotel</div></div></div>
-    
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">The H-sound orientation <span class="hint">— start here, feel the throat</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">hoje</span><span class="ex">hora</span><span class="ex">hotel</span><span class="ex">humano</span><span class="ex">hábito</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Initial R <span class="hint">— same throat sound, different letter</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">Rio</span><span class="ex">rua</span><span class="ex">rápido</span><span class="ex">rato</span><span class="ex">roupa</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Double RR <span class="hint">— same guttural, sustained</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">carro</span><span class="ex">ferro</span><span class="ex">correr</span><span class="ex">cachorro</span><span class="ex">terra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/</code> → <code>Lesson_05</code> – <code>Lesson_09</code></div>
-    </div>
-    
-    <div class="mistake-box">
-      <div class="mistake-label">⚠️ Common mistake</div>
-      <div class="mistake-text">Don't roll the R like Spanish. PT-BR RR is guttural (throat), not rolled (tongue tip). They're completely different sounds.</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/</code> → <code>Lesson_01</code>, <code>Lesson_02</code>, <code>Lesson_03</code> — theory, initial R, double RR</div>
     </div>
   </div>
 </div>
 
 
-<!-- ============================================================ CH 5: T/D BEFORE I ============================================================ -->
-<div class="page-label">📄 PAGE 08 — Ch. 5: T/D before 'i'</div>
+<!-- ============================================================ CH 4 · PAGE B — Single R + Contrast drill ============================================================ -->
+<div class="page-label">📄 PAGE 13 — Ch. 4: R / RR / 'H' (single R + minimal pairs)</div>
 <div class="page">
-  
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 4 · R / RR / H</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">13</span>
+  </div>
+  <div class="body">
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">4</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Single R tap <span class="hint">— soft flick of the tongue, not guttural</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">caro</span><span class="ex">para</span><span class="ex">Maria</span><span class="ex">era</span><span class="ex">barato</span><span class="ex">furar</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">5</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">In full sentences <span class="hint">— natural flow</span></div>
+          <div class="drill-level-sentence">
+            Eu quero um carro caro.
+            <span class="translation">I want an expensive car.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:6px;">
+            Vamos correr até o Rio.
+            <span class="translation">Let's run to Rio.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:6px;">
+            Hoje o cachorro do hotel fugiu.
+            <span class="translation">Today the hotel dog ran away.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="minimal-pairs">
+      <div class="minimal-pairs-label">🔍 Minimal pairs lab — single R vs double RR</div>
+      <div class="pair-row">
+        <div class="pair-word">caro</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">carro</div>
+        <div class="pair-meaning">expensive ↔ car</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">coro</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">corro</div>
+        <div class="pair-meaning">choir ↔ I run</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">fera</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">ferra</div>
+        <div class="pair-meaning">wild beast ↔ (he/she) brands</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">moro</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">morro</div>
+        <div class="pair-meaning">I live ↔ hill</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">era</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">erra</div>
+        <div class="pair-meaning">was (era) ↔ misses/errs</div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_04_R_RR_H/</code> → <code>Lesson_04</code>, <code>Lesson_05</code> — single R + contrast drill</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 4 · PAGE C — Traps + Cultural context ============================================================ -->
+<div class="page-label">📄 PAGE 14 — Ch. 4: R / RR / 'H' (traps + regional variation)</div>
+<div class="page">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 4 · R / RR / H</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">14</span>
+  </div>
+  <div class="body">
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>Rolling the R like Spanish.</strong> The PT-BR RR is <em>guttural</em> (throat), not <em>trilled</em> (tongue tip). A Spanish "perro" ≠ a Portuguese "ferro". If your tongue is vibrating, you're doing it wrong.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Using the English R.</strong> "Rio" is not <em>"Ree-oh"</em>. The American R curls the tongue back — PT-BR doesn't do that at all. Start the word from your throat.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Over-rolling the single R.</strong> Single R between vowels is <em>a quick tongue tap</em>, almost like the T in American "water". "Caro" is <em>KA-ro</em>, not <em>KA-rrrrro</em>.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">4</div>
+        <div class="trap-text"><strong>Pronouncing the H.</strong> In "hoje" and "hotel", the H is <em>completely silent</em>. It's just there for spelling. <strong>"Oje"</strong>, not <em>"Hho-zhi"</em>.</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Regional variation — three flavours of R</div>
+        <div class="cultural-text">
+          <strong>Carioca (Rio)</strong>: heaviest gargle — "carro" sounds almost like <em>"khaRRo"</em> with strong friction.<br>
+          <strong>Paulista (São Paulo)</strong>: softer, more aspirated — closer to English "h".<br>
+          <strong>Nordestino</strong>: often a light trill between teeth — closer to Spanish.<br><br>
+          <strong>Which should you learn?</strong> Any of them works. The Carioca sound is the default in most media and what this kit trains — once you nail it, the others are easier to adapt to.
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🔑</div>
+      <div>
+        <div class="tip-label">The one-minute fix</div>
+        <div class="tip-text">Stand up, open your mouth slightly, and say "ha-ha-ha" like you're pretending to laugh, but quieter. Now add friction at the back of your throat. That's your Brazilian R. <em>Every R word in this kit starts from that exact position.</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 5 · PAGE A — Theory + drills ============================================================ -->
+<div class="page-label">📄 PAGE 15 — Ch. 5: T/D before 'i' (theory + drills)</div>
+<div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Chapter 5</div>
       <h1 class="header-title">T/D before 'i'</h1>
       <p class='header-sub'>tia → 'CHia' · dia → 'JHia'</p>
     </div>
-    <div class="page-num">08</div>
+    <div class="page-num">15</div>
   </div>
   <div class="body">
     <p class="intro">This is one of the most recognisably Brazilian features. Before the vowel "i", the sounds T and D shift into something that sounds like "ch" and "dj". Once you hear it, you'll never un-hear it.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">Palatalization — the physics of the mouth</div>
+        <div class="theory-text">
+          When you say "i", your tongue rises high and pushes forward toward your hard palate. When T or D comes right before "i", they get <strong>dragged along</strong> to that same palatal position — and the hard T/D turns into a softer <em>tch</em>/<em>dj</em>.
+          <br><br>
+          It's not a rule you <em>follow</em>. It's physics. Your tongue <em>wants</em> to do it — you just have to stop fighting it with your hard English T.
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 English reference</span>
         <span></span>
         <span>🇧🇷 PT-BR sound</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">'t' as in 'tea'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ti → tia, tinha, tipo</div>
-          <div class='comp-note'>'t' → soft 'ch' sound</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'d' as in 'day'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">di → dia, dinheiro, difícil</div>
-          <div class='comp-note'>'d' → soft 'dj' sound</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">no shift</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">ta, to, tu → tudo, tá</div>
-          <div class='comp-note'>Only before 'i'</div>
-        </div>
-    </div>
-
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/Lesson_01</code> — tia vs dia — the key pair</div>
-    </div>
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/</code> → <code>Lesson_02</code> – <code>Lesson_06</code></div>
-    </div>
-
-    <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
-      <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">Why it happens</div>
-      <div style="font-family:'Inter',sans-serif; font-size:12px; color:#3D5247; line-height:1.6;">
-        Before a high front vowel (i), the tongue naturally moves forward and the sound palatalises. It's not a "rule" you follow — it's physics of the mouth. Let it happen naturally.
+      <div class="comparison-row">
+        <div class="comp-en">"ch" as in "cheese"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ti → tia, tinha, tipo</div>
+        <div class='comp-note'>T becomes soft "tch" before i</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"j" as in "jeep"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">di → dia, dinheiro, difícil</div>
+        <div class='comp-note'>D becomes soft "dj" before i</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">hard T/D (English default)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">ta, to, tu, da, do, du → stay hard</div>
+        <div class='comp-note'>Only the "i" triggers the shift</div>
       </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">tia</div><div class="drill-word">dia</div><div class="drill-word">tinha</div><div class="drill-word">dinheiro</div><div class="drill-word">tipo</div><div class="drill-word">difícil</div><div class="drill-word">vinte</div><div class="drill-word">Bom dia!</div></div></div>
-    
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">"ti" → "tchi" <span class="hint">— soft tch sound</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">tia</span><span class="ex">tipo</span><span class="ex">tinha</span><span class="ex">time</span><span class="ex">gente</span><span class="ex">vinte</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">"di" → "dji" <span class="hint">— soft dj sound</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">dia</span><span class="ex">dinheiro</span><span class="ex">difícil</span><span class="ex">pedido</span><span class="ex">Dinho</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">In sentences <span class="hint">— where they flow naturally</span></div>
+          <div class="drill-level-sentence">
+            Bom dia! Tudo bem? <span class="translation">Good morning! All good?</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Eu tinha dinheiro no tipo de conta errada. <span class="translation">I had money in the wrong type of account.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            A gente vai difícil, mas vai. <span class="translation">We'll go — it'll be tough, but we'll go.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/</code> → <code>Lesson_07</code>, <code>Lesson_08</code></div>
-    </div>
-    
-    <div class="mistake-box">
-      <div class="mistake-label">⚠️ Common mistake</div>
-      <div class="mistake-text">Saying 'tia' with a hard English 't' ('TEA-a') sounds unnatural. The shift to 'chia' is subtle but essential — natives will notice immediately.</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/</code> → <code>Lesson_01</code>, <code>Lesson_02</code> — ti and di drills</div>
     </div>
   </div>
 </div>
 
 
-<!-- ============================================================ CH 6: LH / NH ============================================================ -->
-<div class="page-label">📄 PAGE 09 — Ch. 6: LH / NH</div>
+<!-- ============================================================ CH 5 · PAGE B — Minimal pairs + regional + traps ============================================================ -->
+<div class="page-label">📄 PAGE 16 — Ch. 5: T/D before 'i' (minimal pairs + regional)</div>
 <div class="page">
-  
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 5 · T/D before 'i'</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">16</span>
+  </div>
+  <div class="body">
+
+    <div class="minimal-pairs">
+      <div class="minimal-pairs-label">🔍 Minimal pairs lab — hard T/D vs palatalized</div>
+      <div class="pair-row">
+        <div class="pair-word">tio (tchi-u)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">Tio (hard T)</div>
+        <div class="pair-meaning">uncle PT-BR ↔ Spanish Tio (English speaker error)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">dizer (djizer)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">dizer (hard D)</div>
+        <div class="pair-meaning">to say (correct) ↔ (stiff, foreign)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">gente (gentchi)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">gente (gent-ay)</div>
+        <div class="pair-meaning">people (correct) ↔ (dead giveaway of non-native)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">vinte (vintchi)</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">vinte (vint-ay)</div>
+        <div class="pair-meaning">twenty (correct) ↔ (unnatural)</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Regional variation — where T/D stays hard</div>
+        <div class="cultural-text">
+          Palatalization is <strong>most pronounced in Rio, São Paulo, and Minas Gerais</strong>. Much of the <strong>Northeast</strong> (Recife, Fortaleza, parts of Bahia) keeps T and D <em>hard</em> before "i" — "tia" stays <em>TEE-a</em>, more like Spanish.
+          <br><br>
+          This kit teaches the Carioca/Paulista standard (the default in national media and what most learners are expected to use). If you're targeting the Northeast, you can skip this shift — but palatalization is the <em>safer default</em> for being understood and sounding polished anywhere.
+        </div>
+      </div>
+    </div>
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>Hard English T in "tia".</strong> Saying <em>"TEE-a"</em> sounds foreign the moment it leaves your mouth. The shift to "tchia" must happen — it's not optional for a natural accent.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Over-palatalizing.</strong> It only happens before "i". "Tudo" stays <em>TOO-doo</em>. "Data" stays <em>DA-ta</em>. Don't apply the shift everywhere.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Forgetting that final "-e" reduces to "i".</strong> "Gente" is spelled with an E but the final E sounds like I — which means T palatalizes! <em>gen-TCHI</em>, not <em>gen-TAY</em>.</div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_05_T_D_Before_I/Lesson_03</code> — minimal pairs + sentences</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 6 · PAGE A — Theory + LH/NH drills ============================================================ -->
+<div class="page-label">📄 PAGE 17 — Ch. 6: LH / NH (theory + drills)</div>
+<div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Chapter 6</div>
       <h1 class="header-title">LH / NH</h1>
       <p class='header-sub'>filho · manhã · melhor · senhor</p>
     </div>
-    <div class="page-num">09</div>
+    <div class="page-num">17</div>
   </div>
   <div class="body">
     <p class="intro">LH and NH are palatalized consonants — the tongue presses against the palate to create a softer, more musical sound. Think of "million" for LH and "onion" for NH.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">One sound, not two</div>
+        <div class="theory-text">
+          LH is written with two letters but it's <strong>one sound</strong>. Same with NH. The tongue presses flat against the hard palate (the roof of your mouth) and stays there for the duration of the sound.
+          <br><br>
+          Spanish uses <em>ll</em> and <em>ñ</em> for similar sounds. Italian uses <em>gli</em> and <em>gn</em>. Portuguese chose <em>lh</em> and <em>nh</em> — but the mechanics are the same: palatalized consonants.
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 English reference</span>
         <span></span>
         <span>🇧🇷 PT-BR sound</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">'ll' in 'million'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">lh → filho, velho, melhor</div>
-          <div class='comp-note'>Tongue to palate</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'ny' in 'canyon'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">nh → banho, manhã, vinho</div>
-          <div class='comp-note'>Nasal + palate</div>
-        </div>
-    </div>
-
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/</code> → <code>Lesson_01</code>, <code>Lesson_02</code></div>
-    </div>
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/</code> → <code>Lesson_03</code>, <code>Lesson_04</code> — mala vs malha · cano vs canho</div>
+      <div class="comparison-row">
+        <div class="comp-en">"lli" in "million" / "billion"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">lh → filho, velho, melhor</div>
+        <div class='comp-note'>Tongue flat against palate</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"ni" in "onion" / "canyon"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">nh → banho, manhã, vinho</div>
+        <div class='comp-note'>Same position, plus nasal resonance</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"ng" in "singing"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">(not in PT-BR)</div>
+        <div class='comp-note'>PT-BR has no "ng" ending</div>
+      </div>
     </div>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-      <div style="background:#fff; border-radius:10px; padding:10px 12px; border:1px solid #EDE9E0;">
-        <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">LH practice</div>
+      <div style="background:#F0FAF4; border-radius:10px; padding:10px 12px; border-left:3px solid #2D6B52;">
+        <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">LH — the million drill</div>
         <div style="font-family:'Inter',sans-serif; font-size:11.5px; color:#3D5247; line-height:1.55;">
-          Say "million" — feel the tongue? Say it again, but only the "-llion" part. That's your LH.
+          Say "million" slowly. Pause on the "lli". That's your LH — hold your tongue in that shape, then release into the next vowel.
         </div>
       </div>
-      <div style="background:#fff; border-radius:10px; padding:10px 12px; border:1px solid #EDE9E0;">
-        <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">NH practice</div>
+      <div style="background:#F0FAF4; border-radius:10px; padding:10px 12px; border-left:3px solid #2D6B52;">
+        <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">NH — the onion drill</div>
         <div style="font-family:'Inter',sans-serif; font-size:11.5px; color:#3D5247; line-height:1.55;">
-          Say "onion" — the "ny" in the middle is your NH. Now say "manhã" with that same feel.
+          Say "onion" slowly. Pause on the "ni". That same position, with air flowing through the nose too, is your NH.
         </div>
       </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">filho</div><div class="drill-word">velho</div><div class="drill-word">mulher</div><div class="drill-word">melhor</div><div class="drill-word">banho</div><div class="drill-word">manhã</div><div class="drill-word">vinho</div><div class="drill-word">dinheiro</div></div></div>
-    
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">LH family <span class="hint">— palate press, no nasal</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">filho</span><span class="ex">velho</span><span class="ex">mulher</span><span class="ex">melhor</span><span class="ex">trabalho</span><span class="ex">orgulho</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">NH family <span class="hint">— palate press + nasal</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">banho</span><span class="ex">manhã</span><span class="ex">vinho</span><span class="ex">dinheiro</span><span class="ex">cozinha</span><span class="ex">senhor</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">In sentences <span class="hint">— natural flow</span></div>
+          <div class="drill-level-sentence">
+            Meu filho toma banho toda manhã. <span class="translation">My son takes a bath every morning.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            O senhor pode esperar? <span class="translation">Can you (formal) wait?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/</code> → <code>Lesson_05</code> – <code>Lesson_08</code></div>
-    </div>
-    
-    <div class="mistake-box">
-      <div class="mistake-label">⚠️ Common mistake</div>
-      <div class="mistake-text">Don't say 'FI-lyo' (like Spanish). The LH in PT-BR is one sound, not an L + Y combination. Keep the tongue pressed to the palate through the whole sound.</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/</code> → <code>Lesson_01</code>, <code>Lesson_02</code> — LH and NH families</div>
     </div>
   </div>
 </div>
 
 
-<!-- ============================================================ CH 7: L FINAL & S FINAL ============================================================ -->
-<div class="page-label">📄 PAGE 10 — Ch. 7: L final & S final</div>
+<!-- ============================================================ CH 6 · PAGE B — Minimal pairs + traps + cultural ============================================================ -->
+<div class="page-label">📄 PAGE 18 — Ch. 6: LH / NH (minimal pairs + traps)</div>
 <div class="page">
-  
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 6 · LH / NH</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">18</span>
+  </div>
+  <div class="body">
+
+    <div class="minimal-pairs">
+      <div class="minimal-pairs-label">🔍 Minimal pairs lab — LH/NH vs plain L/N + vowel</div>
+      <div class="pair-row">
+        <div class="pair-word">mala</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">malha</div>
+        <div class="pair-meaning">suitcase ↔ knit sweater / mesh</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">cano</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">canho</div>
+        <div class="pair-meaning">pipe ↔ left-handed (colloquial)</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">sono</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">sonho</div>
+        <div class="pair-meaning">sleep ↔ dream</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">tela</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">telha</div>
+        <div class="pair-meaning">screen ↔ roof tile</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">pena</div>
+        <div class="pair-arrow">↔</div>
+        <div class="pair-word">penha</div>
+        <div class="pair-meaning">feather/pity ↔ cliff (proper noun area)</div>
+      </div>
+    </div>
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>Saying "FI-lyo" (Spanish style).</strong> In PT-BR, LH is <em>one sound</em>, not L+Y. Your tongue doesn't break into two positions.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Saying "ma-NYA" for "manhã" (English "nyuh").</strong> Keep the tongue flat and the N+H single. Close your ears to the spelling — it's one motion.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Italian-style "gli" or "gn" substitution.</strong> If you speak Italian, resist transferring "gli"/"gn". They sound similar but PT-BR is slightly softer, more front.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">4</div>
+        <div class="trap-text"><strong>Missing the palate contact.</strong> If your tongue is just touching the teeth (like regular L or N), the sound falls flat. <em>Push the tongue higher</em> — you should feel it flatten against the roof.</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">The "trabalho" test</div>
+        <div class="cultural-text">
+          One of the fastest ways a Brazilian can tell if you're a beginner: how you say <em>"trabalho"</em> (work). Spanish speakers say <em>tra-BAL-yo</em>. Italians say <em>tra-BAL-gli-o</em>. English speakers often just skip the LH entirely — <em>tra-BAL-o</em>.
+          <br><br>
+          <em>Nailing "trabalho" is a rite of passage</em> — once your LH is automatic on this word, it's automatic everywhere.
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_06_LH_NH/Lesson_03</code> — minimal pairs + sentences</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 7 · PAGE A — Final L ============================================================ -->
+<div class="page-label">📄 PAGE 19 — Ch. 7: L final & S final (theory + Final L)</div>
+<div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Chapter 7</div>
       <h1 class="header-title">L final &amp;<br>S final</h1>
       <p class='header-sub'>What English speakers get wrong most</p>
     </div>
-    <div class="page-num">10</div>
+    <div class="page-num">19</div>
   </div>
   <div class="body">
-    <p class="intro">Two sounds that trip up English speakers because they look familiar but behave very differently in PT-BR. Getting these right makes a big difference in fluency.</p>
+    <p class="intro">Two sounds that trip up English speakers because they <em>look</em> familiar but behave very differently in PT-BR. Getting these right moves you from "tourist" to "fluent" in how you sound.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">Final L — the vanishing consonant</div>
+        <div class="theory-text">
+          In English, "ball" ends with a crisp L — the tongue hits the top of your mouth. In Brazilian Portuguese, <strong>that L doesn't exist at the end of words</strong>. It's been replaced by a "u" or "w" glide.
+          <br><br>
+          <strong>Brasil</strong> → <em>bra-ZIU</em> (not bra-ZIL)<br>
+          <strong>legal</strong> → <em>le-GAU</em> (not le-GAL)<br>
+          <strong>sol</strong> → <em>SOU</em> (not SOL)
+          <br><br>
+          Your tongue should never touch the roof of your mouth at the end of these words.
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 English reference</span>
         <span></span>
-        <span>🇧🇷 PT-BR sound</span>
+        <span>🇧🇷 PT-BR behavior</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">'l' as in 'ball'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">L final → Brasil, legal, sol</div>
-          <div class='comp-note'>Sounds like a 'w' or 'u' glide</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'s' as in 'bus'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">S final (before consonant) → mais, dois</div>
-          <div class='comp-note'>Can sound like 'sh' in some words</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'you' / 'cê'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">você → cê (casual speech)</div>
-          <div class='comp-note'>Major contraction</div>
-        </div>
-    </div>
-
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/</code> → <code>Lesson_01</code>, <code>Lesson_02</code></div>
-    </div>
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/</code> → <code>Lesson_03</code>, <code>Lesson_04</code> — key reductions in natural speech</div>
-    </div>
-
-    <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
-      <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">The final L secret</div>
-      <div style="font-family:'Inter',sans-serif; font-size:12px; color:#3D5247; line-height:1.6;">
-        In PT-BR, a word-final L becomes a vowel-like "u" glide. "Brasil" → "Brazi-OO". "Legal" → "lega-OO". Don't say a crisp English L — let it dissolve.
+      <div class="comparison-row">
+        <div class="comp-en">"ball" (crisp L)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Final L → "u" glide</div>
+        <div class='comp-note'>Brasil = "bra-ZIU", legal = "le-GAU"</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"love" (L before vowel)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">L before vowel → stays hard</div>
+        <div class='comp-note'>"lápis" keeps normal L — only FINAL L softens</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"bus" (clean S)</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Final S → varies by region</div>
+        <div class='comp-note'>Rio: "bush"/"boosh" — São Paulo: "boos"</div>
       </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">Brasil</div><div class="drill-word">mal</div><div class="drill-word">sol</div><div class="drill-word">legal</div><div class="drill-word">mais</div><div class="drill-word">depois</div><div class="drill-word">vocês</div><div class="drill-word">cê</div></div></div>
-    
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Final L → "u" <span class="hint">— let it dissolve</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">Brasil</span><span class="ex">legal</span><span class="ex">sol</span><span class="ex">mal</span><span class="ex">Portugal</span><span class="ex">hospital</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">When L is NOT final <span class="hint">— stays a normal L</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">lápis</span><span class="ex">lua</span><span class="ex">elevador</span><span class="ex">lindo</span><span class="ex">falar</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">In sentences <span class="hint">— no hard L anywhere at the end</span></div>
+          <div class="drill-level-sentence">
+            O Brasil é legal demais. <span class="translation">Brazil is really cool.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Hoje tem sol e o mar tá lindo. <span class="translation">Today is sunny and the sea is beautiful.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/</code> → <code>Lesson_05</code> – <code>Lesson_10</code></div>
-    </div>
-    
-    <div class="mistake-box">
-      <div class="mistake-label">⚠️ Common mistake</div>
-      <div class="mistake-text">Saying 'BraZILL' (hard English L) is one of the most common giveaways. The final L should dissolve — 'Brazi-OO' feels weird at first but sounds immediately more natural.</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/Lesson_01</code> — final L drill</div>
     </div>
   </div>
 </div>
 
 
-<!-- ============================================================ CH 8: CONNECTED SPEECH ============================================================ -->
-<div class="page-label">📄 PAGE 11 — Ch. 8: Connected Speech</div>
+<!-- ============================================================ CH 7 · PAGE B — Final S + X sound ============================================================ -->
+<div class="page-label">📄 PAGE 20 — Ch. 7: L final & S final (Final S + X sound)</div>
 <div class="page">
-  
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 7 · L final &amp; S final</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">20</span>
+  </div>
+  <div class="body">
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">🗺️</div>
+      <div class="theory-content">
+        <div class="theory-label">Final S — the regional tell</div>
+        <div class="theory-text">
+          The final S in PT-BR is one of the most regionally variable sounds. A single word like <em>"mais"</em> sounds different in every corner of Brazil.
+          <br><br>
+          • <strong>Rio de Janeiro (Carioca):</strong> <em>"maish"</em> — soft "sh" sound<br>
+          • <strong>São Paulo:</strong> <em>"mais"</em> — clean "s" like English<br>
+          • <strong>Minas Gerais:</strong> similar to São Paulo<br>
+          • <strong>Northeast:</strong> varies, often "mais" or "maishhhh"
+          <br><br>
+          <strong>Either pronunciation is understood everywhere.</strong> Pick one and be consistent.
+        </div>
+      </div>
+    </div>
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">4</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Final S words <span class="hint">— try both: "mais" vs "maish"</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">mais</span><span class="ex">dois</span><span class="ex">três</span><span class="ex">vocês</span><span class="ex">depois</span><span class="ex">então</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">5</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">The X sound — often "sh" or "z" <span class="hint">— context-dependent</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">xícara</span><span class="ex">peixe</span><span class="ex">lixo</span><span class="ex">exemplo</span><span class="ex">mexer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="minimal-pairs">
+      <div class="minimal-pairs-label">🔍 S-sound regional comparison — "três irmãos" (three brothers)</div>
+      <div class="pair-row">
+        <div class="pair-word">Carioca</div>
+        <div class="pair-arrow">→</div>
+        <div class="pair-word">"traish irmãosh"</div>
+        <div class="pair-meaning">soft "sh" on both S</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">Paulista</div>
+        <div class="pair-arrow">→</div>
+        <div class="pair-word">"trais irmãos"</div>
+        <div class="pair-meaning">clean S, no sh</div>
+      </div>
+      <div class="pair-row">
+        <div class="pair-word">Nordestino</div>
+        <div class="pair-arrow">→</div>
+        <div class="pair-word">"trais irmãos"</div>
+        <div class="pair-meaning">similar to Paulista, vowels warmer</div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/</code> → <code>Lesson_02</code>, <code>Lesson_03</code> — final S + X sound</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 7 · PAGE C — Reductions + traps + cultural ============================================================ -->
+<div class="page-label">📄 PAGE 21 — Ch. 7: L final & S final (reductions + traps)</div>
+<div class="page">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 7 · L final &amp; S final</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">21</span>
+  </div>
+  <div class="body">
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">6</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Key reductions — "você → cê" <span class="hint">— hear this in every conversation</span></div>
+          <div class="drill-level-sentence">
+            Você tá bem? → Cê tá bem? <span class="translation">Are you OK? (formal → casual)</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Você vai? → Cê vai? <span class="translation">Are you going?</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Você entendeu? → Cê entendeu? <span class="translation">Did you understand?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>Saying "Bra-ZILL" with hard English L.</strong> This is the #1 giveaway. "Brasil" is <em>"bra-ZIU"</em> — the L dissolves into a "u" sound.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Softening ALL L's.</strong> Only FINAL L softens. "Lua", "lápis", "falar" keep a normal L. Check position before applying the rule.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Avoiding "cê" thinking it's too casual.</strong> Unless you're reading a legal document, "cê" is used universally — from kids to executives. Use it.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">4</div>
+        <div class="trap-text"><strong>Picking a regional S and switching mid-sentence.</strong> If you go Carioca "sh" at the start, stay there. Mixing "maish" and "mais" in the same conversation sounds confused.</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">The "Brazi-OO" moment</div>
+        <div class="cultural-text">
+          There's a specific moment in every foreigner's PT-BR journey when saying <em>"Brasil"</em> with a dissolving L stops feeling weird and starts feeling <em>right</em>. Before that, it feels like you're missing something. After, the old way sounds immediately foreign.
+          <br><br>
+          <em>Drill it with a sentence:</em> "Eu amo o Brasil." Say it 10 times until the final L evaporates.
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_07_L_Final_S_Final/Lesson_04</code> — reductions + full flow</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 8 · PAGE A — Theory + linking rules ============================================================ -->
+<div class="page-label">📄 PAGE 22 — Ch. 8: Connected Speech (theory + linking)</div>
+<div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Chapter 8</div>
       <h1 class="header-title">Connected<br>Speech</h1>
       <p class='header-sub'>Linking words like a native</p>
     </div>
-    <div class="page-num">11</div>
+    <div class="page-num">22</div>
   </div>
   <div class="body">
     <p class="intro">Natives don't say individual words — they say streams of sound. Syllables from one word flow into the next. If you pause between every word, you'll sound like a robot reading a script.</p>
 
-    
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">Why connected speech matters most</div>
+        <div class="theory-text">
+          You can nail every individual sound in this kit — but if you still chop your sentences into discrete word-by-word units, you'll sound <em>foreign</em>. All natural languages have connected speech; it's just <strong>more aggressive in PT-BR</strong> than in English.
+          <br><br>
+          The rule: <strong>when two vowels collide, they blend. When a consonant ends a word and a vowel starts the next, they stick together.</strong>
+        </div>
+      </div>
+    </div>
+
     <div class="comparison-table">
       <div class="comparison-header">
-        <span>🇺🇸 English sound</span>
+        <span>🇺🇸 Written (3 words)</span>
         <span></span>
-        <span>🇧🇷 PT-BR sound</span>
+        <span>🇧🇷 Spoken (1 flow)</span>
       </div>
-      
-        <div class="comparison-row">
-          <div class="comp-en">'Como é que' (3 words)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">→ 'Coméki' (1 flow)</div>
-          <div class='comp-note'>Words blur together</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'Deixa eu ver' (3 words)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">→ 'Dêchavér'</div>
-          <div class='comp-note'>Natural reduction</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'Você tá bem?' (3 words)</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">→ 'Cê tá bem?'</div>
-          <div class='comp-note'>você → cê in casual speech</div>
-        </div>
-        <div class="comparison-row">
-          <div class="comp-en">'Eu também não'</div>
-          <div class="comp-arrow">→</div>
-          <div class="comp-pt">→ 'Eu tambémnão'</div>
-          <div class='comp-note'>No gap between words</div>
-        </div>
-    </div>
-
-    
-    <div class="audio-cue">
-      <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_08_Connected_Speech/</code> → <code>Lesson_01</code> – <code>Lesson_05</code></div>
-    </div>
-
-    <div style="background:#fff; border-radius:10px; padding:11px 14px; border:1px solid #EDE9E0;">
-      <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">The 3 linking rules</div>
-      <div style="display:flex; flex-direction:column; gap:5px; margin-top:2px;">
-        <div style="font-family:Inter,sans-serif; font-size:12px; color:#3D5247; display:flex; gap:8px;"><span style="color:#7EC8A4; font-weight:600; flex-shrink:0;">1.</span>Vowel + vowel → they blend into one syllable</div><div style="font-family:Inter,sans-serif; font-size:12px; color:#3D5247; display:flex; gap:8px;"><span style="color:#7EC8A4; font-weight:600; flex-shrink:0;">2.</span>Final consonant + vowel → consonant moves to next syllable</div><div style="font-family:Inter,sans-serif; font-size:12px; color:#3D5247; display:flex; gap:8px;"><span style="color:#7EC8A4; font-weight:600; flex-shrink:0;">3.</span>Casual contractions: você → cê, está → tá, para → pra</div>
+      <div class="comparison-row">
+        <div class="comp-en">Como é que</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Coméki</div>
+        <div class='comp-note'>3 vowel endings/starts blend → one syllable</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">Deixa eu ver</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Dêchavér</div>
+        <div class='comp-note'>"xa" + "eu" fuse into "xave"</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">Você está bem?</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Cê tá bem?</div>
+        <div class='comp-note'>Double reduction (você → cê, está → tá)</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">Eu também não</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Eu tambémnão</div>
+        <div class='comp-note'>No gap — final nasal flows into next vowel</div>
       </div>
     </div>
 
-    <div class="drill-box"><div class="drill-label">🗣 Word drill — say each one twice</div><div class="drill-words"><div class="drill-word">Como é que</div><div class="drill-word">Deixa eu ver</div><div class="drill-word">Cê tá bem?</div><div class="drill-word">pra mim</div><div class="drill-word">tá tudo bem</div><div class="drill-word">vamo lá</div></div></div>
-    
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">1</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Rule 1 — vowel + vowel collide <span class="hint">— blend into one</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">Como é</span><span class="ex">É o mesmo</span><span class="ex">Ela é</span><span class="ex">Tudo é</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">2</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Rule 2 — consonant + vowel link <span class="hint">— consonant moves forward</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">tem um</span><span class="ex">bom amigo</span><span class="ex">com ela</span><span class="ex">sem isso</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">3</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Rule 3 — casual contractions <span class="hint">— everyday speech</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">você → cê</span><span class="ex">está → tá</span><span class="ex">para → pra</span><span class="ex">estou → tô</span><span class="ex">também → tamém</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="audio-cue">
       <div class="audio-cue-icon">🎧</div>
-      <div class="audio-cue-text"><strong>Audio:</strong> <code>Bonus_50_Survival_Phrases/</code> → <code>Phrase_01</code> – <code>Phrase_13</code> — full survival phrases at natural speed</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_08_Connected_Speech/</code> → <code>Lesson_01</code>, <code>Lesson_02</code>, <code>Lesson_03</code> — linking rules</div>
     </div>
-    
-    <div class="tip-box">
-      <div class="tip-icon">🔗</div>
-      <div><div class="tip-label">The rule</div><div class="tip-text">If it sounds like too many separate sounds, you're not connected enough. Speed up slightly and let the words collide.</div></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ CH 8 · PAGE B — Fillers + full flow + traps ============================================================ -->
+<div class="page-label">📄 PAGE 23 — Ch. 8: Connected Speech (fillers + full flow)</div>
+<div class="page">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 8 · Connected Speech</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">23</span>
+  </div>
+  <div class="body">
+
+    <div class="drill-progression">
+      <div class="drill-level">
+        <div class="drill-level-num">4</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Filler words — the glue of conversation <span class="hint">— use them, don't fear them</span></div>
+          <div class="drill-level-examples">
+            <span class="ex">né</span><span class="ex">tipo</span><span class="ex">sei lá</span><span class="ex">então</span><span class="ex">pois é</span><span class="ex">tipo assim</span>
+          </div>
+        </div>
+      </div>
+      <div class="drill-level">
+        <div class="drill-level-num">5</div>
+        <div class="drill-level-content">
+          <div class="drill-level-title">Full natural flow <span class="hint">— everything at once</span></div>
+          <div class="drill-level-sentence">
+            Cê tá bem, né? <span class="translation">You're OK, right?</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Deixa eu ver, tipo, o que tem pra jantar. <span class="translation">Let me see, like, what's for dinner.</span>
+          </div>
+          <div class="drill-level-sentence" style="margin-top:5px;">
+            Sei lá, pra mim tá tudo bem então. <span class="translation">Dunno, for me it's all good then.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="traps-box">
+      <div class="traps-label">⚠️ Traps English speakers fall into</div>
+      <div class="trap-item">
+        <div class="trap-num">1</div>
+        <div class="trap-text"><strong>Pausing between every word.</strong> English puts micro-pauses between words. PT-BR flows continuously. If someone can hear your word boundaries clearly, you're pausing too much.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">2</div>
+        <div class="trap-text"><strong>Avoiding contractions.</strong> "Você" and "para" sound overly formal in conversation. Brazilians <em>expect</em> you to say "cê" and "pra" — not using them reads as stiff or foreign.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">3</div>
+        <div class="trap-text"><strong>Skipping fillers.</strong> <em>"Né"</em>, <em>"tipo"</em>, <em>"sei lá"</em> aren't optional — they're the glue. Your PT-BR without fillers sounds like a language exercise, not conversation.</div>
+      </div>
+      <div class="trap-item">
+        <div class="trap-num">4</div>
+        <div class="trap-text"><strong>Over-enunciating when nervous.</strong> The instinct when you're unsure is to slow down and articulate each word. <em>Do the opposite</em> — let words flow together, even if a few sounds get mushy. That's authentic speech.</div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🍻</div>
+      <div class="cultural-content">
+        <div class="cultural-label">The bar test</div>
+        <div class="cultural-text">
+          The real measure of connected-speech mastery is this: <strong>can you understand Brazilians talking to each other</strong> at a noisy bar, not talking to you? That's the hardest listening challenge — full speed, heavy reductions, strong fillers, regional slang.
+          <br><br>
+          <em>You don't need to speak like that yourself.</em> But you should eventually understand it. The Listening Lab (separate product) trains exactly this.
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-cue">
+      <div class="audio-cue-icon">🎧</div>
+      <div class="audio-cue-text"><strong>Audio:</strong> <code>Chapter_08_Connected_Speech/</code> → <code>Lesson_04</code> — fillers + full natural flow</div>
     </div>
   </div>
 </div>
 
 
 <!-- ============================================================ BONUS: 50 SURVIVAL PHRASES ============================================================ -->
-<div class="page-label">📄 PAGE 12 — Bonus: 50 Survival Phrases (p.1)</div>
+<div class="page-label">📄 PAGE 24 — Bonus: 50 Survival Phrases (p.1)</div>
 <div class="page">
-  
+
   <div class="header">
     <div>
       <div class="section-tag">Bonus</div>
       <h1 class="header-title">50 Survival<br>Phrases</h1>
       <p class='header-sub'>With natural pronunciation cues · Part 1</p>
     </div>
-    <div class="page-num">12</div>
+    <div class="page-num">24</div>
   </div>
   <div class="body">
     <p class="intro">These are the 50 phrases you'll use most in real Brazilian life. Each one is written to help you say it — not just read it.</p>
@@ -1185,12 +2398,12 @@ body {
 
 
 <!-- ============================================================ BONUS: 50 SURVIVAL PHRASES P2 ============================================================ -->
-<div class="page-label">📄 PAGE 13 — Bonus: 50 Survival Phrases (p.2)</div>
+<div class="page-label">📄 PAGE 25 — Bonus: 50 Survival Phrases (p.2)</div>
 <div class="page">
   <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
     <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">50 Survival Phrases</span>
     <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; font-style:italic;">continued · Part 2</span>
-    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; letter-spacing:0.1em; margin-left:auto;">13</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; letter-spacing:0.1em; margin-left:auto;">25</span>
   </div>
   <div class="body">
     <div class="survival-list">
@@ -1206,16 +2419,16 @@ body {
 
 
 <!-- ============================================================ 14-DAY PLAN ============================================================ -->
-<div class="page-label">📄 PAGE 14 — 14-Day Plan</div>
+<div class="page-label">📄 PAGE 26 — 14-Day Plan</div>
 <div class="page">
-  
+
   <div class="header">
     <div>
       <div class="section-tag">14-Day Plan</div>
       <h1 class="header-title">Day by Day</h1>
       <p class='header-sub'>10 min · out loud · every day</p>
     </div>
-    <div class="page-num">14</div>
+    <div class="page-num">26</div>
   </div>
   <div class="body">
     <p class="intro">Two weeks. One module every 1–2 days. Each day has a clear focus and an audio reference. Follow this and you'll cover every sound in the kit.</p>
@@ -1225,11 +2438,11 @@ body {
           <div class="day-badge">Day 1</div>
           <div class="plan-content">
             <div class="plan-module">Chapter 1</div>
-            <div class="plan-text"><strong>Rhythm</strong> — stress + short phrases</div>
+            <div class="plan-text"><strong>Rhythm</strong> — stress rules + linking</div>
           </div>
-          <div class="audio-badge">7 files</div>
+          <div class="audio-badge">4 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch1 · Lessons 01–07</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch1 · Lessons 01–04</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 2</div>
@@ -1239,47 +2452,47 @@ body {
           </div>
           <div class="audio-badge">review</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch1 · Lessons 01–07</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch1 · Lessons 03, 04</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 3</div>
           <div class="plan-content">
             <div class="plan-module">Chapter 2</div>
-            <div class="plan-text"><strong>Vowels</strong> — all 5 + open/closed</div>
+            <div class="plan-text"><strong>Vowels</strong> — clean vowels + open/closed</div>
           </div>
-          <div class="audio-badge">10 files</div>
+          <div class="audio-badge">5 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch2 · Lessons 01–10</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch2 · Lessons 01–05</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 4</div>
           <div class="plan-content">
             <div class="plan-module">Chapter 2 review</div>
-            <div class="plan-text">Minimal pairs: avó / avô</div>
+            <div class="plan-text">Minimal pairs: avó / avô · pôde / pode</div>
           </div>
           <div class="audio-badge">review</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch2 · Lessons 06–07</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch2 · Lessons 02, 03, 05</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 5</div>
           <div class="plan-content">
             <div class="plan-module">Chapter 3</div>
-            <div class="plan-text"><strong>Nasal sounds</strong> — ão, em, ãe, õe</div>
+            <div class="plan-text"><strong>Nasal sounds</strong> — ão, em/en, ã, õe</div>
           </div>
-          <div class="audio-badge">12 files</div>
+          <div class="audio-badge">5 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch3 · Lessons 01–12</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch3 · Lessons 01–05</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 6</div>
           <div class="plan-content">
             <div class="plan-module">Chapter 3 review</div>
-            <div class="plan-text">3 nasal phrases at natural speed</div>
+            <div class="plan-text">Minimal pairs + 3 nasal phrases</div>
           </div>
           <div class="audio-badge">review</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch3 · Lessons 06–08</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch3 · Lesson 05</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 7</div>
@@ -1297,19 +2510,19 @@ body {
             <div class="plan-module">Chapter 4</div>
             <div class="plan-text"><strong>R / RR / H</strong> — the guttural sound</div>
           </div>
-          <div class="audio-badge">10 files</div>
+          <div class="audio-badge">5 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch4 · Lessons 01–10</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch4 · Lessons 01–05</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 9</div>
           <div class="plan-content">
             <div class="plan-module">Chapter 5</div>
-            <div class="plan-text"><strong>T/D before i</strong> — tia/dia drill</div>
+            <div class="plan-text"><strong>T/D before i</strong> — palatalization drill</div>
           </div>
-          <div class="audio-badge">8 files</div>
+          <div class="audio-badge">3 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch5 · Lessons 01–08</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch5 · Lessons 01–03</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 10</div>
@@ -1317,39 +2530,39 @@ body {
             <div class="plan-module">Chapter 6</div>
             <div class="plan-text"><strong>LH / NH</strong> — filho, manhã</div>
           </div>
-          <div class="audio-badge">8 files</div>
+          <div class="audio-badge">3 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch6 · Lessons 01–08</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch6 · Lessons 01–03</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 11</div>
           <div class="plan-content">
-            <div class="plan-module">Chapters 7 + 8</div>
-            <div class="plan-text"><strong>L/S final</strong> + <strong>Connected speech</strong></div>
+            <div class="plan-module">Chapter 7</div>
+            <div class="plan-text"><strong>L final + S final</strong> + reductions</div>
           </div>
-          <div class="audio-badge">15 files</div>
+          <div class="audio-badge">4 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Ch7 · L01–10 + Ch8 · L01–05</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch7 · Lessons 01–04</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 12</div>
           <div class="plan-content">
-            <div class="plan-module">Bonus</div>
-            <div class="plan-text"><strong>Survival phrases</strong> — all 13 audios</div>
+            <div class="plan-module">Chapter 8</div>
+            <div class="plan-text"><strong>Connected speech</strong> — linking + flow</div>
           </div>
-          <div class="audio-badge">13 files</div>
+          <div class="audio-badge">4 lessons</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>Bonus · Phrase 01–13</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Ch8 · Lessons 01–04</code></span></div>
       </div><div class="plan-card">
         <div class="plan-card-top">
           <div class="day-badge">Day 13</div>
           <div class="plan-content">
-            <div class="plan-module">Full review</div>
-            <div class="plan-text">Pick 10 hardest phrases, repeat x3</div>
+            <div class="plan-module">Bonus</div>
+            <div class="plan-text"><strong>50 Survival phrases</strong> — all 13 audios</div>
           </div>
-          <div class="audio-badge">your pick</div>
+          <div class="audio-badge">13 phrases</div>
         </div>
-        <div class="plan-audio"><span>🎧 <code>—</code></span></div>
+        <div class="plan-audio"><span>🎧 <code>Bonus · Phrase 01–13</code></span></div>
       </div><div class="plan-card highlight">
         <div class="plan-card-top">
           <div class="day-badge">Day 14</div>
@@ -1367,72 +2580,52 @@ body {
 
 
 <!-- ============================================================ AUDIO INDEX ============================================================ -->
-<div class="page-label">📄 PAGE 15 — Audio Index (p.1)</div>
+<div class="page-label">📄 PAGE 27 — Audio Index (p.1)</div>
 <div class="page">
-  
+
   <div class="header">
     <div>
       <div class="section-tag">Audio Index</div>
-      <h1 class="header-title">All 83 Files</h1>
+      <h1 class="header-title">All 46 Lessons</h1>
       <p class='header-sub'>Chapters 1–4 · organized by folder</p>
     </div>
-    <div class="page-num">15</div>
+    <div class="page-num">27</div>
   </div>
   <div class="body">
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 1 · Rhythm &amp; Stress</span><span class="folder-path">Chapter_01_Rhythm_Stress/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">ca-FÉ… café… café… (stress demo)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">ho-TEL… hotel… hotel…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Bra-SIL… Brasil… Brasil…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Tudo bem?… (natural, short phrases)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Como é que… (natural linking)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Deixa eu ver… (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Você tá bem? → Cê tá bem?</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Stress on -a/-e/-o words (2nd-to-last)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Stress on other endings + accent override</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Linking &amp; contractions (como é que, cê)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Full natural flow + stress minimal pairs</div></div>
     </div>
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 2 · Vowels</span><span class="folder-path">Chapter_02_Vowels/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">a… / casa… fala…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">é… ê… / pé… você… (open vs closed)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">i… / vida… lindo…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">ó… ô… / avó… avô… (open vs closed)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">u… / tudo… muito…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">avó… avô… (minimal pair E)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">pode… pôde… (minimal pair O)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">para… pra… (vowel reduction)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">não… sim… também… agora…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">Eu tô com fome. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">The 5 clean vowels (a, e, i, o, u) — pure shapes</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Open vs closed E (é vs ê) — pé / você</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Open vs closed O (ó vs ô) — avó / avô</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Final -e/-o reductions → i/u</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">"para" → "pra" + minimal pairs sentences</div></div>
     </div>
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 3 · Nasal Sounds</span><span class="folder-path">Chapter_03_Nasal_Sounds/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">ão… / não… pão… mão…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">em… / bem… tem… vem…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">om… / bom… som…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">ã… / irmã… amanhã…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">ões… / limões… aviões…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Não tem pão. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Eu também não. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Tá tudo bem então. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">mau… mão… (minimal pair)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">sim… sem… (minimal pair)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_11</div><div class="audio-script">bom… bom… (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_12</div><div class="audio-script">Eu não entendi. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Nasal orientation — feel the vibration</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">ão family (não, pão, mão, canção) + pure ã</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">em/en + om/on (bem, tem, bom, som)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">ãe + õe (mãe, pães, limões, aviões)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Minimal pairs (mão/mau, pão/pau) + sentences</div></div>
     </div>
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 4 · R / RR / H</span><span class="folder-path">Chapter_04_R_RR_H/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">caro… carro… (single vs RR)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Rio… rua… rápido… (R at word start)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">correr… carro… cachorro… (RR inside)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">hoje… hotel… humano… (H sound)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Eu quero um carro. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Que horror! (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Vamos pro Rio. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Corre, corre! (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">barato… carro… arroz… correr… (drill)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">Eu moro aqui. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">H-sound orientation (hoje, hora, hotel)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Initial R — guttural (Rio, rua, rápido)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Double RR sustained (carro, ferro, correr)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Single R tap (caro, para, Maria)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Minimal pair drill (caro/carro) + sentences</div></div>
     </div>
 
   </div>
@@ -1440,60 +2633,43 @@ body {
 
 
 <!-- ============================================================ AUDIO INDEX P2 ============================================================ -->
-<div class="page-label">📄 PAGE 16 — Audio Index (p.2)</div>
+<div class="page-label">📄 PAGE 28 — Audio Index (p.2)</div>
 <div class="page">
   <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
     <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Audio Index</span>
     <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; font-style:italic;">continued · Chapters 5–8 + Bonus</span>
-    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">16</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">28</span>
   </div>
   <div class="body">
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 5 · T/D before 'i'</span><span class="folder-path">Chapter_05_T_D_Before_I/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">tia… dia… (key pair)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">tinha… dia… dinheiro… tipo…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Bom dia! (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Que difícil… (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Eu tinha dinheiro. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Que tipo? (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">dia… dinheiro… difícil… tipo… (drill)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Hoje é dia vinte. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">ti → tchi drill (tia, tipo, tinha, gente, vinte)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">di → dji drill (dia, dinheiro, difícil, pedido)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Minimal pairs + sentences ("Bom dia", "Que tipo?")</div></div>
     </div>
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 6 · LH / NH</span><span class="folder-path">Chapter_06_LH_NH/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">filho… velho… trabalho… mulher…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">banho… manhã… vinho… dinheiro…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">mala… malha… (LH minimal pair)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">cano… canho… (NH minimal pair)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Minha mulher trabalha. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Eu quero banho. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">melhor… senhor… mulher… filho…</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Meu filho tá melhor. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">LH family (filho, velho, trabalho, melhor)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">NH family (banho, manhã, vinho, dinheiro)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Minimal pairs (mala/malha, sono/sonho) + sentences</div></div>
     </div>
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 7 · L final &amp; S final</span><span class="folder-path">Chapter_07_L_Final_S_Final/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Brasil… mal… sol… legal… (L final)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">mais… dois… três… vocês… (S final)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Deixa eu ver… (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">você… cê… (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">xícara… mexer… peixe… (X sound)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_06</div><div class="audio-script">Mais tarde. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_07</div><div class="audio-script">Depois eu te falo. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_08</div><div class="audio-script">Fecha a porta. (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_09</div><div class="audio-script">Mexeu? (natural)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_10</div><div class="audio-script">O Brasil é legal. (natural)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Final L → "u" glide (Brasil, legal, sol, mal)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Final S regional (mais, dois, três) — Carioca vs Paulista</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">X sound + complex patterns (xícara, peixe)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Reductions (você→cê) + full natural flow</div></div>
     </div>
 
     <div class="audio-chapter-group">
       <div class="audio-chapter-header"><span>Chapter 8 · Connected Speech</span><span class="folder-path">Chapter_08_Connected_Speech/</span></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Como é que → Cóêki (vowel+vowel)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Deixa eu → Déchavé (consonant+vowel)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">você→cê · está→tá · para→pra</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">né… tipo… sei lá… (fillers)</div></div>
-      <div class="audio-index-row"><div class="audio-filename">Lesson_05</div><div class="audio-script">Eu também não. (full natural flow)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_01</div><div class="audio-script">Rule 1 — vowel+vowel blend (Como é, Ela é)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_02</div><div class="audio-script">Rule 2 — consonant+vowel link (tem um, com ela)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_03</div><div class="audio-script">Casual contractions (cê, tá, pra, tô)</div></div>
+      <div class="audio-index-row"><div class="audio-filename">Lesson_04</div><div class="audio-script">Fillers + full natural flow (né, tipo, sei lá)</div></div>
     </div>
 
     <div class="audio-chapter-group">
@@ -1515,7 +2691,7 @@ body {
 
     <div class="tip-box">
       <div class="tip-icon">✅</div>
-      <div><div class="tip-label">You have everything</div><div class="tip-text">83 audio files across 8 chapters + Bonus, mapped to a 14-day plan. The only thing left is to press play and say it out loud.</div></div>
+      <div><div class="tip-label">You have everything</div><div class="tip-text">46 in-depth audio lessons across 8 chapters + 13 survival phrases, mapped to a 14-day plan. The only thing left is to press play and say it out loud.</div></div>
     </div>
   </div>
 </div>
