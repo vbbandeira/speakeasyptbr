@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakEasy — Brazilian Culture & Etiquette Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter','Noto Color Emoji',sans-serif; background:#D8D4CC;
+  display:flex; flex-direction:column; align-items:center;
+  gap:48px; padding:48px 20px;
+}
+.page-label {
+  width:420px; font-family:'Inter',sans-serif; font-size:10px;
+  font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:#999; margin-bottom:-36px; padding-left:4px;
+}
+.page {
+  width:420px; background:#F5F0E8; border-radius:16px;
+  overflow:hidden; border:1px solid #D4CBBB;
+}
+
+/* ── Header ── */
+.header {
+  background:#1E4D3B; padding:26px 32px 22px;
+  position:relative; overflow:hidden;
+  display:flex; align-items:flex-start; justify-content:space-between;
+}
+.header::before {
+  content:''; position:absolute; top:-50px; right:-50px;
+  width:160px; height:160px; border-radius:50%;
+  background:rgba(255,255,255,0.05);
+}
+.section-tag {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.15em; text-transform:uppercase; color:#7EC8A4; margin-bottom:5px;
+}
+.header-title {
+  font-family:'Poppins',sans-serif; font-size:21px; font-weight:700;
+  color:#fff; line-height:1.15;
+}
+.header-sub {
+  margin-top:5px; font-family:'Inter',sans-serif;
+  font-size:11.5px; color:rgba(255,255,255,0.5);
+}
+.page-num {
+  font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.3);
+  letter-spacing:0.1em; flex-shrink:0; margin-top:2px;
+}
+
+/* ── Body ── */
+.body { padding:22px 30px 30px; display:flex; flex-direction:column; gap:16px; }
+.intro {
+  font-size:12.5px; color:#6B7B6E; line-height:1.65;
+  border-left:3px solid #A8E6C3; padding-left:12px; font-style:italic;
+}
+
+/* ── Tip box ── */
+.tip-box {
+  background:#1E4D3B; border-radius:11px; padding:13px 15px;
+  display:flex; gap:9px; align-items:flex-start;
+}
+.tip-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+.tip-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; margin-bottom:3px;
+}
+.tip-text {
+  font-family:'Inter',sans-serif; font-size:11.5px;
+  color:rgba(255,255,255,0.85); line-height:1.6;
+}
+.tip-text em { color:#A8E6C3; font-style:normal; font-weight:500; }
+
+/* ── Comparison table ── */
+.comparison-table {
+  background:#fff; border-radius:11px; overflow:hidden; border:1px solid #EDE9E0;
+}
+.comparison-header {
+  display:grid; grid-template-columns:1fr 24px 1fr;
+  padding:8px 14px; background:rgba(30,77,59,0.06);
+  border-bottom:1px solid #EDE9E0;
+}
+.comparison-header span {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.1em; text-transform:uppercase; color:#8FA897;
+}
+.comparison-row {
+  display:grid; grid-template-columns:1fr 24px 1fr;
+  padding:9px 14px; border-bottom:1px solid rgba(212,203,187,0.5);
+  align-items:center;
+}
+.comparison-row:last-child { border-bottom:none; }
+.comp-en { font-family:'Inter',sans-serif; font-size:12.5px; color:#6B7B6E; }
+.comp-arrow { font-family:'Inter',sans-serif; font-size:14px; color:#7EC8A4; text-align:center; }
+.comp-pt {
+  font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; color:#1E4D3B;
+}
+.comp-note {
+  grid-column:1/-1; font-family:'Inter',sans-serif;
+  font-size:10.5px; color:#8FA897; font-style:italic;
+  margin-top:2px; padding-top:3px; border-top:1px dashed #E0DDD5;
+}
+
+/* ── TOC ── */
+.toc-item {
+  display:flex; align-items:baseline; padding:9px 0;
+  border-bottom:1px solid rgba(212,203,187,0.5);
+}
+.toc-item:last-child { border-bottom:none; }
+.toc-ch {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.08em; color:#7EC8A4; min-width:60px;
+}
+.toc-title {
+  font-family:'Poppins',sans-serif; font-size:13px; font-weight:600; color:#1E4D3B; flex:1;
+}
+.toc-sub {
+  font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; font-style:italic;
+  display:block; margin-top:1px;
+}
+.toc-dots {
+  flex:1; border-bottom:1.5px dotted #C8BFB0; margin:0 8px 4px; min-width:12px;
+}
+.toc-page {
+  font-family:'Poppins',sans-serif; font-size:12px; font-weight:600;
+  color:#1E4D3B; min-width:20px; text-align:right;
+}
+
+/* ── Theory spotlight (from kit) ── */
+.theory-spotlight {
+  background:#F0FAF4; border-radius:10px; padding:12px 14px;
+  border-left:3px solid #2D6B52; display:flex; gap:10px;
+}
+.theory-icon { font-size:16px; flex-shrink:0; margin-top:1px; }
+.theory-content { flex:1; }
+.theory-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.12em; text-transform:uppercase; color:#2D6B52; margin-bottom:4px;
+}
+.theory-text {
+  font-family:'Inter',sans-serif; font-size:11.5px; color:#3D5247; line-height:1.55;
+}
+.theory-text strong { color:#1E4D3B; font-weight:600; }
+.theory-text em { color:#2D6B52; font-style:normal; font-weight:500; }
+
+/* ── Cultural box (blue-teal) ── */
+.cultural-box {
+  background:#EEF3F4; border-radius:10px; padding:11px 14px;
+  border-left:3px solid #5A9BA4; display:flex; gap:10px;
+}
+.cultural-icon { font-size:15px; flex-shrink:0; margin-top:1px; }
+.cultural-content { flex:1; }
+.cultural-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase; color:#4A838A; margin-bottom:4px;
+}
+.cultural-text {
+  font-family:'Inter',sans-serif; font-size:11px; color:#3D5E63; line-height:1.55;
+}
+.cultural-text strong { color:#2A4A50; font-weight:600; }
+
+/* ── Do / Don't grid (new) ── */
+.do-dont-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:10px;
+}
+.do-column, .dont-column {
+  border-radius:10px; padding:12px 14px;
+}
+.do-column {
+  background:#F0FAF4; border:1px solid #A8E6C3;
+}
+.dont-column {
+  background:#FFF8F0; border:1px solid #F0D4A8;
+}
+.column-label {
+  font-family:'Poppins',sans-serif; font-size:11px; font-weight:700;
+  text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;
+}
+.do-column .column-label { color:#2D6B52; }
+.dont-column .column-label { color:#B07030; }
+.do-column ul, .dont-column ul { list-style:none; padding:0; margin:0; }
+.do-column li, .dont-column li {
+  font-family:'Inter',sans-serif; font-size:10.5px; line-height:1.45;
+  padding:5px 0; border-top:1px solid rgba(212,203,187,0.35);
+}
+.do-column li:first-child, .dont-column li:first-child { border-top:none; padding-top:0; }
+.do-column li { color:#2D6B52; }
+.dont-column li { color:#7A5020; }
+.do-column li strong { color:#1E4D3B; font-weight:600; }
+.dont-column li strong { color:#5A3818; font-weight:600; }
+
+/* ── Region card (new) ── */
+.region-card {
+  background:#fff; border-radius:10px; padding:11px 14px;
+  border:1px solid #EDE9E0; display:flex; gap:10px;
+}
+.region-flag { font-size:18px; flex-shrink:0; margin-top:1px; }
+.region-content { flex:1; }
+.region-name {
+  font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:700;
+  color:#1E4D3B; margin-bottom:2px;
+}
+.region-vibe {
+  font-family:'Inter',sans-serif; font-size:10px; color:#2D6B52;
+  font-weight:500; letter-spacing:0.08em; text-transform:uppercase;
+  margin-bottom:5px;
+}
+.region-desc {
+  font-family:'Inter',sans-serif; font-size:11px; color:#3D5247; line-height:1.5;
+}
+.region-desc strong { color:#1E4D3B; font-weight:600; }
+
+/* ── Feature card (key/value list) ── */
+.feature-list { display:flex; flex-direction:column; gap:8px; }
+.feature-row {
+  background:#fff; border-radius:8px; padding:9px 13px;
+  border:1px solid #EDE9E0; display:flex; gap:10px; align-items:flex-start;
+}
+.feature-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+.feature-content { flex:1; }
+.feature-key {
+  font-family:'Poppins',sans-serif; font-size:11.5px; font-weight:600;
+  color:#1E4D3B; margin-bottom:2px;
+}
+.feature-desc {
+  font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247; line-height:1.5;
+}
+.feature-desc strong { color:#1E4D3B; font-weight:600; }
+
+@media print {
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    animation: none !important; transition: none !important;
+  }
+  @page { size: 420px auto; margin: 0mm; }
+  html, body {
+    width: 420px !important; margin: 0 !important; padding: 0 !important;
+    background: #F5F0E8 !important; display: block !important;
+    min-height: unset !important;
+  }
+  .page-label { display: none !important; }
+  .page {
+    width: 420px !important; border-radius: 0 !important;
+    border: none !important; box-shadow: none !important;
+    overflow: hidden !important; page-break-after: always;
+    page-break-inside: avoid; margin: 0 !important;
+  }
+  .page:last-of-type { page-break-after: auto; }
+  .tip-box, .theory-spotlight, .cultural-box, .comparison-row, .toc-item,
+  .do-dont-grid, .region-card, .feature-row { page-break-inside: avoid; box-shadow: none !important; }
+}
+</style>
+</head>
+<body>
+
+
+<!-- ============================================================ PAGE 01 — COVER ============================================================ -->
+<div class="page-label">📄 PAGE 01 — Cover</div>
+<div class="page" style="height:747px; background:linear-gradient(to bottom, #E8E5DC 0, #E8E5DC 703px, #1E4D3B 703px, #1E4D3B 100%); background-color:#1E4D3B; position:relative; overflow:hidden; border:none;">
+
+  <!-- HEADER -->
+  <div style="position:absolute; left:0; top:0; width:100%; height:72px; overflow:hidden; z-index:5;">
+    <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    <div style="position:absolute; left:50%; top:45%; transform:translate(-50%, -50%); width:210px; height:85px; overflow:hidden; z-index:10; pointer-events:none;">
+      <img src="../_shared/assets/Logo.svg" alt="SpeakEasy Portuguese" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="position:absolute; left:0; bottom:0; width:100%; height:44px; background:#1E4D3B; display:flex; align-items:center; justify-content:center; gap:10px; z-index:6;">
+    <a href="https://www.instagram.com/speakeasy.ptbr" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); text-decoration:none;">@speakeasy.ptbr</a>
+    <div style="width:3px;height:3px;border-radius:50%;background:#7EC8A4;"></div>
+    <a href="https://speakeasyptbr.com" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; text-decoration:none;">speakeasyptbr.com</a>
+  </div>
+
+  <!-- CRISTO -->
+  <div style="position:absolute; left:90px; top:35px; width:239px; height:228px; overflow:hidden; z-index:2; pointer-events:none;">
+    <img src="../_shared/assets/Cristo.svg" alt="Cristo Redentor" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+
+  <!-- TÍTULOS -->
+  <div style="position:absolute; left:0; right:0; top:270px; padding:0 24px; text-align:center; z-index:3;">
+    <div style="font-family:'Poppins',sans-serif; font-size:38px; font-weight:800; color:#1E4D3B; line-height:0.95; letter-spacing:-1px; text-transform:uppercase; margin-bottom:10px;">Brazilian<br>Culture &amp;<br>Etiquette</div>
+    <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#2D6B52; margin-bottom:14px;">The unwritten rules<br>textbooks don't teach</div>
+    <div style="width:44px; height:3px; background:#A8E6C3; border-radius:2px; margin:0 auto 13px;"></div>
+    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">Bonus · Everyday Brazilian Portuguese</div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#4A6B58;">10 topics · the things no phrasebook covers</div>
+  </div>
+
+  <!-- ARARA -->
+  <div style="position:absolute; left:270px; top:425px; width:232px; height:299px; overflow:hidden; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Arara.svg" alt="Arara" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+
+  <!-- PALÁCIO -->
+  <div style="position:absolute; left:-20px; top:560px; width:238.5px; height:157.2px; overflow:hidden; opacity:0.6; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Palacio.svg" alt="Palácio" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+
+</div>
+
+
+<!-- ============================================================ PAGE 02 — TOC ============================================================ -->
+<div class="page-label">📄 PAGE 02 — Table of Contents</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">SpeakEasy Portuguese</div>
+      <h1 class="header-title">Table of<br>Contents</h1>
+    </div>
+    <div class="page-num">02</div>
+  </div>
+  <div class="body">
+    <div style="display:flex; flex-direction:column;">
+      <div class="toc-item">
+        <div class="toc-ch">Intro</div>
+        <div style="flex:1;"><span class="toc-title">Why culture matters</span><span class="toc-sub">Fluent speech, foreign behaviour</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">03</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Ch. 1</div>
+        <div style="flex:1;"><span class="toc-title">Greetings &amp; the beijo</span><span class="toc-sub">Kisses, hugs, handshakes</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">04</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Ch. 2</div>
+        <div style="flex:1;"><span class="toc-title">Money &amp; payment</span><span class="toc-sub">Pix, cards, tipping rules</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">06</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Ch. 3</div>
+        <div style="flex:1;"><span class="toc-title">Food culture</span><span class="toc-sub">Cafezinho, rodízio, churrasco</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">07</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Ch. 4</div>
+        <div style="flex:1;"><span class="toc-title">Time &amp; social norms</span><span class="toc-sub">Hora brasileira, jeitinho, personal space</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">09</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Ch. 5</div>
+        <div style="flex:1;"><span class="toc-title">Regional character</span><span class="toc-sub">Cariocas, paulistas, mineiros, nordestinos</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">10</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Ch. 6</div>
+        <div style="flex:1;"><span class="toc-title">Holidays &amp; seasons</span><span class="toc-sub">Carnaval, Natal no verão, Junina</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">11</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Guide</div>
+        <div style="flex:1;"><span class="toc-title">Do's &amp; Don'ts</span><span class="toc-sub">Quick-reference cheat sheet</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">12</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-ch">Next</div>
+        <div style="flex:1;"><span class="toc-title">What to explore next</span><span class="toc-sub">From culture to pronunciation</span></div>
+        <div class="toc-dots"></div>
+        <div class="toc-page">13</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 03 — WHY THIS MATTERS ============================================================ -->
+<div class="page-label">📄 PAGE 03 — Why this matters</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Introduction</div>
+      <h1 class="header-title">Why culture<br>matters</h1>
+      <p class='header-sub'>Fluent speech, foreign behaviour</p>
+    </div>
+    <div class="page-num">03</div>
+  </div>
+  <div class="body">
+    <p class="intro">You can speak perfect Portuguese and still offend a Brazilian — because cultural norms run deeper than grammar. This guide covers what textbooks skip.</p>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">The cultural fluency gap</div>
+        <div class="theory-text">
+          Brazilians are <strong>extremely forgiving</strong> of language mistakes. Accent? Grammar slip? Wrong verb tense? Nobody cares — they'll smile and correct you gently.
+          <br><br>
+          But <em>cultural missteps</em>? Those are noticed. Not hostilely — but they mark you as an outsider in ways that perfect pronunciation never will. Knowing when to kiss, what to tip, and why being 15 minutes late is on time — that's what makes you feel local.
+        </div>
+      </div>
+    </div>
+
+    <div class="comparison-table">
+      <div class="comparison-header">
+        <span>🇺🇸 What textbooks teach</span>
+        <span></span>
+        <span>🇧🇷 What you actually need</span>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"Bom dia, como vai?"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">When to kiss, when not</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"Quanto custa?"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Pix, card, or cash — and the rules</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"Que horas são?"</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">What "7pm" actually means at a party</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">"Eu gostaria de..."</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Rodízio mechanics, cafezinho rituals</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🔑</div>
+      <div>
+        <div class="tip-label">The promise of this guide</div>
+        <div class="tip-text">10 chapters · 60+ practical rules · zero fluff. Read it once before you go. You'll avoid the mistakes every first-time visitor makes — and spot the nuances natives expect you to notice. <em>Cultural fluency &gt; grammar perfection.</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 04 — GREETINGS & THE BEIJO (p.1) ============================================================ -->
+<div class="page-label">📄 PAGE 04 — Greetings & the beijo (p.1)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Chapter 1</div>
+      <h1 class="header-title">Greetings<br>&amp; the beijo</h1>
+      <p class='header-sub'>Kisses, hugs, handshakes</p>
+    </div>
+    <div class="page-num">04</div>
+  </div>
+  <div class="body">
+    <p class="intro">Physical contact in Brazil is closer and warmer than in most English-speaking cultures. Knowing the rules avoids awkwardness in every first meeting.</p>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">💋</div>
+      <div class="theory-content">
+        <div class="theory-label">The beijo — Brazil's default greeting</div>
+        <div class="theory-text">
+          The <strong>beijo</strong> (kiss on the cheek) is the default social greeting between women, and between men and women who aren't strangers. It's <em>not</em> romantic — it's the equivalent of a handshake in Anglo cultures.
+          <br><br>
+          The number of kisses varies by region. Getting it wrong is harmless but immediately identifies you as a foreigner. Getting it right signals you've been paying attention.
+        </div>
+      </div>
+    </div>
+
+    <div class="comparison-table">
+      <div class="comparison-header">
+        <span>📍 Region</span>
+        <span></span>
+        <span>Number of kisses</span>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">São Paulo</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">1 kiss (right cheek)</div>
+        <div class='comp-note'>Quick, businesslike. Often just touching cheeks with a "mwah" sound.</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">Rio de Janeiro</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">2 kisses (right, then left)</div>
+        <div class='comp-note'>The regional exception. Slightly longer, warmer.</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comp-en">Rest of Brazil</div>
+        <div class="comp-arrow">→</div>
+        <div class="comp-pt">Usually 1, sometimes 2</div>
+        <div class='comp-note'>One kiss is the national default. Two kisses is the exception, tied mostly to Rio. When in doubt, follow the other person's lead.</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">👋</div>
+      <div>
+        <div class="tip-label">The rule of thumb</div>
+        <div class="tip-text">It's <em>air-kiss / cheek-touch</em>, not lip-on-cheek. If unsure about count, <em>start with one and wait</em> — if they lean in for another, follow. Brazilians will never be offended by fewer kisses, only by enforcing more than expected.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 05 — GREETINGS & THE BEIJO (p.2) ============================================================ -->
+<div class="page-label">📄 PAGE 05 — Greetings & the beijo (p.2)</div>
+<div class="page">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 1 · Greetings &amp; the beijo</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">05</span>
+  </div>
+  <div class="body">
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">🤝</div>
+        <div class="feature-content">
+          <div class="feature-key">The handshake — when it's used</div>
+          <div class="feature-desc">
+            <strong>Business contexts.</strong> First meeting with a colleague, a client, or anyone in a professional setting. Firm but not crushing. Eye contact expected.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🫂</div>
+        <div class="feature-content">
+          <div class="feature-key">The abraço — the Brazilian hug</div>
+          <div class="feature-desc">
+            <strong>Between men who are close friends or family.</strong> One-armed, chest-bump, pat-on-the-back variety. Used instead of a kiss. Between women, a hug often <em>accompanies</em> the kiss, not replaces it.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">👨‍💼</div>
+        <div class="feature-content">
+          <div class="feature-key">Male-to-male — handshake or abraço, not kiss</div>
+          <div class="feature-desc">
+            Men greeting men use <strong>handshake, half-hug, or back-pat</strong>. Two men kissing cheeks isn't standard outside family (fathers, uncles, very close friends) or specific social circles. <strong>Women kiss women and women kiss men</strong> — that's the default matrix.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">👋</div>
+        <div class="feature-content">
+          <div class="feature-key">Greet everyone when you enter a room</div>
+          <div class="feature-desc">
+            Walking into a small group silently is read as cold. Say <strong>"boa tarde"</strong> or <strong>"oi gente"</strong> to the room, then go round for individual kisses/handshakes with a small group. Same on the way out — <em>"Irish goodbyes" are genuinely rude</em> in Brazil.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">📐</div>
+        <div class="feature-content">
+          <div class="feature-key">Personal space — much closer than you expect</div>
+          <div class="feature-desc">
+            When talking, Brazilians stand <strong>noticeably closer</strong> than Americans or Brits. Backing away can read as cold. The comfortable distance is about <em>arm's reach</em>.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">👂</div>
+        <div class="feature-content">
+          <div class="feature-key">Touch while talking</div>
+          <div class="feature-desc">
+            A hand on the arm, a light touch on the shoulder, a pat on the back — all <strong>normal and friendly</strong> in Brazil. Not flirtatious, not invasive. Don't flinch.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">The cultural "why"</div>
+        <div class="cultural-text">
+          Brazil's warmth is a cultural inheritance — a mix of Portuguese, Indigenous, and African influences where physical closeness signals inclusion. Standing far away or avoiding touch signals <strong>distance</strong>, <strong>distrust</strong>, or <strong>coldness</strong>. Lean into it and you'll feel people relax around you immediately.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 06 — MONEY & PAYMENT ============================================================ -->
+<div class="page-label">📄 PAGE 06 — Money & payment</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Chapter 2</div>
+      <h1 class="header-title">Money<br>&amp; payment</h1>
+      <p class='header-sub'>Pix, cards, tipping rules</p>
+    </div>
+    <div class="page-num">06</div>
+  </div>
+  <div class="body">
+    <p class="intro">Brazil has one of the most advanced payment ecosystems in the world — thanks to Pix. Cash is disappearing, tipping rules are specific, and not knowing them will cost you time (and sometimes pride).</p>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">💸</div>
+      <div class="theory-content">
+        <div class="theory-label">Pix — the instant payment that changed Brazil</div>
+        <div class="theory-text">
+          Launched in November 2020 by the Central Bank, <strong>Pix</strong> is a free, instant, 24/7 transfer system. By 2024 it overtook cards and cash as the most-used payment method. Scan a QR code (most common) or paste a <em>"Pix copia e cola"</em> string, and the money moves in seconds — free for individuals.
+          <br><br>
+          Keys (<em>chaves Pix</em>) can be a phone number, CPF, email, or random key. <strong>Tourists can now get a Pix key too</strong> — digital banks like Wise, Nomad, C6, and Inter allow non-residents to open accounts with just a passport. Worth setting up <em>before</em> your trip.
+        </div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">⚠️</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Watch out — "Golpe do Pix"</div>
+        <div class="cultural-text">
+          Pix scams are rampant. Common ones: <strong>fake payment screenshots</strong> shown at shops ("I already paid, check your phone"), and <strong>WhatsApp impersonation</strong> asking for urgent transfers. When receiving, always confirm the <em>name that appears</em> on the Pix confirmation — that's the real identity check. Never rely on screenshots.
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">💳</div>
+        <div class="feature-content">
+          <div class="feature-key">Credit &amp; debit cards — nearly universal</div>
+          <div class="feature-desc">
+            Cards work in most urban businesses. Contactless is common. Expect to be asked <strong>"crédito ou débito?"</strong> (credit or debit?) and <strong>"à vista ou parcelado?"</strong> (one payment or installments?) — Brazilians love splitting purchases into monthly installments.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">💵</div>
+        <div class="feature-content">
+          <div class="feature-key">Cash — still useful, but declining</div>
+          <div class="feature-desc">
+            Useful for <strong>small purchases</strong> at bakeries, street vendors, markets. Carry small notes (R$5, R$10, R$20). Big notes (R$100, R$200) can be hard to break.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🍽️</div>
+        <div class="feature-content">
+          <div class="feature-key">Tipping at restaurants — the 10% rule</div>
+          <div class="feature-desc">
+            Most restaurants add <strong>10% "taxa de serviço"</strong> automatically to the bill. It's <strong>optional by law</strong> (formalized in Lei 13.419/2017) — but if the service was decent, pay it. You won't tip on top of the 10%. If not added, leaving 10% in cash is appreciated.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🚖</div>
+        <div class="feature-content">
+          <div class="feature-key">Outside restaurants — tips are optional, not expected</div>
+          <div class="feature-desc">
+            Taxis, Uber, bars without table service, cafés: <strong>no tip expected</strong>, but <em>rounding up</em> the next few reais is appreciated. At hair salons a small <em>"caixinha"</em> for the person who washed your hair (R$5-10) is a kind norm. Delivery (<em>motoboy</em>): R$2-5 tip goes a long way, especially in rain.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🔑</div>
+      <div>
+        <div class="tip-label">The payment flow in 3 steps</div>
+        <div class="tip-text">1. Ask the bill: <em>"A conta, por favor."</em><br>2. Check for "taxa de serviço" (10%) — usually included.<br>3. Pay by Pix or card. <em>Never leave cash on the table.</em> Brazilians hand it to the waiter directly.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 07 — FOOD CULTURE I ============================================================ -->
+<div class="page-label">📄 PAGE 07 — Food culture I</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Chapter 3</div>
+      <h1 class="header-title">Food culture</h1>
+      <p class='header-sub'>Cafezinho, pão de queijo, rodízio</p>
+    </div>
+    <div class="page-num">07</div>
+  </div>
+  <div class="body">
+    <p class="intro">Food in Brazil isn't just fuel — it's the center of social life. Understanding the rituals opens doors most tourists never see.</p>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">☕</div>
+      <div class="theory-content">
+        <div class="theory-label">The cafezinho ritual</div>
+        <div class="theory-text">
+          A <strong>cafezinho</strong> — literally "little coffee" — is a tiny, strong, sugary espresso-like shot offered constantly. In offices, homes, small shops, government buildings. You'll be offered one almost everywhere you visit for more than five minutes.
+          <br><br>
+          <em>Accepting is the warm default</em> — it signals you're engaging with the gesture of welcome. A polite <em>"Não, obrigado, acabei de tomar um"</em> (no thanks, I just had one) is perfectly fine though. Repeatedly refusing across a visit can seem standoffish. If you genuinely can't drink coffee, ask for <strong>água</strong> as an alternative.
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">🥐</div>
+        <div class="feature-content">
+          <div class="feature-key">Breakfast — the padaria culture</div>
+          <div class="feature-desc">
+            Brazilians default to the neighbourhood <strong>padaria</strong> (bakery) for breakfast. Order <strong>pão na chapa</strong> (buttered toast) with <strong>café com leite</strong>, or the iconic <strong>pão de queijo</strong> (cheese bread, especially in Minas). Hotel buffets are never as good.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🥩</div>
+        <div class="feature-content">
+          <div class="feature-key">Rodízio — the all-you-can-eat system</div>
+          <div class="feature-desc">
+            At churrascarias and pizzarias rodízio-style, waiters bring food continuously. Each table has a <strong>green/red chip</strong>, wooden block, or printed card (sim/não). <strong>Green/sim = "bring more"</strong>, <strong>red/não = "stop for now"</strong>. Flip back when ready again. The person carving meat tableside is the <em>passador</em>.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🍕</div>
+        <div class="feature-content">
+          <div class="feature-key">Sweet pizzas = rodízio is wrapping up</div>
+          <div class="feature-desc">
+            At pizza rodízio, when <strong>sweet pizzas</strong> (chocolate, banana, Romeu e Julieta) start appearing, the meal is in its final lap. That's your signal to pace yourself. At churrascarias, there's no secret signal — lighter items like pineapple with cinnamon mark the same phase.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🍴</div>
+        <div class="feature-content">
+          <div class="feature-key">PF — the working lunch</div>
+          <div class="feature-desc">
+            <strong>Prato feito</strong> (PF) is the default lunch set at small restaurants: rice, beans, a protein, salad, sometimes fries. Fast, cheap (~R$20-35), filling. If you see "PF do dia" on a board, try it.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 08 — FOOD CULTURE II ============================================================ -->
+<div class="page-label">📄 PAGE 08 — Food culture II</div>
+<div class="page">
+  <div style="background:rgba(30,77,59,0.07); padding:10px 32px; display:flex; align-items:center; gap:16px; border-bottom:1px solid rgba(212,203,187,0.6);">
+    <span style="font-family:'Poppins',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4;">Chapter 3 · Food culture</span>
+    <span style="font-family:'Inter',sans-serif; font-size:11px; color:#8FA897; margin-left:auto;">08</span>
+  </div>
+  <div class="body">
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">🔥</div>
+      <div class="theory-content">
+        <div class="theory-label">Churrasco — Brazil's most sacred tradition</div>
+        <div class="theory-text">
+          A Brazilian <strong>churrasco</strong> is closer to a weekend ritual than a barbecue. Hours of cooking, beer flowing, meat rotating on skewers. The host is usually the <em>churrasqueiro</em> — he controls the fire, the timing, the distribution.
+          <br><br>
+          <strong>If invited:</strong> bring drinks (beer, never wine), show up 30 minutes late, praise the meat, eat with your hands if offered. Don't offer to help cook — it's the churrasqueiro's domain.
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">🍛</div>
+        <div class="feature-content">
+          <div class="feature-key">Feijoada — the Wednesday / Saturday institution</div>
+          <div class="feature-desc">
+            Black bean stew with pork cuts, served with rice, kale, orange slices, and farinha. Traditionally eaten on <strong>Wednesdays and Saturdays for lunch</strong>. It's heavy — a nap follows, not a meeting. <strong>Note:</strong> foreigners imagine feijoada is <em>the</em> everyday national dish. It's not — the daily staple is <em>arroz com feijão</em> (rice and plain beans).
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🍺</div>
+        <div class="feature-content">
+          <div class="feature-key">Bar culture — chopp, porção, petiscos</div>
+          <div class="feature-desc">
+            <strong>Chopp</strong> is draft beer (colder, fresher than bottled). <strong>Porção</strong> is a shareable plate. Order several small <strong>petiscos</strong> (appetizers) for the table instead of one each. <em>Everything is shared</em> — there's no "my food, your food". The Brazilian beer ideal is <strong>"estupidamente gelada"</strong> (stupidly cold, near-freezing) — never with ice.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🍹</div>
+        <div class="feature-content">
+          <div class="feature-key">Caipirinha &amp; açaí — get them right</div>
+          <div class="feature-desc">
+            <strong>Caipirinha</strong>: cachaça, lime, sugar, ice. With vodka = <em>caipiroska</em>. With fruit = <em>caipifruta</em>. Never ask for it "not too strong" — order a <em>batida</em> instead.
+            <br>Real Brazilian <strong>açaí</strong> is unsweetened, paste-like. In the Amazon (its origin) it's often eaten <em>savory</em> with fish and farofa. The sweet bowl with granola is a Southern adaptation — delicious, but not the original.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🥤</div>
+        <div class="feature-content">
+          <div class="feature-key">Almoço is the main meal</div>
+          <div class="feature-desc">
+            Lunch, not dinner, is the main meal of the day. Weekday urban default is <strong>self-service por kg</strong> (weigh-your-plate buffets) — even more common than the classic PF. <strong>Guaraná</strong> (the native caffeinated soda) is often ordered alongside. Ordering it instead of Coke earns quiet approval.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🍽️</div>
+      <div>
+        <div class="tip-label">Sharing beats ordering</div>
+        <div class="tip-text">At bars and casual restaurants, the default is <em>shared plates</em>. Ordering one dish each is unusual. Ask <em>"o que vocês querem dividir?"</em> (what do you want to share?) and pick 2-3 things for the table. You'll eat better and spend less.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 09 — TIME & SOCIAL NORMS ============================================================ -->
+<div class="page-label">📄 PAGE 09 — Time & social norms</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Chapter 4</div>
+      <h1 class="header-title">Time &amp;<br>social norms</h1>
+      <p class='header-sub'>Hora brasileira, jeitinho, personal space</p>
+    </div>
+    <div class="page-num">09</div>
+  </div>
+  <div class="body">
+    <p class="intro">Brazilian social time moves differently. Knowing the unwritten rules saves you from showing up awkward — or worse, being mistaken for rude.</p>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">⏰</div>
+      <div class="theory-content">
+        <div class="theory-label">"Hora brasileira" — time is soft in social contexts</div>
+        <div class="theory-text">
+          If someone invites you to a party at 8pm, showing up at 8:00 makes you <strong>one of the first guests</strong>, possibly before the host is ready. Brazilians interpret social start times as a window, not a deadline.
+          <br><br>
+          <strong>House parties / casual gatherings</strong>: 15-30 minutes late is comfortable.<br>
+          <strong>Churrasco at a friend's place</strong>: 30-45 minutes after stated time.<br>
+          <strong>Meetings with friends at a bar</strong>: 10-20 minutes flex.<br>
+          <strong>Professional meetings, medical appointments, flights</strong>: be on time — urban Brazilian professionals treat these strictly.<br><br>
+          When unsure, ask <em>"hora marcada ou hora chegando?"</em> — "scheduled time or arrival time?"
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">🧩</div>
+        <div class="feature-content">
+          <div class="feature-key">Jeitinho brasileiro — the art of bending rules</div>
+          <div class="feature-desc">
+            <strong>Jeitinho</strong> is Brazil's cultural reflex for solving problems outside the formal system. Parking in a weird spot? Ask the guard nicely. Flight overbooked? Appeal to the attendant's humanity. It's flexibility, friendliness, and persistence combined — <em>not</em> bribery.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🗣️</div>
+        <div class="feature-content">
+          <div class="feature-key">Volume — Brazilians are loud</div>
+          <div class="feature-desc">
+            Restaurants, family gatherings, street conversations — <strong>loud is the default</strong>. Speaking softly can read as cold or sad. Don't whisper; don't apologize for a raised voice. Everyone's projecting.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">💬</div>
+        <div class="feature-content">
+          <div class="feature-key">Interrupting — it's engagement, not rudeness</div>
+          <div class="feature-desc">
+            Brazilian conversation <strong>overlaps</strong>. Finishing each other's sentences, jumping in with reactions, talking over — all signs of <em>engagement</em>, not disrespect. If you wait for complete silence, you'll never speak.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">👀</div>
+        <div class="feature-content">
+          <div class="feature-key">Direct comments on looks — don't initiate, don't flinch</div>
+          <div class="feature-desc">
+            Older relatives and close friends may remark openly on weight, age, or appearance — <em>"você engordou"</em>, <em>"tá magrinha"</em>, <em>"que cabelo"</em>. It's usually meant as engagement or concern, not insult. <strong>You, as a visitor, should not initiate these comments</strong> — younger and urban Brazilians increasingly push back on body-commentary culture. Just don't be shocked when they land on you.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🙏</div>
+        <div class="feature-content">
+          <div class="feature-key">The politeness triad — com licença, pois não, imagina</div>
+          <div class="feature-desc">
+            <strong>"Com licença"</strong> = excuse me (getting past, asking attention). <strong>"Pois não"</strong> = "how can I help?" (shop clerks, waiters). <strong>"Imagina"</strong> = "don't mention it" (response to thanks). Visitors miss <em>imagina</em> most — it's constant.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🌎</div>
+      <div class="cultural-content">
+        <div class="cultural-label">The "no" that isn't a no</div>
+        <div class="cultural-text">
+          Brazilians often avoid saying an outright <em>"não"</em>. Instead, you'll hear <strong>"pode ser"</strong> (could be), <strong>"vou ver"</strong> (I'll see), or <strong>"tá, tá"</strong> (yeah, yeah). These are polite dismissals as often as they are genuine agreements. Read the context — <em>silence or vagueness usually means no</em>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 10 — REGIONAL CHARACTER ============================================================ -->
+<div class="page-label">📄 PAGE 10 — Regional character</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Chapter 5</div>
+      <h1 class="header-title">Regional<br>character</h1>
+      <p class='header-sub'>The cultural "flavours" of Brazil</p>
+    </div>
+    <div class="page-num">10</div>
+  </div>
+  <div class="body">
+    <p class="intro">Brazil is continental — these are caricatures locals themselves play with, not anthropology. Treat every person as an individual; these just help you read the cultural "terrain" faster.</p>
+
+    <div class="region-card">
+      <div class="region-flag">🏖️</div>
+      <div class="region-content">
+        <div class="region-name">Cariocas — Rio de Janeiro</div>
+        <div class="region-vibe">Beach-first · descontraído · socially warm</div>
+        <div class="region-desc">
+          Laid-back, social, easy with strangers. <strong>The beach is a central civic space</strong> — meetings, dates, and workouts happen there. Informal speech is the norm (<em>"tá ligado?"</em> as filler). The casualness paulistas sometimes find frustrating, cariocas call "<em>no fluxo</em>".
+        </div>
+      </div>
+    </div>
+
+    <div class="region-card">
+      <div class="region-flag">🏙️</div>
+      <div class="region-content">
+        <div class="region-name">Paulistas — São Paulo</div>
+        <div class="region-vibe">Workaholic · intense · cosmopolitan</div>
+        <div class="region-desc">
+          The engine of Brazil's economy. <strong>Work hard, eat well, talk business.</strong> Fast-paced, direct, slightly impatient. Proud of arguably the most diverse food scene in Brazil — serious Italian, Japanese, Lebanese, and Northeastern diaspora communities shape the city's menus.
+        </div>
+      </div>
+    </div>
+
+    <div class="region-card">
+      <div class="region-flag">🧀</div>
+      <div class="region-content">
+        <div class="region-name">Mineiros — Minas Gerais</div>
+        <div class="region-vibe">Warm · food-obsessed · "mineiro desconfiado"</div>
+        <div class="region-desc">
+          The country-hearted Brazilians. Slow, deliberate, generous. Famous for hospitality, food (<em>pão de queijo, feijão tropeiro</em>), baroque towns (Ouro Preto, Tiradentes), and a self-described style: <strong>"mineiro desconfiado"</strong> — they observe before opening up. Once they do, deeply loyal.
+        </div>
+      </div>
+    </div>
+
+    <div class="region-card">
+      <div class="region-flag">🌴</div>
+      <div class="region-content">
+        <div class="region-name">Nordestinos — the Northeast</div>
+        <div class="region-vibe">Deeply hospitable · musically rich · proud</div>
+        <div class="region-desc">
+          From Bahia, Pernambuco, Ceará, and beyond. <strong>Forró, frevo, axé, maracatu — the musical heart of Brazil.</strong> Fiercely proud of regional identity, and rightly tired of being stereotyped by other Brazilians. Baianos in particular carry distinct Afro-Brazilian heritage (Candomblé, capoeira, Salvador as a cultural capital).
+        </div>
+      </div>
+    </div>
+
+    <div class="region-card">
+      <div class="region-flag">⛰️</div>
+      <div class="region-content">
+        <div class="region-name">Sulistas — the South</div>
+        <div class="region-vibe">Immigrant heritage · formal · chimarrão &amp; churrasco</div>
+        <div class="region-desc">
+          Rio Grande do Sul, Santa Catarina, Paraná. Strong German, Italian, and Slavic immigrant communities shape food, festivals (Oktoberfest in Blumenau), and architecture. Gaúchos (RS) are famously proud — the <strong>chimarrão</strong> (yerba mate gourd) ritual is central to social life. Cooler climate, better wine, slower to warm up.
+        </div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🗺️</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Don't forget the North</div>
+        <div class="cultural-text">
+          Every list like this gets criticized for skipping <strong>nortistas</strong> (Amazon region — Pará, Amazonas, Acre). They're not in this page's cards because most foreign visitors don't go there first, but the region has its own rich food culture (tucupi, tacacá, pato no tucupi), indigenous heritage, and a sense that it's geographically and culturally distant from the rest of Brazil. If you visit Belém or Manaus, you'll feel it immediately.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 11 — HOLIDAYS & SEASONS ============================================================ -->
+<div class="page-label">📄 PAGE 11 — Holidays & seasons</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Chapter 6</div>
+      <h1 class="header-title">Holidays<br>&amp; seasons</h1>
+      <p class='header-sub'>Summer Christmas, Junina, Carnaval</p>
+    </div>
+    <div class="page-num">11</div>
+  </div>
+  <div class="body">
+    <p class="intro">Brazil's seasons are inverted from the Northern Hemisphere, and its holidays reflect a mix of Catholic tradition, Indigenous roots, and African celebration. Know these and you'll get the calendar right.</p>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">☀️</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Seasons — flipped, and milder than you'd expect</div>
+        <div class="cultural-text">
+          <strong>Summer (Dec-Mar):</strong> hot and humid, especially in Rio and the Northeast. Christmas is in the peak of summer — expect beaches, shorts, and air conditioning.<br>
+          <strong>Winter (Jun-Sep):</strong> mild in most of the country. São Paulo can hit 10°C at night. The South (Porto Alegre, Curitiba) gets genuinely cold. Rio and the Northeast stay warm year-round.<br>
+          <strong>"Inverno carioca"</strong> is a joke — a 22°C day when locals wear jackets.
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">🎭</div>
+        <div class="feature-content">
+          <div class="feature-key">Carnaval (Feb-Mar) — but not one Carnaval</div>
+          <div class="feature-desc">
+            Officially Sat-Tue, but the party spills from Friday to Ash Wednesday. <strong>Every city is a different Carnaval:</strong> Rio = samba school parades (sambódromo); Salvador = trios elétricos, street; Olinda/Recife = frevo, maracatu, giant puppets; Ouro Preto = student blocos. Book accommodation <strong>6+ months ahead</strong> in the famous cities.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🎪</div>
+        <div class="feature-content">
+          <div class="feature-key">Festa Junina (June) — biggest in the Northeast</div>
+          <div class="feature-desc">
+            Honors São João, São Pedro, Santo Antônio. Bonfires, country dress (straw hats, checkered shirts — playful costume, not mockery), bobbing dances (<strong>quadrilha</strong>), and corn-based food (canjica, pamonha, milho cozido). The biggest are in <strong>Campina Grande (PB)</strong> and <strong>Caruaru (PE)</strong> — São João there is on Carnaval's scale.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">💝</div>
+        <div class="feature-content">
+          <div class="feature-key">Dia dos Namorados (Jun 12) — Brazilian Valentine's</div>
+          <div class="feature-desc">
+            Tied to Santo Antônio (saint of marriage). Couples exchange gifts; restaurants fully booked; florists peak day. If you're partnered with a Brazilian, this matters — <em>much more than February 14</em>.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🎄</div>
+        <div class="feature-content">
+          <div class="feature-key">Natal (Dec 25) — summer Christmas</div>
+          <div class="feature-desc">
+            Family-focused, warm weather, smaller gifts. <strong>Panetone</strong> is universal. The big meal is the <em>Ceia de Natal</em> on the night of Dec 24, often with ham, turkey, rice, rabanada. Dec 25 is leftovers and family lunch. <strong>Amigo secreto</strong> (secret Santa) is near-universal in offices and families throughout December.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🌊</div>
+        <div class="feature-content">
+          <div class="feature-key">Ano Novo (Dec 31) — white clothes &amp; waves</div>
+          <div class="feature-desc">
+            Brazilians wear <strong>all white</strong> for peace. Head to the beach and jump <strong>seven waves</strong> at midnight (one wish per wave). Offerings to <strong>Iemanjá</strong> (orixá of the sea) — flowers thrown into the ocean. <em>This tradition has Afro-Brazilian religious roots (Candomblé, Umbanda)</em> and is held with reverence by practitioners; many Brazilians of all backgrounds join in, but it's not a generic fun tradition — it's sacred.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">✊🏾</div>
+        <div class="feature-content">
+          <div class="feature-key">Consciência Negra (Nov 20) — federal holiday since 2024</div>
+          <div class="feature-desc">
+            <strong>Dia da Consciência Negra</strong> honors Zumbi dos Palmares and recognizes the central role of Afro-Brazilian heritage. Became a federal holiday via Lei 14.759/2023. Observed increasingly as a day of reflection, events, and protest; offices and schools close.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 12 — DO'S & DON'TS ============================================================ -->
+<div class="page-label">📄 PAGE 12 — Do's & Don'ts</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Quick-reference guide</div>
+      <h1 class="header-title">Do's<br>&amp; Don'ts</h1>
+      <p class='header-sub'>Print this. Tape it to your fridge.</p>
+    </div>
+    <div class="page-num">12</div>
+  </div>
+  <div class="body">
+    <p class="intro">The whole guide, distilled into two columns. If you only read one page before you go — make it this one.</p>
+
+    <div class="do-dont-grid">
+      <div class="do-column">
+        <div class="column-label">✅ Do</div>
+        <ul>
+          <li><strong>Greet the whole room</strong> when you enter — "oi gente" or "boa tarde".</li>
+          <li><strong>Kiss on the cheek</strong> — follow the other person's lead, air-kiss.</li>
+          <li><strong>Arrive 15-30 min late</strong> to social events at homes.</li>
+          <li><strong>Be on time</strong> for business, medical, or flights.</li>
+          <li><strong>Ask "cê aceita Pix?"</strong> — faster than card.</li>
+          <li><strong>Share food</strong> — order petiscos for the table.</li>
+          <li><strong>Use "imagina"</strong> as the reply to "obrigado".</li>
+          <li><strong>Stand closer</strong> — arm's reach is normal.</li>
+          <li><strong>Try the local thing</strong> — cachaça, guaraná, açaí.</li>
+          <li><strong>Let Brazilians interrupt</strong> — it means engaged.</li>
+        </ul>
+      </div>
+      <div class="dont-column">
+        <div class="column-label">❌ Don't</div>
+        <ul>
+          <li><strong>Don't skip greeting people individually</strong> — "Irish goodbyes" are rude.</li>
+          <li><strong>Don't comment on someone's weight</strong> — receive, don't initiate.</li>
+          <li><strong>Don't tip outside restaurants</strong> — round up if you want, never obligatory.</li>
+          <li><strong>Don't call Brazil "Hispanic"</strong> — they speak Portuguese.</li>
+          <li><strong>Don't arrive early</strong> to house parties — host isn't ready.</li>
+          <li><strong>Don't pay with R$200 notes</strong> — hard to break.</li>
+          <li><strong>Don't joke about corruption</strong> as a foreigner.</li>
+          <li><strong>Don't offer to cook the churrasco</strong> — it's their domain.</li>
+          <li><strong>Don't trust Pix screenshots</strong> — only the name on confirmation.</li>
+          <li><strong>Don't assume Rio = Brazil</strong> — every region is different.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🎯</div>
+      <div>
+        <div class="tip-label">The golden rule</div>
+        <div class="tip-text">When in doubt, <em>follow the Brazilian next to you</em>. Watch how many kisses they give, how loud they talk, how they order, how they pay. Brazilians are some of the most welcoming people on Earth — they'll never judge you for imitating.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 13 — WHAT NEXT ============================================================ -->
+<div class="page-label">📄 PAGE 13 — What to explore next</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Next Step</div>
+      <h1 class="header-title">You know how<br>to behave</h1>
+      <p class='header-sub'>Now: how to sound</p>
+    </div>
+    <div class="page-num">13</div>
+  </div>
+  <div class="body">
+    <p class="intro">Cultural fluency is half of fitting in. The other half is sounding like you belong — and that's a whole different craft.</p>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">🗣️</div>
+      <div class="theory-content">
+        <div class="theory-label">The pronunciation problem</div>
+        <div class="theory-text">
+          You can nail every cultural rule in this guide and still get <em>"repeat that?"</em> the moment you open your mouth. Brazilian Portuguese has sounds English doesn't — the nasal vowels, the guttural R, the LH, the NH, the palatalization of T and D before I.
+          <br><br>
+          These aren't things you pick up from a phrasebook. They need <strong>focused drills</strong>, <strong>minimal pair training</strong>, and <strong>listening practice</strong>.
+        </div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🎧</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Speaking &amp; Pronunciation Kit</div>
+        <div class="cultural-text">
+          A dedicated SpeakEasy product for exactly this: <strong>46 audio lessons across 8 chapters</strong>, covering rhythm, nasals, the Brazilian R, and connected speech. Each sound gets its own theory spotlight, drill progression, and minimal pair lab.
+          <br><br>
+          If this guide got you excited about fitting in, the kit is what gets you <em>mistaken for a local</em>. Available at <strong>speakeasyptbr.com</strong>.
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🌱</div>
+      <div>
+        <div class="tip-label">You're already ahead</div>
+        <div class="tip-text">Most visitors to Brazil speak zero Portuguese and know less about the culture. You've done both. <em>The rest is showing up and using it.</em> Boa sorte e boa viagem!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

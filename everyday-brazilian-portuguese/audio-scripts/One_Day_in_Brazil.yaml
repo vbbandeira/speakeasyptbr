@@ -1,0 +1,141 @@
+# One Day in Brazil — immersion audio bonus (tier €19.90)
+# Narrated by Carla (ELEVENLABS_VOICE_CARLA_PT) at natural speed.
+# Each scene generated separately, concatenated with 0.8s silence between.
+#
+# Character: Mariana, 28, lives in Zona Sul, Rio de Janeiro, works remotely.
+# First-person, observational, warm. ~8-10 min total.
+
+product: everyday-brazilian-portuguese
+title: One Day in Brazil
+output_dir: audio
+output_filename: One Day in Brazil.mp3
+voice_env: ELEVENLABS_VOICE_CARLA_PT
+stability: 0.55
+similarity_boost: 0.75
+pause_between_scenes_sec: 0.9
+
+scenes:
+
+  - id: 00_intro
+    pt: |
+      Meu nome é Mariana. Eu moro no Rio de Janeiro, na Zona Sul. Esse é um dia comum na minha vida.
+    en: |
+      My name is Mariana. I live in Rio de Janeiro, in the Zona Sul. This is an ordinary day in my life.
+
+  - id: 01_morning
+    pt: |
+      O despertador toca às seis e meia. Eu acordo, estico os braços, e abro a janela do quarto. O ar da manhã carioca entra com aquele cheirinho de maresia, e eu já consigo ouvir o zum-zum da cidade acordando. Um vizinho lá embaixo cumprimentando o outro: "Bom dia, seu João!" Um cachorro latindo três prédios pra frente. E o som distante de alguém varrendo a calçada.
+      Vou pra cozinha, coloco água pra ferver, e faço o meu primeiro cafezinho do dia. É o ritual, né? Café sem pressa. Preciso de, pelo menos, dez minutos pra acordar de verdade.
+      Enquanto o café coa, eu dou uma olhada no celular — tem uma mensagem da minha mãe: "Filha, cê viu o preço do tomate no mercado? Tá um absurdo." Eu respondo: "Mãe, tô acordando ainda. Daqui a pouco eu vejo."
+      Tomo o café olhando pela janela. O céu de dezembro tá ficando azulzinho. Outro dia começando no Rio.
+    en: |
+      The alarm goes off at six-thirty. I wake up, stretch my arms, and open the bedroom window. The morning Rio air comes in with that salty smell of the sea, and I can already hear the buzz of the city waking up. A neighbour downstairs greeting another: "Good morning, Seu João!" A dog barking three buildings away. And the distant sound of someone sweeping the pavement.
+      I go to the kitchen, put water on to boil, and make the first cafezinho of the day. It's the ritual, you know? Coffee without rushing. I need at least ten minutes to really wake up.
+      While the coffee brews, I check my phone — there's a message from my mom: "Daughter, have you seen the price of tomatoes at the market? It's absurd." I reply: "Mom, I'm just waking up. I'll look in a bit."
+      I drink the coffee looking out the window. The December sky is turning a soft blue. Another day starting in Rio.
+
+  - id: 02_padaria
+    pt: |
+      Depois do primeiro café, eu desço pra padaria da esquina. A mesma padaria há cinco anos. O seu Paulo, o dono, já sabe o meu pedido antes mesmo de eu pedir.
+      — Bom dia, Mari! Pão de queijo saindo agora do forno, tá quentinho.
+      — Bom dia, seu Paulo. Manda um café com leite e dois pão de queijo.
+      A padaria tá cheia, como sempre de manhã. Gente de terno indo pro trabalho, mães com as crianças antes da escola, e o senhorzinho do canto que lê o jornal todo santo dia na mesma mesa.
+      Eu sento num banquinho perto do balcão. O pão de queijo chega quentinho, ainda soltando vapor. E o café com leite vem naquela xícara grande, na medida certa. Sete reais.
+      — Paga no Pix, Mari?
+      — Pix, seu Paulo.
+      Ele mostra o QR code do estabelecimento, eu escaneio, pago, e já saio dali pra voltar pra casa. Cinco minutos. Perfeito.
+    en: |
+      After the first coffee, I head down to the bakery on the corner. The same bakery for five years. Seu Paulo, the owner, already knows my order before I even say it.
+      "Good morning, Mari! Pão de queijo just came out of the oven, it's nice and warm."
+      "Good morning, Seu Paulo. I'll take a café com leite and two pão de queijo."
+      The bakery is packed, like every morning. People in suits heading to work, moms with kids before school, and the old man in the corner who reads the newspaper every single day at the same table.
+      I sit on a stool near the counter. The pão de queijo arrives warm, still steaming. And the café com leite comes in that big cup, just the right size. Seven reais.
+      "Paying by Pix, Mari?"
+      "Pix, Seu Paulo."
+      He shows the QR code of the business, I scan it, pay, and I'm already out of there heading home. Five minutes. Perfect.
+
+  - id: 03_work_cafe
+    pt: |
+      Eu trabalho de casa, mas duas vezes por semana, eu gosto de ir pra um café trabalhar, só pra mudar o ambiente. Hoje é um desses dias. Coloco o notebook na mochila, desço, e chamo um Uber.
+      O motorista, um carioca animado, tá ouvindo um pagode na rádio. A gente conversa sobre o tempo, o trânsito, e o jogo do Flamengo de ontem. Chegamos em dez minutos — tá tranquilo de manhã.
+      No café, o barista já me conhece. Eu peço um pingado — que é basicamente café com um pouquinho de leite. Sento numa mesa perto da janela, abro o notebook, e começo a trabalhar.
+      O Wi-Fi é rápido, o café é bom, e o barulho de fundo é aquela trilha sonora perfeita pra focar: conversas baixas, colherzinha mexendo xícara, o sibilo da máquina de espresso. A gente até esquece que tá trabalhando.
+      Umas três horas depois, o barista passa e pergunta:
+      — Outro cafezinho, Mari?
+      — Claro. Valeu.
+    en: |
+      I work from home, but twice a week I like to go to a café to work, just to change the environment. Today is one of those days. I put the notebook in my backpack, head down, and call an Uber.
+      The driver, a cheerful carioca, is listening to pagode on the radio. We chat about the weather, the traffic, and yesterday's Flamengo game. We arrive in ten minutes — it's calm in the morning.
+      At the café, the barista already knows me. I order a pingado — basically coffee with a little milk. I sit at a table near the window, open the notebook, and start working.
+      The Wi-Fi is fast, the coffee is good, and the background noise is that perfect focus soundtrack: low conversations, a teaspoon clinking in a cup, the hiss of the espresso machine. You almost forget you're working.
+      About three hours later, the barista passes by and asks:
+      "Another cafezinho, Mari?"
+      "Of course. Thanks."
+
+  - id: 04_lunch
+    pt: |
+      Ao meio-dia, eu fecho o notebook e saio pro almoço. Tem um self-service por quilo na próxima esquina que é ótimo. A gente paga por peso: você pega uma bandeja, monta o prato do jeito que quiser, pesa na balança, e paga.
+      A fila já tá comprida — é o horário de pico. Gente de escritório, estudantes universitários, motoristas de aplicativo. Todo mundo buscando comida caseira no meio do dia.
+      O cardápio hoje tá bom: arroz, feijão preto, frango grelhado, farofa, salada de folhas, batata frita. Eu pego um pouco de cada. A bandeja pesa quatrocentos e cinquenta gramas — dá uns vinte e oito reais.
+      Sento numa mesa compartilhada. Um rapaz na minha frente tá terminando o almoço. A gente troca um "boa tarde" e uma cabeçada educada.
+      Depois de comer, tomo mais um cafezinho — o restaurante oferece grátis. Três é o número do dia: o primeiro em casa, o segundo no café, o terceiro agora. Normal. Brasileiro não vive sem.
+    en: |
+      At noon, I close the notebook and head out for lunch. There's a self-service by the kilo place on the next corner that's great. You pay by weight: you grab a tray, build your plate however you want, put it on the scale, and pay.
+      The line is already long — it's peak hour. Office workers, university students, app drivers. Everyone looking for homemade food in the middle of the day.
+      The menu is good today: rice, black beans, grilled chicken, farofa, green salad, french fries. I take a little of each. The tray weighs four hundred and fifty grams — about twenty-eight reais.
+      I sit at a shared table. A guy across from me is finishing his lunch. We exchange a "good afternoon" and a polite nod.
+      After eating, I have another cafezinho — the restaurant offers it for free. Three is the number of the day: the first at home, the second at the café, the third now. Normal. Brazilians can't live without it.
+
+  - id: 05_beach
+    pt: |
+      Depois do almoço, eu volto pra casa. De tarde é quando eu produzo mais — o cérebro já acordou, a barriga já tá cheia, e é mais calmo. Trabalho mais umas três horas no meu sofá mesmo, com um ventilador ligado.
+      Pelas cinco da tarde, eu fecho o notebook e vou pra praia. Moro em Ipanema, então a praia tá a três quadras de casa. É um dos melhores momentos do dia.
+      O sol tá começando a descer, o vento tá mais fresco, e a areia tá cheia de gente terminando o dia. Eu pego uma cadeira alugada, peço uma água de coco no quiosque — cinco reais — e sento de frente pro mar.
+      O vendedor de biscoito Globo passa gritando: "Biscoito Globo! Biscoito Globo!" Eu compro um. Três reais. Crocante, sem graça, perfeito com a água de coco gelada.
+      Fico ali uns quarenta minutos. Vendo o sol descer, os surfistas pegando as últimas ondas, o céu passando do azul pro laranja. Esse é o Rio que todo mundo vê nos cartões-postais. E é mesmo assim.
+    en: |
+      After lunch, I go home. The afternoon is when I produce most — the brain is awake, the stomach is full, and it's calmer. I work another three hours on my couch, with a fan on.
+      Around five in the afternoon, I close the notebook and head to the beach. I live in Ipanema, so the beach is three blocks from home. It's one of the best moments of the day.
+      The sun is starting to go down, the wind is fresher, and the sand is full of people wrapping up the day. I grab a rental chair, order a coconut water from the kiosk — five reais — and sit facing the sea.
+      The biscoito Globo vendor walks by shouting: "Biscoito Globo! Biscoito Globo!" I buy one. Three reais. Crunchy, plain, perfect with the cold coconut water.
+      I stay there about forty minutes. Watching the sun go down, the surfers catching the last waves, the sky shifting from blue to orange. This is the Rio everyone sees on postcards. And it really is like this.
+
+  - id: 06_happy_hour
+    pt: |
+      Às sete da noite, eu encontro com duas amigas pra um happy hour. A gente combinou num bar em Botafogo, perto do metrô. Chego quinze minutos atrasada, porque... hora brasileira, né? Elas chegam dez minutos depois de mim, então tá tudo bem.
+      O bar é simples: mesas de plástico, ventilador no teto, TV com jogo de futebol sem volume. A gente pede logo de cara: três chopps e uma porção de batata frita pra dividir. Depois, uns dadinhos de tapioca pra acompanhar.
+      A conversa flui. Uma amiga tá planejando uma viagem pra Bahia, a outra reclamando do chefe novo. Eu conto do projeto novo no trabalho. A gente ri, interrompe uma à outra, fala alto. Um brasileiro na mesa ao lado ouviu alguma coisa engraçada e riu com a gente sem nem conhecer.
+      Depois de duas horas, a conta chega. Noventa e seis reais no total, com o dez por cento do garçom já incluso. Dividimos em três: trinta e dois cada. Cada uma paga no Pix. Rapidinho.
+    en: |
+      At seven in the evening, I meet up with two friends for happy hour. We agreed on a bar in Botafogo, near the metro. I arrive fifteen minutes late, because... Brazilian time, right? They arrive ten minutes after me, so it's all good.
+      The bar is simple: plastic tables, a ceiling fan, a TV with a soccer game on mute. We order right away: three draft beers and a shared portion of french fries. Then some tapioca cubes to go with them.
+      The conversation flows. One friend is planning a trip to Bahia, the other is complaining about her new boss. I tell them about a new project at work. We laugh, interrupt each other, speak loudly. A Brazilian at the next table overheard something funny and laughed along with us without even knowing us.
+      After two hours, the bill comes. Ninety-six reais total, with the waiter's ten percent already included. We split it three ways: thirty-two each. Each of us pays by Pix. Quick.
+
+  - id: 07_evening
+    pt: |
+      No Brasil, a gente almoça pesado e janta leve. Então chego em casa, faço um sanduíche natural rápido com pão integral, frango desfiado, tomate, e um pouco de alface. Tomo um suco de maracujá. Leve.
+      Enquanto como, coloco um podcast pra tocar. Um podcast sobre cultura brasileira, com entrevistas de artistas, músicos, escritores. Eu adoro. Aprendo muito.
+      Depois, tomo um banho e coloco uma roupa confortável. São nove horas da noite, já dá pra começar a desacelerar.
+      Sento no sofá com um chá — camomila pra dormir bem — e assisto um episódio de uma série brasileira que tô acompanhando. Quarenta minutos. Sem pressa.
+      Por volta das dez e meia, começa a bater o sono. Apago a TV, vou escovar os dentes, e subo na cama. Antes de apagar a luz, eu dou uma olhada no WhatsApp. Tem uma mensagem da minha mãe: "Filha, comprou o tomate?" Eu respondo: "Amanhã eu compro, mãe. Boa noite!"
+    en: |
+      In Brazil, we eat lunch heavy and dinner light. So I get home, make a quick natural sandwich with whole-wheat bread, shredded chicken, tomato, and a bit of lettuce. I drink some passion fruit juice. Light.
+      While I eat, I put on a podcast. A podcast about Brazilian culture, with interviews of artists, musicians, writers. I love it. I learn a lot.
+      After that, I take a shower and put on comfortable clothes. It's nine in the evening — already time to start winding down.
+      I sit on the couch with tea — chamomile to sleep well — and watch an episode of a Brazilian series I'm following. Forty minutes. No rush.
+      Around ten-thirty, sleep starts to hit. I turn off the TV, go brush my teeth, and climb into bed. Before turning off the light, I check WhatsApp. There's a message from my mom: "Daughter, did you buy the tomato?" I reply: "Tomorrow I'll buy it, mom. Good night!"
+
+  - id: 08_closing
+    pt: |
+      Enquanto fecho os olhos, eu penso no dia. Teve café da padaria, trabalho num café, almoço de autosserviço, praia no fim da tarde, chopp com as amigas, jantar leve em casa. Um dia comum. Um dia bom.
+      Esse é o ritmo do Rio. Não é glamour o tempo inteiro. Não é Carnaval todo dia. É café, trânsito, pão de queijo, Pix, praia no fim da tarde, chopp com gente querida, e uma mensagem da mãe no final da noite.
+      É isso aqui, pra mim, que é ser brasileira. Essa normalidade calorosa. O ritmo que mistura trabalho com prazer, pressa com pausa, o individual com o coletivo.
+      Se cê tá no Brasil agora, ou planejando vir, tenta viver um dia assim. Vai num self-service por quilo. Compra um biscoito Globo na praia. Paga no Pix. Chega quinze minutos atrasado no bar. Cumprimenta o porteiro pelo nome.
+      É esse o Brasil que você vai lembrar. Não o Cristo Redentor, não o Pão de Açúcar. É o pão de queijo, o vendedor da praia, o chopp gelado no fim da tarde. Essa é a vida aqui. Boa noite.
+    en: |
+      As I close my eyes, I think about the day. There was coffee at the bakery, work at a café, self-service lunch, the beach at sunset, draft beer with friends, a light dinner at home. An ordinary day. A good day.
+      This is the rhythm of Rio. It's not glamour all the time. It's not Carnaval every day. It's coffee, traffic, pão de queijo, Pix, the beach at sunset, chopp with people you love, and a message from your mom at the end of the night.
+      This is what, for me, being Brazilian is. This warm normality. The rhythm that mixes work with pleasure, hurry with pause, the individual with the collective.
+      If you're in Brazil now, or planning to come, try to live a day like this. Go to a self-service by the kilo. Buy a biscoito Globo on the beach. Pay by Pix. Show up fifteen minutes late at the bar. Greet the doorman by name.
+      This is the Brazil you'll remember. Not Cristo Redentor, not the Sugarloaf. It's the pão de queijo, the beach vendor, the cold chopp at sunset. This is life here. Good night.

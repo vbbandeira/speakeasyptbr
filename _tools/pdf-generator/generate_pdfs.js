@@ -12,17 +12,27 @@ const EBOOKS = [
   {
     label: 'Everyday Brazilian Portuguese',
     html: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'speakeasy_ebook_FINAL.html'),
-    output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'everyday_brazilian_portuguese.pdf'),
+    output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'Everyday Brazilian Portuguese.pdf'),
+  },
+  {
+    label: 'Everyday — Brazilian Culture & Etiquette Guide (bonus)',
+    html: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'speakeasy_culture_guide.html'),
+    output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'Brazilian Culture & Etiquette Guide.pdf'),
+  },
+  {
+    label: 'Everyday — One Day in Brazil (transcript, audio tier bonus)',
+    html: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'speakeasy_one_day_transcript.html'),
+    output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'One Day in Brazil - Transcript.pdf'),
   },
   {
     label: 'Speaking & Pronunciation Kit',
     html: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'speakeasy_pronunciation_kit.html'),
-    output: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'pdf', 'speakeasy_pronunciation_kit.pdf'),
+    output: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'pdf', 'Speaking & Pronunciation Kit.pdf'),
   },
   {
     label: 'Speaking & Pronunciation Kit — Start Here',
     html: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'speakeasy_start_here.html'),
-    output: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'pdf', 'speakeasy_start_here.pdf'),
+    output: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'pdf', 'Speaking & Pronunciation Kit - Start Here.pdf'),
   },
 ];
 

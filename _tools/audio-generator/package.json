@@ -6,6 +6,11 @@
   "type": "module",
   "scripts": {
     "test-voice": "tsx src/cli/test-voice.ts",
+    "test-formats": "tsx src/cli/test-formats.ts",
+    "test-format-concat": "tsx src/cli/test-format-concat.ts",
+    "generate-kit-audio": "tsx src/cli/generate-kit-audio.ts",
+    "generate-kit-audio-v2": "tsx src/cli/generate-kit-audio-v2.ts",
+    "generate-immersion-audio": "tsx src/cli/generate-immersion-audio.ts",
     "generate-audio": "tsx src/cli/generate-audio.ts",
     "post-process": "tsx src/cli/post-process.ts",
     "package": "tsx src/cli/package.ts",
