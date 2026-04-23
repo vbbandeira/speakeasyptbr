@@ -12,7 +12,12 @@ Usage:
 
 import re
 import csv
+import sys
 from pathlib import Path
+
+# Force UTF-8 on stdout so emoji/accented prints work on Windows (default cp1252 chokes).
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DIALOGUES_MD = REPO_ROOT / "brazilian-listening-lab" / "audio-scripts" / "dialogues.md"

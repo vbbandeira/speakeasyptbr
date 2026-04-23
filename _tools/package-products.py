@@ -20,6 +20,10 @@ import sys
 import zipfile
 from pathlib import Path
 
+# Force UTF-8 on stdout so emoji/accented prints work on Windows (default cp1252 chokes).
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 CHAPTER_NAMES = {
@@ -56,7 +60,7 @@ def convert_m4a_to_mp3(src: Path, dst: Path) -> None:
             "-codec:a", "libmp3lame", "-b:a", "192k",
             str(dst),
         ],
-        capture_output=True, text=True,
+        capture_output=True, encoding="utf-8", errors="replace",
     )
     if result.returncode != 0:
         raise RuntimeError(f"ffmpeg failed for {src.name}: {result.stderr[-400:]}")
