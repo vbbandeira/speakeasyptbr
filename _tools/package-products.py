@@ -322,11 +322,11 @@ def package_listening_lab(make_zip: bool = False) -> None:
             for f in deep_dive_files[:tier["deep_dives"]]:
                 shutil.copy2(f, dd_out / f.name)
 
-        # Flashcards (Pro only)
+        # Flashcards (Pro only) — now a printable PDF, lives in Books/
         if tier["flashcards"]:
-            fc_path = extras_dir / "Vocabulary Flashcards - Pro.csv"
+            fc_path = pdf_dir / "Vocabulary Flashcards.pdf"
             if fc_path.exists():
-                shutil.copy2(fc_path, tier_root / "Vocabulary Flashcards.csv")
+                shutil.copy2(fc_path, books_dir / "Vocabulary Flashcards.pdf")
 
         # Summary
         extras_note = []
@@ -335,7 +335,7 @@ def package_listening_lab(make_zip: bool = False) -> None:
         if tier["workbook"]:
             extras_note.append("workbook")
         if tier["flashcards"]:
-            extras_note.append("flashcards CSV")
+            extras_note.append("flashcards PDF")
         print(f"   ✅ Structure: Start Here + Books/ (transcripts{'+workbook' if tier['workbook'] else ''}) + {', '.join(extras_note)}")
 
         if make_zip:
