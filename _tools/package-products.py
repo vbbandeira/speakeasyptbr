@@ -87,7 +87,7 @@ def zip_folder(folder: Path, out_zip: Path) -> None:
                 zf.write(str(full), str(rel_path))
 
 
-def package_everyday() -> None:
+def package_everyday(make_zip: bool = False) -> None:
     print("=" * 60)
     print("EVERYDAY BRAZILIAN PORTUGUESE")
     print("=" * 60)
@@ -104,7 +104,7 @@ def package_everyday() -> None:
 
     # === TIER 1: EBOOK ONLY (€9.90) ===
     ebook_name = "Everyday Brazilian Portuguese - Ebook Only"
-    ebook_root = delivery_dir / ebook_name / "Everyday Brazilian Portuguese"
+    ebook_root = delivery_dir / ebook_name
     ebook_root.mkdir(parents=True)
 
     print(f"\n📦 Building tier €9.90: {ebook_name}")
@@ -119,7 +119,7 @@ def package_everyday() -> None:
 
     # === TIER 2: EBOOK + AUDIO (€19.90) ===
     full_name = "Everyday Brazilian Portuguese - Ebook and Audio"
-    full_root = delivery_dir / full_name / "Everyday Brazilian Portuguese"
+    full_root = delivery_dir / full_name
     full_root.mkdir(parents=True)
 
     print(f"\n📦 Building tier €19.90: {full_name}")
@@ -168,23 +168,17 @@ def package_everyday() -> None:
     print(f"   ✅ {converted}/{len(files)} audio files converted to MP3")
     print(f"   ✅ Structure: Start Here (root) + Books/ (2) + One Day in Brazil/ (audio+transcript) + Audio Book/ ({converted} files in 10 chapters)")
 
-    # === Build ZIPs ===
-    print("\n📦 Creating ZIPs...")
-
-    zip1 = delivery_dir / f"{ebook_name}.zip"
-    zip_folder(delivery_dir / ebook_name / "Everyday Brazilian Portuguese", zip1)
-    size1 = zip1.stat().st_size / (1024 * 1024)
-    print(f"   ✅ {zip1.name} ({size1:.1f} MB)")
-
-    zip2 = delivery_dir / f"{full_name}.zip"
-    zip_folder(delivery_dir / full_name / "Everyday Brazilian Portuguese", zip2)
-    size2 = zip2.stat().st_size / (1024 * 1024)
-    print(f"   ✅ {zip2.name} ({size2:.1f} MB)")
+    if make_zip:
+        print("\n📦 Creating ZIPs...")
+        for name in [ebook_name, full_name]:
+            z = delivery_dir / f"{name}.zip"
+            zip_folder(delivery_dir / name, z)
+            print(f"   ✅ {z.name} ({z.stat().st_size / (1024 * 1024):.1f} MB)")
 
     print(f"\n✅ Everyday packaging done. Delivery in {delivery_dir.relative_to(REPO_ROOT)}/")
 
 
-def package_pronunciation_kit() -> None:
+def package_pronunciation_kit(make_zip: bool = False) -> None:
     print("=" * 60)
     print("SPEAKING & PRONUNCIATION KIT")
     print("=" * 60)
@@ -200,7 +194,7 @@ def package_pronunciation_kit() -> None:
 
     # === TIER: BASIC (€29.90) ===
     basic_name = "Speaking and Pronunciation Kit - Basic"
-    basic_root = delivery_dir / basic_name / "Speaking and Pronunciation Kit"
+    basic_root = delivery_dir / basic_name
     basic_root.mkdir(parents=True)
 
     print(f"\n📦 Building tier €29.90: {basic_name}")
@@ -225,18 +219,17 @@ def package_pronunciation_kit() -> None:
                 chapter_count += 1
     print(f"   ✅ Structure: Start Here + AUDIO-NOTICE (root) + Books/ (1 PDF) + Audio Drills/ ({chapter_count} folders)")
 
-    # === Build ZIP ===
-    print("\n📦 Creating ZIP...")
-    zip1 = delivery_dir / f"{basic_name}.zip"
-    zip_folder(delivery_dir / basic_name / "Speaking and Pronunciation Kit", zip1)
-    size1 = zip1.stat().st_size / (1024 * 1024)
-    print(f"   ✅ {zip1.name} ({size1:.1f} MB)")
+    if make_zip:
+        print("\n📦 Creating ZIP...")
+        z = delivery_dir / f"{basic_name}.zip"
+        zip_folder(delivery_dir / basic_name, z)
+        print(f"   ✅ {z.name} ({z.stat().st_size / (1024 * 1024):.1f} MB)")
 
     print(f"\n✅ Pronunciation Kit basic tier packaged. Plus and Pro tiers pending content creation.")
     print(f"   Delivery in {delivery_dir.relative_to(REPO_ROOT)}/")
 
 
-def package_listening_lab() -> None:
+def package_listening_lab(make_zip: bool = False) -> None:
     print("=" * 60)
     print("BRAZILIAN LISTENING LAB")
     print("=" * 60)
@@ -294,7 +287,7 @@ def package_listening_lab() -> None:
 
     for tier in tiers:
         folder_name = f"Brazilian Listening Lab - {tier['name']}"
-        tier_root = delivery_dir / folder_name / "Brazilian Listening Lab"
+        tier_root = delivery_dir / folder_name
         tier_root.mkdir(parents=True)
 
         print(f"\n📦 Building tier {tier['price']}: {folder_name}")
@@ -345,10 +338,11 @@ def package_listening_lab() -> None:
             extras_note.append("flashcards CSV")
         print(f"   ✅ Structure: Start Here + Books/ (transcripts{'+workbook' if tier['workbook'] else ''}) + {', '.join(extras_note)}")
 
-        zip_path = delivery_dir / f"{folder_name}.zip"
-        zip_folder(tier_root, zip_path)
-        size = zip_path.stat().st_size / (1024 * 1024)
-        print(f"   ✅ {zip_path.name} ({size:.1f} MB)")
+        if make_zip:
+            zip_path = delivery_dir / f"{folder_name}.zip"
+            zip_folder(tier_root, zip_path)
+            size = zip_path.stat().st_size / (1024 * 1024)
+            print(f"   ✅ {zip_path.name} ({size:.1f} MB)")
 
     print(f"\n✅ Listening Lab packaged (3 tiers). Delivery in {delivery_dir.relative_to(REPO_ROOT)}/")
 
@@ -544,16 +538,17 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--product", choices=["everyday", "pronunciation-kit", "listening-lab"])
     parser.add_argument("--all", action="store_true")
+    parser.add_argument("--zip", action="store_true", help="Also create ZIP files (default: folders only)")
     args = parser.parse_args()
 
     if args.all or args.product == "everyday":
-        package_everyday()
+        package_everyday(make_zip=args.zip)
 
     if args.all or args.product == "pronunciation-kit":
-        package_pronunciation_kit()
+        package_pronunciation_kit(make_zip=args.zip)
 
     if args.all or args.product == "listening-lab":
-        package_listening_lab()
+        package_listening_lab(make_zip=args.zip)
 
 
 if __name__ == "__main__":

@@ -109,11 +109,15 @@ HTML_HEAD = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SpeakEasy — Brazilian Listening Lab · Transcripts</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
+img.emoji {
+  height: 1em; width: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em; display: inline;
+}
 body {
-  font-family:'Inter','Noto Color Emoji',sans-serif; background:#D8D4CC;
+  font-family:'Inter',sans-serif; background:#D8D4CC;
   display:flex; flex-direction:column; align-items:center;
   gap:48px; padding:48px 20px;
 }
@@ -563,6 +567,14 @@ def render_closing(page_num: int) -> str:
 
 
 HTML_TAIL = """
+<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>
+  twemoji.parse(document.body, {
+    base: 'https://cdn.jsdelivr.net/gh/iamcal/emoji-data@master/',
+    folder: 'img-apple-160',
+    ext: '.png'
+  });
+</script>
 </body>
 </html>
 """
