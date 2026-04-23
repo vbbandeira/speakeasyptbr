@@ -107,11 +107,15 @@ HTML_HEAD = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <title>SpeakEasy — Brazilian Listening Lab · Comprehension Workbook</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
+img.emoji {
+  height: 1em; width: 1em;
+  margin: 0 0.05em 0 0.1em;
+  vertical-align: -0.1em; display: inline;
+}
 body {
-  font-family:'Inter','Noto Color Emoji',sans-serif; background:#D8D4CC;
+  font-family:'Inter',sans-serif; background:#D8D4CC;
   display:flex; flex-direction:column; align-items:center;
   gap:48px; padding:48px 20px;
 }
@@ -354,7 +358,18 @@ def render_workbook_dialogue(d: dict, page_num: int) -> str:
 """
 
 
-HTML_TAIL = "</body></html>"
+HTML_TAIL = """
+<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>
+  twemoji.parse(document.body, {
+    base: 'https://cdn.jsdelivr.net/gh/iamcal/emoji-data@master/',
+    folder: 'img-apple-160',
+    ext: '.png'
+  });
+</script>
+</body>
+</html>
+"""
 
 
 def build_workbook(dialogues, tier: str, max_num: int):
@@ -381,14 +396,14 @@ def main():
     dialogues = parse_dialogues(md)
     print(f"📚 Parsed {len(dialogues)} dialogues\n")
 
-    print("💳 Vocabulary Flashcards CSV (Pro tier only):")
-    build_flashcards_csv(dialogues, "pro", 50)
+    # NOTE: Flashcards are now generated as PDF-ready HTML via
+    # build-flashcards-pdf.py (replaces the old Anki-style CSV).
 
-    print("\n📝 Comprehension Workbooks:")
+    print("📝 Comprehension Workbooks:")
     # Plus tier gets Plus workbook (has fill-the-gap from dialogue 16+)
     build_workbook(dialogues, "plus", 30)
     build_workbook(dialogues, "pro", 50)
-    print("\n✅ All workbooks + flashcards generated.")
+    print("\n✅ All workbooks generated.")
 
 
 if __name__ == "__main__":

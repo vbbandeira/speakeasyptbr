@@ -69,6 +69,16 @@ const EBOOKS = [
     html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_workbook_pro.html'),
     output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Comprehension Workbook - Pro.pdf'),
   },
+  {
+    label: 'Brazilian Listening Lab — Flashcards (Plus)',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_flashcards_plus.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Vocabulary Flashcards - Plus.pdf'),
+  },
+  {
+    label: 'Brazilian Listening Lab — Flashcards (Pro)',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_flashcards_pro.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Vocabulary Flashcards - Pro.pdf'),
+  },
 ];
 
 // Per-ebook output dirs are now next to the source HTML, not in this tool folder.
@@ -291,7 +301,14 @@ async function generateAll() {
     args: ['--allow-file-access-from-files'],
   });
 
-  for (const ebook of EBOOKS) {
+  // Optional filter: node generate_pdfs.js flashcard  → only ebooks whose label matches
+  const filter = process.argv[2];
+  const ebooksToRun = filter
+    ? EBOOKS.filter(e => e.label.toLowerCase().includes(filter.toLowerCase()))
+    : EBOOKS;
+  if (filter) console.log(`🔎 Filter: "${filter}" → ${ebooksToRun.length} ebook(s)`);
+
+  for (const ebook of ebooksToRun) {
     await generateSinglePDF(browser, ebook);
   }
 
@@ -305,7 +322,7 @@ async function generateAll() {
   console.log(`\n${'═'.repeat(60)}`);
   console.log('✅ All e-books generated!');
   console.log(`${'═'.repeat(60)}`);
-  for (const ebook of EBOOKS) {
+  for (const ebook of ebooksToRun) {
     console.log(`📄 ${ebook.label}: ${ebook.output}`);
   }
 }
