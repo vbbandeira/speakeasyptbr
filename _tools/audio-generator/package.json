@@ -12,6 +12,7 @@
     "generate-kit-audio-v2": "tsx src/cli/generate-kit-audio-v2.ts",
     "generate-immersion-audio": "tsx src/cli/generate-immersion-audio.ts",
     "generate-listening-lab": "tsx src/cli/generate-listening-lab.ts",
+    "generate-deep-dives": "tsx src/cli/generate-deep-dives.ts",
     "generate-audio": "tsx src/cli/generate-audio.ts",
     "post-process": "tsx src/cli/post-process.ts",
     "package": "tsx src/cli/package.ts",

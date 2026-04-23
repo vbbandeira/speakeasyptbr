@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakEasy — Brazilian Listening Lab · Transcripts</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter','Noto Color Emoji',sans-serif; background:#D8D4CC;
+  display:flex; flex-direction:column; align-items:center;
+  gap:48px; padding:48px 20px;
+}
+.page-label {
+  width:420px; font-family:'Inter',sans-serif; font-size:10px;
+  font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:#999; margin-bottom:-36px; padding-left:4px;
+}
+.page {
+  width:420px; background:#F5F0E8; border-radius:16px;
+  overflow:hidden; border:1px solid #D4CBBB;
+}
+.header {
+  background:#1E4D3B; padding:26px 32px 22px;
+  position:relative; overflow:hidden;
+  display:flex; align-items:flex-start; justify-content:space-between;
+}
+.header::before {
+  content:''; position:absolute; top:-50px; right:-50px;
+  width:160px; height:160px; border-radius:50%;
+  background:rgba(255,255,255,0.05);
+}
+.section-tag {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.15em; text-transform:uppercase; color:#7EC8A4; margin-bottom:5px;
+}
+.header-title {
+  font-family:'Poppins',sans-serif; font-size:19px; font-weight:700;
+  color:#fff; line-height:1.15;
+}
+.header-sub {
+  margin-top:5px; font-family:'Inter',sans-serif;
+  font-size:10.5px; color:rgba(255,255,255,0.55);
+}
+.page-num {
+  font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.3);
+  letter-spacing:0.1em; flex-shrink:0; margin-top:2px;
+}
+.body { padding:22px 30px 30px; display:flex; flex-direction:column; gap:14px; }
+.intro {
+  font-size:12px; color:#6B7B6E; line-height:1.6;
+  border-left:3px solid #A8E6C3; padding-left:12px; font-style:italic;
+}
+
+.meta-row {
+  display:flex; gap:8px; flex-wrap:wrap;
+}
+.meta-chip {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.05em; color:#4A6B58;
+  background:#F0FAF4; border:1px solid #A8E6C3;
+  padding:3px 9px; border-radius:12px;
+}
+.meta-chip strong { color:#1E4D3B; font-weight:600; }
+
+/* Scene/turn block */
+.scene {
+  background:#fff; border-radius:11px; border:1px solid #EDE9E0;
+  padding:13px 15px;
+}
+.turn {
+  display:grid; grid-template-columns:22px 1fr; gap:8px;
+  padding:6px 0; border-bottom:1px solid rgba(212,203,187,0.3);
+  align-items:start;
+}
+.turn:last-child { border-bottom:none; }
+.turn-speaker {
+  font-family:'Poppins',sans-serif; font-size:11px; font-weight:700;
+  color:#fff; background:#2D6B52; border-radius:4px;
+  text-align:center; padding:2px 0; min-width:22px; line-height:1.1;
+}
+.turn-speaker.b { background:#7EC8A4; color:#1E4D3B; }
+.turn-text {
+  font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:500;
+  color:#1E4D3B; line-height:1.5;
+}
+.turn-text .role {
+  font-family:'Inter',sans-serif; font-size:10px; font-style:italic;
+  color:#8FA897; font-weight:400; display:block; margin-bottom:1px;
+}
+
+/* Vocab box */
+.vocab-box {
+  background:#FFF8F0; border:1px solid #F0D4A8; border-radius:10px;
+  padding:11px 14px;
+}
+.vocab-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase; color:#B07030; margin-bottom:6px;
+}
+.vocab-item {
+  display:block; font-family:'Inter',sans-serif; font-size:10.5px;
+  color:#7A5020; line-height:1.5; padding:3px 0;
+  border-top:1px solid rgba(240,212,168,0.4);
+}
+.vocab-item:first-child { border-top:none; padding-top:0; }
+.vocab-item strong {
+  font-family:'Poppins',sans-serif; color:#5A3818; font-weight:600;
+}
+
+/* Comprehension box */
+.comp-box {
+  background:#EEF3F4; border-radius:10px; padding:11px 14px;
+  border-left:3px solid #5A9BA4;
+}
+.comp-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase; color:#4A838A; margin-bottom:6px;
+}
+.comp-item {
+  font-family:'Inter',sans-serif; font-size:11px; color:#3D5E63; line-height:1.5;
+  padding:3px 0 3px 18px; position:relative;
+}
+.comp-item::before {
+  content:attr(data-num); position:absolute; left:0; top:3px;
+  font-family:'Poppins',sans-serif; font-size:10px; font-weight:700;
+  color:#5A9BA4;
+}
+
+/* Gap-fill box */
+.gap-box {
+  background:#F0FAF4; border:1px solid #A8E6C3; border-radius:10px;
+  padding:11px 14px;
+}
+.gap-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase; color:#2D6B52; margin-bottom:6px;
+}
+.gap-item {
+  font-family:'Poppins',sans-serif; font-size:11px; color:#1E4D3B; line-height:1.5;
+  padding:3px 0 3px 18px; position:relative; font-weight:500;
+}
+.gap-item::before {
+  content:attr(data-num); position:absolute; left:0; top:3px;
+  font-family:'Poppins',sans-serif; font-size:10px; font-weight:700;
+  color:#2D6B52;
+}
+
+/* TOC */
+.toc-item {
+  display:flex; align-items:baseline; padding:5px 0;
+  border-bottom:1px solid rgba(212,203,187,0.4);
+}
+.toc-item:last-child { border-bottom:none; }
+.toc-num {
+  font-family:'Poppins',sans-serif; font-size:10px; font-weight:700;
+  color:#7EC8A4; min-width:28px;
+}
+.toc-title {
+  font-family:'Poppins',sans-serif; font-size:11.5px; font-weight:500; color:#1E4D3B; flex:1;
+}
+.toc-dots {
+  flex:1; border-bottom:1px dotted #C8BFB0; margin:0 6px 4px; min-width:10px;
+}
+.toc-page {
+  font-family:'Inter',sans-serif; font-size:10.5px; font-weight:500;
+  color:#8FA897; min-width:20px; text-align:right;
+}
+.toc-level {
+  font-family:'Inter',sans-serif; font-size:9px; font-weight:500;
+  color:#B07030; background:#FFF8F0; border:1px solid #F0D4A8;
+  padding:1px 5px; border-radius:8px; margin-left:6px;
+}
+
+.tip-box {
+  background:#1E4D3B; border-radius:11px; padding:13px 15px;
+  display:flex; gap:9px; align-items:flex-start;
+}
+.tip-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+.tip-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; margin-bottom:3px;
+}
+.tip-text {
+  font-family:'Inter',sans-serif; font-size:11.5px;
+  color:rgba(255,255,255,0.85); line-height:1.6;
+}
+.tip-text em { color:#A8E6C3; font-style:normal; font-weight:500; }
+
+@media print {
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    animation: none !important; transition: none !important;
+  }
+  @page { size: 420px auto; margin: 0mm; }
+  html, body {
+    width: 420px !important; margin: 0 !important; padding: 0 !important;
+    background: #F5F0E8 !important; display: block !important;
+    min-height: unset !important;
+  }
+  .page-label { display: none !important; }
+  .page {
+    width: 420px !important; border-radius: 0 !important;
+    border: none !important; box-shadow: none !important;
+    overflow: hidden !important; page-break-after: always;
+    page-break-inside: avoid; margin: 0 !important;
+  }
+  .page:last-of-type { page-break-after: auto; }
+  .scene, .vocab-box, .comp-box, .gap-box, .tip-box, .toc-item { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE 01 — Cover -->
+<div class="page-label">📄 PAGE 01 — Cover</div>
+<div class="page" style="height:747px; background:linear-gradient(to bottom, #E8E5DC 0, #E8E5DC 703px, #1E4D3B 703px, #1E4D3B 100%); background-color:#1E4D3B; position:relative; overflow:hidden; border:none;">
+  <div style="position:absolute; left:0; top:0; width:100%; height:72px; overflow:hidden; z-index:5;">
+    <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    <div style="position:absolute; left:50%; top:45%; transform:translate(-50%, -50%); width:210px; height:85px; overflow:hidden; z-index:10; pointer-events:none;">
+      <img src="../_shared/assets/Logo.svg" alt="SpeakEasy Portuguese" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+    </div>
+  </div>
+  <div style="position:absolute; left:0; bottom:0; width:100%; height:44px; background:#1E4D3B; display:flex; align-items:center; justify-content:center; gap:10px; z-index:6;">
+    <a href="https://www.instagram.com/speakeasy.ptbr" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); text-decoration:none;">@speakeasy.ptbr</a>
+    <div style="width:3px;height:3px;border-radius:50%;background:#7EC8A4;"></div>
+    <a href="https://speakeasyptbr.com" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; text-decoration:none;">speakeasyptbr.com</a>
+  </div>
+  <div style="position:absolute; left:90px; top:35px; width:239px; height:228px; overflow:hidden; z-index:2; pointer-events:none;">
+    <img src="../_shared/assets/Cristo.svg" alt="Cristo Redentor" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+  <div style="position:absolute; left:0; right:0; top:270px; padding:0 24px; text-align:center; z-index:3;">
+    <div style="font-family:'Poppins',sans-serif; font-size:36px; font-weight:800; color:#1E4D3B; line-height:0.95; letter-spacing:-1px; text-transform:uppercase; margin-bottom:10px;">Transcripts<br>&amp; Study Notes</div>
+    <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#2D6B52; margin-bottom:14px;">Brazilian<br>Listening Lab</div>
+    <div style="width:44px; height:3px; background:#A8E6C3; border-radius:2px; margin:0 auto 13px;"></div>
+    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">BASIC TIER · 15 DIALOGUES</div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#4A6B58;">full transcripts · vocab notes · comprehension questions</div>
+  </div>
+  <div style="position:absolute; left:270px; top:425px; width:232px; height:299px; overflow:hidden; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Arara.svg" alt="Arara" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+  <div style="position:absolute; left:-20px; top:560px; width:238.5px; height:157.2px; overflow:hidden; opacity:0.6; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Palacio.svg" alt="Palácio" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+</div>
+
+<!-- PAGE 02 — How to use -->
+<div class="page-label">📄 PAGE 02 — How to use</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">How to use</div>
+      <h1 class="header-title">Read along,<br>listen deeper</h1>
+      <p class='header-sub'>The transcripts workflow</p>
+    </div>
+    <div class="page-num">02</div>
+  </div>
+  <div class="body">
+    <p class="intro">These transcripts are companions to your audio files. Use them to unlock comprehension you couldn't catch on passive listening.</p>
+
+    <div class="tip-box">
+      <div class="tip-icon">🎧</div>
+      <div>
+        <div class="tip-label">The 3-pass workflow</div>
+        <div class="tip-text">
+          <strong>Pass 1</strong> — listen to the dialogue without the transcript. Get the rhythm, even if you miss words.<br><br>
+          <strong>Pass 2</strong> — read along with the transcript. Check vocab notes for tricky phrases.<br><br>
+          <strong>Pass 3</strong> — listen again, transcript closed. You'll catch more than before.
+        </div>
+      </div>
+    </div>
+
+    <div class="vocab-box">
+      <div class="vocab-label">📚 What each section contains</div>
+      <div class="vocab-item"><strong>Scene</strong> — the full Portuguese dialogue with speaker labels (A / B).</div>
+      <div class="vocab-item"><strong>Vocab notes</strong> — tricky phrases, idioms, and Brazilianisms explained in English.</div>
+      <div class="vocab-item"><strong>Comprehension questions</strong> — test your understanding after listening.</div>
+      <div class="vocab-item"><strong>Fill-the-gap</strong> — from Plus tier onwards, word-completion exercises.</div>
+    </div>
+
+    <div class="comp-box">
+      <div class="comp-label">💡 Don't translate word-by-word</div>
+      <div class="comp-item" data-num="→">Let context teach you. You don't need to understand every word — you need to feel the rhythm of real Brazilian speech.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 03 — TOC -->
+<div class="page-label">📄 PAGE 03 — Contents</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Contents</div>
+      <h1 class="header-title">All dialogues</h1>
+      <p class='header-sub'>15 transcripts total</p>
+    </div>
+    <div class="page-num">03</div>
+  </div>
+  <div class="body">
+    <div class="toc-item">
+      <div class="toc-num">01</div>
+      <div class="toc-title">Pedindo um Uber</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">4</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">02</div>
+      <div class="toc-title">Na padaria</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">5</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">03</div>
+      <div class="toc-title">Pedindo comida num bar</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">6</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">04</div>
+      <div class="toc-title">Perguntando direções</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">7</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">05</div>
+      <div class="toc-title">No supermercado</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">8</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">06</div>
+      <div class="toc-title">Marcando um encontro</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">9</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">07</div>
+      <div class="toc-title">Na farmácia</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">10</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">08</div>
+      <div class="toc-title">Chegando no hotel</div>
+      <div class="toc-level">A1</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">11</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">09</div>
+      <div class="toc-title">No ponto de ônibus</div>
+      <div class="toc-level">A2</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">12</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">10</div>
+      <div class="toc-title">Ligando pra marcar consulta</div>
+      <div class="toc-level">A2</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">13</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">11</div>
+      <div class="toc-title">Trocando dinheiro</div>
+      <div class="toc-level">A2</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">14</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">12</div>
+      <div class="toc-title">Comprando ingresso</div>
+      <div class="toc-level">A2</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">15</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">13</div>
+      <div class="toc-title">No Airbnb</div>
+      <div class="toc-level">A2</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">16</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">14</div>
+      <div class="toc-title">Pedindo conta no restaurante</div>
+      <div class="toc-level">A2</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">17</div>
+    </div>
+<div class="toc-item">
+      <div class="toc-num">15</div>
+      <div class="toc-title">Perdido no bairro</div>
+      <div class="toc-level">A2</div>
+      <div class="toc-dots"></div>
+      <div class="toc-page">18</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 04 — Dialogue 01 -->
+<div class="page-label">📄 PAGE 04 — Dialogue 01</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 01</div>
+      <h1 class="header-title">Pedindo um Uber</h1>
+      <p class='header-sub'>Ordering an Uber</p>
+    </div>
+    <div class="page-num">04</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> Street / Phone</div>
+      <div class="meta-chip"><strong>Theme</strong> Transportation</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Passageiro</span>Oi, você é o motorista do Uber?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Motorista</span>Sou sim! Você é o Marcos?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Sou eu. Tudo bem?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Tudo ótimo. Pode entrar. Você vai pra Avenida Paulista, né?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Isso, número 1500.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Beleza. Uns vinte minutos, mais ou menos.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Tá bom, obrigado.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Pode deixar o ar ligado ou tá bom assim?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Assim tá ótimo, obrigado.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Tranquilo. Boa noite!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Sou sim</strong> — emphatic "yes, I am" (common Brazilian pattern: verb + sim)</div>
+<div class="vocab-item"><strong>Pode entrar</strong> — "come in" / "go ahead and get in"</div>
+<div class="vocab-item"><strong>né?</strong> — short for "não é?" — tag question, like "right?"</div>
+<div class="vocab-item"><strong>Beleza</strong> — "cool" / "alright" (very common informal agreement)</div>
+<div class="vocab-item"><strong>Pode deixar</strong> — "shall I leave..." / "want me to keep..."</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">Where is the passenger going?</div>
+<div class="comp-item" data-num="2.">How long will the trip take approximately?</div>
+<div class="comp-item" data-num="3.">What does the driver offer to do?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 05 — Dialogue 02 -->
+<div class="page-label">📄 PAGE 05 — Dialogue 02</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 02</div>
+      <h1 class="header-title">Na padaria</h1>
+      <p class='header-sub'>At the bakery</p>
+    </div>
+    <div class="page-num">05</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> Bakery</div>
+      <div class="meta-chip"><strong>Theme</strong> Food & ordering</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Cliente</span>Bom dia! Tem pão francês?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Atendente</span>Bom dia! Tem sim, saiu agora do forno. Quantos você quer?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Me dá dez, por favor.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Dez pãezinhos. Mais alguma coisa?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Tem café pronto?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Tem! Quer um cafezinho?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Quero sim. Quanto fica tudo?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Dez pãezinhos e um café... Fica seis e cinquenta.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Posso pagar no cartão?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Pode sim. Pode aproximar ali.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Pronto. Obrigado!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Obrigada! Bom dia!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Tem...?</strong> — "Do you have...?" (using "ter" instead of "haver" — standard in spoken Brazilian PT)</div>
+<div class="vocab-item"><strong>Saiu agora do forno</strong> — "just came out of the oven"</div>
+<div class="vocab-item"><strong>Me dá</strong> — "give me" (informal, standard way to order)</div>
+<div class="vocab-item"><strong>Pãezinhos</strong> — diminutive of "pães" (rolls) — Brazilians love diminutives</div>
+<div class="vocab-item"><strong>Quanto fica?</strong> — "How much does it come to?"</div>
+<div class="vocab-item"><strong>Pode aproximar</strong> — "you can tap" (contactless payment)</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">How many bread rolls does the customer order?</div>
+<div class="comp-item" data-num="2.">Is the bread fresh?</div>
+<div class="comp-item" data-num="3.">How does the customer pay?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 06 — Dialogue 03 -->
+<div class="page-label">📄 PAGE 06 — Dialogue 03</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 03</div>
+      <h1 class="header-title">Pedindo comida num bar</h1>
+      <p class='header-sub'>Ordering food at a bar</p>
+    </div>
+    <div class="page-num">06</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> Boteco / Bar</div>
+      <div class="meta-chip"><strong>Theme</strong> Food & drinks</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Cliente</span>Com licença, posso ver o cardápio?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Garçom</span>Claro! Toma aqui. Quer pedir a bebida já?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Quero sim. Uma cerveja bem gelada, por favor.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Original, Brahma ou Heineken?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Brahma, pode ser.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Beleza. E pra comer?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">O que você recomenda?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">A porção de calabresa é muito boa. E o bolinho de bacalhau sai rápido.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Me traz a calabresa então.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Fechou. Já trago a cerveja.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Valeu!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Com licença</strong> — "excuse me" (polite way to get attention)</div>
+<div class="vocab-item"><strong>Bem gelada</strong> — "very cold" (Brazilians take cold beer seriously)</div>
+<div class="vocab-item"><strong>Pode ser</strong> — "that works" / "sure, why not"</div>
+<div class="vocab-item"><strong>Me traz</strong> — "bring me" (informal order)</div>
+<div class="vocab-item"><strong>Fechou</strong> — literally "closed" — means "deal!" / "done!"</div>
+<div class="vocab-item"><strong>Valeu</strong> — "thanks" (informal, very common)</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">What beer brand does the customer choose?</div>
+<div class="comp-item" data-num="2.">What does the waiter recommend?</div>
+<div class="comp-item" data-num="3.">What does the customer order to eat?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 07 — Dialogue 04 -->
+<div class="page-label">📄 PAGE 07 — Dialogue 04</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 04</div>
+      <h1 class="header-title">Perguntando direções</h1>
+      <p class='header-sub'>Asking for directions</p>
+    </div>
+    <div class="page-num">07</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> Street</div>
+      <div class="meta-chip"><strong>Theme</strong> Getting around</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Turista</span>Com licença, você sabe onde fica a estação de metrô?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Local</span>Sei sim! É bem pertinho daqui. Segue reto por essa rua, umas duas quadras.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Duas quadras reto?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Isso. Aí você vai ver uma farmácia na esquina. Vira à esquerda ali.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Esquerda na farmácia.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Isso. Aí anda mais um pouquinho e a estação tá do lado direito. Não tem como errar.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Ah, beleza! Muito obrigado!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">De nada! Boa sorte!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Pertinho</strong> — diminutive of "perto" (close) — means "very close"</div>
+<div class="vocab-item"><strong>Segue reto</strong> — "go straight"</div>
+<div class="vocab-item"><strong>Quadras</strong> — "blocks"</div>
+<div class="vocab-item"><strong>Vira à esquerda</strong> — "turn left"</div>
+<div class="vocab-item"><strong>Um pouquinho</strong> — diminutive of "um pouco" — "a little bit"</div>
+<div class="vocab-item"><strong>Não tem como errar</strong> — "you can't miss it"</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">How many blocks straight ahead?</div>
+<div class="comp-item" data-num="2.">What landmark should the tourist look for?</div>
+<div class="comp-item" data-num="3.">Which direction should they turn at the pharmacy?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 08 — Dialogue 05 -->
+<div class="page-label">📄 PAGE 08 — Dialogue 05</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 05</div>
+      <h1 class="header-title">No supermercado</h1>
+      <p class='header-sub'>At the supermarket</p>
+    </div>
+    <div class="page-num">08</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> Supermarket</div>
+      <div class="meta-chip"><strong>Theme</strong> Shopping</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Cliente</span>Com licença, onde ficam as frutas?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Funcionário</span>Lá no fundo, do lado esquerdo. Corredor sete.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">E leite? Onde tem leite?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Leite fica no corredor três, junto com os laticínios.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Ah tá. E vocês têm sacola?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Tem sim, mas é paga. Vinte centavos cada.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Tá bom, eu quero duas.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Beleza. É só pedir no caixa.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Valeu, obrigado!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Lá no fundo</strong> — "in the back"</div>
+<div class="vocab-item"><strong>Do lado esquerdo</strong> — "on the left side"</div>
+<div class="vocab-item"><strong>Corredor</strong> — "aisle"</div>
+<div class="vocab-item"><strong>Laticínios</strong> — "dairy products"</div>
+<div class="vocab-item"><strong>Sacola</strong> — "bag" (plastic/reusable bag)</div>
+<div class="vocab-item"><strong>No caixa</strong> — "at the register/checkout"</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">What aisle are the fruits in?</div>
+<div class="comp-item" data-num="2.">How much does a bag cost?</div>
+<div class="comp-item" data-num="3.">Where does the customer get the bags?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 09 — Dialogue 06 -->
+<div class="page-label">📄 PAGE 09 — Dialogue 06</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 06</div>
+      <h1 class="header-title">Marcando um encontro</h1>
+      <p class='header-sub'>Making plans</p>
+    </div>
+    <div class="page-num">09</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> WhatsApp / Phone</div>
+      <div class="meta-chip"><strong>Theme</strong> Social plans</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">E aí, vamos fazer alguma coisa sábado?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Bora! Tava pensando em ir naquele restaurante novo ali perto da sua casa.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Qual? O japonês?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Esse mesmo. Dizem que é muito bom.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Pode ser. Que horas?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Umas oito? Oito e meia?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Oito e meia é melhor pra mim.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Fechou. Te encontro lá então.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Combinado! Até sábado.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Até!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>E aí</strong> — "hey" / "what's up" (casual greeting)</div>
+<div class="vocab-item"><strong>Bora!</strong> — short for "vamos embora" — "let's go!" / "let's do it!"</div>
+<div class="vocab-item"><strong>Tava pensando</strong> — "I was thinking" (informal: "estava" → "tava")</div>
+<div class="vocab-item"><strong>Esse mesmo</strong> — "that's the one" / "exactly that one"</div>
+<div class="vocab-item"><strong>Combinado!</strong> — "it's a plan!" / "agreed!"</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">What day are they planning to meet?</div>
+<div class="comp-item" data-num="2.">What type of restaurant are they going to?</div>
+<div class="comp-item" data-num="3.">What time do they agree on?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 10 — Dialogue 07 -->
+<div class="page-label">📄 PAGE 10 — Dialogue 07</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 07</div>
+      <h1 class="header-title">Na farmácia</h1>
+      <p class='header-sub'>At the pharmacy</p>
+    </div>
+    <div class="page-num">10</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> Pharmacy</div>
+      <div class="meta-chip"><strong>Theme</strong> Health</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Cliente</span>Boa tarde. Eu tô com dor de cabeça faz dois dias. Tem alguma coisa boa?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Farmacêutico</span>Boa tarde. Você tem alergia a algum remédio?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Não, nenhuma.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Então pode tomar dipirona. Toma um comprimido de seis em seis horas.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">De seis em seis horas. Tá. Quanto custa?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Essa caixa aqui com dez comprimidos sai por oito reais.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Tá bom, eu levo.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Mais alguma coisa?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Só isso. Obrigado!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">De nada. Melhoras!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Tô</strong> — short for "estou" (I am)</div>
+<div class="vocab-item"><strong>Dor de cabeça</strong> — "headache"</div>
+<div class="vocab-item"><strong>Faz dois dias</strong> — "for two days" (using "fazer" for time duration)</div>
+<div class="vocab-item"><strong>De seis em seis horas</strong> — "every six hours"</div>
+<div class="vocab-item"><strong>Sai por</strong> — "comes to" / "costs" (informal)</div>
+<div class="vocab-item"><strong>Eu levo</strong> — "I'll take it"</div>
+<div class="vocab-item"><strong>Melhoras!</strong> — "get well!" (common farewell when someone is sick)</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">How long has the customer had a headache?</div>
+<div class="comp-item" data-num="2.">How often should they take the medicine?</div>
+<div class="comp-item" data-num="3.">How much does the box cost?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 11 — Dialogue 08 -->
+<div class="page-label">📄 PAGE 11 — Dialogue 08</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 08</div>
+      <h1 class="header-title">Chegando no hotel</h1>
+      <p class='header-sub'>Checking into a hotel</p>
+    </div>
+    <div class="page-num">11</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A1</div>
+      <div class="meta-chip"><strong>Setting</strong> Hotel reception</div>
+      <div class="meta-chip"><strong>Theme</strong> Travel & accommodation</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Hóspede</span>Boa noite, eu tenho uma reserva no nome de Sarah Collins.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Recepcionista</span>Boa noite! Deixa eu ver aqui... Collins... Achei! Quarto 405, quarto andar.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Ótimo. Tem Wi-Fi?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Tem sim. A senha tá nesse cartãozinho aqui.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Perfeito. E o café da manhã, que horas é?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Das seis e meia às dez. No segundo andar.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Tá bom. E pra ir pro quarto?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">O elevador é ali à direita. Aqui é a chave do quarto. Precisa de ajuda com as malas?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Não, tá tranquilo. Obrigada!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">De nada! Qualquer coisa, é só ligar pra recepção.</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>No nome de</strong> — "under the name of"</div>
+<div class="vocab-item"><strong>Deixa eu ver</strong> — "let me see" (very common phrase)</div>
+<div class="vocab-item"><strong>Cartãozinho</strong> — diminutive of "cartão" (card) — affectionate/casual</div>
+<div class="vocab-item"><strong>Café da manhã</strong> — "breakfast" (literally "morning coffee")</div>
+<div class="vocab-item"><strong>Tá tranquilo</strong> — "it's all good" / "I'm fine"</div>
+<div class="vocab-item"><strong>Qualquer coisa</strong> — "if you need anything" (literally "anything")</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">What room number is the guest in?</div>
+<div class="comp-item" data-num="2.">What time is breakfast?</div>
+<div class="comp-item" data-num="3.">Where is the elevator?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 12 — Dialogue 09 -->
+<div class="page-label">📄 PAGE 12 — Dialogue 09</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 09</div>
+      <h1 class="header-title">No ponto de ônibus</h1>
+      <p class='header-sub'>At the bus stop</p>
+    </div>
+    <div class="page-num">12</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A2</div>
+      <div class="meta-chip"><strong>Setting</strong> Bus stop</div>
+      <div class="meta-chip"><strong>Theme</strong> Transportation</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Turista</span>Com licença, esse ônibus vai pro centro?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Local</span>Esse não. Esse vai pra Zona Sul. Pro centro você pega o 875.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">O 875? E passa por aqui?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Passa sim, mas demora um pouco. Deve chegar em uns quinze minutos.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Ah tá. E sabe quanto é a passagem?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Quatro e quarenta. Você tem Bilhete Único?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Não, o que é isso?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">É um cartão recarregável. Você pode comprar na estação. Sai mais barato.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Ah, vou ver isso. Obrigado pela dica!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Imagina!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Vai pro centro?</strong> — "does it go to downtown?"</div>
+<div class="vocab-item"><strong>Pega o 875</strong> — "take the 875" (pegar = to catch/take transport)</div>
+<div class="vocab-item"><strong>Deve chegar</strong> — "it should arrive" (using "dever" for probability)</div>
+<div class="vocab-item"><strong>Bilhete Único</strong> — rechargeable transit card (São Paulo)</div>
+<div class="vocab-item"><strong>Sai mais barato</strong> — "it ends up cheaper"</div>
+<div class="vocab-item"><strong>Imagina!</strong> — "don't mention it!" / "no worries!" (very Brazilian)</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">Does the current bus go downtown?</div>
+<div class="comp-item" data-num="2.">How long until the right bus arrives?</div>
+<div class="comp-item" data-num="3.">What is the Bilhete Único?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 13 — Dialogue 10 -->
+<div class="page-label">📄 PAGE 13 — Dialogue 10</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 10</div>
+      <h1 class="header-title">Ligando pra marcar consulta</h1>
+      <p class='header-sub'>Calling to schedule an appointment</p>
+    </div>
+    <div class="page-num">13</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A2</div>
+      <div class="meta-chip"><strong>Setting</strong> Phone call</div>
+      <div class="meta-chip"><strong>Theme</strong> Health</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Paciente</span>Alô, boa tarde. Eu queria marcar uma consulta com o doutor Rodrigues.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Recepcionista</span>Boa tarde! Você já é paciente daqui?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Sou sim. Meu nome é Daniel Parker.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Deixa eu ver a agenda... A próxima vaga é quarta-feira, dia doze, às duas da tarde. Serve pra você?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Quarta às duas... Hmm, tem alguma coisa de manhã?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">De manhã só na sexta, às dez e quinze.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Sexta tá perfeito!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Anotado. Sexta, dia quatorze, dez e quinze. Lembra de trazer o plano de saúde, tá?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Pode deixar. Obrigado!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">De nada. Até sexta!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Eu queria</strong> — "I'd like to" (using imperfect for politeness, not "eu quero")</div>
+<div class="vocab-item"><strong>Marcar uma consulta</strong> — "schedule an appointment"</div>
+<div class="vocab-item"><strong>Vaga</strong> — "opening" / "available slot"</div>
+<div class="vocab-item"><strong>Serve pra você?</strong> — "does that work for you?"</div>
+<div class="vocab-item"><strong>Plano de saúde</strong> — "health insurance"</div>
+<div class="vocab-item"><strong>Pode deixar</strong> — "sure thing" / "will do"</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">Is the caller a new patient?</div>
+<div class="comp-item" data-num="2.">When is the appointment scheduled?</div>
+<div class="comp-item" data-num="3.">What should the patient bring?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 14 — Dialogue 11 -->
+<div class="page-label">📄 PAGE 14 — Dialogue 11</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 11</div>
+      <h1 class="header-title">Trocando dinheiro</h1>
+      <p class='header-sub'>Exchanging money</p>
+    </div>
+    <div class="page-num">14</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A2</div>
+      <div class="meta-chip"><strong>Setting</strong> Casa de câmbio</div>
+      <div class="meta-chip"><strong>Theme</strong> Money</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Turista</span>Oi, boa tarde. Eu queria trocar dólares por reais.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Atendente</span>Boa tarde! Claro. Quanto você quer trocar?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Trezentos dólares.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Tá. O câmbio hoje tá a cinco e vinte. Fica mil quinhentos e sessenta reais.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Cinco e vinte? Ontem eu vi a cinco e trinta num outro lugar.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Pode ser, mas a gente não cobra taxa. Então no final sai parecido.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Ah, faz sentido. Tá bom, pode trocar.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Preciso de um documento com foto. Passaporte ou identidade.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Toma, meu passaporte.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Perfeito. Só um minutinho.</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Casa de câmbio</strong> — "currency exchange"</div>
+<div class="vocab-item"><strong>Câmbio tá a</strong> — "exchange rate is at"</div>
+<div class="vocab-item"><strong>Não cobra taxa</strong> — "doesn't charge a fee"</div>
+<div class="vocab-item"><strong>Sai parecido</strong> — "ends up about the same"</div>
+<div class="vocab-item"><strong>Faz sentido</strong> — "makes sense"</div>
+<div class="vocab-item"><strong>Só um minutinho</strong> — "just a moment" (diminutive = friendly)</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">How many dollars does the tourist want to exchange?</div>
+<div class="comp-item" data-num="2.">What is today's exchange rate?</div>
+<div class="comp-item" data-num="3.">What document is required?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 15 — Dialogue 12 -->
+<div class="page-label">📄 PAGE 15 — Dialogue 12</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 12</div>
+      <h1 class="header-title">Comprando ingresso</h1>
+      <p class='header-sub'>Buying tickets</p>
+    </div>
+    <div class="page-num">15</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A2</div>
+      <div class="meta-chip"><strong>Setting</strong> Box office / Online</div>
+      <div class="meta-chip"><strong>Theme</strong> Entertainment</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Cliente</span>Oi, ainda tem ingresso pro show de sábado?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Bilheteria</span>Tem sim! Pista ou camarote?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Qual a diferença de preço?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Pista é cento e vinte. Camarote é duzentos e cinquenta. O camarote tem open bar.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Hmm, o camarote tá caro. Dois de pista, por favor.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Dois de pista. Duzentos e quarenta no total. Quer pagar como?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Pode ser no crédito? Parcela?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Parcela em até três vezes sem juros.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Três vezes então.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Feito! Os ingressos vão pro seu e-mail. Boa diversão!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Pista</strong> — "general admission" / "standing area"</div>
+<div class="vocab-item"><strong>Camarote</strong> — "VIP section" / "balcony"</div>
+<div class="vocab-item"><strong>Open bar</strong> — used in Portuguese too (anglicism)</div>
+<div class="vocab-item"><strong>Parcela?</strong> — "installments?" (very Brazilian — everything can be parceled)</div>
+<div class="vocab-item"><strong>Sem juros</strong> — "no interest"</div>
+<div class="vocab-item"><strong>Boa diversão!</strong> — "have fun!"</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">What are the two ticket options?</div>
+<div class="comp-item" data-num="2.">How much does the customer pay in total?</div>
+<div class="comp-item" data-num="3.">How many installments will the payment be split into?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 16 — Dialogue 13 -->
+<div class="page-label">📄 PAGE 16 — Dialogue 13</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 13</div>
+      <h1 class="header-title">No Airbnb</h1>
+      <p class='header-sub'>At the Airbnb</p>
+    </div>
+    <div class="page-num">16</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A2</div>
+      <div class="meta-chip"><strong>Setting</strong> Apartment</div>
+      <div class="meta-chip"><strong>Theme</strong> Accommodation</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Hóspede</span>Oi, cheguei! Tô aqui na frente do prédio.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Anfitrião</span>Oi! Beleza, o código do portão é 4523. Entra e pega o elevador pro terceiro andar. Apartamento 302.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">4523, terceiro andar, 302. Achei o portão. Tô subindo.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Ótimo! A chave tá dentro de um cofrezinho do lado da porta. A senha é 1980.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Achei! Tô entrando... Nossa, que apartamento bonito!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Que bom que gostou! O Wi-Fi tá na geladeira, colei um papel lá. E o mercado mais perto fica a duas quadras, descendo a rua.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Perfeito, obrigado por tudo!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Imagina! Qualquer dúvida, me manda mensagem.</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Tô aqui na frente</strong> — "I'm here in front" (tô = estou)</div>
+<div class="vocab-item"><strong>Portão</strong> — "gate" (building entrance)</div>
+<div class="vocab-item"><strong>Cofrezinho</strong> — "lockbox" (diminutive of cofre)</div>
+<div class="vocab-item"><strong>Nossa!</strong> — exclamation of surprise, "wow!"</div>
+<div class="vocab-item"><strong>Que bom que gostou!</strong> — "glad you liked it!"</div>
+<div class="vocab-item"><strong>Me manda mensagem</strong> — "send me a message" (WhatsApp culture)</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">What is the gate code?</div>
+<div class="comp-item" data-num="2.">Where is the apartment key?</div>
+<div class="comp-item" data-num="3.">Where is the Wi-Fi password?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 17 — Dialogue 14 -->
+<div class="page-label">📄 PAGE 17 — Dialogue 14</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 14</div>
+      <h1 class="header-title">Pedindo conta no restaurante</h1>
+      <p class='header-sub'>Asking for the bill</p>
+    </div>
+    <div class="page-num">17</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A2</div>
+      <div class="meta-chip"><strong>Setting</strong> Restaurant</div>
+      <div class="meta-chip"><strong>Theme</strong> Food & payment</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Cliente</span>Garçom, a conta, por favor!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Garçom</span>Claro, já trago. Vai querer dividir?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Não, pode ser tudo junto.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Aqui, ó. Cento e quarenta e seis reais. Já tá com os dez por cento.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Dez por cento de serviço, né? É obrigatório?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Não é obrigatório, mas a maioria do pessoal paga. Fica a seu critério.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Tudo bem, pode deixar. Aceita Pix?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Aceita sim! O QR code tá aqui no cantinho da conta.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Pronto, paguei!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Confirmado aqui. Obrigado! Volte sempre!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>A conta</strong> — "the bill/check"</div>
+<div class="vocab-item"><strong>Dividir</strong> — "split" (the bill)</div>
+<div class="vocab-item"><strong>Tudo junto</strong> — "all together" (one bill)</div>
+<div class="vocab-item"><strong>Os dez por cento</strong> — "the 10%" (standard service charge in Brazil)</div>
+<div class="vocab-item"><strong>Fica a seu critério</strong> — "it's up to you"</div>
+<div class="vocab-item"><strong>Pix</strong> — Brazilian instant payment system (everyone uses it)</div>
+<div class="vocab-item"><strong>Volte sempre!</strong> — "come back anytime!"</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">Does the customer want to split the bill?</div>
+<div class="comp-item" data-num="2.">Is the service charge mandatory?</div>
+<div class="comp-item" data-num="3.">How does the customer pay?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 18 — Dialogue 15 -->
+<div class="page-label">📄 PAGE 18 — Dialogue 15</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 15</div>
+      <h1 class="header-title">Perdido no bairro</h1>
+      <p class='header-sub'>Lost in the neighborhood</p>
+    </div>
+    <div class="page-num">18</div>
+  </div>
+  <div class="body">
+    <div class="meta-row">
+      <div class="meta-chip"><strong>Level</strong> A2</div>
+      <div class="meta-chip"><strong>Setting</strong> Street</div>
+      <div class="meta-chip"><strong>Theme</strong> Getting around</div>
+    </div>
+
+    <div class="scene">
+      <div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text"><span class="role">Turista</span>Oi, desculpa, eu acho que tô perdido. Você pode me ajudar?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text"><span class="role">Local</span>Claro! Pra onde você tá tentando ir?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Eu tô procurando a Rua Augusta. No mapa parece perto, mas eu não tô achando.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Ah, Rua Augusta! Você passou dela. Tem que voltar lá pra trás.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Sério? Eu andei demais?</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Um pouquinho. Volta umas três quadras e vira na primeira à direita. Vai cair direto na Augusta.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Três quadras pra trás, primeira à direita.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">Isso! Se você ver uma loja grande de celular na esquina, é ali.</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker ">A</div>
+      <div class="turn-text">Entendi! Muito obrigado!</div>
+    </div>
+<div class="turn">
+      <div class="turn-speaker b">B</div>
+      <div class="turn-text">De nada! Bem-vindo ao Brasil!</div>
+    </div>
+    </div>
+    
+    <div class="vocab-box">
+      <div class="vocab-label">📚 Vocab notes</div>
+      <div class="vocab-item"><strong>Tô perdido</strong> — "I'm lost"</div>
+<div class="vocab-item"><strong>Você passou dela</strong> — "you passed it" (dela = de + ela, referring to the street)</div>
+<div class="vocab-item"><strong>Andei demais</strong> — "I walked too far"</div>
+<div class="vocab-item"><strong>Vai cair direto</strong> — "you'll end up right on" (cair = to fall, used figuratively)</div>
+<div class="vocab-item"><strong>Loja de celular</strong> — "cell phone store"</div>
+<div class="vocab-item"><strong>Bem-vindo ao Brasil!</strong> — "welcome to Brazil!"</div>
+    </div>
+    
+    <div class="comp-box">
+      <div class="comp-label">🎯 Comprehension questions</div>
+      <div class="comp-item" data-num="1.">What street is the tourist looking for?</div>
+<div class="comp-item" data-num="2.">Did the tourist walk too far or not far enough?</div>
+<div class="comp-item" data-num="3.">What landmark should they look for?</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- PAGE 19 — Closing -->
+<div class="page-label">📄 PAGE 19 — Closing</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">That's a wrap</div>
+      <h1 class="header-title">Keep<br>listening</h1>
+      <p class='header-sub'>The rhythm compounds</p>
+    </div>
+    <div class="page-num">19</div>
+  </div>
+  <div class="body">
+    <p class="intro">Comprehension doesn't happen in one session. It builds through repeated exposure. Come back to these transcripts whenever you feel stuck on a dialogue.</p>
+
+    <div class="tip-box">
+      <div class="tip-icon">🌱</div>
+      <div>
+        <div class="tip-label">Next steps</div>
+        <div class="tip-text">
+          Try listening to each dialogue three times across three different days. The second and third listens catch more than the first. <em>Consistency beats intensity.</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="comp-box">
+      <div class="comp-label">🎧 Ready for more?</div>
+      <div class="comp-item" data-num="→">Your Pro tier unlocks 50 dialogues. Plus tier has 30. Upgrade when you've mastered your current level.</div>
+      <div class="comp-item" data-num="→">Complementary product: <strong>Speaking &amp; Pronunciation Kit</strong> — train the active side of the language (rhythm, nasals, R).</div>
+      <div class="comp-item" data-num="→">Foundation product: <strong>Everyday Brazilian Portuguese</strong> — 100 practical phrases and the cultural rules behind them.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

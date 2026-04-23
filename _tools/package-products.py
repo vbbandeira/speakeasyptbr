@@ -263,30 +263,87 @@ def package_listening_lab() -> None:
         shutil.rmtree(_long_path(delivery_dir))
     delivery_dir.mkdir(parents=True)
 
+    slow_dir = audio_dir / "slow"
+    slow_files = sorted(slow_dir.glob("Dialogue_*_slow.mp3")) if slow_dir.exists() else []
+    deep_dive_dir = audio_dir / "deep-dives"
+    deep_dive_files = sorted(deep_dive_dir.glob("Deep_Dive_*.mp3")) if deep_dive_dir.exists() else []
+    pdf_dir = product_dir / "pdf"
+    extras_dir = product_dir / "extras"
+
     # === 3 tiers: Basic (15) / Plus (30) / Pro (50) ===
+    # Each tier builds on what previous tier gives + additional bonuses.
     tiers = [
-        ("Basic",  15, "€19.90"),
-        ("Plus",   30, "€39.90"),
-        ("Pro",    50, "€59.90"),
+        {
+            "name": "Basic", "count": 15, "price": "€19.90",
+            "transcripts": "Transcripts - Basic.pdf",
+            "workbook": None, "flashcards": False, "deep_dives": 1,
+        },
+        {
+            "name": "Plus", "count": 30, "price": "€39.90",
+            "transcripts": "Transcripts - Plus.pdf",
+            "workbook": "Comprehension Workbook - Plus.pdf",
+            "flashcards": False, "deep_dives": 3,
+        },
+        {
+            "name": "Pro", "count": 50, "price": "€59.90",
+            "transcripts": "Transcripts - Pro.pdf",
+            "workbook": "Comprehension Workbook - Pro.pdf",
+            "flashcards": True, "deep_dives": 5,
+        },
     ]
 
-    for tier_name, count, price in tiers:
-        folder_name = f"Brazilian Listening Lab - {tier_name}"
+    for tier in tiers:
+        folder_name = f"Brazilian Listening Lab - {tier['name']}"
         tier_root = delivery_dir / folder_name / "Brazilian Listening Lab"
         tier_root.mkdir(parents=True)
 
-        print(f"\n📦 Building tier {price}: {folder_name} ({count} dialogues)")
+        print(f"\n📦 Building tier {tier['price']}: {folder_name}")
 
         # Root: Start Here
-        shutil.copy2(product_dir / "pdf" / "Brazilian Listening Lab - Start Here.pdf", tier_root / "Start Here.pdf")
+        shutil.copy2(pdf_dir / "Brazilian Listening Lab - Start Here.pdf", tier_root / "Start Here.pdf")
 
-        # Dialogues subfolder
+        # Books/ — transcripts + workbook
+        books_dir = tier_root / "Books"
+        books_dir.mkdir()
+        shutil.copy2(pdf_dir / tier["transcripts"], books_dir / "Transcripts.pdf")
+        if tier["workbook"]:
+            shutil.copy2(pdf_dir / tier["workbook"], books_dir / "Comprehension Workbook.pdf")
+
+        # Dialogues/ — natural speed MP3s
         dialogues_dir = tier_root / "Dialogues"
         dialogues_dir.mkdir()
-        for f in dialogue_files[:count]:
+        for f in dialogue_files[:tier["count"]]:
             shutil.copy2(f, dialogues_dir / f.name)
 
-        print(f"   ✅ Structure: Start Here (root) + Dialogues/ ({count} MP3s)")
+        # Dialogues (slow)/ — slow versions
+        if slow_files:
+            slow_out = tier_root / "Dialogues (slow)"
+            slow_out.mkdir()
+            for f in slow_files[:tier["count"]]:
+                shutil.copy2(f, slow_out / f.name)
+
+        # Deep Dive Podcasts/
+        if deep_dive_files and tier["deep_dives"] > 0:
+            dd_out = tier_root / "Deep Dive Podcasts"
+            dd_out.mkdir()
+            for f in deep_dive_files[:tier["deep_dives"]]:
+                shutil.copy2(f, dd_out / f.name)
+
+        # Flashcards (Pro only)
+        if tier["flashcards"]:
+            fc_path = extras_dir / "Vocabulary Flashcards - Pro.csv"
+            if fc_path.exists():
+                shutil.copy2(fc_path, tier_root / "Vocabulary Flashcards.csv")
+
+        # Summary
+        extras_note = []
+        extras_note.append(f"{tier['count']} dialogues (natural+slow)")
+        extras_note.append(f"{tier['deep_dives']} deep-dive podcasts")
+        if tier["workbook"]:
+            extras_note.append("workbook")
+        if tier["flashcards"]:
+            extras_note.append("flashcards CSV")
+        print(f"   ✅ Structure: Start Here + Books/ (transcripts{'+workbook' if tier['workbook'] else ''}) + {', '.join(extras_note)}")
 
         zip_path = delivery_dir / f"{folder_name}.zip"
         zip_folder(tier_root, zip_path)

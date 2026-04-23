@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SpeakEasy — Brazilian Listening Lab · Comprehension Workbook</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter','Noto Color Emoji',sans-serif; background:#D8D4CC;
+  display:flex; flex-direction:column; align-items:center;
+  gap:48px; padding:48px 20px;
+}
+.page-label {
+  width:420px; font-family:'Inter',sans-serif; font-size:10px;
+  font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:#999; margin-bottom:-36px; padding-left:4px;
+}
+.page {
+  width:420px; background:#F5F0E8; border-radius:16px;
+  overflow:hidden; border:1px solid #D4CBBB;
+}
+.header {
+  background:#1E4D3B; padding:26px 32px 22px;
+  position:relative; overflow:hidden;
+  display:flex; align-items:flex-start; justify-content:space-between;
+}
+.header::before {
+  content:''; position:absolute; top:-50px; right:-50px;
+  width:160px; height:160px; border-radius:50%;
+  background:rgba(255,255,255,0.05);
+}
+.section-tag {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.15em; text-transform:uppercase; color:#7EC8A4; margin-bottom:5px;
+}
+.header-title {
+  font-family:'Poppins',sans-serif; font-size:19px; font-weight:700;
+  color:#fff; line-height:1.15;
+}
+.header-sub {
+  margin-top:5px; font-family:'Inter',sans-serif;
+  font-size:10.5px; color:rgba(255,255,255,0.55);
+}
+.page-num {
+  font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.3);
+  letter-spacing:0.1em; flex-shrink:0; margin-top:2px;
+}
+.body { padding:22px 30px 30px; display:flex; flex-direction:column; gap:14px; }
+.intro {
+  font-size:12px; color:#6B7B6E; line-height:1.6;
+  border-left:3px solid #A8E6C3; padding-left:12px; font-style:italic;
+}
+.exercise {
+  background:#fff; border-radius:11px; border:1px solid #EDE9E0;
+  padding:14px 16px;
+}
+.exercise-title {
+  font-family:'Poppins',sans-serif; font-size:13px; font-weight:700;
+  color:#1E4D3B; margin-bottom:4px;
+}
+.exercise-sub {
+  font-family:'Inter',sans-serif; font-size:10.5px; color:#8FA897;
+  font-style:italic; margin-bottom:10px;
+}
+.question {
+  font-family:'Inter',sans-serif; font-size:11.5px; color:#3D5247;
+  line-height:1.5; padding:6px 0 6px 22px; position:relative;
+  border-top:1px solid rgba(212,203,187,0.3);
+}
+.question:first-of-type { border-top:none; padding-top:0; }
+.question::before {
+  content:attr(data-num); position:absolute; left:0; top:7px;
+  font-family:'Poppins',sans-serif; font-size:11px; font-weight:700;
+  color:#2D6B52;
+}
+.answer-space {
+  display:block; border-bottom:1px solid rgba(212,203,187,0.7);
+  min-height:16px; margin-top:6px;
+}
+.gap {
+  font-family:'Poppins',sans-serif; font-size:11.5px; color:#1E4D3B;
+  font-weight:500; padding:6px 0 6px 22px; position:relative;
+  border-top:1px solid rgba(212,203,187,0.3);
+}
+.gap:first-of-type { border-top:none; padding-top:0; }
+.gap::before {
+  content:attr(data-num); position:absolute; left:0; top:7px;
+  font-family:'Poppins',sans-serif; font-size:11px; font-weight:700;
+  color:#2D6B52;
+}
+.tip-box {
+  background:#1E4D3B; border-radius:11px; padding:13px 15px;
+  display:flex; gap:9px; align-items:flex-start;
+}
+.tip-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+.tip-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; margin-bottom:3px;
+}
+.tip-text {
+  font-family:'Inter',sans-serif; font-size:11.5px;
+  color:rgba(255,255,255,0.85); line-height:1.6;
+}
+.tip-text em { color:#A8E6C3; font-style:normal; font-weight:500; }
+
+@media print {
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  @page { size: 420px auto; margin: 0mm; }
+  html, body {
+    width: 420px !important; margin: 0 !important; padding: 0 !important;
+    background: #F5F0E8 !important; display: block !important;
+  }
+  .page-label { display: none !important; }
+  .page {
+    width: 420px !important; border-radius: 0 !important;
+    border: none !important; overflow: hidden !important;
+    page-break-after: always; page-break-inside: avoid;
+    margin: 0 !important;
+  }
+  .page:last-of-type { page-break-after: auto; }
+  .exercise, .tip-box { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-label">📄 PAGE 01 — Cover</div>
+<div class="page" style="height:747px; background:linear-gradient(to bottom, #E8E5DC 0, #E8E5DC 703px, #1E4D3B 703px, #1E4D3B 100%); background-color:#1E4D3B; position:relative; overflow:hidden; border:none;">
+  <div style="position:absolute; left:0; top:0; width:100%; height:72px; overflow:hidden; z-index:5;">
+    <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    <div style="position:absolute; left:50%; top:45%; transform:translate(-50%, -50%); width:210px; height:85px; overflow:hidden; z-index:10; pointer-events:none;">
+      <img src="../_shared/assets/Logo.svg" alt="SpeakEasy Portuguese" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+    </div>
+  </div>
+  <div style="position:absolute; left:0; bottom:0; width:100%; height:44px; background:#1E4D3B; display:flex; align-items:center; justify-content:center; gap:10px; z-index:6;">
+    <a href="https://www.instagram.com/speakeasy.ptbr" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); text-decoration:none;">@speakeasy.ptbr</a>
+    <div style="width:3px;height:3px;border-radius:50%;background:#7EC8A4;"></div>
+    <a href="https://speakeasyptbr.com" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; text-decoration:none;">speakeasyptbr.com</a>
+  </div>
+  <div style="position:absolute; left:90px; top:35px; width:239px; height:228px; overflow:hidden; z-index:2; pointer-events:none;">
+    <img src="../_shared/assets/Cristo.svg" alt="Cristo Redentor" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+  <div style="position:absolute; left:0; right:0; top:275px; padding:0 24px; text-align:center; z-index:3;">
+    <div style="font-family:'Poppins',sans-serif; font-size:38px; font-weight:800; color:#1E4D3B; line-height:0.95; letter-spacing:-1px; text-transform:uppercase; margin-bottom:10px;">Comprehension<br>Workbook</div>
+    <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#2D6B52; margin-bottom:14px;">Brazilian Listening Lab</div>
+    <div style="width:44px; height:3px; background:#A8E6C3; border-radius:2px; margin:0 auto 13px;"></div>
+    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">PRO TIER · 50 dialogues</div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#4A6B58;">exercises · fill-the-gap · comprehension questions</div>
+  </div>
+  <div style="position:absolute; left:270px; top:425px; width:232px; height:299px; overflow:hidden; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Arara.svg" alt="Arara" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+  <div style="position:absolute; left:-20px; top:560px; width:238.5px; height:157.2px; overflow:hidden; opacity:0.6; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Palacio.svg" alt="Palácio" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 02 — How to use</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">How to use</div>
+      <h1 class="header-title">Listen. Think. Answer.</h1>
+      <p class='header-sub'>Training active comprehension</p>
+    </div>
+    <div class="page-num">02</div>
+  </div>
+  <div class="body">
+    <p class="intro">These exercises turn passive listening into active comprehension. Do them after listening to each dialogue.</p>
+
+    <div class="tip-box">
+      <div class="tip-icon">🎧</div>
+      <div>
+        <div class="tip-label">The workflow</div>
+        <div class="tip-text">
+          <strong>1.</strong> Listen to the dialogue with the transcript closed.<br><br>
+          <strong>2.</strong> Open this workbook to that dialogue's page.<br><br>
+          <strong>3.</strong> Answer the comprehension questions in your own words. Write the answers on a notebook or mentally.<br><br>
+          <strong>4.</strong> (Plus/Pro only) Do the fill-the-gap exercises — these train vocabulary recall.<br><br>
+          <strong>5.</strong> Check your answers by reading the transcripts PDF or listening again.
+        </div>
+      </div>
+    </div>
+
+    <div class="exercise">
+      <div class="exercise-title">💡 Pro tip</div>
+      <div class="exercise-sub">Why fill-the-gap works</div>
+      <div class="question" data-num="→" style="padding-top:4px;">Word-level recall is harder than passive recognition. If you can produce the missing word from memory, you've truly internalized it.</div>
+    </div>
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 03 — Dialogue 01</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 01 · Exercises</div>
+      <h1 class="header-title">Pedindo um Uber</h1>
+      <p class='header-sub'>Ordering an Uber · Level A1</p>
+    </div>
+    <div class="page-num">03</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Where is the passenger going?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How long will the trip take approximately?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does the driver offer to do?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 04 — Dialogue 02</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 02 · Exercises</div>
+      <h1 class="header-title">Na padaria</h1>
+      <p class='header-sub'>At the bakery · Level A1</p>
+    </div>
+    <div class="page-num">04</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How many bread rolls does the customer order?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Is the bread fresh?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How does the customer pay?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 05 — Dialogue 03</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 03 · Exercises</div>
+      <h1 class="header-title">Pedindo comida num bar</h1>
+      <p class='header-sub'>Ordering food at a bar · Level A1</p>
+    </div>
+    <div class="page-num">05</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What beer brand does the customer choose?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What does the waiter recommend?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does the customer order to eat?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 06 — Dialogue 04</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 04 · Exercises</div>
+      <h1 class="header-title">Perguntando direções</h1>
+      <p class='header-sub'>Asking for directions · Level A1</p>
+    </div>
+    <div class="page-num">06</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How many blocks straight ahead?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What landmark should the tourist look for?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Which direction should they turn at the pharmacy?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 07 — Dialogue 05</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 05 · Exercises</div>
+      <h1 class="header-title">No supermercado</h1>
+      <p class='header-sub'>At the supermarket · Level A1</p>
+    </div>
+    <div class="page-num">07</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What aisle are the fruits in?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much does a bag cost?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Where does the customer get the bags?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 08 — Dialogue 06</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 06 · Exercises</div>
+      <h1 class="header-title">Marcando um encontro</h1>
+      <p class='header-sub'>Making plans · Level A1</p>
+    </div>
+    <div class="page-num">08</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What day are they planning to meet?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What type of restaurant are they going to?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What time do they agree on?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 09 — Dialogue 07</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 07 · Exercises</div>
+      <h1 class="header-title">Na farmácia</h1>
+      <p class='header-sub'>At the pharmacy · Level A1</p>
+    </div>
+    <div class="page-num">09</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How long has the customer had a headache?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How often should they take the medicine?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How much does the box cost?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 10 — Dialogue 08</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 08 · Exercises</div>
+      <h1 class="header-title">Chegando no hotel</h1>
+      <p class='header-sub'>Checking into a hotel · Level A1</p>
+    </div>
+    <div class="page-num">10</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What room number is the guest in?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What time is breakfast?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Where is the elevator?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 11 — Dialogue 09</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 09 · Exercises</div>
+      <h1 class="header-title">No ponto de ônibus</h1>
+      <p class='header-sub'>At the bus stop · Level A2</p>
+    </div>
+    <div class="page-num">11</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Does the current bus go downtown?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How long until the right bus arrives?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What is the Bilhete Único?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 12 — Dialogue 10</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 10 · Exercises</div>
+      <h1 class="header-title">Ligando pra marcar consulta</h1>
+      <p class='header-sub'>Calling to schedule an appointment · Level A2</p>
+    </div>
+    <div class="page-num">12</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Is the caller a new patient?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">When is the appointment scheduled?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What should the patient bring?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 13 — Dialogue 11</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 11 · Exercises</div>
+      <h1 class="header-title">Trocando dinheiro</h1>
+      <p class='header-sub'>Exchanging money · Level A2</p>
+    </div>
+    <div class="page-num">13</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How many dollars does the tourist want to exchange?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What is today's exchange rate?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What document is required?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 14 — Dialogue 12</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 12 · Exercises</div>
+      <h1 class="header-title">Comprando ingresso</h1>
+      <p class='header-sub'>Buying tickets · Level A2</p>
+    </div>
+    <div class="page-num">14</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What are the two ticket options?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much does the customer pay in total?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How many installments will the payment be split into?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 15 — Dialogue 13</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 13 · Exercises</div>
+      <h1 class="header-title">No Airbnb</h1>
+      <p class='header-sub'>At the Airbnb · Level A2</p>
+    </div>
+    <div class="page-num">15</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What is the gate code?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Where is the apartment key?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Where is the Wi-Fi password?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 16 — Dialogue 14</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 14 · Exercises</div>
+      <h1 class="header-title">Pedindo conta no restaurante</h1>
+      <p class='header-sub'>Asking for the bill · Level A2</p>
+    </div>
+    <div class="page-num">16</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Does the customer want to split the bill?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Is the service charge mandatory?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How does the customer pay?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 17 — Dialogue 15</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 15 · Exercises</div>
+      <h1 class="header-title">Perdido no bairro</h1>
+      <p class='header-sub'>Lost in the neighborhood · Level A2</p>
+    </div>
+    <div class="page-num">17</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What street is the tourist looking for?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Did the tourist walk too far or not far enough?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What landmark should they look for?<span class="answer-space"></span></div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 18 — Dialogue 16</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 16 · Exercises</div>
+      <h1 class="header-title">No churrasco</h1>
+      <p class='header-sub'>At a barbecue · Level A2</p>
+    </div>
+    <div class="page-num">18</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Who is in charge of the grill?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What is farofa made of?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Where is the beer?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Pega um prato ali, pode se ___." (servir)</div>
+<div class="gap" data-num="2.">"Pega antes que ___!" (acabe)</div>
+<div class="gap" data-num="3.">"Se ___ em casa!" (sinta)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 19 — Dialogue 17</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 17 · Exercises</div>
+      <h1 class="header-title">Voltando de compras</h1>
+      <p class='header-sub'>Coming back from shopping · Level A2</p>
+    </div>
+    <div class="page-num">19</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How much did the blouse originally cost?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How is the friend paying for the shoes?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How much per installment?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Nossa, ___ demais hoje." (gastei)</div>
+<div class="gap" data-num="2.">"Parcelei em cinco ___." (vezes)</div>
+<div class="gap" data-num="3.">"Parcela é a ___ do Brasil." (cara)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 20 — Dialogue 18</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 18 · Exercises</div>
+      <h1 class="header-title">Reclamando do trânsito</h1>
+      <p class='header-sub'>Complaining about traffic · Level B1</p>
+    </div>
+    <div class="page-num">20</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How long did it take A to get to work?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How far does A live from work?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What solution did B find?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"A Marginal tava ___. Parecia um estacionamento." (impossível)</div>
+<div class="gap" data-num="2.">"Corta pela ___ o tempo." (metade)</div>
+<div class="gap" data-num="3.">"Pelo menos não fico ___ no trânsito." (preso)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 21 — Dialogue 19</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 19 · Exercises</div>
+      <h1 class="header-title">Alugando um apartamento</h1>
+      <p class='header-sub'>Renting an apartment · Level B1</p>
+    </div>
+    <div class="page-num">21</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What's the total monthly cost?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What's included in the condomínio?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What are the two guarantee options?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Entra, fica à ___." (vontade)</div>
+<div class="gap" data-num="2.">"Luz é por ___." (fora)</div>
+<div class="gap" data-num="3.">"Te dou um ___ até amanhã." (retorno)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 22 — Dialogue 20</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 20 · Exercises</div>
+      <h1 class="header-title">No médico</h1>
+      <p class='header-sub'>At the doctor's office · Level B1</p>
+    </div>
+    <div class="page-num">22</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How long has the patient had back pain?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What's the likely cause?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What two things does the doctor recommend?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Tô com uma dor nas costas faz mais de uma ___." (semana)</div>
+<div class="gap" data-num="2.">"___ quando eu fico sentado muito tempo." (Piora)</div>
+<div class="gap" data-num="3.">"Tenta fazer pausas no trabalho, ___ a cada hora." (levanta)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 23 — Dialogue 21</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 21 · Exercises</div>
+      <h1 class="header-title">Falando sobre trabalho</h1>
+      <p class='header-sub'>Talking about work · Level B1</p>
+    </div>
+    <div class="page-num">23</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What does B do at the new job?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What's the work arrangement?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How did B leave the old job?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Cuido das ___ sociais e campanhas de anúncio." (redes)</div>
+<div class="gap" data-num="2.">"Cumpri o aviso ___ direitinho." (prévio)</div>
+<div class="gap" data-num="3.">"Saí numa ___." (boa)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 24 — Dialogue 22</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 22 · Exercises</div>
+      <h1 class="header-title">Na praia</h1>
+      <p class='header-sub'>At the beach · Level A2</p>
+    </div>
+    <div class="page-num">24</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Where do they decide to sit?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much is each coconut water?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Why should they wait before going in the water?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"O sol aqui não ___." (perdoa)</div>
+<div class="gap" data-num="2.">"Já ___ feio uma vez." (queimei)</div>
+<div class="gap" data-num="3.">"Depois que o protetor ___." (secar)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 25 — Dialogue 23</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 23 · Exercises</div>
+      <h1 class="header-title">Problemas com internet</h1>
+      <p class='header-sub'>Internet problems · Level B1</p>
+    </div>
+    <div class="page-num">25</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How long has the internet been down?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What did the agent find during the remote test?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">When is the technician visit scheduled?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Minha internet ___ de novo." (caiu)</div>
+<div class="gap" data-num="2.">"Já ___ o roteador duas vezes." (reiniciei)</div>
+<div class="gap" data-num="3.">"É a ___ vez nesse mês." (terceira)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 26 — Dialogue 24</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 24 · Exercises</div>
+      <h1 class="header-title">Conversando com o vizinho</h1>
+      <p class='header-sub'>Talking to the neighbor · Level A2</p>
+    </div>
+    <div class="page-num">26</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Which apartment does Carla live in?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How do the laundry machines work?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What are the quiet hours?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Você é o vizinho ___, né?" (novo)</div>
+<div class="gap" data-num="2.">"Desce pelo elevador, aperta ___." (S)</div>
+<div class="gap" data-num="3.">"___ depois das dez da noite." (Silêncio)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 27 — Dialogue 25</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 25 · Exercises</div>
+      <h1 class="header-title">No salão de beleza</h1>
+      <p class='header-sub'>At the hair salon · Level B1</p>
+    </div>
+    <div class="page-num">27</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What three services will be done?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much will it cost in total?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How long will it take?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Meu cabelo tá muito ___." (armado)</div>
+<div class="gap" data-num="2.">"Tá bem ___ também." (ressecado)</div>
+<div class="gap" data-num="3.">"___ no processo!" (Confia)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 28 — Dialogue 26</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 26 · Exercises</div>
+      <h1 class="header-title">Pedindo comida por delivery</h1>
+      <p class='header-sub'>Ordering delivery food · Level A2</p>
+    </div>
+    <div class="page-num">28</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What pizza did the customer order?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What dessert did they choose?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How long is the delivery time?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Eu queria fazer um ___ pra entrega." (pedido)</div>
+<div class="gap" data-num="2.">"Vai ___ como?" (pagar)</div>
+<div class="gap" data-num="3.">"___ em uns quarenta minutos." (Chega)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 29 — Dialogue 27</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 27 · Exercises</div>
+      <h1 class="header-title">Conta de banco</h1>
+      <p class='header-sub'>Bank account · Level B1</p>
+    </div>
+    <div class="page-num">29</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What documents are needed?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Why is the proof of address a problem?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does the customer need from the landlord?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Vou precisar do passaporte, CPF, ___ de residência e ___ de renda." (comprovante, comprovante)</div>
+<div class="gap" data-num="2.">"Reconhecida em ___." (cartório)</div>
+<div class="gap" data-num="3.">"Marca um horário pelo app que ___." (agiliza)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 30 — Dialogue 28</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 28 · Exercises</div>
+      <h1 class="header-title">Discussão sobre futebol</h1>
+      <p class='header-sub'>Football discussion · Level B1</p>
+    </div>
+    <div class="page-num">30</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Who won the game and what was the score?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Which team does each person support?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does "afogar as mágoas" mean?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"O Corinthians jogou muito ___." (mal)</div>
+<div class="gap" data-num="2.">"A gente sofre mas não ___." (larga)</div>
+<div class="gap" data-num="3.">"Bora ___ mais uma cerveja?" (pedir)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 31 — Dialogue 29</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 29 · Exercises</div>
+      <h1 class="header-title">Resolvendo problema no celular</h1>
+      <p class='header-sub'>Fixing phone problems · Level B1</p>
+    </div>
+    <div class="page-num">31</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What's wrong with the phone?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much does the repair cost?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How long is the warranty?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Meu celular tá com a tela ___." (trincada)</div>
+<div class="gap" data-num="2.">"A ___ da tela fica duzentos e cinquenta." (troca)</div>
+<div class="gap" data-num="3.">"Noventa dias na ___ e no serviço." (peça)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 32 — Dialogue 30</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 30 · Exercises</div>
+      <h1 class="header-title">Planejando uma viagem</h1>
+      <p class='header-sub'>Planning a trip · Level B1</p>
+    </div>
+    <div class="page-num">32</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How many days do they have for the trip?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much is the pousada per night per person?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What's included in the rate?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Que ___ Paraty?" (tal)</div>
+<div class="gap" data-num="2.">"Pousada tem mais ___." (charme)</div>
+<div class="gap" data-num="3.">"Bora ___ antes que acabe?" (reservar)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 33 — Dialogue 31</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 31 · Exercises</div>
+      <h1 class="header-title">Entrevista de emprego</h1>
+      <p class='header-sub'>Job interview · Level B1</p>
+    </div>
+    <div class="page-num">33</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Why did Lucas leave his previous job?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What achievement does he highlight?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">When will he hear back?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"A empresa foi ___ e a cultura mudou." (vendida)</div>
+<div class="gap" data-num="2.">"A gente conseguiu ___ até mais do que o esperado." (economizar)</div>
+<div class="gap" data-num="3.">"Sei quando preciso pedir ___." (ajuda)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 34 — Dialogue 32</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 32 · Exercises</div>
+      <h1 class="header-title">Briga de casal</h1>
+      <p class='header-sub'>Couple's argument · Level B1</p>
+    </div>
+    <div class="page-num">34</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What did B promise?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What does A really want?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does "não promete, faz" mean?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Você nunca ___ a gente." (prioriza)</div>
+<div class="gap" data-num="2.">"Acabo ___ a gente de lado." (deixando)</div>
+<div class="gap" data-num="3.">"Não ___, faz." (promete)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 35 — Dialogue 33</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 33 · Exercises</div>
+      <h1 class="header-title">Reclamação no Procon</h1>
+      <p class='header-sub'>Consumer complaint · Level B2</p>
+    </div>
+    <div class="page-num">35</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What's wrong with the product?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How many days does the company have to respond?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What are the consumer's three rights?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"A loja não quer ___." (trocar)</div>
+<div class="gap" data-num="2.">"Ficaram ___ o problema." (empurrando)</div>
+<div class="gap" data-num="3.">"Tava me sentindo de mãos ___." (atadas)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 36 — Dialogue 34</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 34 · Exercises</div>
+      <h1 class="header-title">Almoço de domingo em família</h1>
+      <p class='header-sub'>Sunday family lunch · Level B1</p>
+    </div>
+    <div class="page-num">36</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What's on the menu?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Whose recipe is the chicken?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What's the grandmother's famous story about?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Arroz, feijão, farofa, ___ de batata e frango assado." (maionese)</div>
+<div class="gap" data-num="2.">"Esse frango tá ___ ao da sua avó." (igual)</div>
+<div class="gap" data-num="3.">"Domingo sem almoço em ___ não é domingo." (família)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 37 — Dialogue 35</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 35 · Exercises</div>
+      <h1 class="header-title">Pedindo aumento</h1>
+      <p class='header-sub'>Asking for a raise · Level B2</p>
+    </div>
+    <div class="page-num">37</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How long has the employee been at the company?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What's the market salary for the role?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does the boss promise?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Meus resultados tão acima da ___ em todo trimestre." (meta)</div>
+<div class="gap" data-num="2.">"Meu salário não ___ essa evolução." (acompanhou)</div>
+<div class="gap" data-num="3.">"Profissional como você, a empresa tem que ___." (valorizar)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 38 — Dialogue 36</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 36 · Exercises</div>
+      <h1 class="header-title">Festa de aniversário surpresa</h1>
+      <p class='header-sub'>Surprise birthday party · Level B1</p>
+    </div>
+    <div class="page-num">38</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How old is Juliana turning?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Who is bringing what?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Who is responsible for getting Juliana to the party?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Ela ___ de tudo." (desconfia)</div>
+<div class="gap" data-num="2.">"Ele ___ uma desculpa e leva ela lá." (inventa)</div>
+<div class="gap" data-num="3.">"___ que ela não descubra antes!" (Tomara)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 39 — Dialogue 37</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 37 · Exercises</div>
+      <h1 class="header-title">Na delegacia</h1>
+      <p class='header-sub'>At the police station · Level B2</p>
+    </div>
+    <div class="page-num">39</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What happened and where?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What information does the officer need?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What can the victim do with the BO and IMEI?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Eu queria ___ um boletim de ocorrência." (registrar)</div>
+<div class="gap" data-num="2.">"Um cara de moto passou e ___ da minha mão." (arrancou)</div>
+<div class="gap" data-num="3.">"Com o BO e o IMEI você consegue ___ o aparelho." (bloquear)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 40 — Dialogue 38</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 38 · Exercises</div>
+      <h1 class="header-title">Negociando preço na feira</h1>
+      <p class='header-sub'>Negotiating at the street market · Level B1</p>
+    </div>
+    <div class="page-num">40</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What's the original price per kilo of mango?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What price do they agree on?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How much discount does the customer get on the total?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Me ___ sete?" (faz)</div>
+<div class="gap" data-num="2.">"Sete e cinquenta e a gente ___." (fecha)</div>
+<div class="gap" data-num="3.">"___ que vem tem morango!" (Semana)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 41 — Dialogue 39</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 39 · Exercises</div>
+      <h1 class="header-title">Conversa sobre morar no Brasil</h1>
+      <p class='header-sub'>Discussion about living in Brazil · Level B2</p>
+    </div>
+    <div class="page-num">41</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How long has A been living in Brazil?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What cultural difference surprised A the most?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What is a "despachante"?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"A gente ___ mais a presença do que a pontualidade." (valoriza)</div>
+<div class="gap" data-num="2.">"Se você foi legal uma vez, já é ___ pra sempre." (amigo)</div>
+<div class="gap" data-num="3.">"Uma pessoa que ___ burocracia pra você." (resolve)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 42 — Dialogue 40</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 40 · Exercises</div>
+      <h1 class="header-title">No cartório</h1>
+      <p class='header-sub'>At the notary office · Level B2</p>
+    </div>
+    <div class="page-num">42</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What's the difference between the two types of signature recognition?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much is the total?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What payment methods are accepted?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Preciso ___ uns documentos." (autenticar)</div>
+<div class="gap" data-num="2.">"A firma já tá ___ aqui?" (aberta)</div>
+<div class="gap" data-num="3.">"Pode ___ ali que eu chamo." (sentar)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 43 — Dialogue 41</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 41 · Exercises</div>
+      <h1 class="header-title">Conversa sobre séries</h1>
+      <p class='header-sub'>Talking about TV shows · Level B1</p>
+    </div>
+    <div class="page-num">43</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What show is B watching?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How many episodes does it have?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What tip does B give about subtitles?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Tô ___ numa série nova." (viciado)</div>
+<div class="gap" data-num="2.">"Eu ___ em dois dias." (maratonei)</div>
+<div class="gap" data-num="3.">"Tenta assistir com ___ em português." (legenda)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 44 — Dialogue 42</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 42 · Exercises</div>
+      <h1 class="header-title">Emergência médica</h1>
+      <p class='header-sub'>Medical emergency · Level B2</p>
+    </div>
+    <div class="page-num">44</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What symptoms does the patient have?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What pre-existing condition does she have?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What test will the doctor do first?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Ela tá ___ muito mal." (passando)</div>
+<div class="gap" data-num="2.">"Ela tem ___ alta." (pressão)</div>
+<div class="gap" data-num="3.">"A gente te chama assim que tiver ___." (novidade)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 45 — Dialogue 43</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 43 · Exercises</div>
+      <h1 class="header-title">Conversa no Uber</h1>
+      <p class='header-sub'>Uber conversation · Level B1</p>
+    </div>
+    <div class="page-num">45</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">How many rides has the driver done today?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What did the driver do before Uber?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How much does the driver earn in a normal month?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Já fiz umas vinte ___ desde de manhã." (corridas)</div>
+<div class="gap" data-num="2.">"Quando quero ___, eu folgo." (folgar)</div>
+<div class="gap" data-num="3.">"___ pra tirar uns cinco, seis mil." (Dá)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 46 — Dialogue 44</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 44 · Exercises</div>
+      <h1 class="header-title">Reclamando do calor</h1>
+      <p class='header-sub'>Complaining about the heat · Level B1</p>
+    </div>
+    <div class="page-num">46</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What's the actual temperature vs. feels-like?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What broke at the office?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How much was A's electricity bill?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"O ar condicionado ___  logo hoje." (pifou)</div>
+<div class="gap" data-num="2.">"___ do inverno." (Saudade)</div>
+<div class="gap" data-num="3.">"Nem me ___." (fala)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 47 — Dialogue 45</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 45 · Exercises</div>
+      <h1 class="header-title">Comprando passagem de avião</h1>
+      <p class='header-sub'>Buying a plane ticket · Level B1</p>
+    </div>
+    <div class="page-num">47</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Why are tickets expensive?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How much cheaper is it to leave on Wednesday?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does the customer decide to do?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Só com mochila fica uns mil e ___." (oitocentos)</div>
+<div class="gap" data-num="2.">"Se embarcar na ___ em vez do sábado, cai bastante." (quarta)</div>
+<div class="gap" data-num="3.">"Quer que eu ___ o preço?" (trave)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 48 — Dialogue 46</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 46 · Exercises</div>
+      <h1 class="header-title">Conversa sobre exercício</h1>
+      <p class='header-sub'>Talking about exercise · Level B1</p>
+    </div>
+    <div class="page-num">48</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">When did A start going to the gym?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Why will tomorrow be worse?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">How long has B been training?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Primeira semana é a ___. O corpo estranha." (pior)</div>
+<div class="gap" data-num="2.">"O importante é não parar de ___." (vez)</div>
+<div class="gap" data-num="3.">"Descanso é ___ do treino." (parte)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 49 — Dialogue 47</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 47 · Exercises</div>
+      <h1 class="header-title">Ligação pra mãe</h1>
+      <p class='header-sub'>Calling mom · Level B1</p>
+    </div>
+    <div class="page-num">49</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Why hasn't the son called recently?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Where do the mother and son live?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does the mother promise to make?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Faz ___ que você não liga!" (tempo)</div>
+<div class="gap" data-num="2.">"Promessa é ___." (dívida)</div>
+<div class="gap" data-num="3.">"Vou fazer aquele bolo de ___ que você ama." (fubá)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 50 — Dialogue 48</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 48 · Exercises</div>
+      <h1 class="header-title">Problema no voo</h1>
+      <p class='header-sub'>Flight problem · Level B2</p>
+    </div>
+    <div class="page-num">50</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Why was the flight cancelled?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">What does the airline offer?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Can the passenger get their luggage back?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Foi cancelado por ___ meteorológicas." (condições)</div>
+<div class="gap" data-num="2.">"Você tem direito ao ___ integral." (reembolso)</div>
+<div class="gap" data-num="3.">"O transporte pro hotel sai do ___ D." (portão)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 51 — Dialogue 49</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 49 · Exercises</div>
+      <h1 class="header-title">Conversa sobre política</h1>
+      <p class='header-sub'>Talking about politics · Level B2</p>
+    </div>
+    <div class="page-num">51</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">What did the mayor talk about?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">Has B attended a public hearing?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">What does B think people should do?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Ninguém ___." (cobra)</div>
+<div class="gap" data-num="2.">"A gente reclama, mas na hora de ___ esquece." (votar)</div>
+<div class="gap" data-num="3.">"Reclamar sem ___ não muda nada." (agir)</div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 52 — Dialogue 50</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Dialogue 50 · Exercises</div>
+      <h1 class="header-title">Despedida do amigo que vai embora</h1>
+      <p class='header-sub'>Saying goodbye to a friend who's leaving · Level B2</p>
+    </div>
+    <div class="page-num">52</div>
+  </div>
+  <div class="body">
+    
+    <div class="exercise">
+      <div class="exercise-title">🎯 Comprehension questions</div>
+      <div class="exercise-sub">Answer in your own words</div>
+      <div class="question" data-num="1.">Where is B moving to and why?<span class="answer-space"></span></div>
+<div class="question" data-num="2.">How long have they been friends?<span class="answer-space"></span></div>
+<div class="question" data-num="3.">Where did they first meet?<span class="answer-space"></span></div>
+    </div>
+    
+    
+    <div class="exercise">
+      <div class="exercise-title">✍️ Fill-the-gap</div>
+      <div class="exercise-sub">Complete with the missing word</div>
+      <div class="gap" data-num="1.">"Vai deixar ___ demais." (saudade)</div>
+<div class="gap" data-num="2.">"Tô com o coração ___." (apertado)</div>
+<div class="gap" data-num="3.">"Vai lá e ___." (arrasa)</div>
+    </div>
+    
+  </div>
+</div>
+</body></html>

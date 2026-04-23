@@ -1,0 +1,342 @@
+front,back,source,tags
+Sou sim,"emphatic ""yes, I am"" (common Brazilian pattern: verb + sim)",Dialogue 01 — Pedindo um Uber,level-a1 dialogue-01
+Pode entrar,"""come in"" / ""go ahead and get in""",Dialogue 01 — Pedindo um Uber,level-a1 dialogue-01
+né?,"short for ""não é?"" — tag question, like ""right?""",Dialogue 01 — Pedindo um Uber,level-a1 dialogue-01
+Beleza,"""cool"" / ""alright"" (very common informal agreement)",Dialogue 01 — Pedindo um Uber,level-a1 dialogue-01
+Pode deixar,"""shall I leave..."" / ""want me to keep...""",Dialogue 01 — Pedindo um Uber,level-a1 dialogue-01
+Tem...?,"""Do you have...?"" (using ""ter"" instead of ""haver"" — standard in spoken Brazilian PT)",Dialogue 02 — Na padaria,level-a1 dialogue-02
+Saiu agora do forno,"""just came out of the oven""",Dialogue 02 — Na padaria,level-a1 dialogue-02
+Me dá,"""give me"" (informal, standard way to order)",Dialogue 02 — Na padaria,level-a1 dialogue-02
+Pãezinhos,"diminutive of ""pães"" (rolls) — Brazilians love diminutives",Dialogue 02 — Na padaria,level-a1 dialogue-02
+Quanto fica?,"""How much does it come to?""",Dialogue 02 — Na padaria,level-a1 dialogue-02
+Pode aproximar,"""you can tap"" (contactless payment)",Dialogue 02 — Na padaria,level-a1 dialogue-02
+Com licença,"""excuse me"" (polite way to get attention)",Dialogue 03 — Pedindo comida num bar,level-a1 dialogue-03
+Bem gelada,"""very cold"" (Brazilians take cold beer seriously)",Dialogue 03 — Pedindo comida num bar,level-a1 dialogue-03
+Pode ser,"""that works"" / ""sure, why not""",Dialogue 03 — Pedindo comida num bar,level-a1 dialogue-03
+Me traz,"""bring me"" (informal order)",Dialogue 03 — Pedindo comida num bar,level-a1 dialogue-03
+Fechou,"literally ""closed"" — means ""deal!"" / ""done!""",Dialogue 03 — Pedindo comida num bar,level-a1 dialogue-03
+Valeu,"""thanks"" (informal, very common)",Dialogue 03 — Pedindo comida num bar,level-a1 dialogue-03
+Pertinho,"diminutive of ""perto"" (close) — means ""very close""",Dialogue 04 — Perguntando direções,level-a1 dialogue-04
+Segue reto,"""go straight""",Dialogue 04 — Perguntando direções,level-a1 dialogue-04
+Quadras,"""blocks""",Dialogue 04 — Perguntando direções,level-a1 dialogue-04
+Vira à esquerda,"""turn left""",Dialogue 04 — Perguntando direções,level-a1 dialogue-04
+Um pouquinho,"diminutive of ""um pouco"" — ""a little bit""",Dialogue 04 — Perguntando direções,level-a1 dialogue-04
+Não tem como errar,"""you can't miss it""",Dialogue 04 — Perguntando direções,level-a1 dialogue-04
+Lá no fundo,"""in the back""",Dialogue 05 — No supermercado,level-a1 dialogue-05
+Do lado esquerdo,"""on the left side""",Dialogue 05 — No supermercado,level-a1 dialogue-05
+Corredor,"""aisle""",Dialogue 05 — No supermercado,level-a1 dialogue-05
+Laticínios,"""dairy products""",Dialogue 05 — No supermercado,level-a1 dialogue-05
+Sacola,"""bag"" (plastic/reusable bag)",Dialogue 05 — No supermercado,level-a1 dialogue-05
+No caixa,"""at the register/checkout""",Dialogue 05 — No supermercado,level-a1 dialogue-05
+E aí,"""hey"" / ""what's up"" (casual greeting)",Dialogue 06 — Marcando um encontro,level-a1 dialogue-06
+Bora!,"short for ""vamos embora"" — ""let's go!"" / ""let's do it!""",Dialogue 06 — Marcando um encontro,level-a1 dialogue-06
+Tava pensando,"""I was thinking"" (informal: ""estava"" → ""tava"")",Dialogue 06 — Marcando um encontro,level-a1 dialogue-06
+Esse mesmo,"""that's the one"" / ""exactly that one""",Dialogue 06 — Marcando um encontro,level-a1 dialogue-06
+Combinado!,"""it's a plan!"" / ""agreed!""",Dialogue 06 — Marcando um encontro,level-a1 dialogue-06
+Tô,"short for ""estou"" (I am)",Dialogue 07 — Na farmácia,level-a1 dialogue-07
+Dor de cabeça,"""headache""",Dialogue 07 — Na farmácia,level-a1 dialogue-07
+Faz dois dias,"""for two days"" (using ""fazer"" for time duration)",Dialogue 07 — Na farmácia,level-a1 dialogue-07
+De seis em seis horas,"""every six hours""",Dialogue 07 — Na farmácia,level-a1 dialogue-07
+Sai por,"""comes to"" / ""costs"" (informal)",Dialogue 07 — Na farmácia,level-a1 dialogue-07
+Eu levo,"""I'll take it""",Dialogue 07 — Na farmácia,level-a1 dialogue-07
+Melhoras!,"""get well!"" (common farewell when someone is sick)",Dialogue 07 — Na farmácia,level-a1 dialogue-07
+No nome de,"""under the name of""",Dialogue 08 — Chegando no hotel,level-a1 dialogue-08
+Deixa eu ver,"""let me see"" (very common phrase)",Dialogue 08 — Chegando no hotel,level-a1 dialogue-08
+Cartãozinho,"diminutive of ""cartão"" (card) — affectionate/casual",Dialogue 08 — Chegando no hotel,level-a1 dialogue-08
+Café da manhã,"""breakfast"" (literally ""morning coffee"")",Dialogue 08 — Chegando no hotel,level-a1 dialogue-08
+Tá tranquilo,"""it's all good"" / ""I'm fine""",Dialogue 08 — Chegando no hotel,level-a1 dialogue-08
+Qualquer coisa,"""if you need anything"" (literally ""anything"")",Dialogue 08 — Chegando no hotel,level-a1 dialogue-08
+Vai pro centro?,"""does it go to downtown?""",Dialogue 09 — No ponto de ônibus,level-a2 dialogue-09
+Pega o 875,"""take the 875"" (pegar = to catch/take transport)",Dialogue 09 — No ponto de ônibus,level-a2 dialogue-09
+Deve chegar,"""it should arrive"" (using ""dever"" for probability)",Dialogue 09 — No ponto de ônibus,level-a2 dialogue-09
+Bilhete Único,rechargeable transit card (São Paulo),Dialogue 09 — No ponto de ônibus,level-a2 dialogue-09
+Sai mais barato,"""it ends up cheaper""",Dialogue 09 — No ponto de ônibus,level-a2 dialogue-09
+Imagina!,"""don't mention it!"" / ""no worries!"" (very Brazilian)",Dialogue 09 — No ponto de ônibus,level-a2 dialogue-09
+Eu queria,"""I'd like to"" (using imperfect for politeness, not ""eu quero"")",Dialogue 10 — Ligando pra marcar consulta,level-a2 dialogue-10
+Marcar uma consulta,"""schedule an appointment""",Dialogue 10 — Ligando pra marcar consulta,level-a2 dialogue-10
+Vaga,"""opening"" / ""available slot""",Dialogue 10 — Ligando pra marcar consulta,level-a2 dialogue-10
+Serve pra você?,"""does that work for you?""",Dialogue 10 — Ligando pra marcar consulta,level-a2 dialogue-10
+Plano de saúde,"""health insurance""",Dialogue 10 — Ligando pra marcar consulta,level-a2 dialogue-10
+Pode deixar,"""sure thing"" / ""will do""",Dialogue 10 — Ligando pra marcar consulta,level-a2 dialogue-10
+Casa de câmbio,"""currency exchange""",Dialogue 11 — Trocando dinheiro,level-a2 dialogue-11
+Câmbio tá a,"""exchange rate is at""",Dialogue 11 — Trocando dinheiro,level-a2 dialogue-11
+Não cobra taxa,"""doesn't charge a fee""",Dialogue 11 — Trocando dinheiro,level-a2 dialogue-11
+Sai parecido,"""ends up about the same""",Dialogue 11 — Trocando dinheiro,level-a2 dialogue-11
+Faz sentido,"""makes sense""",Dialogue 11 — Trocando dinheiro,level-a2 dialogue-11
+Só um minutinho,"""just a moment"" (diminutive = friendly)",Dialogue 11 — Trocando dinheiro,level-a2 dialogue-11
+Pista,"""general admission"" / ""standing area""",Dialogue 12 — Comprando ingresso,level-a2 dialogue-12
+Camarote,"""VIP section"" / ""balcony""",Dialogue 12 — Comprando ingresso,level-a2 dialogue-12
+Open bar,used in Portuguese too (anglicism),Dialogue 12 — Comprando ingresso,level-a2 dialogue-12
+Parcela?,"""installments?"" (very Brazilian — everything can be parceled)",Dialogue 12 — Comprando ingresso,level-a2 dialogue-12
+Sem juros,"""no interest""",Dialogue 12 — Comprando ingresso,level-a2 dialogue-12
+Boa diversão!,"""have fun!""",Dialogue 12 — Comprando ingresso,level-a2 dialogue-12
+Tô aqui na frente,"""I'm here in front"" (tô = estou)",Dialogue 13 — No Airbnb,level-a2 dialogue-13
+Portão,"""gate"" (building entrance)",Dialogue 13 — No Airbnb,level-a2 dialogue-13
+Cofrezinho,"""lockbox"" (diminutive of cofre)",Dialogue 13 — No Airbnb,level-a2 dialogue-13
+Nossa!,"exclamation of surprise, ""wow!""",Dialogue 13 — No Airbnb,level-a2 dialogue-13
+Que bom que gostou!,"""glad you liked it!""",Dialogue 13 — No Airbnb,level-a2 dialogue-13
+Me manda mensagem,"""send me a message"" (WhatsApp culture)",Dialogue 13 — No Airbnb,level-a2 dialogue-13
+A conta,"""the bill/check""",Dialogue 14 — Pedindo conta no restaurante,level-a2 dialogue-14
+Dividir,"""split"" (the bill)",Dialogue 14 — Pedindo conta no restaurante,level-a2 dialogue-14
+Tudo junto,"""all together"" (one bill)",Dialogue 14 — Pedindo conta no restaurante,level-a2 dialogue-14
+Os dez por cento,"""the 10%"" (standard service charge in Brazil)",Dialogue 14 — Pedindo conta no restaurante,level-a2 dialogue-14
+Fica a seu critério,"""it's up to you""",Dialogue 14 — Pedindo conta no restaurante,level-a2 dialogue-14
+Pix,Brazilian instant payment system (everyone uses it),Dialogue 14 — Pedindo conta no restaurante,level-a2 dialogue-14
+Volte sempre!,"""come back anytime!""",Dialogue 14 — Pedindo conta no restaurante,level-a2 dialogue-14
+Tô perdido,"""I'm lost""",Dialogue 15 — Perdido no bairro,level-a2 dialogue-15
+Você passou dela,"""you passed it"" (dela = de + ela, referring to the street)",Dialogue 15 — Perdido no bairro,level-a2 dialogue-15
+Andei demais,"""I walked too far""",Dialogue 15 — Perdido no bairro,level-a2 dialogue-15
+Vai cair direto,"""you'll end up right on"" (cair = to fall, used figuratively)",Dialogue 15 — Perdido no bairro,level-a2 dialogue-15
+Loja de celular,"""cell phone store""",Dialogue 15 — Perdido no bairro,level-a2 dialogue-15
+Bem-vindo ao Brasil!,"""welcome to Brazil!""",Dialogue 15 — Perdido no bairro,level-a2 dialogue-15
+Quem tá cuidando,"""who's taking care of"" (tá = está)",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Pode se servir,"""help yourself""",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Vinagrete,"Brazilian salsa (tomato, onion, pepper, vinegar) — not the dressing",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Bota em cima,"""put on top"" (botar = informal for ""colocar"")",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Pode confiar,"""trust me""",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Antes que acabe,"""before it's gone""",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Caixa térmica,"""cooler""",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Se sinta em casa,"""make yourself at home""",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Outra coisa,"""something else entirely"" (compliment)",Dialogue 16 — No churrasco,level-a2 dialogue-16
+Gastei demais,"""I spent too much""",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+Promoções,"""sales/deals""",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+Tava quanto?,"""how much was it?"" (informal)",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+Que barato!,"""how cheap!"" / ""what a deal!""",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+Quanto saiu?,"""how much did it end up being?""",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+Parcelei,"""I split into installments""",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+Nem dói,"""doesn't even hurt"" (figurative: it's manageable)",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+É a cara do Brasil,"""that's the face of Brazil"" / ""that's so Brazilian""",Dialogue 17 — Voltando de compras,level-a2 dialogue-17
+Demorei,"""it took me"" / ""I took long""",Dialogue 18 — Reclamando do trânsito,level-b1 dialogue-18
+Marginal,main highway in São Paulo (Marginal Pinheiros/Tietê),Dialogue 18 — Reclamando do trânsito,level-b1 dialogue-18
+Parecia um estacionamento,"""looked like a parking lot"" (traffic metaphor)",Dialogue 18 — Reclamando do trânsito,level-b1 dialogue-18
+Corta pela metade,"""cuts in half""",Dialogue 18 — Reclamando do trânsito,level-b1 dialogue-18
+A gente acostuma,"""you get used to it"" (a gente = informal ""we/one"")",Dialogue 18 — Reclamando do trânsito,level-b1 dialogue-18
+Preso no trânsito,"""stuck in traffic""",Dialogue 18 — Reclamando do trânsito,level-b1 dialogue-18
+Home office,used in PT-BR as-is (anglicism),Dialogue 18 — Reclamando do trânsito,level-b1 dialogue-18
+Vim ver,"""I came to see""",Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Fica à vontade,"""make yourself comfortable""",Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Condomínio,monthly building maintenance fee,Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Por fora,"""separately"" / ""not included""",Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Fiador,"""guarantor"" (person who guarantees your rent)",Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Seguro-fiança,rental insurance (alternative to guarantor),Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Caução,"""security deposit""",Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Fico no aguardo,"""I'll be waiting"" (polite/formal)",Dialogue 19 — Alugando um apartamento,level-b1 dialogue-19
+Dor nas costas,"""back pain""",Dialogue 20 — No médico,level-b1 dialogue-20
+Não tá passando,"""it's not going away""",Dialogue 20 — No médico,level-b1 dialogue-20
+Maca,"""examination table""",Dialogue 20 — No médico,level-b1 dialogue-20
+Nada grave,"""nothing serious""",Dialogue 20 — No médico,level-b1 dialogue-20
+Tensão muscular,"""muscle tension""",Dialogue 20 — No médico,level-b1 dialogue-20
+Vou te passar,"""I'll prescribe you""",Dialogue 20 — No médico,level-b1 dialogue-20
+Te encaminhar,"""refer you""",Dialogue 20 — No médico,level-b1 dialogue-20
+Faz diferença,"""it makes a difference""",Dialogue 20 — No médico,level-b1 dialogue-20
+Tô gostando,"""I'm enjoying it"" (present continuous informal)",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+Redes sociais,"""social media""",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+Modelo híbrido,"""hybrid model"" (work arrangement)",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+Dá pra crescer,"""is there room to grow""",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+"Vamos ver, né","""we'll see, right"" (cautious optimism)",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+Aviso prévio,"""notice period"" (usually 30 days in Brazil)",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+Saí numa boa,"""I left on good terms""",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+Saúde!,"""cheers!"" (when toasting)",Dialogue 21 — Falando sobre trabalho,level-b1 dialogue-21
+Que dia perfeito,"""what a perfect day""",Dialogue 22 — Na praia,level-a2 dialogue-22
+Guarda-sol,"""beach umbrella""",Dialogue 22 — Na praia,level-a2 dialogue-22
+O sol não perdoa,"""the sun is unforgiving""",Dialogue 22 — Na praia,level-a2 dialogue-22
+Queimei feio,"""got badly sunburned""",Dialogue 22 — Na praia,level-a2 dialogue-22
+Água de coco,"""coconut water"" (sold fresh on beaches)",Dialogue 22 — Na praia,level-a2 dialogue-22
+Barraca,"""beach stand/tent""",Dialogue 22 — Na praia,level-a2 dialogue-22
+Moço!,"""hey, sir!"" (informal way to call someone)",Dialogue 22 — Na praia,level-a2 dialogue-22
+Depois que o protetor secar,"""after the sunscreen dries""",Dialogue 22 — Na praia,level-a2 dialogue-22
+Caiu,"""went down"" / ""dropped"" (internet, call)",Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+CPF,Brazilian individual taxpayer number (like SSN),Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+Titular,"""account holder""",Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+Reiniciei,"""I restarted""",Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+Roteador,"""router""",Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+Cabeamento,"""wiring/cabling""",Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+Agendar,"""to schedule""",Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+Transtorno,"""inconvenience"" (formal apology word)",Dialogue 23 — Problemas com internet,level-b1 dialogue-23
+Mudei,"""I moved in""",Dialogue 24 — Conversando com o vizinho,level-a2 dialogue-24
+Subsolo,"""basement""",Dialogue 24 — Conversando com o vizinho,level-a2 dialogue-24
+Por ficha,"""by token"" (coin-operated)",Dialogue 24 — Conversando com o vizinho,level-a2 dialogue-24
+Porteiro,"""doorman"" (most Brazilian apartment buildings have one)",Dialogue 24 — Conversando com o vizinho,level-a2 dialogue-24
+Silêncio,quiet hours,Dialogue 24 — Conversando com o vizinho,level-a2 dialogue-24
+Pode bater na porta,"""you can knock on my door""",Dialogue 24 — Conversando com o vizinho,level-a2 dialogue-24
+Sem problema,"""no problem""",Dialogue 24 — Conversando com o vizinho,level-a2 dialogue-24
+Horário marcado,"""scheduled appointment""",Dialogue 25 — No salão de beleza,level-b1 dialogue-25
+Progressiva,"""Brazilian keratin treatment"" (very popular)",Dialogue 25 — No salão de beleza,level-b1 dialogue-25
+Armado,"""frizzy"" (literally ""armed"")",Dialogue 25 — No salão de beleza,level-b1 dialogue-25
+Ressecado,"""dry/damaged""",Dialogue 25 — No salão de beleza,level-b1 dialogue-25
+Hidratação,"""deep conditioning treatment""",Dialogue 25 — No salão de beleza,level-b1 dialogue-25
+Confia no processo,"""trust the process"" (common encouragement)",Dialogue 25 — No salão de beleza,level-b1 dialogue-25
+Pedido pra entrega,"""order for delivery""",Dialogue 26 — Pedindo comida por delivery,level-a2 dialogue-26
+Tá saindo por,"""is going for"" (current price)",Dialogue 26 — Pedindo comida por delivery,level-a2 dialogue-26
+Petit gâteau,"chocolate lava cake (common Brazilian dessert, French name)",Dialogue 26 — Pedindo comida por delivery,level-a2 dialogue-26
+Pudim,flan/caramel custard (classic Brazilian dessert),Dialogue 26 — Pedindo comida por delivery,level-a2 dialogue-26
+Na máquina,"""on the card machine"" (delivery person brings it)",Dialogue 26 — Pedindo comida por delivery,level-a2 dialogue-26
+Chega em uns quarenta minutos,"""arrives in about 40 minutes""",Dialogue 26 — Pedindo comida por delivery,level-a2 dialogue-26
+Conta corrente,"""checking account""",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Comprovante de residência,"""proof of address""",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Comprovante de renda,"""proof of income""",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Extrato bancário,"""bank statement""",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Conta de luz,"""electricity bill""",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Reconhecida em cartório,"""notarized"" (cartório = notary public office, very Brazilian)",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Providenciar,"""to arrange/get""",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Agiliza,"""speeds things up""",Dialogue 27 — Conta de banco,level-b1 dialogue-27
+Viu o jogo?,"""did you see the game?""",Dialogue 28 — Discussão sobre futebol,level-b1 dialogue-28
+Jogou muito mal,"""played very badly""",Dialogue 28 — Discussão sobre futebol,level-b1 dialogue-28
+Tá explicado,"""that explains it""",Dialogue 28 — Discussão sobre futebol,level-b1 dialogue-28
+Sofrendo faz tempo,"""suffering for a long time""",Dialogue 28 — Discussão sobre futebol,level-b1 dialogue-28
+Não larga,"""doesn't give up"" / ""doesn't let go""",Dialogue 28 — Discussão sobre futebol,level-b1 dialogue-28
+Afogar as mágoas,"""drown the sorrows"" (idiom)",Dialogue 28 — Discussão sobre futebol,level-b1 dialogue-28
+Tela trincada,"""cracked screen""",Dialogue 29 — Resolvendo problema no celular,level-b1 dialogue-29
+Touch,touchscreen (used as-is in PT-BR),Dialogue 29 — Resolvendo problema no celular,level-b1 dialogue-29
+Dá pra consertar?,"""can it be fixed?""",Dialogue 29 — Resolvendo problema no celular,level-b1 dialogue-29
+Saía mais caro,"""would be more expensive""",Dialogue 29 — Resolvendo problema no celular,level-b1 dialogue-29
+Troca da tela,"""screen replacement""",Dialogue 29 — Resolvendo problema no celular,level-b1 dialogue-29
+Dar uma volta,"""take a walk / go around""",Dialogue 29 — Resolvendo problema no celular,level-b1 dialogue-29
+Quando ficar pronto,"""when it's ready""",Dialogue 29 — Resolvendo problema no celular,level-b1 dialogue-29
+Feriado,"""holiday"" (long weekends are sacred in Brazil)",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+Dá pra ir,"""we can go"" / ""it's possible to go""",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+Que tal,"""how about""",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+É uma boa,"""that's a good idea""",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+Pousada,"""inn/guesthouse"" (cozy, smaller than hotel)",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+Diária,"""nightly rate""",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+Avaliação,"""rating/review score""",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+Antes que acabe,"""before it's gone""",Dialogue 30 — Planejando uma viagem,level-b1 dialogue-30
+Formado em,"""graduated in""",Dialogue 31 — Entrevista de emprego,level-b1 dialogue-31
+Perdi a identificação,"""I lost my connection/alignment with""",Dialogue 31 — Entrevista de emprego,level-b1 dialogue-31
+Combina com,"""matches with""",Dialogue 31 — Entrevista de emprego,level-b1 dialogue-31
+Redesenhei,"""I redesigned""",Dialogue 31 — Entrevista de emprego,level-b1 dialogue-31
+Lida com,"""deal with""",Dialogue 31 — Entrevista de emprego,level-b1 dialogue-31
+Funciono bem sob pressão,"""I work well under pressure""",Dialogue 31 — Entrevista de emprego,level-b1 dialogue-31
+Maturidade profissional,"""professional maturity""",Dialogue 31 — Entrevista de emprego,level-b1 dialogue-31
+Não teve como,"""there was no way to""",Dialogue 32 — Briga de casal,level-b1 dialogue-32
+Prioriza a gente,"""prioritize us""",Dialogue 32 — Briga de casal,level-b1 dialogue-32
+Me matando no trabalho,"""killing myself at work"" (figurative)",Dialogue 32 — Briga de casal,level-b1 dialogue-32
+Acabo deixando de lado,"""I end up neglecting""",Dialogue 32 — Briga de casal,level-b1 dialogue-32
+"Não promete, faz","""don't promise, do it"" (powerful phrase)",Dialogue 32 — Briga de casal,level-b1 dialogue-32
+Justo,"""fair"" / ""fair point""",Dialogue 32 — Briga de casal,level-b1 dialogue-32
+Procon,Consumer Protection Bureau (Brazilian institution),Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+Nota fiscal,"""receipt/invoice"" (legal document)",Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+SAC,Customer Service (Serviço de Atendimento ao Consumidor),Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+Empurrando o problema,"""passing the problem around""",Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+Assistência técnica,"""authorized service center""",Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+Código de Defesa do Consumidor,Consumer Defense Code (Brazilian law),Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+Produto durável,"""durable good""",Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+De mãos atadas,"""with hands tied"" (helpless)",Dialogue 33 — Reclamação no Procon,level-b2 dialogue-33
+Gente,"""everyone"" / ""guys"" (addressing a group)",Dialogue 34 — Almoço de domingo em família,level-b1 dialogue-34
+Maionese de batata,Brazilian potato salad (a Sunday classic),Dialogue 34 — Almoço de domingo em família,level-b1 dialogue-34
+Frango assado,"""roast chicken""",Dialogue 34 — Almoço de domingo em família,level-b1 dialogue-34
+Mexendo na garagem,"""messing around in the garage""",Dialogue 34 — Almoço de domingo em família,level-b1 dialogue-34
+Igualzinho,"""exactly the same""",Dialogue 34 — Almoço de domingo em família,level-b1 dialogue-34
+A senhora,"formal ""you"" for elderly women (respect)",Dialogue 34 — Almoço de domingo em família,level-b1 dialogue-34
+Come que esfria,"""eat before it gets cold""",Dialogue 34 — Almoço de domingo em família,level-b1 dialogue-34
+Cinco minutinhos,"""just five minutes"" (diminutive softens the request)",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+Assumi,"""I took on""",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+Acima da meta,"""above target""",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+Não acompanhou,"""didn't keep up with""",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+Reajuste,"""adjustment"" (polite word for raise)",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+Piso,"""floor"" / ""minimum"" (salary floor for a role)",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+RH,"""HR"" (Recursos Humanos)",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+Lutar por você,"""fight for you""",Dialogue 35 — Pedindo aumento,level-b2 dialogue-35
+Faz trinta anos,"""turns thirty""",Dialogue 36 — Festa de aniversário surpresa,level-b1 dialogue-36
+Desconfia de tudo,"""is suspicious of everything""",Dialogue 36 — Festa de aniversário surpresa,level-b1 dialogue-36
+Salgadinhos,"""savory snacks/finger food"" (party staple)",Dialogue 36 — Festa de aniversário surpresa,level-b1 dialogue-36
+Inventa uma desculpa,"""makes up an excuse""",Dialogue 36 — Festa de aniversário surpresa,level-b1 dialogue-36
+Tomara que,"""hopefully"" / ""let's hope""",Dialogue 36 — Festa de aniversário surpresa,level-b1 dialogue-36
+Vai ser demais!,"""it's going to be awesome!""",Dialogue 36 — Festa de aniversário surpresa,level-b1 dialogue-36
+Boletim de ocorrência (BO),"""police report""",Dialogue 37 — Na delegacia,level-b2 dialogue-37
+Arrancou,"""snatched/ripped away""",Dialogue 37 — Na delegacia,level-b2 dialogue-37
+Placa,"""license plate""",Dialogue 37 — Na delegacia,level-b2 dialogue-37
+IMEI,phone's unique identifier,Dialogue 37 — Na delegacia,level-b2 dialogue-37
+Operadora,"""carrier"" (phone carrier)",Dialogue 37 — Na delegacia,level-b2 dialogue-37
+Rastrear,"""track""",Dialogue 37 — Na delegacia,level-b2 dialogue-37
+Feira livre,"""open-air street market"" (weekly tradition in Brazil)",Dialogue 38 — Negociando preço na feira,level-b1 dialogue-38
+Minha senhora,respectful address for women,Dialogue 38 — Negociando preço na feira,level-b1 dialogue-38
+Docinha,"""nice and sweet"" (diminutive)",Dialogue 38 — Negociando preço na feira,level-b1 dialogue-38
+Me faz sete?,"""will you do seven?"" (negotiating)",Dialogue 38 — Negociando preço na feira,level-b1 dialogue-38
+A gente fecha,"""we have a deal""",Dialogue 38 — Negociando preço na feira,level-b1 dialogue-38
+Feirante,"""market vendor""",Dialogue 38 — Negociando preço na feira,level-b1 dialogue-38
+Cliente boa,"""good/loyal customer""",Dialogue 38 — Negociando preço na feira,level-b1 dialogue-38
+Me surpreendo,"""I'm surprised""",Dialogue 39 — Conversa sobre morar no Brasil,level-b2 dialogue-39
+Lida com,"""deals with""",Dialogue 39 — Conversa sobre morar no Brasil,level-b2 dialogue-39
+Pontualidade,"""punctuality""",Dialogue 39 — Conversa sobre morar no Brasil,level-b2 dialogue-39
+Reservadas,"""reserved"" (personality)",Dialogue 39 — Conversa sobre morar no Brasil,level-b2 dialogue-39
+Adota rápido,"""adopts quickly"" (accepts you into the group)",Dialogue 39 — Conversa sobre morar no Brasil,level-b2 dialogue-39
+Reconhecimento de firma,signature authentication at notary,Dialogue 39 — Conversa sobre morar no Brasil,level-b2 dialogue-39
+Despachante,professional bureaucracy handler (uniquely Brazilian),Dialogue 39 — Conversa sobre morar no Brasil,level-b2 dialogue-39
+Autenticar,"""to authenticate/certify a copy""",Dialogue 40 — No cartório,level-b2 dialogue-40
+Reconhecer firma,"""to notarize a signature""",Dialogue 40 — No cartório,level-b2 dialogue-40
+Por semelhança,"""by comparison"" (cheaper option)",Dialogue 40 — No cartório,level-b2 dialogue-40
+Por autenticidade,"""by authenticity"" (you sign in person, more expensive)",Dialogue 40 — No cartório,level-b2 dialogue-40
+Firma aberta,your signature is registered at the notary,Dialogue 40 — No cartório,level-b2 dialogue-40
+Débito,"""debit card""",Dialogue 40 — No cartório,level-b2 dialogue-40
+Cê,"contraction of ""você"" (very common in speech)",Dialogue 41 — Conversa sobre séries,level-b1 dialogue-41
+Viciado,"""addicted"" / ""hooked""",Dialogue 41 — Conversa sobre séries,level-b1 dialogue-41
+Maratonei,"""I binge-watched"" (from ""maratona"")",Dialogue 41 — Conversa sobre séries,level-b1 dialogue-41
+Dar uma chance,"""give it a chance""",Dialogue 41 — Conversa sobre séries,level-b1 dialogue-41
+Legenda,"""subtitles""",Dialogue 41 — Conversa sobre séries,level-b1 dialogue-41
+Viciante,"""addictive""",Dialogue 41 — Conversa sobre séries,level-b1 dialogue-41
+Passando mal,"""feeling very sick""",Dialogue 42 — Emergência médica,level-b2 dialogue-42
+Dor no peito,"""chest pain""",Dialogue 42 — Emergência médica,level-b2 dialogue-42
+Falta de ar,"""shortness of breath""",Dialogue 42 — Emergência médica,level-b2 dialogue-42
+Pressão alta,"""high blood pressure""",Dialogue 42 — Emergência médica,level-b2 dialogue-42
+Cadeira de rodas,"""wheelchair""",Dialogue 42 — Emergência médica,level-b2 dialogue-42
+Eletro,"short for ""eletrocardiograma"" (ECG)",Dialogue 42 — Emergência médica,level-b2 dialogue-42
+Assim que tiver novidade,"""as soon as there's an update""",Dialogue 42 — Emergência médica,level-b2 dialogue-42
+Movimentado,"""busy"" (for work/traffic)",Dialogue 43 — Conversa no Uber,level-b1 dialogue-43
+Corridas,"""rides"" (Uber term)",Dialogue 43 — Conversa no Uber,level-b1 dialogue-43
+Tá rendendo,"""it's been profitable""",Dialogue 43 — Conversa no Uber,level-b1 dialogue-43
+Folgar,"""take a day off""",Dialogue 43 — Conversa no Uber,level-b1 dialogue-43
+Compensa,"""is it worth it"" / ""does it pay off""",Dialogue 43 — Conversa no Uber,level-b1 dialogue-43
+Dá pra tirar,"""you can make"" (earn)",Dialogue 43 — Conversa no Uber,level-b1 dialogue-43
+Cinco estrelas,"""five stars"" (rating)",Dialogue 43 — Conversa no Uber,level-b1 dialogue-43
+Sensação térmica,"""heat index"" / ""feels like""",Dialogue 44 — Reclamando do calor,level-b1 dialogue-44
+Tô derretendo,"""I'm melting""",Dialogue 44 — Reclamando do calor,level-b1 dialogue-44
+Pifou,"""broke down"" / ""stopped working"" (informal)",Dialogue 44 — Reclamando do calor,level-b1 dialogue-44
+Ir embora,"""leave"" / ""go home""",Dialogue 44 — Reclamando do calor,level-b1 dialogue-44
+Saudade,"""missing/longing"" (untranslatable Portuguese word)",Dialogue 44 — Reclamando do calor,level-b1 dialogue-44
+Nem me fala,"""don't even get me started""",Dialogue 44 — Reclamando do calor,level-b1 dialogue-44
+Bem-vindo ao verão brasileiro,"""welcome to Brazilian summer""",Dialogue 44 — Reclamando do calor,level-b1 dialogue-44
+Tá saindo,"""is going for"" (price)",Dialogue 45 — Comprando passagem de avião,level-b1 dialogue-45
+Bagagem despachada,"""checked luggage""",Dialogue 45 — Comprando passagem de avião,level-b1 dialogue-45
+Embarcar,"""to board/depart""",Dialogue 45 — Comprando passagem de avião,level-b1 dialogue-45
+Quarta de cinzas,"""Ash Wednesday""",Dialogue 45 — Comprando passagem de avião,level-b1 dialogue-45
+Trave o preço,"""lock the price""",Dialogue 45 — Comprando passagem de avião,level-b1 dialogue-45
+Antes que aumente,"""before it goes up""",Dialogue 45 — Comprando passagem de avião,level-b1 dialogue-45
+Academia,"""gym"" (Brazilian term)",Dialogue 46 — Conversa sobre exercício,level-b1 dialogue-46
+Tô destruído,"""I'm destroyed/wrecked""",Dialogue 46 — Conversa sobre exercício,level-b1 dialogue-46
+O corpo estranha,"""the body finds it strange"" (adjustment)",Dialogue 46 — Conversa sobre exercício,level-b1 dialogue-46
+Leg press,used as-is (gym anglicism),Dialogue 46 — Conversa sobre exercício,level-b1 dialogue-46
+DOMS,Delayed Onset Muscle Soreness,Dialogue 46 — Conversa sobre exercício,level-b1 dialogue-46
+Parar de vez,"""stop for good""",Dialogue 46 — Conversa sobre exercício,level-b1 dialogue-46
+Confiar no processo,"""trust the process""",Dialogue 46 — Conversa sobre exercício,level-b1 dialogue-46
+Faz tempo que,"""it's been a while since""",Dialogue 47 — Ligação pra mãe,level-b1 dialogue-47
+Corrido,"""hectic"" / ""busy/rushed""",Dialogue 47 — Ligação pra mãe,level-b1 dialogue-47
+Comendo direito,"""eating properly""",Dialogue 47 — Ligação pra mãe,level-b1 dialogue-47
+Manda um beijo,"""sends a kiss"" (common)",Dialogue 47 — Ligação pra mãe,level-b1 dialogue-47
+Promessa é dívida,"""a promise is a debt"" (idiom: you must keep it)",Dialogue 47 — Ligação pra mãe,level-b1 dialogue-47
+Bolo de fubá,cornmeal cake (traditional Minas Gerais dessert),Dialogue 47 — Ligação pra mãe,level-b1 dialogue-47
+Se cuida,"""take care of yourself""",Dialogue 47 — Ligação pra mãe,level-b1 dialogue-47
+Cartão de embarque,"""boarding pass""",Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Condições meteorológicas,"""weather conditions""",Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Realocar,"""rebook""",Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Voucher,used as-is in PT-BR,Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Reembolso integral,"""full refund""",Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Reacomodação,"""rebooking/rerouting""",Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Dias úteis,"""business days""",Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Mala despachada,"""checked luggage""",Dialogue 48 — Problema no voo,level-b2 dialogue-48
+Prefeito,"""mayor""",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Nada concreto,"""nothing concrete""",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Cobra,"""hold accountable"" / ""demand""",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Menos pior,"""least bad"" (lesser evil)",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Se envolver,"""get involved""",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Audiência pública,"""public hearing""",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Vereador,"""city council member""",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Reclamar sem agir,"""complain without acting""",Dialogue 49 — Conversa sobre política,level-b2 dialogue-49
+Vai deixar saudade,"""you'll be missed"" (saudade in action)",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50
+Coração apertado,"""heavy heart"" (literally ""tight heart"")",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50
+Se conheceu,"""met each other""",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50
+"Para, vai","""stop it, come on"" (emotional, trying not to cry)",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50
+Arrasa,"""kill it"" / ""crush it"" (informal encouragement)",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50
+Um brinde,"""a toast""",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50
+Conquistar o mundo,"""conquer the world""",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50
+Levar no coração,"""carry in my heart""",Dialogue 50 — Despedida do amigo que vai embora,level-b2 dialogue-50

@@ -1,0 +1,87 @@
+# Brazilian Listening Lab — Deep Dive Mini-Podcasts
+# 5 monologue narratives, ~3-5 min each. Narrated by Carla (marketplace, warm narrator).
+# Scripts sourced from dialogues.md (lines 1745-1826) — already written and curated.
+
+product: brazilian-listening-lab
+title: Deep Dive Podcasts
+voice_env: ELEVENLABS_VOICE_CARLA_PT
+stability: 0.55
+similarity_boost: 0.75
+
+deep_dives:
+
+  - id: Deep_Dive_01_Comida_Brasileira
+    title: "Comida brasileira: mais que arroz e feijão"
+    duration_estimate: "~4 min"
+    script: |
+      Quando alguém de fora pensa em comida brasileira, geralmente pensa em churrasco e feijoada. E sim, a gente ama os dois. Mas a verdade é que a culinária brasileira é muito mais diversa do que isso.
+
+      Cada região tem uma identidade gastronômica completamente diferente. No Nordeste, você tem o acarajé, a moqueca, o baião de dois. É uma cozinha com influência africana, forte, cheia de dendê e pimenta. Em Minas Gerais, é o oposto: comida de fazenda. Pão de queijo, tutu de feijão, frango com quiabo, doce de leite. Tudo feito no fogão a lenha.
+
+      No Sul, a influência é europeia. Gaúchos são loucos por churrasco, mas também tem o chimarrão, que é quase uma religião. E no Norte, a comida é baseada nos ingredientes da Amazônia: açaí, tucupi, jambu, peixes de rio.
+
+      E tem o dia a dia, que talvez seja o mais importante: o famoso PF. Prato feito. Arroz, feijão, carne, salada e farofa. Simples, barato, e sustenta o trabalhador brasileiro. Você encontra em qualquer restaurante popular do país.
+
+      Se você quer realmente entender o Brasil, preste atenção na comida. Cada prato conta uma história de migração, de clima, de cultura. A mesa brasileira é, na verdade, o melhor retrato do país.
+
+  - id: Deep_Dive_02_Carnaval
+    title: "Carnaval: o que ninguém te conta"
+    duration_estimate: "~4 min"
+    script: |
+      Todo mundo conhece o Carnaval do Rio de Janeiro. As escolas de samba, o Sambódromo, as fantasias. É um espetáculo incrível. Mas o Carnaval brasileiro é muito mais do que o que aparece na TV.
+
+      Primeiro: cada cidade celebra de um jeito diferente. Em Salvador, o Carnaval é de rua. Os trios elétricos passam pelas avenidas e todo mundo dança atrás. É suado, apertado, barulhento — e absolutamente inesquecível. Em Recife e Olinda, é o frevo e o maracatu. A música é diferente, a dança é diferente, e o clima é mais cultural.
+
+      Segundo: muita gente não sabe, mas o Carnaval é uma indústria. As escolas de samba começam a se preparar meses antes. São milhares de pessoas trabalhando em fantasias, carros alegóricos, coreografias. Gera emprego, renda e orgulho comunitário.
+
+      Terceiro: nem todo brasileiro gosta de Carnaval. Tem muita gente que viaja pra fugir da folia. Vai pra praia, pro campo, ou simplesmente fica em casa assistindo série. E tá tudo bem.
+
+      O Carnaval é um pedaço importante da identidade brasileira. Mas, como tudo no Brasil, é complexo, diverso e cheio de camadas. Se você vier pro Carnaval, viva com tudo. E se não vier, não se preocupe — o Brasil é incrível o ano inteiro.
+
+  - id: Deep_Dive_03_Sao_Paulo
+    title: "Um dia normal em São Paulo"
+    duration_estimate: "~3 min"
+    script: |
+      São Paulo é a maior cidade da América do Sul. Mais de doze milhões de pessoas. É caótica, barulhenta, estressante — e ao mesmo tempo, fascinante.
+
+      Um dia normal começa cedo. Às seis da manhã o trânsito já tá pesado. O metrô tá lotado. Todo mundo correndo pra chegar no trabalho. O paulistano vive no modo automático de segunda a sexta: trabalha, almoça rápido, trabalha mais, e volta pra casa no trânsito.
+
+      Mas é nos detalhes que São Paulo brilha. O café na padaria da esquina, sempre quentinho. O happy hour na sexta com os colegas de trabalho. A diversidade absurda: num quarteirão você acha comida japonesa, árabe, italiana e nordestina.
+
+      E tem a vida cultural. São Paulo tem mais teatro que qualquer cidade da América Latina. Tem shows todo dia, museus de classe mundial, e uma cena gastronômica que rivaliza com qualquer capital europeia.
+
+      O paulistano reclama de São Paulo todo dia. O trânsito, a poluição, o custo de vida. Mas se você perguntar se ele sairia, a resposta quase sempre é: "Nunca."
+
+      São Paulo é assim: difícil de gostar no começo, impossível de largar depois.
+
+  - id: Deep_Dive_04_Humor
+    title: "O humor brasileiro"
+    duration_estimate: "~3 min"
+    script: |
+      O humor brasileiro é uma das coisas mais difíceis de entender pra quem tá aprendendo a língua. E não é por causa do vocabulário — é por causa da cultura.
+
+      Brasileiro ri de tudo. De si mesmo, da própria desgraça, da situação política, do vizinho. É um humor de sobrevivência. Quando o dólar sobe, quando o time perde, quando o ônibus atrasa — a reação natural é fazer uma piada. Memes viram válvula de escape nacional.
+
+      Tem também o humor regional. Baiano ri de um jeito, gaúcho de outro, carioca de outro. Piada de paulista sempre envolve trabalho. Piada de mineiro sempre envolve silêncio. E piada de carioca sempre envolve praia e malandragem.
+
+      Uma coisa que confunde estrangeiro: brasileiro adora zoar os amigos. Quanto mais próximo, mais pesada a zoeira. Se ninguém te zoa, é porque você ainda não faz parte do grupo. A zoeira é, paradoxalmente, um sinal de afeto.
+
+      E tem o sarcasmo. Brasileiro é muito sarcástico, mas de um jeito sutil. "Que lindo, hein" pode significar o oposto do que parece. O tom de voz é tudo.
+
+      Se você quer entender o humor brasileiro, assista Stand-Up no YouTube. Comece com Fábio Porchat, Bruna Louise ou Thiago Ventura. E presta atenção não só nas palavras, mas nas reações da plateia. Isso vai te ensinar mais sobre o Brasil do que qualquer livro.
+
+  - id: Deep_Dive_05_Familia
+    title: "Tradições de família no Brasil"
+    duration_estimate: "~4 min"
+    script: |
+      Família no Brasil é tudo. Literalmente. As decisões mais importantes da vida passam pela família. Onde morar, o que estudar, com quem casar. A opinião da mãe tem um peso que estrangeiros às vezes não entendem.
+
+      A tradição mais sagrada é o almoço de domingo. A família se reúne, geralmente na casa da avó ou da mãe, e come junto. Arroz, feijão, macarrão, carne assada, salada. E sobremesa, sempre. É quase um ritual. Quem falta do almoço de domingo sem um bom motivo vai ouvir sobre isso por semanas.
+
+      Outra tradição forte são as festas. Aniversário no Brasil é produção. Tem bolo, salgadinho, refrigerante, música, e dura horas. Até aniversário de criança de um ano tem cem convidados. Casamento brasileiro então nem se fala: festa até o sol nascer.
+
+      E tem o Natal. No Brasil, a ceia é no dia vinte e quatro à noite. A família se reúne, come peru, chester, arroz com passas — sim, passas é polêmico — e troca presentes à meia-noite. Muita gente vai à missa antes.
+
+      O que une tudo isso é o conceito de estar junto. Brasileiro não gosta de distância. Mesmo quem mora longe liga, manda mensagem, faz videochamada. A frase "a gente se fala" não é vazia — é uma promessa.
+
+      Se você tá no Brasil e alguém te convidar pra um almoço de domingo, aceite. Você vai entender mais sobre o país em três horas do que em três meses de estudo.

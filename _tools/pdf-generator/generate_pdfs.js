@@ -44,6 +44,31 @@ const EBOOKS = [
     html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_start_here.html'),
     output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Brazilian Listening Lab - Start Here.pdf'),
   },
+  {
+    label: 'Brazilian Listening Lab — Transcripts (Basic)',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_transcripts_basic.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Transcripts - Basic.pdf'),
+  },
+  {
+    label: 'Brazilian Listening Lab — Transcripts (Plus)',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_transcripts_plus.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Transcripts - Plus.pdf'),
+  },
+  {
+    label: 'Brazilian Listening Lab — Transcripts (Pro)',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_transcripts_pro.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Transcripts - Pro.pdf'),
+  },
+  {
+    label: 'Brazilian Listening Lab — Workbook (Plus)',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_workbook_plus.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Comprehension Workbook - Plus.pdf'),
+  },
+  {
+    label: 'Brazilian Listening Lab — Workbook (Pro)',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_workbook_pro.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Comprehension Workbook - Pro.pdf'),
+  },
 ];
 
 // Per-ebook output dirs are now next to the source HTML, not in this tool folder.
