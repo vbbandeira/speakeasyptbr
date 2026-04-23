@@ -103,7 +103,7 @@ EMOJI_RULES: list[tuple[list[str], str]] = [
     # ── Directions ──
     (["left", "esquerda", "right (direction)", "direita", "straight", "segue reto", "reto"], "🧭"),
     (["turn", "vira"], "↪️"),
-    (["block", "quadra"], "🗺️"),
+    (["block", "blocks", "quadra"], "🗺️"),
     (["close", "pertinho", "perto", "near"], "📍"),
     (["downtown", "centro"], "🏙️"),
     (["in the back", "lá no fundo", "on the left side", "do lado"], "📍"),
@@ -128,6 +128,7 @@ EMOJI_RULES: list[tuple[list[str], str]] = [
     (["pain", "dor", "not going away", "not tá passando"], "😣"),
     (["nothing serious", "nada grave"], "😌"),
     (["update", "novidade"], "📣"),
+    (["feeling very sick", "feeling sick", "passando mal"], "🤢"),
 
     # ── Beach & summer ──
     (["sunburned", "queimei", "sunscreen", "protetor", "sun is unforgiving", "sol não perdoa", "sun", "sol"], "☀️"),
@@ -274,6 +275,12 @@ EMOJI_RULES: list[tuple[list[str], str]] = [
     (["deals with", "lida com"], "🛠️"),
     (["took on", "assumi"], "📌"),
     (["didn't keep up", "não acompanhou"], "📉"),
+    (["punctuality", "pontualidade"], "⏰"),
+    (["reserved (personality)", "reservadas"], "🤐"),
+    (["adopts quickly", "accepts you", "adota rápido"], "🤗"),
+    (["makes up an excuse", "makes up", "inventa uma desculpa"], "🤥"),
+    (["give it a chance", "dar uma chance"], "🎯"),
+    (["ash wednesday", "quarta de cinzas"], "🗓️"),
     (["room to grow", "dá pra crescer"], "📈"),
     (["killing myself at work", "me matando no trabalho"], "🥵"),
     (["end up neglecting", "acabo deixando de lado"], "🫥"),
@@ -338,9 +345,26 @@ EMOJI_RULES: list[tuple[list[str], str]] = [
     (["came to see", "vim ver"], "👀"),
     (["I'll be waiting", "fico no aguardo"], "⏳"),
 
-    # ── General helpers (last resort) ──
+    # ── General helpers (last resort, before default) ──
+    (["opening", "available slot", "vaga"], "📅"),
+    (["can it be fixed", "consertar"], "🔧"),
+    (["matches with", "matches", "combina com"], "🎨"),
+    (["i was thinking", "tava pensando", "i'm thinking"], "💭"),
+    (["inconvenience", "transtorno"], "😔"),
+    (["that's a good idea", "é uma boa", "good idea"], "💡"),
+    (["cuts in half", "corta pela metade"], "➗"),
+    (["we can go", "dá pra ir"], "🚶"),
     (["give me", "me dá"], "🤲"),
     (["bring me", "me traz"], "🤲"),
+    (["can't miss it", "não tem como errar"], "🎯"),
+    (["under the name of", "no nome de"], "📝"),
+    (["should arrive", "deve chegar"], "🕐"),
+    (["i'd like to", "eu queria"], "🙏"),
+    (["ends up about the same", "sai parecido"], "⚖️"),
+    (["in front", "aqui na frente"], "📍"),
+    (["taking care of", "quem tá cuidando"], "🛎️"),
+    (["put on top", "bota em cima"], "🔝"),
+    (["do you have", "tem...?", "tem?"], "🙋"),
     (["i'll take it", "eu levo"], "👍"),
     (["come in", "pode entrar", "go ahead"], "🚪"),
     (["let's hope", "quando acabar", "before it's gone", "antes que acabe", "before it goes up", "antes que aumente"], "⏳"),
@@ -483,6 +507,7 @@ body {
   letter-spacing:0.1em; flex-shrink:0; margin-top:2px;
 }
 .body { padding:22px 30px 30px; display:flex; flex-direction:column; gap:14px; }
+.body.idx-body { gap:0; }
 .intro {
   font-size:12px; color:#6B7B6E; line-height:1.6;
   border-left:3px solid #A8E6C3; padding-left:12px; font-style:italic;
@@ -580,27 +605,27 @@ body {
 
 /* ── Index ── */
 .idx-row {
-  display:flex; align-items:baseline; padding:4px 0;
+  display:flex; align-items:baseline; padding:2px 0;
   border-bottom:1px solid rgba(212,203,187,0.4);
-  gap:8px;
+  gap:6px; line-height:1.35;
 }
 .idx-row:last-child { border-bottom:none; }
 .idx-num {
-  font-family:'Poppins',sans-serif; font-size:10px; font-weight:700;
-  color:#7EC8A4; min-width:28px;
+  font-family:'Poppins',sans-serif; font-size:9px; font-weight:700;
+  color:#7EC8A4; min-width:24px;
 }
 .idx-term {
-  font-family:'Poppins',sans-serif; font-size:11px; font-weight:500;
+  font-family:'Poppins',sans-serif; font-size:10.5px; font-weight:500;
   color:#1E4D3B;
   overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   flex:1; min-width:0;
 }
 .idx-dots {
-  border-bottom:1px dotted #C8BFB0; min-width:8px; margin-bottom:4px; flex-shrink:0; width:16px;
+  border-bottom:1px dotted #C8BFB0; min-width:8px; margin-bottom:3px; flex-shrink:0; width:14px;
 }
 .idx-page {
-  font-family:'Inter',sans-serif; font-size:10.5px; font-weight:500;
-  color:#8FA897; min-width:20px; text-align:right;
+  font-family:'Inter',sans-serif; font-size:9.5px; font-weight:500;
+  color:#8FA897; min-width:18px; text-align:right;
 }
 
 @media print {
@@ -755,7 +780,7 @@ def render_deck_page(cards_in_page, page_num: int) -> str:
 
 def render_index(cards, start_page: int) -> list[str]:
     sorted_cards = sorted(cards, key=lambda c: c["term"].lower())
-    rows_per_page = 22
+    rows_per_page = 24
     chunks = [sorted_cards[i:i+rows_per_page] for i in range(0, len(sorted_cards), rows_per_page)]
     html_pages = []
     for i, chunk in enumerate(chunks):
@@ -781,7 +806,7 @@ def render_index(cards, start_page: int) -> list[str]:
     </div>
     <div class="page-num">{page_num:02d}</div>
   </div>
-  <div class="body">
+  <div class="body idx-body">
     {rows}
   </div>
 </div>

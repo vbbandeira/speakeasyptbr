@@ -55,6 +55,7 @@ body {
   letter-spacing:0.1em; flex-shrink:0; margin-top:2px;
 }
 .body { padding:22px 30px 30px; display:flex; flex-direction:column; gap:14px; }
+.body.idx-body { gap:0; }
 .intro {
   font-size:12px; color:#6B7B6E; line-height:1.6;
   border-left:3px solid #A8E6C3; padding-left:12px; font-style:italic;
@@ -152,27 +153,27 @@ body {
 
 /* ── Index ── */
 .idx-row {
-  display:flex; align-items:baseline; padding:4px 0;
+  display:flex; align-items:baseline; padding:2px 0;
   border-bottom:1px solid rgba(212,203,187,0.4);
-  gap:8px;
+  gap:6px; line-height:1.35;
 }
 .idx-row:last-child { border-bottom:none; }
 .idx-num {
-  font-family:'Poppins',sans-serif; font-size:10px; font-weight:700;
-  color:#7EC8A4; min-width:28px;
+  font-family:'Poppins',sans-serif; font-size:9px; font-weight:700;
+  color:#7EC8A4; min-width:24px;
 }
 .idx-term {
-  font-family:'Poppins',sans-serif; font-size:11px; font-weight:500;
+  font-family:'Poppins',sans-serif; font-size:10.5px; font-weight:500;
   color:#1E4D3B;
   overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   flex:1; min-width:0;
 }
 .idx-dots {
-  border-bottom:1px dotted #C8BFB0; min-width:8px; margin-bottom:4px; flex-shrink:0; width:16px;
+  border-bottom:1px dotted #C8BFB0; min-width:8px; margin-bottom:3px; flex-shrink:0; width:14px;
 }
 .idx-page {
-  font-family:'Inter',sans-serif; font-size:10.5px; font-weight:500;
-  color:#8FA897; min-width:20px; text-align:right;
+  font-family:'Inter',sans-serif; font-size:9.5px; font-weight:500;
+  color:#8FA897; min-width:18px; text-align:right;
 }
 
 @media print {
@@ -327,7 +328,7 @@ body {
       <div class="fc-source">📍 <strong>D01 · Pedindo um Uber</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🙋</div>
       <div class="fc-head">
         <div class="fc-term">Tem...?</div>
         <div class="fc-meta"><span>006/341</span><span class="lvl">A1</span></div>
@@ -465,7 +466,7 @@ body {
       <div class="fc-source">📍 <strong>D04 · Perguntando direções</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🗺️</div>
       <div class="fc-head">
         <div class="fc-term">Quadras</div>
         <div class="fc-meta"><span>020/341</span><span class="lvl">A1</span></div>
@@ -496,7 +497,7 @@ body {
       <div class="fc-source">📍 <strong>D04 · Perguntando direções</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💙</div>
+      <div class="fc-emoji">🎯</div>
       <div class="fc-head">
         <div class="fc-term">Não tem como errar</div>
         <div class="fc-meta"><span>023/341</span><span class="lvl">A1</span></div>
@@ -585,7 +586,7 @@ body {
       <div class="fc-source">📍 <strong>D06 · Marcando um encontro</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">💭</div>
       <div class="fc-head">
         <div class="fc-term">Tava pensando</div>
         <div class="fc-meta"><span>032/341</span><span class="lvl">A1</span></div>
@@ -687,7 +688,7 @@ body {
       <div class="fc-source">📍 <strong>D07 · Na farmácia</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">📝</div>
       <div class="fc-head">
         <div class="fc-term">No nome de</div>
         <div class="fc-meta"><span>042/341</span><span class="lvl">A1</span></div>
@@ -758,7 +759,7 @@ body {
 <div class="page-label">📄 PAGE 15 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🚌</div>
       <div class="fc-head">
         <div class="fc-term">Pega o 875</div>
         <div class="fc-meta"><span>049/341</span><span class="lvl">A2</span></div>
@@ -767,7 +768,7 @@ body {
       <div class="fc-source">📍 <strong>D09 · No ponto de ônibus</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🕐</div>
       <div class="fc-head">
         <div class="fc-term">Deve chegar</div>
         <div class="fc-meta"><span>050/341</span><span class="lvl">A2</span></div>
@@ -807,7 +808,7 @@ body {
       <div class="fc-source">📍 <strong>D09 · No ponto de ônibus</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🙏</div>
       <div class="fc-head">
         <div class="fc-term">Eu queria</div>
         <div class="fc-meta"><span>054/341</span><span class="lvl">A2</span></div>
@@ -825,7 +826,7 @@ body {
       <div class="fc-source">📍 <strong>D10 · Ligando pra marcar consulta</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">📅</div>
       <div class="fc-head">
         <div class="fc-term">Vaga</div>
         <div class="fc-meta"><span>056/341</span><span class="lvl">A2</span></div>
@@ -896,7 +897,7 @@ body {
       <div class="fc-source">📍 <strong>D11 · Trocando dinheiro</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">⚖️</div>
       <div class="fc-head">
         <div class="fc-term">Sai parecido</div>
         <div class="fc-meta"><span>063/341</span><span class="lvl">A2</span></div>
@@ -927,7 +928,7 @@ body {
       <div class="fc-source">📍 <strong>D11 · Trocando dinheiro</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🎤</div>
       <div class="fc-head">
         <div class="fc-term">Pista</div>
         <div class="fc-meta"><span>066/341</span><span class="lvl">A2</span></div>
@@ -936,7 +937,7 @@ body {
       <div class="fc-source">📍 <strong>D12 · Comprando ingresso</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🎤</div>
       <div class="fc-head">
         <div class="fc-term">Camarote</div>
         <div class="fc-meta"><span>067/341</span><span class="lvl">A2</span></div>
@@ -945,7 +946,7 @@ body {
       <div class="fc-source">📍 <strong>D12 · Comprando ingresso</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🍻</div>
       <div class="fc-head">
         <div class="fc-term">Open bar</div>
         <div class="fc-meta"><span>068/341</span><span class="lvl">A2</span></div>
@@ -985,7 +986,7 @@ body {
       <div class="fc-source">📍 <strong>D12 · Comprando ingresso</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">📍</div>
       <div class="fc-head">
         <div class="fc-term">Tô aqui na frente</div>
         <div class="fc-meta"><span>072/341</span><span class="lvl">A2</span></div>
@@ -1047,7 +1048,7 @@ body {
       <div class="fc-source">📍 <strong>D13 · No Airbnb</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🧾</div>
       <div class="fc-head">
         <div class="fc-term">A conta</div>
         <div class="fc-meta"><span>078/341</span><span class="lvl">A2</span></div>
@@ -1056,7 +1057,7 @@ body {
       <div class="fc-source">📍 <strong>D14 · Pedindo conta no restaurante</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🧾</div>
       <div class="fc-head">
         <div class="fc-term">Dividir</div>
         <div class="fc-meta"><span>079/341</span><span class="lvl">A2</span></div>
@@ -1065,7 +1066,7 @@ body {
       <div class="fc-source">📍 <strong>D14 · Pedindo conta no restaurante</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🧾</div>
       <div class="fc-head">
         <div class="fc-term">Tudo junto</div>
         <div class="fc-meta"><span>080/341</span><span class="lvl">A2</span></div>
@@ -1078,7 +1079,7 @@ body {
 <div class="page-label">📄 PAGE 23 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">💵</div>
       <div class="fc-head">
         <div class="fc-term">Os dez por cento</div>
         <div class="fc-meta"><span>081/341</span><span class="lvl">A2</span></div>
@@ -1087,7 +1088,7 @@ body {
       <div class="fc-source">📍 <strong>D14 · Pedindo conta no restaurante</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🤷</div>
       <div class="fc-head">
         <div class="fc-term">Fica a seu critério</div>
         <div class="fc-meta"><span>082/341</span><span class="lvl">A2</span></div>
@@ -1176,7 +1177,7 @@ body {
       <div class="fc-source">📍 <strong>D15 · Perdido no bairro</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🛎️</div>
       <div class="fc-head">
         <div class="fc-term">Quem tá cuidando</div>
         <div class="fc-meta"><span>091/341</span><span class="lvl">A2</span></div>
@@ -1207,7 +1208,7 @@ body {
       <div class="fc-source">📍 <strong>D16 · No churrasco</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🔝</div>
       <div class="fc-head">
         <div class="fc-term">Bota em cima</div>
         <div class="fc-meta"><span>094/341</span><span class="lvl">A2</span></div>
@@ -1238,7 +1239,7 @@ body {
 <div class="page-label">📄 PAGE 27 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">🧾</div>
+      <div class="fc-emoji">🧊</div>
       <div class="fc-head">
         <div class="fc-term">Caixa térmica</div>
         <div class="fc-meta"><span>097/341</span><span class="lvl">A2</span></div>
@@ -1376,7 +1377,7 @@ body {
       <div class="fc-source">📍 <strong>D18 · Reclamando do trânsito</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">➗</div>
       <div class="fc-head">
         <div class="fc-term">Corta pela metade</div>
         <div class="fc-meta"><span>111/341</span><span class="lvl">B1</span></div>
@@ -1607,7 +1608,7 @@ body {
       <div class="fc-source">📍 <strong>D21 · Falando sobre trabalho</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">🚪</div>
+      <div class="fc-emoji">📈</div>
       <div class="fc-head">
         <div class="fc-term">Dá pra crescer</div>
         <div class="fc-meta"><span>134/341</span><span class="lvl">B1</span></div>
@@ -1638,7 +1639,7 @@ body {
 <div class="page-label">📄 PAGE 37 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">🧭</div>
+      <div class="fc-emoji">👋</div>
       <div class="fc-head">
         <div class="fc-term">Saí numa boa</div>
         <div class="fc-meta"><span>137/341</span><span class="lvl">B1</span></div>
@@ -1807,7 +1808,7 @@ body {
       <div class="fc-source">📍 <strong>D23 · Problemas com internet</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">😔</div>
       <div class="fc-head">
         <div class="fc-term">Transtorno</div>
         <div class="fc-meta"><span>154/341</span><span class="lvl">B1</span></div>
@@ -2167,7 +2168,7 @@ body {
       <div class="fc-source">📍 <strong>D29 · Resolvendo problema no celular</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🔧</div>
       <div class="fc-head">
         <div class="fc-term">Dá pra consertar?</div>
         <div class="fc-meta"><span>190/341</span><span class="lvl">B1</span></div>
@@ -2225,7 +2226,7 @@ body {
       <div class="fc-source">📍 <strong>D30 · Planejando uma viagem</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🚶</div>
       <div class="fc-head">
         <div class="fc-term">Dá pra ir</div>
         <div class="fc-meta"><span>196/341</span><span class="lvl">B1</span></div>
@@ -2247,7 +2248,7 @@ body {
       <div class="fc-source">📍 <strong>D30 · Planejando uma viagem</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">💡</div>
       <div class="fc-head">
         <div class="fc-term">É uma boa</div>
         <div class="fc-meta"><span>198/341</span><span class="lvl">B1</span></div>
@@ -2318,7 +2319,7 @@ body {
 <div class="page-label">📄 PAGE 54 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🎨</div>
       <div class="fc-head">
         <div class="fc-term">Combina com</div>
         <div class="fc-meta"><span>205/341</span><span class="lvl">B1</span></div>
@@ -2625,7 +2626,7 @@ body {
       <div class="fc-source">📍 <strong>D35 · Pedindo aumento</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">🚪</div>
+      <div class="fc-emoji">💰</div>
       <div class="fc-head">
         <div class="fc-term">Piso</div>
         <div class="fc-meta"><span>236/341</span><span class="lvl">B2</span></div>
@@ -2687,7 +2688,7 @@ body {
       <div class="fc-source">📍 <strong>D36 · Festa de aniversário surpresa</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🤥</div>
       <div class="fc-head">
         <div class="fc-term">Inventa uma desculpa</div>
         <div class="fc-meta"><span>242/341</span><span class="lvl">B1</span></div>
@@ -2807,7 +2808,7 @@ body {
       <div class="fc-source">📍 <strong>D38 · Negociando preço na feira</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🤝</div>
       <div class="fc-head">
         <div class="fc-term">Me faz sete?</div>
         <div class="fc-meta"><span>254/341</span><span class="lvl">B1</span></div>
@@ -2838,7 +2839,7 @@ body {
 <div class="page-label">📄 PAGE 67 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🤝</div>
       <div class="fc-head">
         <div class="fc-term">Cliente boa</div>
         <div class="fc-meta"><span>257/341</span><span class="lvl">B1</span></div>
@@ -2847,7 +2848,7 @@ body {
       <div class="fc-source">📍 <strong>D38 · Negociando preço na feira</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">😮</div>
       <div class="fc-head">
         <div class="fc-term">Me surpreendo</div>
         <div class="fc-meta"><span>258/341</span><span class="lvl">B2</span></div>
@@ -2865,7 +2866,7 @@ body {
       <div class="fc-source">📍 <strong>D39 · Conversa sobre morar no Brasil</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">⏰</div>
       <div class="fc-head">
         <div class="fc-term">Pontualidade</div>
         <div class="fc-meta"><span>260/341</span><span class="lvl">B2</span></div>
@@ -2878,7 +2879,7 @@ body {
 <div class="page-label">📄 PAGE 68 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🤐</div>
       <div class="fc-head">
         <div class="fc-term">Reservadas</div>
         <div class="fc-meta"><span>261/341</span><span class="lvl">B2</span></div>
@@ -2887,7 +2888,7 @@ body {
       <div class="fc-source">📍 <strong>D39 · Conversa sobre morar no Brasil</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🤗</div>
       <div class="fc-head">
         <div class="fc-term">Adota rápido</div>
         <div class="fc-meta"><span>262/341</span><span class="lvl">B2</span></div>
@@ -2896,7 +2897,7 @@ body {
       <div class="fc-source">📍 <strong>D39 · Conversa sobre morar no Brasil</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🖋️</div>
       <div class="fc-head">
         <div class="fc-term">Reconhecimento de firma</div>
         <div class="fc-meta"><span>263/341</span><span class="lvl">B2</span></div>
@@ -3007,7 +3008,7 @@ body {
       <div class="fc-source">📍 <strong>D41 · Conversa sobre séries</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🎯</div>
       <div class="fc-head">
         <div class="fc-term">Dar uma chance</div>
         <div class="fc-meta"><span>274/341</span><span class="lvl">B1</span></div>
@@ -3038,7 +3039,7 @@ body {
 <div class="page-label">📄 PAGE 72 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🤢</div>
       <div class="fc-head">
         <div class="fc-term">Passando mal</div>
         <div class="fc-meta"><span>277/341</span><span class="lvl">B2</span></div>
@@ -3278,7 +3279,7 @@ body {
 <div class="page-label">📄 PAGE 78 — Flashcards</div>
 <div class="page deck-page">
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">🗓️</div>
       <div class="fc-head">
         <div class="fc-term">Quarta de cinzas</div>
         <div class="fc-meta"><span>301/341</span><span class="lvl">B1</span></div>
@@ -3496,7 +3497,7 @@ body {
       <div class="fc-source">📍 <strong>D48 · Problema no voo</strong></div>
     </div>
     <div class="flashcard">
-      <div class="fc-emoji">💬</div>
+      <div class="fc-emoji">✈️</div>
       <div class="fc-head">
         <div class="fc-term">Reacomodação</div>
         <div class="fc-meta"><span>323/341</span><span class="lvl">B2</span></div>
@@ -3688,17 +3689,17 @@ body {
     </div>
 </div>
 
-<div class="page-label">📄 PAGE 89 — Index (1/16)</div>
+<div class="page-label">📄 PAGE 89 — Index (1/15)</div>
 <div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Alphabetical index</div>
       <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (1/16)</p>
+      <p class='header-sub'>341 terms, A to Z (1/15)</p>
     </div>
     <div class="page-num">89</div>
   </div>
-  <div class="body">
+  <div class="body idx-body">
     <div class="idx-row">
       <div class="idx-num">078</div>
       <div class="idx-term">A conta</div>
@@ -3831,21 +3832,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">85</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 90 — Index (2/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (2/16)</p>
-    </div>
-    <div class="page-num">90</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">265</div>
       <div class="idx-term">Autenticar</div>
       <div class="idx-dots"></div>
@@ -3857,7 +3844,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">53</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 90 — Index (2/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (2/15)</p>
+    </div>
+    <div class="page-num">90</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">136</div>
       <div class="idx-term">Aviso prévio</div>
       <div class="idx-dots"></div>
@@ -3977,21 +3978,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">82</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 91 — Index (3/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (3/16)</p>
-    </div>
-    <div class="page-num">91</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">044</div>
       <div class="idx-term">Cartãozinho</div>
       <div class="idx-dots"></div>
@@ -4015,7 +4002,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">46</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 91 — Index (3/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (3/15)</p>
+    </div>
+    <div class="page-num">91</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">290</div>
       <div class="idx-term">Cinco estrelas</div>
       <div class="idx-dots"></div>
@@ -4123,21 +4124,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">87</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 92 — Index (4/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (4/16)</p>
-    </div>
-    <div class="page-num">92</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">174</div>
       <div class="idx-term">Conta corrente</div>
       <div class="idx-dots"></div>
@@ -4173,7 +4160,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">80</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 92 — Index (4/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (4/15)</p>
+    </div>
+    <div class="page-num">92</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">111</div>
       <div class="idx-term">Corta pela metade</div>
       <div class="idx-dots"></div>
@@ -4269,21 +4270,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">83</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 93 — Index (5/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (5/16)</p>
-    </div>
-    <div class="page-num">93</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">079</div>
       <div class="idx-term">Dividir</div>
       <div class="idx-dots"></div>
@@ -4331,7 +4318,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">72</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 93 — Index (5/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (5/15)</p>
+    </div>
+    <div class="page-num">93</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">190</div>
       <div class="idx-term">Dá pra consertar?</div>
       <div class="idx-dots"></div>
@@ -4415,21 +4416,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">72</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 94 — Index (6/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (6/16)</p>
-    </div>
-    <div class="page-num">94</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">130</div>
       <div class="idx-term">Faz diferença</div>
       <div class="idx-dots"></div>
@@ -4489,7 +4476,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">32</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 94 — Index (6/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (6/15)</p>
+    </div>
+    <div class="page-num">94</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">082</div>
       <div class="idx-term">Fica a seu critério</div>
       <div class="idx-dots"></div>
@@ -4561,21 +4562,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">44</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 95 — Index (7/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (7/16)</p>
-    </div>
-    <div class="page-num">95</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">114</div>
       <div class="idx-term">Home office</div>
       <div class="idx-dots"></div>
@@ -4647,7 +4634,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">71</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 95 — Index (7/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (7/15)</p>
+    </div>
+    <div class="page-num">95</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">341</div>
       <div class="idx-term">Levar no coração</div>
       <div class="idx-dots"></div>
@@ -4707,21 +4708,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">81</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 96 — Index (8/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (8/16)</p>
-    </div>
-    <div class="page-num">96</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">273</div>
       <div class="idx-term">Maratonei</div>
       <div class="idx-dots"></div>
@@ -4805,7 +4792,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">65</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 96 — Index (8/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (8/15)</p>
+    </div>
+    <div class="page-num">96</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">133</div>
       <div class="idx-term">Modelo híbrido</div>
       <div class="idx-dots"></div>
@@ -4853,21 +4854,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">29</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 97 — Index (9/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (9/16)</p>
-    </div>
-    <div class="page-num">97</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">296</div>
       <div class="idx-term">Nem me fala</div>
       <div class="idx-dots"></div>
@@ -4963,7 +4950,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">19</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 97 — Index (9/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (9/15)</p>
+    </div>
+    <div class="page-num">97</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">249</div>
       <div class="idx-term">Operadora</div>
       <div class="idx-dots"></div>
@@ -4999,21 +5000,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">20</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 98 — Index (10/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (10/16)</p>
-    </div>
-    <div class="page-num">98</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">105</div>
       <div class="idx-term">Parcelei</div>
       <div class="idx-dots"></div>
@@ -5121,7 +5108,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">4</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 98 — Index (10/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (10/15)</p>
+    </div>
+    <div class="page-num">98</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">059</div>
       <div class="idx-term">Pode deixar</div>
       <div class="idx-dots"></div>
@@ -5145,21 +5146,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">6</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 99 — Index (11/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (11/16)</p>
-    </div>
-    <div class="page-num">99</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">260</div>
       <div class="idx-term">Pontualidade</div>
       <div class="idx-dots"></div>
@@ -5279,7 +5266,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">5</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 99 — Index (11/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (11/15)</p>
+    </div>
+    <div class="page-num">99</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">020</div>
       <div class="idx-term">Quadras</div>
       <div class="idx-dots"></div>
@@ -5291,21 +5292,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">14</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 100 — Index (12/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (12/16)</p>
-    </div>
-    <div class="page-num">100</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">194</div>
       <div class="idx-term">Quando ficar pronto</div>
       <div class="idx-dots"></div>
@@ -5440,17 +5427,17 @@ body {
   </div>
 </div>
 
-<div class="page-label">📄 PAGE 101 — Index (13/16)</div>
+<div class="page-label">📄 PAGE 100 — Index (12/15)</div>
 <div class="page">
   <div class="header">
     <div>
       <div class="section-tag">Alphabetical index</div>
       <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (13/16)</p>
+      <p class='header-sub'>341 terms, A to Z (12/15)</p>
     </div>
-    <div class="page-num">101</div>
+    <div class="page-num">100</div>
   </div>
-  <div class="body">
+  <div class="body idx-body">
     <div class="idx-row">
       <div class="idx-num">261</div>
       <div class="idx-term">Reservadas</div>
@@ -5583,21 +5570,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">20</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 102 — Index (14/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (14/16)</p>
-    </div>
-    <div class="page-num">102</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">161</div>
       <div class="idx-term">Sem problema</div>
       <div class="idx-dots"></div>
@@ -5609,7 +5582,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">75</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 101 — Index (13/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (13/15)</p>
+    </div>
+    <div class="page-num">101</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">057</div>
       <div class="idx-term">Serve pra você?</div>
       <div class="idx-dots"></div>
@@ -5729,21 +5716,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">48</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 103 — Index (15/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (15/16)</p>
-    </div>
-    <div class="page-num">103</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">286</div>
       <div class="idx-term">Tá rendendo</div>
       <div class="idx-dots"></div>
@@ -5767,7 +5740,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">14</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 102 — Index (14/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (14/15)</p>
+    </div>
+    <div class="page-num">102</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">035</div>
       <div class="idx-term">Tô</div>
       <div class="idx-dots"></div>
@@ -5875,21 +5862,7 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">71</div>
     </div>
-  </div>
-</div>
-
-<div class="page-label">📄 PAGE 104 — Index (16/16)</div>
-<div class="page">
-  <div class="header">
-    <div>
-      <div class="section-tag">Alphabetical index</div>
-      <h1 class="header-title">Find a card</h1>
-      <p class='header-sub'>341 terms, A to Z (16/16)</p>
-    </div>
-    <div class="page-num">104</div>
-  </div>
-  <div class="body">
-    <div class="idx-row">
+<div class="idx-row">
       <div class="idx-num">115</div>
       <div class="idx-term">Vim ver</div>
       <div class="idx-dots"></div>
@@ -5925,7 +5898,21 @@ body {
       <div class="idx-dots"></div>
       <div class="idx-page">23</div>
     </div>
-<div class="idx-row">
+  </div>
+</div>
+
+<div class="page-label">📄 PAGE 103 — Index (15/15)</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Alphabetical index</div>
+      <h1 class="header-title">Find a card</h1>
+      <p class='header-sub'>341 terms, A to Z (15/15)</p>
+    </div>
+    <div class="page-num">103</div>
+  </div>
+  <div class="body idx-body">
+    <div class="idx-row">
       <div class="idx-num">128</div>
       <div class="idx-term">Vou te passar</div>
       <div class="idx-dots"></div>
@@ -5958,7 +5945,7 @@ body {
   </div>
 </div>
 
-<div class="page-label">📄 PAGE 105 — Closing</div>
+<div class="page-label">📄 PAGE 104 — Closing</div>
 <div class="page">
   <div class="header">
     <div>
@@ -5966,7 +5953,7 @@ body {
       <h1 class="header-title">Words stick<br>with use</h1>
       <p class='header-sub'>The review that matters</p>
     </div>
-    <div class="page-num">105</div>
+    <div class="page-num">104</div>
   </div>
   <div class="body">
     <p class="intro">A flashcard works only if you come back to it. Don't review every card every day — review the ones you got wrong, let the easy ones rest.</p>

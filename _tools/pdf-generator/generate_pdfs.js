@@ -70,14 +70,9 @@ const EBOOKS = [
     output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Comprehension Workbook - Pro.pdf'),
   },
   {
-    label: 'Brazilian Listening Lab — Flashcards (Plus)',
-    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_flashcards_plus.html'),
-    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Vocabulary Flashcards - Plus.pdf'),
-  },
-  {
-    label: 'Brazilian Listening Lab — Flashcards (Pro)',
-    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_flashcards_pro.html'),
-    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Vocabulary Flashcards - Pro.pdf'),
+    label: 'Brazilian Listening Lab — Vocabulary Flashcards',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_flashcards.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Vocabulary Flashcards.pdf'),
   },
 ];
 
