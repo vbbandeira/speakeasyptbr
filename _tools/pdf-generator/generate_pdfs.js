@@ -15,6 +15,11 @@ const EBOOKS = [
     output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'Everyday Brazilian Portuguese.pdf'),
   },
   {
+    label: 'Everyday Brazilian Portuguese — Start Here',
+    html: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'speakeasy_start_here.html'),
+    output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'Everyday Brazilian Portuguese - Start Here.pdf'),
+  },
+  {
     label: 'Everyday — Brazilian Culture & Etiquette Guide (bonus)',
     html: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'speakeasy_culture_guide.html'),
     output: path.join(REPO_ROOT, 'everyday-brazilian-portuguese', 'pdf', 'Brazilian Culture & Etiquette Guide.pdf'),
@@ -33,6 +38,11 @@ const EBOOKS = [
     label: 'Speaking & Pronunciation Kit — Start Here',
     html: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'speakeasy_start_here.html'),
     output: path.join(REPO_ROOT, 'speaking-pronunciation-kit', 'pdf', 'Speaking & Pronunciation Kit - Start Here.pdf'),
+  },
+  {
+    label: 'Brazilian Listening Lab — Start Here',
+    html: path.join(REPO_ROOT, 'brazilian-listening-lab', 'speakeasy_start_here.html'),
+    output: path.join(REPO_ROOT, 'brazilian-listening-lab', 'pdf', 'Brazilian Listening Lab - Start Here.pdf'),
   },
 ];
 

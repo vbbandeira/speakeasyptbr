@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakEasy — Brazilian Listening Lab · Start Here</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter','Noto Color Emoji',sans-serif; background:#D8D4CC;
+  display:flex; flex-direction:column; align-items:center;
+  gap:48px; padding:48px 20px;
+}
+.page-label {
+  width:420px; font-family:'Inter',sans-serif; font-size:10px;
+  font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:#999; margin-bottom:-36px; padding-left:4px;
+}
+.page {
+  width:420px; background:#F5F0E8; border-radius:16px;
+  overflow:hidden; border:1px solid #D4CBBB;
+}
+.header {
+  background:#1E4D3B; padding:26px 32px 22px;
+  position:relative; overflow:hidden;
+  display:flex; align-items:flex-start; justify-content:space-between;
+}
+.header::before {
+  content:''; position:absolute; top:-50px; right:-50px;
+  width:160px; height:160px; border-radius:50%;
+  background:rgba(255,255,255,0.05);
+}
+.section-tag {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.15em; text-transform:uppercase; color:#7EC8A4; margin-bottom:5px;
+}
+.header-title {
+  font-family:'Poppins',sans-serif; font-size:21px; font-weight:700;
+  color:#fff; line-height:1.15;
+}
+.header-sub {
+  margin-top:5px; font-family:'Inter',sans-serif;
+  font-size:11.5px; color:rgba(255,255,255,0.5);
+}
+.page-num {
+  font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.3);
+  letter-spacing:0.1em; flex-shrink:0; margin-top:2px;
+}
+.body { padding:22px 30px 30px; display:flex; flex-direction:column; gap:16px; }
+.intro {
+  font-size:12.5px; color:#6B7B6E; line-height:1.65;
+  border-left:3px solid #A8E6C3; padding-left:12px; font-style:italic;
+}
+.tip-box {
+  background:#1E4D3B; border-radius:11px; padding:13px 15px;
+  display:flex; gap:9px; align-items:flex-start;
+}
+.tip-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+.tip-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; margin-bottom:3px;
+}
+.tip-text {
+  font-family:'Inter',sans-serif; font-size:11.5px;
+  color:rgba(255,255,255,0.85); line-height:1.6;
+}
+.tip-text em { color:#A8E6C3; font-style:normal; font-weight:500; }
+.cultural-box {
+  background:#EEF3F4; border-radius:10px; padding:11px 14px;
+  border-left:3px solid #5A9BA4; display:flex; gap:10px;
+}
+.cultural-icon { font-size:15px; flex-shrink:0; margin-top:1px; }
+.cultural-content { flex:1; }
+.cultural-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase; color:#4A838A; margin-bottom:4px;
+}
+.cultural-text {
+  font-family:'Inter',sans-serif; font-size:11px; color:#3D5E63; line-height:1.55;
+}
+.cultural-text strong { color:#2A4A50; font-weight:600; }
+.feature-list { display:flex; flex-direction:column; gap:8px; }
+.feature-row {
+  background:#fff; border-radius:8px; padding:9px 13px;
+  border:1px solid #EDE9E0; display:flex; gap:10px; align-items:flex-start;
+}
+.feature-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+.feature-content { flex:1; }
+.feature-key {
+  font-family:'Poppins',sans-serif; font-size:11.5px; font-weight:600;
+  color:#1E4D3B; margin-bottom:2px;
+}
+.feature-desc {
+  font-family:'Inter',sans-serif; font-size:10.5px; color:#3D5247; line-height:1.5;
+}
+.feature-desc strong { color:#1E4D3B; font-weight:600; }
+.theory-spotlight {
+  background:#F0FAF4; border-radius:10px; padding:12px 14px;
+  border-left:3px solid #2D6B52; display:flex; gap:10px;
+}
+.theory-content { flex:1; }
+.theory-label {
+  font-family:'Inter',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:0.12em; text-transform:uppercase; color:#2D6B52; margin-bottom:4px;
+}
+.theory-text {
+  font-family:'Inter',sans-serif; font-size:11.5px; color:#3D5247; line-height:1.55;
+}
+.theory-text strong { color:#1E4D3B; font-weight:600; }
+.theory-text em { color:#2D6B52; font-style:normal; font-weight:500; }
+
+@media print {
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    animation: none !important; transition: none !important;
+  }
+  @page { size: 420px auto; margin: 0mm; }
+  html, body {
+    width: 420px !important; margin: 0 !important; padding: 0 !important;
+    background: #F5F0E8 !important; display: block !important;
+    min-height: unset !important;
+  }
+  .page-label { display: none !important; }
+  .page {
+    width: 420px !important; border-radius: 0 !important;
+    border: none !important; box-shadow: none !important;
+    overflow: hidden !important; page-break-after: always;
+    page-break-inside: avoid; margin: 0 !important;
+  }
+  .page:last-of-type { page-break-after: auto; }
+  .tip-box, .cultural-box, .feature-row, .theory-spotlight { page-break-inside: avoid; box-shadow: none !important; }
+}
+</style>
+</head>
+<body>
+
+
+<!-- ============================================================ PAGE 01 — COVER ============================================================ -->
+<div class="page-label">📄 PAGE 01 — Cover</div>
+<div class="page" style="height:747px; background:linear-gradient(to bottom, #E8E5DC 0, #E8E5DC 703px, #1E4D3B 703px, #1E4D3B 100%); background-color:#1E4D3B; position:relative; overflow:hidden; border:none;">
+
+  <div style="position:absolute; left:0; top:0; width:100%; height:72px; overflow:hidden; z-index:5;">
+    <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    <div style="position:absolute; left:50%; top:45%; transform:translate(-50%, -50%); width:210px; height:85px; overflow:hidden; z-index:10; pointer-events:none;">
+      <img src="../_shared/assets/Logo.svg" alt="SpeakEasy Portuguese" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+    </div>
+  </div>
+
+  <div style="position:absolute; left:0; bottom:0; width:100%; height:44px; background:#1E4D3B; display:flex; align-items:center; justify-content:center; gap:10px; z-index:6;">
+    <a href="https://www.instagram.com/speakeasy.ptbr" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); text-decoration:none;">@speakeasy.ptbr</a>
+    <div style="width:3px;height:3px;border-radius:50%;background:#7EC8A4;"></div>
+    <a href="https://speakeasyptbr.com" target="_blank" style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7EC8A4; text-decoration:none;">speakeasyptbr.com</a>
+  </div>
+
+  <div style="position:absolute; left:90px; top:35px; width:239px; height:228px; overflow:hidden; z-index:2; pointer-events:none;">
+    <img src="../_shared/assets/Cristo.svg" alt="Cristo Redentor" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+
+  <div style="position:absolute; left:0; right:0; top:280px; padding:0 24px; text-align:center; z-index:3;">
+    <div style="font-family:'Poppins',sans-serif; font-size:44px; font-weight:800; color:#1E4D3B; line-height:0.95; letter-spacing:-1px; text-transform:uppercase; margin-bottom:10px;">Start<br>Here</div>
+    <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#2D6B52; margin-bottom:14px;">Brazilian<br>Listening Lab</div>
+    <div style="width:44px; height:3px; background:#A8E6C3; border-radius:2px; margin:0 auto 13px;"></div>
+    <div style="font-family:'Poppins',sans-serif; font-size:11px; font-weight:600; color:#1E4D3B; margin-bottom:5px;">Open me first</div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#4A6B58;">4 pages · your listening practice playbook</div>
+  </div>
+
+  <div style="position:absolute; left:270px; top:425px; width:232px; height:299px; overflow:hidden; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Arara.svg" alt="Arara" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+
+  <div style="position:absolute; left:-20px; top:560px; width:238.5px; height:157.2px; overflow:hidden; opacity:0.6; z-index:1; pointer-events:none;">
+    <img src="../_shared/assets/Palacio.svg" alt="Palácio" style="position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); display:block; object-fit:cover; object-position:center;" />
+  </div>
+
+</div>
+
+
+<!-- ============================================================ PAGE 02 — WHY ACTIVE LISTENING ============================================================ -->
+<div class="page-label">📄 PAGE 02 — Why active listening</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Start Here · 01</div>
+      <h1 class="header-title">Why active<br>listening works</h1>
+      <p class='header-sub'>The shortcut most learners skip</p>
+    </div>
+    <div class="page-num">02</div>
+  </div>
+  <div class="body">
+    <p class="intro">Most language courses teach you to <em>speak</em>. The Listening Lab trains the other half: understanding real Brazilians when they talk to each other at natural speed.</p>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">🧠</div>
+      <div class="theory-content">
+        <div class="theory-label">The comprehension gap</div>
+        <div class="theory-text">
+          You can study Portuguese for a year, build solid grammar, and still not understand a Brazilian family argument at a dinner table. Why? Because <strong>the sound of real speech is different from the sound of textbook audio.</strong>
+          <br><br>
+          Natives contract words (<em>cê, tá, pra</em>), swallow syllables, overlap, use slang, and adapt to their regional accent. Your ear needs to hear thousands of hours of this before it becomes second nature.
+        </div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">🎧</div>
+      <div class="cultural-content">
+        <div class="cultural-label">What the Listening Lab solves</div>
+        <div class="cultural-text">
+          Each dialogue in this pack is a short, natural conversation between two Brazilian voices. They order food, argue, flirt, plan trips, navigate emergencies — all at real speed, with real rhythm. The goal isn't to memorise words. It's to <strong>acclimatise your ear</strong> until native speech stops feeling foreign.
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🔑</div>
+      <div>
+        <div class="tip-label">The mindset shift</div>
+        <div class="tip-text">You don't need to understand every word. You need to get <em>comfortable not understanding every word</em>. That's what fluency actually feels like in the beginning. <strong>Relax. Let it wash over you. Come back tomorrow.</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 03 — THE 3-PASS METHOD ============================================================ -->
+<div class="page-label">📄 PAGE 03 — The 3-pass method</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Start Here · 02</div>
+      <h1 class="header-title">The 3-pass<br>method</h1>
+      <p class='header-sub'>How to practice each dialogue</p>
+    </div>
+    <div class="page-num">03</div>
+  </div>
+  <div class="body">
+    <p class="intro">Listen to every dialogue three times, with a different intent each pass. This is how comprehension actually builds.</p>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">1️⃣</div>
+        <div class="feature-content">
+          <div class="feature-key">Pass 1 — Passive listen</div>
+          <div class="feature-desc">
+            Play the dialogue during a commute, workout, or while cooking. <strong>Don't try to understand.</strong> Just let the rhythm and sound patterns sink in. Notice the contractions, the speed, the melody.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">2️⃣</div>
+        <div class="feature-content">
+          <div class="feature-key">Pass 2 — Follow along</div>
+          <div class="feature-desc">
+            Listen again, this time with the transcript open (coming as a free update). Read the Portuguese while listening. Glance at the English only when a word blocks you. This builds the <strong>sound-to-meaning map</strong>.
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">3️⃣</div>
+        <div class="feature-content">
+          <div class="feature-key">Pass 3 — Closed test</div>
+          <div class="feature-desc">
+            Listen one more time, transcript closed. Notice how much more you catch. <strong>This is how real comprehension builds</strong> — not by memorising words, but by re-meeting them in context until they stop being foreign.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="theory-spotlight">
+      <div class="theory-icon">⏱️</div>
+      <div class="theory-content">
+        <div class="theory-label">Realistic timing per dialogue</div>
+        <div class="theory-text">
+          Each dialogue is about 1-2 minutes long. A full 3-pass cycle takes ~5-7 minutes per dialogue. Doing <strong>one dialogue per day</strong>, you cover the Basic tier (15 dialogues) in two weeks, or the Pro tier (50) in about two months.
+          <br><br>
+          <em>Don't rush. Don't skip passes. Consistency beats intensity.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ PAGE 04 — YOUR KIT + NEXT STEPS ============================================================ -->
+<div class="page-label">📄 PAGE 04 — Your kit + next steps</div>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="section-tag">Start Here · 03</div>
+      <h1 class="header-title">Your kit<br>at a glance</h1>
+      <p class='header-sub'>What's included and what's next</p>
+    </div>
+    <div class="page-num">04</div>
+  </div>
+  <div class="body">
+    <p class="intro">Your pack contains the core dialogue audios. Additional materials are on the roadmap and will arrive as free updates.</p>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">🎧</div>
+        <div class="feature-content">
+          <div class="feature-key">Dialogue_01.mp3 through Dialogue_XX.mp3</div>
+          <div class="feature-desc">
+            Your core pack. Each file is one natural conversation between two Brazilian speakers (male + female), covering everyday scenarios. File counts by tier: <strong>Basic = 15 · Plus = 30 · Pro = 50.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cultural-box">
+      <div class="cultural-icon">📬</div>
+      <div class="cultural-content">
+        <div class="cultural-label">Coming as free updates</div>
+        <div class="cultural-text">
+          The following materials are in production and will be delivered to your email as free updates, in this order:
+          <br><br>
+          <strong>1. Transcripts PDF</strong> — Portuguese + English, line by line, for use with Pass 2.<br>
+          <strong>2. Vocabulary notes</strong> — key words and expressions per dialogue.<br>
+          <strong>3. Comprehension questions</strong> — 3-5 per dialogue to test your understanding.<br>
+          <strong>4. Slow-speed versions</strong> — for beginners who need more time.
+          <br><br>
+          Watch your email.
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-icon">🗣️</div>
+        <div class="feature-content">
+          <div class="feature-key">Companion product — Speaking &amp; Pronunciation Kit</div>
+          <div class="feature-desc">
+            For the active side of the language: 46 audio drills covering the 8 sounds that distinguish Brazilian Portuguese. Best paired with listening practice. <strong>Basic from €29.90.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">📘</div>
+        <div class="feature-content">
+          <div class="feature-key">Foundation product — Everyday Brazilian Portuguese</div>
+          <div class="feature-desc">
+            100 everyday phrases + a Brazilian culture and etiquette guide. Perfect if you're also visiting Brazil and want the practical phrasebook side. <strong>From €9.90.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🌱</div>
+      <div>
+        <div class="tip-label">Press play</div>
+        <div class="tip-text">Don't overthink it. Open Dialogue_01.mp3 right now. Listen once. That's your first pass done. <em>Vamos lá!</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
